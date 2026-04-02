@@ -1,0 +1,1000 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2012–2024, Ivan Sagalaev
+# This file is distributed under the same license as the highlight.js package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: highlight.js latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-04-02 03:28+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../readme.md:1
+msgid "Highlight.js"
+msgstr ""
+
+#: ../../../readme.md:3
+msgid ""
+"[![latest version](https://badgen.net/npm/v/highlight.js?label=latest)]"
+"(https://www.npmjs.com/package/highlight.js) [![license](https://badgen.net/"
+"github/license/highlightjs/highlight.js?color=cyan)](https://github.com/"
+"highlightjs/highlight.js/blob/main/LICENSE) [![install size](https://badgen."
+"net/packagephobia/install/highlight.js?label=npm+install)](https://"
+"packagephobia.now.sh/result?p=highlight.js) ![minified](https://img.shields."
+"io/github/size/highlightjs/cdn-release/build/highlight.min.js?"
+"label=minified) [![NPM downloads weekly](https://badgen.net/npm/dw/highlight."
+"js?label=npm+downloads&color=purple)](https://www.npmjs.com/package/"
+"highlight.js) [![jsDelivr CDN downloads](https://badgen.net/jsdelivr/hits/gh/"
+"highlightjs/cdn-release?label=jsDelivr+CDN&color=purple)](https://www."
+"jsdelivr.com/package/gh/highlightjs/cdn-release)"
+msgstr ""
+
+#: ../../../readme.md:3
+msgid "latest version"
+msgstr ""
+
+#: ../../../readme.md:3
+msgid "license"
+msgstr ""
+
+#: ../../../readme.md:3
+msgid "install size"
+msgstr ""
+
+#: ../../../readme.md:3
+msgid "minified"
+msgstr ""
+
+#: ../../../readme.md:3
+msgid "NPM downloads weekly"
+msgstr ""
+
+#: ../../../readme.md:3
+msgid "jsDelivr CDN downloads"
+msgstr ""
+
+#: ../../../readme.md:10
+msgid ""
+"[![ci status](https://badgen.net/github/checks/highlightjs/highlight.js/main?"
+"label=build)](https://github.com/highlightjs/highlight.js/actions/workflows/"
+"tests.js.yml) [![CodeQL](https://github.com/highlightjs/highlight.js/"
+"workflows/CodeQL/badge.svg)](https://github.com/highlightjs/highlight.js/"
+"actions/workflows/github-code-scanning/codeql) [![vulnerabilities](https://"
+"badgen.net/snyk/highlightjs/highlight.js)](https://snyk.io/test/github/"
+"highlightjs/highlight.js?targetFile=package.json)"
+msgstr ""
+
+#: ../../../readme.md:10
+msgid "ci status"
+msgstr ""
+
+#: ../../../readme.md:10
+msgid "CodeQL"
+msgstr ""
+
+#: ../../../readme.md:10
+msgid "vulnerabilities"
+msgstr ""
+
+#: ../../../readme.md:14
+msgid ""
+"[![discord](https://badgen.net/badge/icon/discord?"
+"icon=discord&label&color=pink)](https://discord.gg/M24EbU7ja9) [![open "
+"issues](https://badgen.net/github/open-issues/highlightjs/highlight.js?"
+"label=issues)](https://github.com/highlightjs/highlight.js/issues) [![help "
+"welcome issues](https://badgen.net/github/label-issues/highlightjs/highlight."
+"js/help%20welcome/open)](https://github.com/highlightjs/highlight.js/issues?"
+"q=is%3Aopen+is%3Aissue+label%3A%22help+welcome%22) [![good first issue]"
+"(https://badgen.net/github/label-issues/highlightjs/highlight.js/"
+"good%20first%20issue/open)](https://github.com/highlightjs/highlight.js/"
+"issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22)"
+msgstr ""
+
+#: ../../../readme.md:14
+msgid "discord"
+msgstr ""
+
+#: ../../../readme.md:14
+msgid "open issues"
+msgstr ""
+
+#: ../../../readme.md:14
+msgid "help welcome issues"
+msgstr ""
+
+#: ../../../readme.md:14
+msgid "good first issue"
+msgstr ""
+
+#: ../../../readme.md:19
+msgid ""
+"<!-- [![Build CI](https://img.shields.io/github/workflow/status/highlightjs/"
+"highlight.js/Node.js%20CI)](https://github.com/highlightjs/highlight.js/"
+"actions?query=workflow%3A%22Node.js+CI%22) -->\n"
+msgstr ""
+
+#: ../../../readme.md:20
+msgid ""
+"<!-- [![commits since release](https://img.shields.io/github/commits-since/"
+"highlightjs/highlight.js/latest?label=commits+since)](https://github.com/"
+"highlightjs/highlight.js/commits/main) -->\n"
+msgstr ""
+
+#: ../../../readme.md:21
+msgid ""
+"<!-- [![](https://data.jsdelivr.com/v1/package/gh/highlightjs/cdn-release/"
+"badge?style=rounded)](https://www.jsdelivr.com/package/gh/highlightjs/cdn-"
+"release) -->\n"
+msgstr ""
+
+#: ../../../readme.md:22
+msgid ""
+"<!-- [![Total Lines](https://img.shields.io/tokei/lines/github/highlightjs/"
+"highlight.js)]() -->\n"
+msgstr ""
+
+#: ../../../readme.md:23
+msgid ""
+"<!-- [![npm bundle size (minified + gzip)](https://img.shields.io/"
+"bundlephobia/minzip/highlight.js.svg)](https://bundlephobia.com/result?"
+"p=highlight.js) -->\n"
+msgstr ""
+
+#: ../../../readme.md:26
+msgid ""
+"Highlight.js is a syntax highlighter written in JavaScript. It works in the "
+"browser as well as on the server. It can work with pretty much any markup, "
+"doesn’t depend on any other frameworks, and has automatic language detection."
+msgstr ""
+
+#: ../../../readme.md:31
+msgid "**Contents**"
+msgstr ""
+
+#: ../../../readme.md:33
+msgid "[Basic Usage](#basic-usage)"
+msgstr ""
+
+#: ../../../readme.md:34
+msgid "[In the Browser](#in-the-browser)"
+msgstr ""
+
+#: ../../../readme.md:35
+msgid "[Plaintext Code Blocks](#plaintext-code-blocks)"
+msgstr ""
+
+#: ../../../readme.md:36
+msgid "[Ignoring a Code Block](#ignoring-a-code-block)"
+msgstr ""
+
+#: ../../../readme.md:37
+msgid "[Node.js on the Server](#nodejs-on-the-server)"
+msgstr ""
+
+#: ../../../readme.md:38
+msgid "[Supported Languages](#supported-languages)"
+msgstr ""
+
+#: ../../../readme.md:39
+msgid "[Custom Usage](#custom-usage)"
+msgstr ""
+
+#: ../../../readme.md:40
+msgid "[Using custom HTML](#using-custom-html)"
+msgstr ""
+
+#: ../../../readme.md:41
+msgid "[Using with Vue.js](#using-with-vuejs)"
+msgstr ""
+
+#: ../../../readme.md:42
+msgid "[Using Web Workers](#using-web-workers)"
+msgstr ""
+
+#: ../../../readme.md:43
+msgid "[Importing the Library](#importing-the-library)"
+msgstr ""
+
+#: ../../../readme.md:44
+msgid ""
+"[Node.js CommonJS Modules / `require`](#nodejs-commonjs-modules--require)"
+msgstr ""
+
+#: ../../../readme.md:45
+msgid "[Node.js ES6 Modules / `import`](#nodejs-es6-modules--import)"
+msgstr ""
+
+#: ../../../readme.md:46
+msgid "[Browser ES6 Modules](#browser-es6-modules)"
+msgstr ""
+
+#: ../../../readme.md:47
+msgid "[Getting the Library](#getting-the-library)"
+msgstr ""
+
+#: ../../../readme.md:48
+msgid "[Fetch via CDN](#fetch-via-cdn)"
+msgstr ""
+
+#: ../../../readme.md:49
+msgid "[cdnjs (link)](#cdnjs-link)"
+msgstr ""
+
+#: ../../../readme.md:50
+msgid "[jsdelivr (link)](#jsdelivr-link)"
+msgstr ""
+
+#: ../../../readme.md:51
+msgid "[unpkg (link)](#unpkg-link)"
+msgstr ""
+
+#: ../../../readme.md:52
+msgid "[Download prebuilt CDN assets](#download-prebuilt-cdn-assets)"
+msgstr ""
+
+#: ../../../readme.md:53
+msgid "[Download from our website](#download-from-our-website)"
+msgstr ""
+
+#: ../../../readme.md:54
+msgid "[Install via NPM package](#install-via-npm-package)"
+msgstr ""
+
+#: ../../../readme.md:55
+msgid "[Build from Source](#build-from-source)"
+msgstr ""
+
+#: ../../../readme.md:56
+msgid "[Requirements](#requirements)"
+msgstr ""
+
+#: ../../../readme.md:57
+msgid "[License](#license)"
+msgstr ""
+
+#: ../../../readme.md:58
+msgid "[Links](#links)"
+msgstr ""
+
+#: ../../../readme.md:62
+msgid "Upgrading to Version 11"
+msgstr ""
+
+#: ../../../readme.md:64
+msgid ""
+"As always, major releases do contain breaking changes which may require "
+"action from users.  Please read [VERSION_11_UPGRADE.md](https://github.com/"
+"highlightjs/highlight.js/blob/main/VERSION_11_UPGRADE.md) for a detailed "
+"summary of breaking changes and any actions you may need to take."
+msgstr ""
+
+#: ../../../readme.md:67
+msgid "Support for older versions <!-- omit in toc -->"
+msgstr ""
+
+#: ../../../readme.md:67 ../../../readme.md:370 ../../../readme.md:379
+#: ../../../readme.md:395 ../../../readme.md:404 ../../../readme.md:418
+#: ../../../readme.md:427
+msgid "<!-- omit in toc -->"
+msgstr ""
+
+#: ../../../readme.md:69
+msgid ""
+"Please see [SECURITY.md](https://github.com/highlightjs/highlight.js/blob/"
+"main/SECURITY.md) for long-term support information."
+msgstr ""
+
+#: ../../../readme.md:73
+msgid "Basic Usage"
+msgstr ""
+
+#: ../../../readme.md:74
+msgid "In the Browser"
+msgstr ""
+
+#: ../../../readme.md:76
+msgid ""
+"The bare minimum for using highlight.js on a web page is linking to the "
+"library along with one of the themes and calling [`highlightAll`][1]:"
+msgstr ""
+
+#: ../../../readme.md:79
+msgid ""
+"<link rel=\"stylesheet\" href=\"/path/to/styles/default.min.css\">\n"
+"<script src=\"/path/to/highlight.min.js\"></script>\n"
+"<script>hljs.highlightAll();</script>\n"
+msgstr ""
+
+#: ../../../readme.md:85
+msgid ""
+"This will find and highlight code inside of `<pre><code>` tags; it tries to "
+"detect the language automatically. If automatic detection doesn’t work for "
+"you, or you simply prefer to be explicit, you can specify the language "
+"manually by using the `class` attribute:"
+msgstr ""
+
+#: ../../../readme.md:90
+msgid "<pre><code class=\"language-html\">...</code></pre>\n"
+msgstr ""
+
+#: ../../../readme.md:94
+msgid "Plaintext Code Blocks"
+msgstr ""
+
+#: ../../../readme.md:96
+msgid ""
+"To apply the Highlight.js styling to plaintext without actually highlighting "
+"it, use the `plaintext` language:"
+msgstr ""
+
+#: ../../../readme.md:98
+msgid "<pre><code class=\"language-plaintext\">...</code></pre>\n"
+msgstr ""
+
+#: ../../../readme.md:102
+msgid "Ignoring a Code Block"
+msgstr ""
+
+#: ../../../readme.md:104
+msgid ""
+"To skip highlighting of a code block completely, use the `nohighlight` class:"
+msgstr ""
+
+#: ../../../readme.md:106
+msgid "<pre><code class=\"nohighlight\">...</code></pre>\n"
+msgstr ""
+
+#: ../../../readme.md:110
+msgid "Node.js on the Server"
+msgstr ""
+
+#: ../../../readme.md:112
+msgid "The bare minimum to auto-detect the language and highlight some code."
+msgstr ""
+
+#: ../../../readme.md:114
+msgid ""
+"// load the library and ALL languages\n"
+"hljs = require('highlight.js');\n"
+"html = hljs.highlightAuto('<h1>Hello World!</h1>').value\n"
+msgstr ""
+
+#: ../../../readme.md:120
+msgid "To load only a \"common\" subset of popular languages:"
+msgstr ""
+
+#: ../../../readme.md:122
+msgid "hljs = require('highlight.js/lib/common');\n"
+msgstr ""
+
+#: ../../../readme.md:126
+msgid "To highlight code with a specific language, use `highlight`:"
+msgstr ""
+
+#: ../../../readme.md:128
+msgid ""
+"html = hljs.highlight('<h1>Hello World!</h1>', {language: 'xml'}).value\n"
+msgstr ""
+
+#: ../../../readme.md:132
+msgid ""
+"See [Importing the Library](#importing-the-library) for more examples of "
+"`require` vs `import` usage, etc.  For more information about the result "
+"object returned by `highlight` or `highlightAuto` refer to the [api docs]"
+"(https://highlightjs.readthedocs.io/en/latest/api.html)."
+msgstr ""
+
+#: ../../../readme.md:136
+msgid "Supported Languages"
+msgstr ""
+
+#: ../../../readme.md:138
+msgid ""
+"Highlight.js supports over 180 languages in the core library.  There are "
+"also 3rd party language definitions available to support even more "
+"languages. You can find the full list of supported languages in "
+"[SUPPORTED_LANGUAGES.md][9]."
+msgstr ""
+
+#: ../../../readme.md:141
+msgid "Custom Usage"
+msgstr ""
+
+#: ../../../readme.md:143
+msgid ""
+"If you need a bit more control over the initialization of Highlight.js, you "
+"can use the [`highlightElement`][3] and [`configure`][4] functions. This "
+"allows you to better control *what* to highlight and *when*."
+msgstr ""
+
+#: ../../../readme.md:147
+msgid ""
+"For example, here’s the rough equivalent of calling [`highlightAll`][1] but "
+"doing the work manually instead:"
+msgstr ""
+
+#: ../../../readme.md:149
+msgid ""
+"document.addEventListener('DOMContentLoaded', (event) => {\n"
+"  document.querySelectorAll('pre code').forEach((el) => {\n"
+"    hljs.highlightElement(el);\n"
+"  });\n"
+"});\n"
+msgstr ""
+
+#: ../../../readme.md:157
+msgid "Please refer to the documentation for [`configure`][4] options."
+msgstr ""
+
+#: ../../../readme.md:160
+msgid "Using custom HTML"
+msgstr ""
+
+#: ../../../readme.md:162
+msgid ""
+"We strongly recommend `<pre><code>` wrapping for code blocks. It's quite "
+"semantic and \"just works\" out of the box with zero fiddling. It is "
+"possible to use other HTML elements (or combos), but you may need to pay "
+"special attention to preserving linebreaks."
+msgstr ""
+
+#: ../../../readme.md:167
+msgid "Let's say your markup for code blocks uses divs:"
+msgstr ""
+
+#: ../../../readme.md:169
+msgid "<div class='code'>...</div>\n"
+msgstr ""
+
+#: ../../../readme.md:173
+msgid "To highlight such blocks manually:"
+msgstr ""
+
+#: ../../../readme.md:175
+msgid ""
+"// first, find all the div.code blocks\n"
+"document.querySelectorAll('div.code').forEach(el => {\n"
+"  // then highlight each\n"
+"  hljs.highlightElement(el);\n"
+"});\n"
+msgstr ""
+
+#: ../../../readme.md:183
+msgid ""
+"Without using a tag that preserves linebreaks (like `pre`) you'll need some "
+"additional CSS to help preserve them.  You could also [pre and post-process "
+"line breaks with a plug-in][brPlugin], but *we recommend using CSS*."
+msgstr ""
+
+#: ../../../readme.md:189
+msgid "To preserve linebreaks inside a `div` using CSS:"
+msgstr ""
+
+#: ../../../readme.md:191
+msgid ""
+"div.code {\n"
+"  white-space: pre;\n"
+"}\n"
+msgstr ""
+
+#: ../../../readme.md:198
+msgid "Using with Vue.js"
+msgstr ""
+
+#: ../../../readme.md:200
+msgid ""
+"See [highlightjs/vue-plugin](https://github.com/highlightjs/vue-plugin) for "
+"a simple Vue plugin that works great with Highlight.js."
+msgstr ""
+
+#: ../../../readme.md:202
+msgid "An example of `vue-plugin` in action:"
+msgstr ""
+
+#: ../../../readme.md:204
+msgid ""
+"  <div id=\"app\">\n"
+"    <!-- bind to a data property named `code` -->\n"
+"    <highlightjs autodetect :code=\"code\" />\n"
+"    <!-- or literal code works as well -->\n"
+"    <highlightjs language='javascript' code=\"var x = 5;\" />\n"
+"  </div>\n"
+msgstr ""
+
+#: ../../../readme.md:213
+msgid "Using Web Workers"
+msgstr ""
+
+#: ../../../readme.md:215
+msgid ""
+"You can run highlighting inside a web worker to avoid freezing the browser "
+"window while dealing with very big chunks of code."
+msgstr ""
+
+#: ../../../readme.md:218
+msgid "In your main script:"
+msgstr ""
+
+#: ../../../readme.md:220
+msgid ""
+"addEventListener('load', () => {\n"
+"  const code = document.querySelector('#code');\n"
+"  const worker = new Worker('worker.js');\n"
+"  worker.onmessage = (event) => { code.innerHTML = event.data; }\n"
+"  worker.postMessage(code.textContent);\n"
+"});\n"
+msgstr ""
+
+#: ../../../readme.md:229
+msgid "In worker.js:"
+msgstr ""
+
+#: ../../../readme.md:231
+msgid ""
+"onmessage = (event) => {\n"
+"  importScripts('<path>/highlight.min.js');\n"
+"  const result = self.hljs.highlightAuto(event.data);\n"
+"  postMessage(result.value);\n"
+"};\n"
+msgstr ""
+
+#: ../../../readme.md:239
+msgid "Importing the Library"
+msgstr ""
+
+#: ../../../readme.md:241
+msgid ""
+"First, you'll likely be installing the library via `npm` or `yarn` -- see "
+"[Getting the Library](#getting-the-library)."
+msgstr ""
+
+#: ../../../readme.md:244
+msgid "Node.js CommonJS Modules / `require`"
+msgstr ""
+
+#: ../../../readme.md:246
+msgid "Requiring the top-level library will load all languages:"
+msgstr ""
+
+#: ../../../readme.md:248
+msgid ""
+"// require the highlight.js library, including all languages\n"
+"const hljs = require('./highlight.js');\n"
+"const highlightedCode = hljs.highlightAuto('<span>Hello World!</span>')."
+"value\n"
+msgstr ""
+
+#: ../../../readme.md:254
+msgid ""
+"For a smaller footprint, load our common subset of languages (the same set "
+"used for our default web build)."
+msgstr ""
+
+#: ../../../readme.md:256
+msgid "const hljs = require('highlight.js/lib/common');\n"
+msgstr ""
+
+#: ../../../readme.md:260
+msgid "For the smallest footprint, load only the languages you need:"
+msgstr ""
+
+#: ../../../readme.md:262
+msgid ""
+"const hljs = require('highlight.js/lib/core');\n"
+"hljs.registerLanguage('xml', require('highlight.js/lib/languages/xml'));\n"
+"\n"
+"const highlightedCode = hljs.highlight('<span>Hello World!</span>', "
+"{language: 'xml'}).value\n"
+msgstr ""
+
+#: ../../../readme.md:270
+msgid "Node.js ES6 Modules / `import`"
+msgstr ""
+
+#: ../../../readme.md:272
+msgid "The default import will register all languages:"
+msgstr ""
+
+#: ../../../readme.md:274
+msgid "import hljs from 'highlight.js';\n"
+msgstr ""
+
+#: ../../../readme.md:278
+msgid ""
+"It is more efficient to import only the library and register the languages "
+"you need:"
+msgstr ""
+
+#: ../../../readme.md:280
+msgid ""
+"import hljs from 'highlight.js/lib/core';\n"
+"import javascript from 'highlight.js/lib/languages/javascript';\n"
+"hljs.registerLanguage('javascript', javascript);\n"
+msgstr ""
+
+#: ../../../readme.md:286
+msgid ""
+"If your build tool processes CSS imports, you can also import the theme "
+"directly as a module:"
+msgstr ""
+
+#: ../../../readme.md:288
+msgid ""
+"import hljs from 'highlight.js';\n"
+"import 'highlight.js/styles/github.css';\n"
+msgstr ""
+
+#: ../../../readme.md:293
+msgid "Browser ES6 Modules"
+msgstr ""
+
+#: ../../../readme.md:295
+msgid ""
+"*Note: For now you'll want to install `@highlightjs/cdn-assets` package "
+"instead of `highlight.js`. See [Download prebuilt CDN assets](#download-"
+"prebuilt-cdn-assets)*"
+msgstr ""
+
+#: ../../../readme.md:298
+msgid "To import the library and register only those languages that you need:"
+msgstr ""
+
+#: ../../../readme.md:300
+msgid ""
+"import hljs from './assets/js/@highlightjs/cdn-assets/es/core.js';\n"
+"import javascript from './assets/js/@highlightjs/cdn-assets/es/languages/"
+"javascript.min.js';\n"
+"\n"
+"hljs.registerLanguage('javascript', javascript);\n"
+msgstr ""
+
+#: ../../../readme.md:307
+msgid "To import the library and register all languages:"
+msgstr ""
+
+#: ../../../readme.md:309
+msgid ""
+"import hljs from './assets/js/@highlightjs/cdn-assets/es/highlight.js';\n"
+msgstr ""
+
+#: ../../../readme.md:313
+msgid ""
+"*Note: The path to these files will vary depending on where you have "
+"installed/copied them within your project or site. The above path is only an "
+"example.*"
+msgstr ""
+
+#: ../../../readme.md:316
+msgid ""
+"You can also use [`importmap`](https://developer.mozilla.org/en-US/docs/Web/"
+"HTML/Element/script/type/importmap) to import in similar way as Node:"
+msgstr ""
+
+#: ../../../readme.md:318
+msgid ""
+"<script type=\"importmap\">\n"
+"{\n"
+"\t\"imports\": {\n"
+"\t\t\"@highlightjs\": \"./assets/js/@highlightjs/cdn-assets/es/\"\n"
+"\t}\n"
+"}\n"
+"</script>\n"
+msgstr ""
+
+#: ../../../readme.md:328
+msgid ""
+"Use the above code in your HTML. After that, your JavaScript can import "
+"using the named key from your `importmap`, for example `@highlightjs` in "
+"this case:"
+msgstr ""
+
+#: ../../../readme.md:331
+msgid ""
+"import hljs from '@highlightjs/core.js';\n"
+"import javascript from '@highlightjs/languages/javascript.min.js';\n"
+"\n"
+"hljs.registerLanguage('javascript', javascript);\n"
+msgstr ""
+
+#: ../../../readme.md:338
+msgid ""
+"*Note: You can also import directly from fully static URLs, such as our very "
+"own pre-built ES6 Module CDN resources. See [Fetch via CDN](#fetch-via-cdn) "
+"for specific examples.*"
+msgstr ""
+
+#: ../../../readme.md:341
+msgid "Getting the Library"
+msgstr ""
+
+#: ../../../readme.md:343
+msgid ""
+"You can get highlight.js as a hosted, or custom-build, browser script or as "
+"a server module. Right out of the box the browser script supports both AMD "
+"and CommonJS, so if you wish you can use RequireJS or Browserify without "
+"having to build from source. The server module also works perfectly fine "
+"with Browserify, but there is the option to use a build specific to browsers "
+"rather than something meant for a server."
+msgstr ""
+
+#: ../../../readme.md:351
+msgid ""
+"**Do not link to GitHub directly.** The library is not supposed to work "
+"straight from the source, it requires building. If none of the pre-packaged "
+"options work for you refer to the [building documentation][6]."
+msgstr ""
+
+#: ../../../readme.md:355
+msgid ""
+"**On Almond.** You need to use the optimizer to give the module a name. For "
+"example:"
+msgstr ""
+
+#: ../../../readme.md:358
+msgid "r.js -o name=hljs paths.hljs=/path/to/highlight out=highlight.js\n"
+msgstr ""
+
+#: ../../../readme.md:362
+msgid "Fetch via CDN"
+msgstr ""
+
+#: ../../../readme.md:364
+msgid ""
+"A prebuilt version of Highlight.js bundled with many common languages is "
+"hosted by several popular CDNs. When using Highlight.js via CDN you can use "
+"Subresource Integrity for additional security.  For details see [DIGESTS.md]"
+"(https://github.com/highlightjs/cdn-release/blob/main/DIGESTS.md)."
+msgstr ""
+
+#: ../../../readme.md:368
+msgid "cdnjs ([link](https://cdnjs.com/libraries/highlight.js))"
+msgstr ""
+
+#: ../../../readme.md:370 ../../../readme.md:395 ../../../readme.md:418
+msgid "Common JS <!-- omit in toc -->"
+msgstr ""
+
+#: ../../../readme.md:372
+msgid ""
+"<link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/"
+"highlight.js/11.11.1/styles/default.min.css\">\n"
+"<script src=\"https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/"
+"highlight.min.js\"></script>\n"
+"<!-- and it's easy to individually load additional languages -->\n"
+"<script src=\"https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/"
+"languages/go.min.js\"></script>\n"
+msgstr ""
+
+#: ../../../readme.md:379 ../../../readme.md:404 ../../../readme.md:427
+msgid "ES6 Modules <!-- omit in toc -->"
+msgstr ""
+
+#: ../../../readme.md:381
+msgid ""
+"<link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/"
+"highlight.js/11.11.1/styles/dark.min.css\">\n"
+"<script type=\"module\">\n"
+"import hljs from 'https://cdnjs.cloudflare.com/ajax/libs/highlight."
+"js/11.11.1/es/highlight.min.js';\n"
+"//  and it's easy to individually load additional languages\n"
+"import go from 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/"
+"es/languages/go.min.js';\n"
+"hljs.registerLanguage('go', go);\n"
+"</script>\n"
+"\n"
+msgstr ""
+
+#: ../../../readme.md:393
+msgid ""
+"jsdelivr ([link](https://www.jsdelivr.com/package/gh/highlightjs/cdn-"
+"release))"
+msgstr ""
+
+#: ../../../readme.md:397
+msgid ""
+"<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/gh/highlightjs/cdn-"
+"release@11.11.1/build/styles/default.min.css\">\n"
+"<script src=\"https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.11.1/"
+"build/highlight.min.js\"></script>\n"
+"<!-- and it's easy to individually load additional languages -->\n"
+"<script src=\"https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.11.1/"
+"build/languages/go.min.js\"></script>\n"
+msgstr ""
+
+#: ../../../readme.md:406
+msgid ""
+"<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/gh/highlightjs/cdn-"
+"release@11.11.1/build/styles/default.min.css\">\n"
+"<script type=\"module\">\n"
+"import hljs from 'https://cdn.jsdelivr.net/gh/highlightjs/cdn-"
+"release@11.11.1/build/es/highlight.min.js';\n"
+"//  and it's easy to individually load additional languages\n"
+"import go from 'https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.11.1/"
+"build/es/languages/go.min.js';\n"
+"hljs.registerLanguage('go', go);\n"
+"</script>\n"
+msgstr ""
+
+#: ../../../readme.md:416
+msgid "unpkg ([link](https://unpkg.com/browse/@highlightjs/cdn-assets/))"
+msgstr ""
+
+#: ../../../readme.md:420
+msgid ""
+"<link rel=\"stylesheet\" href=\"https://unpkg.com/@highlightjs/cdn-"
+"assets@11.11.1/styles/default.min.css\">\n"
+"<script src=\"https://unpkg.com/@highlightjs/cdn-assets@11.11.1/highlight."
+"min.js\"></script>\n"
+"<!-- and it's easy to individually load additional languages -->\n"
+"<script src=\"https://unpkg.com/@highlightjs/cdn-assets@11.11.1/languages/go."
+"min.js\"></script>\n"
+msgstr ""
+
+#: ../../../readme.md:429
+msgid ""
+"<link rel=\"stylesheet\" href=\"https://unpkg.com/@highlightjs/cdn-"
+"assets@11.11.1/styles/default.min.css\">\n"
+"<script type=\"module\">\n"
+"import hljs from 'https://unpkg.com/@highlightjs/cdn-assets@11.11.1/es/"
+"highlight.min.js';\n"
+"//  and it's easy to individually load & register additional languages\n"
+"import go from 'https://unpkg.com/@highlightjs/cdn-assets@11.11.1/es/"
+"languages/go.min.js';\n"
+"hljs.registerLanguage('go', go);\n"
+"</script>\n"
+msgstr ""
+
+#: ../../../readme.md:440
+msgid ""
+"**Note:** *The CDN-hosted `highlight.min.js` package doesn't bundle every "
+"language.* It would be very large. You can find our list of \"common\" "
+"languages that we bundle by default on our [download page][5]."
+msgstr ""
+
+#: ../../../readme.md:443
+msgid "Download prebuilt CDN assets"
+msgstr ""
+
+#: ../../../readme.md:445
+msgid ""
+"You can also download and self-host the same assets we serve up via our own "
+"CDNs.  We publish those builds to the [cdn-release](https://github.com/"
+"highlightjs/cdn-release) GitHub repository.  You can easily pull individual "
+"files off the CDN endpoints with `curl`, etc; if say you only needed "
+"`highlight.min.js` and a single CSS file."
+msgstr ""
+
+#: ../../../readme.md:447
+msgid ""
+"There is also an npm package [@highlightjs/cdn-assets](https://www.npmjs.com/"
+"package/@highlightjs/cdn-assets) if pulling the assets in via `npm` or "
+"`yarn` would be easier for your build process."
+msgstr ""
+
+#: ../../../readme.md:449
+msgid "Download from our website"
+msgstr ""
+
+#: ../../../readme.md:451
+msgid ""
+"The [download page][5] can quickly generate a custom single-file minified "
+"bundle including only the languages you desire."
+msgstr ""
+
+#: ../../../readme.md:453
+msgid ""
+"**Note:** [Building from source](#build-from-source) can produce slightly "
+"smaller builds than the website download."
+msgstr ""
+
+#: ../../../readme.md:456
+msgid "Install via NPM package"
+msgstr ""
+
+#: ../../../readme.md:458
+msgid ""
+"Our NPM package including all supported languages can be installed with NPM "
+"or Yarn:"
+msgstr ""
+
+#: ../../../readme.md:460
+msgid ""
+"npm install highlight.js\n"
+"# or\n"
+"yarn add highlight.js\n"
+msgstr ""
+
+#: ../../../readme.md:466
+msgid ""
+"There is also another npm package [@highlightjs/cdn-assets](https://www."
+"npmjs.com/package/@highlightjs/cdn-assets) that contains prebuilt CDN assets "
+"including [ES6 Modules that can be imported in browser](#browser-es6-"
+"modules):"
+msgstr ""
+
+#: ../../../readme.md:468
+msgid ""
+"npm install @highlightjs/cdn-assets\n"
+"# or\n"
+"yarn add @highlightjs/cdn-assets\n"
+msgstr ""
+
+#: ../../../readme.md:474
+msgid "Alternatively, you can build the NPM package from source."
+msgstr ""
+
+#: ../../../readme.md:477
+msgid "Build from Source"
+msgstr ""
+
+#: ../../../readme.md:479
+msgid "The [current source code][10] is always available on GitHub."
+msgstr ""
+
+#: ../../../readme.md:481
+msgid ""
+"node tools/build.js -t node\n"
+"node tools/build.js -t browser :common\n"
+"node tools/build.js -t cdn :common\n"
+msgstr ""
+
+#: ../../../readme.md:487
+msgid "See our [building documentation][6] for more information."
+msgstr ""
+
+#: ../../../readme.md:490
+msgid "Requirements"
+msgstr ""
+
+#: ../../../readme.md:492
+msgid ""
+"Highlight.js works on all modern browsers and currently supported Node.js "
+"versions.  You'll need the following software to contribute to the core "
+"library:"
+msgstr ""
+
+#: ../../../readme.md:494
+msgid "Node.js >= 12.x"
+msgstr ""
+
+#: ../../../readme.md:495
+msgid "npm >= 6.x"
+msgstr ""
+
+#: ../../../readme.md:497
+msgid "License"
+msgstr ""
+
+#: ../../../readme.md:499
+msgid ""
+"Highlight.js is released under the BSD License. See our [LICENSE][7] file "
+"for details."
+msgstr ""
+
+#: ../../../readme.md:503
+msgid "Links"
+msgstr ""
+
+#: ../../../readme.md:505
+msgid "The official website for the library is <https://highlightjs.org/>."
+msgstr ""
+
+#: ../../../readme.md:507
+msgid ""
+"Further in-depth documentation for the API and other topics is at <http://"
+"highlightjs.readthedocs.io/>."
+msgstr ""
+
+#: ../../../readme.md:510
+msgid ""
+"A list of the Core Team and contributors can be found in the [CONTRIBUTORS."
+"md][8] file."
+msgstr ""

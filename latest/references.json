@@ -13,22 +13,22 @@
     },
     "zh_CN" : 
     {
-      "branch" : "",
+      "branch" : "main",
       "commit" : 
       {
-        "date" : "",
-        "hash" : "",
-        "title" : ""
+        "date" : "2025-07-06 21:00:41 -0400",
+        "hash" : "5697ae5187746c24732e62cd625f3f83004a44ce",
+        "title" : "(enh) Add 3rd party Abc Notation grammar to Supported Languages (#4291)"
       }
     },
     "zh_TW" : 
     {
-      "branch" : "",
+      "branch" : "main",
       "commit" : 
       {
-        "date" : "",
-        "hash" : "",
-        "title" : ""
+        "date" : "2025-07-06 21:00:41 -0400",
+        "hash" : "5697ae5187746c24732e62cd625f3f83004a44ce",
+        "title" : "(enh) Add 3rd party Abc Notation grammar to Supported Languages (#4291)"
       }
     }
   },

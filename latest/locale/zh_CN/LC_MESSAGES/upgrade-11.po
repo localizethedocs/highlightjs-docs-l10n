@@ -1,0 +1,540 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2012–2024, Ivan Sagalaev
+# This file is distributed under the same license as the highlight.js package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: highlight.js latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-04-02 03:28+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../upgrade-11.md:1
+msgid "Upgrading to Highlight.js v11.0"
+msgstr ""
+
+#: ../../../upgrade-11.md:3
+msgid "[Overview of Breaking Changes](#overview-of-breaking-changes)"
+msgstr ""
+
+#: ../../../upgrade-11.md:4
+msgid ""
+"[Built-in set of \"Common\" Languages](#built-in-set-of-common-languages)"
+msgstr ""
+
+#: ../../../upgrade-11.md:5
+msgid "[Language Files](#language-files)"
+msgstr ""
+
+#: ../../../upgrade-11.md:6
+msgid "[Language Aliases](#language-aliases)"
+msgstr ""
+
+#: ../../../upgrade-11.md:7
+msgid "[Styles and CSS](#styles-and-css)"
+msgstr ""
+
+#: ../../../upgrade-11.md:8
+msgid "[Grammar Scopes](#grammar-scopes)"
+msgstr ""
+
+#: ../../../upgrade-11.md:9
+msgid "[Behavioral changes](#behavioral-changes)"
+msgstr ""
+
+#: ../../../upgrade-11.md:10
+msgid "[API changes](#api-changes)"
+msgstr ""
+
+#: ../../../upgrade-11.md:11
+msgid "[Changes to Result Data](#changes-to-result-data)"
+msgstr ""
+
+#: ../../../upgrade-11.md:12
+msgid "[Feature Removal](#feature-removal)"
+msgstr ""
+
+#: ../../../upgrade-11.md:13
+msgid "[Small Things](#small-things)"
+msgstr ""
+
+#: ../../../upgrade-11.md:14
+msgid "[Upgrading from Version 9.x](#upgrading-from-version-9x)"
+msgstr ""
+
+#: ../../../upgrade-11.md:17
+msgid "Overview of Breaking Changes"
+msgstr ""
+
+#: ../../../upgrade-11.md:19
+msgid ""
+"Welcome to version 11.0.  This a major release and therefore contains "
+"breaking changes.  Below is a complete list of those such changes."
+msgstr ""
+
+#: ../../../upgrade-11.md:22
+msgid "Built-in set of \"Common\" Languages"
+msgstr ""
+
+#: ../../../upgrade-11.md:24
+msgid ""
+"The default `highlight.min.js` build **removes** a few less popular grammars:"
+msgstr ""
+
+#: ../../../upgrade-11.md:26
+msgid "apache"
+msgstr ""
+
+#: ../../../upgrade-11.md:27
+msgid "http"
+msgstr ""
+
+#: ../../../upgrade-11.md:28
+msgid "nginx"
+msgstr ""
+
+#: ../../../upgrade-11.md:29
+msgid "properties"
+msgstr ""
+
+#: ../../../upgrade-11.md:30
+msgid "coffeescript"
+msgstr ""
+
+#: ../../../upgrade-11.md:32
+msgid "If you need any of these, you can always create a custom build."
+msgstr ""
+
+#: ../../../upgrade-11.md:34
+msgid "Ref: https://github.com/highlightjs/highlight.js/issues/2848"
+msgstr ""
+
+#: ../../../upgrade-11.md:37
+msgid "Language Files"
+msgstr ""
+
+#: ../../../upgrade-11.md:39
+msgid ""
+"This would matter if you are requiring any of these files directly (via Node."
+"js or CDN)."
+msgstr ""
+
+#: ../../../upgrade-11.md:41
+msgid "`htmlbars` has been removed. Use `handlebars` instead."
+msgstr ""
+
+#: ../../../upgrade-11.md:42
+msgid "`c-like` has been removed. Use `c`, `cpp`, or `arduino`."
+msgstr ""
+
+#: ../../../upgrade-11.md:43
+msgid ""
+"`sql_more` has been removed. Use `sql` instead or a more specific 3rd party "
+"grammar."
+msgstr ""
+
+#: ../../../upgrade-11.md:46
+msgid "Language Aliases"
+msgstr ""
+
+#: ../../../upgrade-11.md:48
+msgid "This would matter if you are using these aliases."
+msgstr ""
+
+#: ../../../upgrade-11.md:50
+msgid ""
+"`php3`,`php4`,`php5`, `php6`, `php7`, and `php8` have been removed. Use "
+"`php` instead."
+msgstr ""
+
+#: ../../../upgrade-11.md:51
+msgid "`zsh` has been removed. Use `sh` or `bash` instead."
+msgstr ""
+
+#: ../../../upgrade-11.md:52
+msgid ""
+"`freepascal`, `lazarus`, `lpr`, and `lpm` removed. Use `delphi` instead."
+msgstr ""
+
+#: ../../../upgrade-11.md:54
+msgid ""
+"You can of course re-register any of these aliases easily if necessary. For "
+"example to restore the PHP aliases:"
+msgstr ""
+
+#: ../../../upgrade-11.md:56
+msgid ""
+"hljs.registerAliases([\"php3\",\"php4\",\"php5\",\"php6\",\"php7\",\"php8\"],"
+"{ languageName: \"php\" })\n"
+msgstr ""
+
+#: ../../../upgrade-11.md:60
+msgid "Styles and CSS"
+msgstr ""
+
+#: ../../../upgrade-11.md:62
+msgid ""
+"The default padding on `.hljs` element has been increased and is now `1em` "
+"(it was `0.5em` previously). If your design depends on the smaller spacing "
+"you may need to update your CSS to override."
+msgstr ""
+
+#: ../../../upgrade-11.md:63
+msgid ""
+"`schoolbook` no longer has a custom lined background, it is solid color "
+"now.  The old image and CSS can be found in the [10-stable branch](https://"
+"github.com/highlightjs/highlight.js/tree/10-stable/src/styles) if you wish "
+"to manually copy it into your project."
+msgstr ""
+
+#: ../../../upgrade-11.md:64
+msgid ""
+"`github` includes significant changes to more properly match modern GitHub "
+"syntax highlighting. If you desire the old theme you can manually copy it "
+"into your project from the [10-stable branch](https://github.com/highlightjs/"
+"highlight.js/tree/10-stable/src/styles)."
+msgstr ""
+
+#: ../../../upgrade-11.md:65
+msgid ""
+"`github-gist` has been removed in favor of `github` as GitHub and GitHub "
+"Gist have converged. If you desire the theme you can manually copy it into "
+"your project from the [10-stable branch](https://github.com/highlightjs/"
+"highlight.js/tree/10-stable/src/styles)."
+msgstr ""
+
+#: ../../../upgrade-11.md:66
+msgid ""
+"The `.hljs` CSS selector is now further scoped.  It now targets `code.hljs` "
+"(inline code) and `pre code.hljs` (code blocks). If you are using a "
+"different element you may need to update your CSS to reapply some styling."
+msgstr ""
+
+#: ../../../upgrade-11.md:67
+msgid ""
+"All [Base16 themes](https://github.com/highlightjs/base16-highlightjs) now "
+"live in the `styles/base16` directory - this means some CSS files have "
+"moved.  Please confirm themes you use reference the new locations."
+msgstr ""
+
+#: ../../../upgrade-11.md:70
+msgid "Grammar Scopes"
+msgstr ""
+
+#: ../../../upgrade-11.md:72
+msgid ""
+"`.meta-string` removed/deprecated.  Use `.meta .string` (a nested scope) "
+"instead. See [meta-keyword][]."
+msgstr ""
+
+#: ../../../upgrade-11.md:73
+msgid ""
+"`.meta-keyword` removed/deprecated.  Use `.meta .keyword` (a nested scope) "
+"instead. See [meta-keyword][]."
+msgstr ""
+
+#: ../../../upgrade-11.md:75
+msgid "Behavioral changes"
+msgstr ""
+
+#: ../../../upgrade-11.md:77
+msgid ""
+"`after:highlightElement` plugin callback is now fired *after* the DOM has "
+"been updated, not before."
+msgstr ""
+
+#: ../../../upgrade-11.md:79
+msgid "API changes"
+msgstr ""
+
+#: ../../../upgrade-11.md:81
+msgid ""
+"The option `ignoreIllegals` is now `true` by default (for `highlight()`). "
+"Previously it was `false`."
+msgstr ""
+
+#: ../../../upgrade-11.md:82
+msgid ""
+"The `highlight(language,code, ...args)` API no longer accepts `continuation` "
+"as a 4th argument."
+msgstr ""
+
+#: ../../../upgrade-11.md:83
+msgid ""
+"The `highlight(language,code, ...args)` API is deprecated (to be removed in "
+"12.0)."
+msgstr ""
+
+#: ../../../upgrade-11.md:85
+msgid ""
+"The new call signature is `highlight(code, {options})`. ([see docs](https://"
+"highlightjs.readthedocs.io/en/latest/api.html#highlight))"
+msgstr ""
+
+#: ../../../upgrade-11.md:87
+msgid "Code using the old API:"
+msgstr ""
+
+#: ../../../upgrade-11.md:89
+msgid ""
+"// highlight(language, code, ignoreIllegals, continuation)\n"
+"highlight(\"javascript\", \"var a = 5;\", true)\n"
+msgstr ""
+
+#: ../../../upgrade-11.md:93
+msgid "...would be upgraded to the newer API as follows:"
+msgstr ""
+
+#: ../../../upgrade-11.md:95
+msgid ""
+"// highlight(code, {language, ignoreIllegals})\n"
+"highlight(\"var a = 5;\", {language: \"javascript\", ignoreIllegals: true})\n"
+msgstr ""
+
+#: ../../../upgrade-11.md:100
+msgid ""
+"The new API purposely does not support `continuation` as this is only "
+"intended for internal library usage."
+msgstr ""
+
+#: ../../../upgrade-11.md:102
+msgid "`initHighlighting()` is deprecated (to be removed in 12.0)."
+msgstr ""
+
+#: ../../../upgrade-11.md:103
+msgid "`initHighlightingOnLoad()` is deprecated (to be removed in 12.0)."
+msgstr ""
+
+#: ../../../upgrade-11.md:105
+msgid ""
+"**Use `highlightAll()` instead.** ([see docs](https://highlightjs."
+"readthedocs.io/en/latest/api.html#highlight-all)) The old functions are now "
+"simply aliases of `highlightAll()`. The new function may be called before or "
+"after the DOM is loaded and should do the correct thing in all cases, "
+"replacing the need for the previous individual functions."
+msgstr ""
+
+#: ../../../upgrade-11.md:107
+msgid ""
+"Note: `highlightAll()` does not guard against calling itself repeatedly as "
+"the previous functions did. Your code should be careful to avoid doing this."
+msgstr ""
+
+#: ../../../upgrade-11.md:109
+msgid "`highlightBlock()` is deprecated (to be removed in 12.0)."
+msgstr ""
+
+#: ../../../upgrade-11.md:111
+msgid ""
+"**Use `highlightElement()` instead.** ([see docs](https://highlightjs."
+"readthedocs.io/en/latest/api.html#highlight-element)) This is merely a "
+"naming change."
+msgstr ""
+
+#: ../../../upgrade-11.md:113
+msgid ""
+"Note: The object literal passed to the `before:highlightElement` callback "
+"now passes the element in the `el` key vs the `block` key."
+msgstr ""
+
+#: ../../../upgrade-11.md:115
+msgid "Changes to Result Data"
+msgstr ""
+
+#: ../../../upgrade-11.md:117
+msgid "`highlightAuto()`'s `second_best` key has been renamed to `secondBest`"
+msgstr ""
+
+#: ../../../upgrade-11.md:118
+msgid ""
+"`highlightElement()`'s result now no longer includes a `re` key. Use the "
+"`relevance` key now."
+msgstr ""
+
+#: ../../../upgrade-11.md:119
+msgid ""
+"`highlight()` renames some result keys to more clearly mark them as private: "
+"`_top`, `_emitter`, and `_illegalBy`. You should not depend on these keys as "
+"they are subject to change at any time."
+msgstr ""
+
+#: ../../../upgrade-11.md:120
+msgid ""
+"The `relevance` key returned by `highlight()` is no longer guaranteed to be "
+"an even integer."
+msgstr ""
+
+#: ../../../upgrade-11.md:121
+msgid ""
+"`highlightElement` now always tags blocks with a consistent `language-"
+"[name]` class"
+msgstr ""
+
+#: ../../../upgrade-11.md:123
+msgid ""
+"This behavior was inconsistent before.  Sometimes `[name]` class would be "
+"added, sometimes the alias name would be added, something no class would be "
+"added.  now `language-[name]` is always added. This also affects sublanguage "
+"`span` tags which now also include the `language-` prefix."
+msgstr ""
+
+#: ../../../upgrade-11.md:125
+msgid "Feature Removal"
+msgstr ""
+
+#: ../../../upgrade-11.md:127
+msgid ""
+"HTML auto-passthru is now no longer included in core.  Use a plugin instead. "
+"For a possible plugin please see [#2889](https://github.com/highlightjs/"
+"highlight.js/issues/2889)."
+msgstr ""
+
+#: ../../../upgrade-11.md:129
+msgid "An example:"
+msgstr ""
+
+#: ../../../upgrade-11.md:131
+msgid ""
+"<pre><code class=\"lang-js\">\n"
+"var a = 4;\n"
+"<span class=\"yellow\">var a = 4;</span>\n"
+"</code></pre>\n"
+msgstr ""
+
+#: ../../../upgrade-11.md:138
+msgid ""
+"Unescaped HTML like this will now be ignored (stripped before highlighting) "
+"and a warning will be logged to the console.  All HTML to be highlighted "
+"should be properly escaped to avoid potential HTML/JS injection attacks."
+msgstr ""
+
+#: ../../../upgrade-11.md:140
+msgid "`fixMarkup` has been removed."
+msgstr ""
+
+#: ../../../upgrade-11.md:142
+msgid ""
+"This function was deprecated in v10.2.  It is not our goal to provide random "
+"string utilities. You may need to provide your own replacement [Ref: #2534]"
+"(https://github.com/highlightjs/highlight.js/issues/2634)"
+msgstr ""
+
+#: ../../../upgrade-11.md:144
+msgid "`CSS_NUMBER_MODE` has been removed."
+msgstr ""
+
+#: ../../../upgrade-11.md:146
+msgid ""
+"This rule was too broad for bring inclusion in core and has been removed."
+msgstr ""
+
+#: ../../../upgrade-11.md:148
+msgid "`lexemes` mode attribute has been removed."
+msgstr ""
+
+#: ../../../upgrade-11.md:150
+msgid "Use the new `keywords.$pattern` instead."
+msgstr ""
+
+#: ../../../upgrade-11.md:152
+msgid "Before:"
+msgstr ""
+
+#: ../../../upgrade-11.md:154
+msgid ""
+"{\n"
+"  keywords: \"do.it start.now begin.later end.immediately\"\n"
+"  lexemes: /[a-z.]+/\n"
+"}\n"
+msgstr ""
+
+#: ../../../upgrade-11.md:161
+msgid "After:"
+msgstr ""
+
+#: ../../../upgrade-11.md:163
+msgid ""
+"{\n"
+"  keywords: {\n"
+"    $pattern: /[a-z.]+/\n"
+"    keyword: \"do.it start.now begin.later end.immediately\",\n"
+"  }\n"
+"}\n"
+msgstr ""
+
+#: ../../../upgrade-11.md:172
+msgid ""
+"This may required converting your `keywords` key into an object if it's not "
+"already (as shown above)."
+msgstr ""
+
+#: ../../../upgrade-11.md:174
+msgid "`endSameAsBegin` mode attribute has been removed."
+msgstr ""
+
+#: ../../../upgrade-11.md:176
+msgid "Use the new `END_SAME_AS_BEGIN` mode rule/function instead."
+msgstr ""
+
+#: ../../../upgrade-11.md:178
+msgid "`useBR` configuration has been removed."
+msgstr ""
+
+#: ../../../upgrade-11.md:180
+msgid ""
+"This configuration option was deprecated in v10.1. Use a plugin or "
+"preferably simply CSS `white-space: pre`. [Ref: #2559](https://github.com/"
+"highlightjs/highlight.js/issues/2559)"
+msgstr ""
+
+#: ../../../upgrade-11.md:183
+msgid "`tabReplace` configuration has been removed."
+msgstr ""
+
+#: ../../../upgrade-11.md:185
+msgid ""
+"This configuration option was deprecated in v10.5. Use a plugin or pre-"
+"render content instead with desired spacing. [Ref: #2874](https://github.com/"
+"highlightjs/highlight.js/issues/2874)"
+msgstr ""
+
+#: ../../../upgrade-11.md:191
+msgid "Small Things"
+msgstr ""
+
+#: ../../../upgrade-11.md:193
+msgid ""
+"The `regex` utility `join` has been renamed to "
+"`_eitherRewriteBackreferences` (this has always been intended for internal "
+"use only)"
+msgstr ""
+
+#: ../../../upgrade-11.md:195
+msgid "Upgrading from Version 9.x"
+msgstr ""
+
+#: ../../../upgrade-11.md:197
+msgid ""
+"If you're upgrading all the way from version 9 it may still be helpful to "
+"review all the breaking changes in version 10 as well:"
+msgstr ""
+
+#: ../../../upgrade-11.md:199
+msgid ""
+"[VERSION_10_UPGRADE.md](https://github.com/highlightjs/highlight.js/blob/"
+"main/VERSION_10_UPGRADE.md)"
+msgstr ""
+
+#: ../../../upgrade-11.md:200
+msgid ""
+"[VERSION_10_BREAKING_CHANGES.md](https://github.com/highlightjs/highlight.js/"
+"blob/main/VERSION_10_BREAKING_CHANGES.md)"
+msgstr ""
