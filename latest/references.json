@@ -1,0 +1,47 @@
+{
+  "po" : 
+  {
+    "en_US" : 
+    {
+      "branch" : "",
+      "commit" : 
+      {
+        "date" : "",
+        "hash" : "",
+        "title" : ""
+      }
+    },
+    "zh_CN" : 
+    {
+      "branch" : "",
+      "commit" : 
+      {
+        "date" : "",
+        "hash" : "",
+        "title" : ""
+      }
+    },
+    "zh_TW" : 
+    {
+      "branch" : "",
+      "commit" : 
+      {
+        "date" : "",
+        "hash" : "",
+        "title" : ""
+      }
+    }
+  },
+  "pot" : 
+  {
+    "branch" : "main",
+    "commit" : 
+    {
+      "date" : "2025-07-06 21:00:41 -0400",
+      "hash" : "5697ae5187746c24732e62cd625f3f83004a44ce",
+      "title" : "(enh) Add 3rd party Abc Notation grammar to Supported Languages (#4291)"
+    }
+  },
+  "type" : "branch",
+  "version" : "latest"
+}

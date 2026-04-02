@@ -1,0 +1,2586 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2012–2024, Ivan Sagalaev
+# This file is distributed under the same license as the highlight.js package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: highlight.js latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-04-02 03:28+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../supported-languages.md:1
+msgid "Supported Languages"
+msgstr ""
+
+#: ../../../supported-languages.md:3
+msgid ""
+"The table below shows the full list of languages (and corresponding classes/"
+"aliases) supported by Highlight.js.  Languages that list a **Package** below "
+"are 3rd party languages and are not bundled with the core library.  You can "
+"find their repositories by following the links."
+msgstr ""
+
+#: ../../../supported-languages.md:5
+msgid ""
+"**Note:** The languages available will depend on how you've built or are "
+"included the library in your app. For example our default minified web build "
+"includes only ~40 popular languages.  See [Getting the Library][1] and "
+"[Importing the Library][2] in the README for examples of how to load "
+"additional/specific languages."
+msgstr ""
+
+#: ../../../supported-languages.md:7
+msgid "<!-- LANGLIST -->\n"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "Language"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "Aliases"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "Package"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "1C"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "1c"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "4D"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "4d"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "[highlightjs-4d](https://github.com/highlightjs/highlightjs-4d)"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "ABAP"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "sap-abap, abap"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid ""
+"[highlight-sap-abap](https://github.com/highlightjs/highlightjs-sap-abap)"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "Abc Notation"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "abc"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "[highlightjs-abc](https://github.com/nocpiun/highlightjs-abc)"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "ABNF"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "abnf"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "Access logs"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "accesslog"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "ActionScript"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "actionscript, as"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "Ada"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "ada"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "Aiken"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "aiken, ak"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "[highlightjs-aiken](https://github.com/yHSJ/highlightjs-aiken)"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "Alan"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "ln"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "[highlightjs-alan](https://github.com/alantech/highlightjs-alan)"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "Alan IF"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "alan, i"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "[highlightjs-alan](https://github.com/highlightjs/highlightjs-alan)"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "AngelScript"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "angelscript, asc"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "Apache"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "apache, apacheconf"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "Apex"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "apex"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "[highlightjs-apex](https://github.com/highlightjs/highlightjs-apex/)"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "AppleScript"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "applescript, osascript"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "Arcade"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "arcade"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "Arduino (C++ w/Arduino libs)"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "arduino, ino"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "ARM assembler"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "armasm, arm"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "AsciiDoc"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "asciidoc, adoc"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "AspectJ"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "aspectj"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "AutoHotkey"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "autohotkey"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "AutoIt"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "autoit"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "AVR assembler"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "avrasm"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "Awk"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "awk, mawk, nawk, gawk"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "Ballerina"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "ballerina, bal"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid ""
+"[highlightjs-ballerina](https://github.com/highlightjs/highlightjs-ballerina)"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "Bash"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "bash, sh, zsh"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "BASIC"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "basic"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "BBCode"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "bbcode"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "[highlightjs-bbcode](https://github.com/RedGuy12/highlightjs-bbcode)"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "Bicep"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "bicep"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid ""
+"[highlightjs-bicep](https://github.com/Azure/bicep/blob/main/docs/"
+"highlighting.md#highlightjs)"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "Blade (Laravel)"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "blade"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "[highlightjs-blade](https://github.com/miken32/highlightjs-blade)"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "BNF"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "bnf"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "BQN"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "bqn"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "[highlightjs-bqn](https://github.com/razetime/highlightjs-bqn)"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "Brainfuck"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "brainfuck, bf"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "C"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "c, h"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "C#"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "csharp, cs"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "C++"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "cpp, hpp, cc, hh, c++, h++, cxx, hxx"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "C/AL"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "cal"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "C3"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "c3"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "[highlightjs-c3](https://github.com/highlightjs/highlightjs-c3)"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "Cache Object Script"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "cos, cls"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "Candid"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "candid, did"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "[highlightjs-motoko](https://github.com/rvanasa/highlightjs-motoko)"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "Cap’n Proto"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "capnproto, capnp"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "Chaos"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "chaos, kaos"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "[highlightjs-chaos](https://github.com/chaos-lang/highlightjs-chaos)"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "Chapel"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "chapel, chpl"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "[highlightjs-chapel](https://github.com/chapel-lang/highlightjs-chapel)"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "Cisco CLI"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "cisco"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid ""
+"[highlightjs-cisco-cli](https://github.com/BMatheas/highlightjs-cisco-cli)"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "Clojure"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "clojure, clj"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "CMake"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "cmake, cmake.in"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "COBOL"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "cobol, standard-cobol"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "[highlightjs-cobol](https://github.com/otterkit/highlightjs-cobol)"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "CODEOWNERS"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "codeowners"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid ""
+"[highlightjs-codeowners](https://github.com/highlightjs/highlightjs-"
+"codeowners)"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "CoffeeScript"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "coffeescript, coffee, cson, iced"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "Coq"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "coq"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "CpcdosC+"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "cpc"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid ""
+"[highlightjs-cpcdos](https://github.com/SPinti-Software/highlightjs-cpcdos)"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "Crmsh"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "crmsh, crm, pcmk"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "Crystal"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "crystal, cr"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "CSP"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "csp"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "CSS"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "css"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "cURL"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "curl"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "[highlightjs-curl](https://github.com/highlightjs/highlightjs-curl)"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "Cypher (Neo4j)"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "cypher"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "[highlightjs-cypher](https://github.com/highlightjs/highlightjs-cypher)"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "D"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "d"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "Dafny"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "dafny"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "[highlightjs-dafny](https://github.com/ConsenSys/highlightjs-dafny)"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "Dart"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "dart"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "Delphi"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "dpr, dfm, pas, pascal"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "Diff"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "diff, patch"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "Django"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "django, jinja"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "DNS Zone file"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "dns, zone, bind"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "Dockerfile"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "dockerfile, docker"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "DOS"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "dos, bat, cmd"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "dsconfig"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "DTS (Device Tree)"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "dts"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "Dust"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "dust, dst"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "Dylan"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "dylan"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "[highlightjs-dylan](https://github.com/highlightjs/highlightjs-dylan)"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "EBNF"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "ebnf"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "Elixir"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "elixir"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "Elm"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "elm"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "Erlang"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "erlang, erl"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "Excel"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "excel, xls, xlsx"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "Extempore"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "extempore, xtlang, xtm"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "[highlightjs-xtlang](https://github.com/highlightjs/highlightjs-xtlang)"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "F#"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "fsharp, fs, fsx, fsi, fsscript"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "FIX"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "fix"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "Flix"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "flix"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "[highlightjs-flix](https://github.com/flix/highlightjs-flix)"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "Fortran"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "fortran, f90, f95"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "FunC"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "func"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "[highlightjs-func](https://github.com/highlightjs/highlightjs-func)"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "G-Code"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "gcode, nc"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "Gams"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "gams, gms"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "GAUSS"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "gauss, gss"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "GDScript"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "godot, gdscript"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid ""
+"[highlightjs-gdscript](https://github.com/highlightjs/highlightjs-gdscript)"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "Gherkin"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "gherkin"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "Gleam"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "gleam"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "[gleam-highlight.js](https://github.com/gleam-lang/gleam-highlight.js)"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "Glimmer and EmberJS"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "hbs, glimmer, html.hbs, html.handlebars, htmlbars"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid ""
+"[highlightjs-glimmer](https://github.com/NullVoxPopuli/highlightjs-glimmer)"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "GN for Ninja"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "gn, gni"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "[highlightjs-GN](https://github.com/highlightjs/highlightjs-GN)"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "Go"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "go, golang"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "Golo"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "golo, gololang"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "Gradle"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "gradle"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "Grammatical Framework"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "gf"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "[highlightjs-gf](https://github.com/johnjcamilleri/highlightjs-gf)"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "GraphQL"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "graphql, gql"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "Groovy"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "groovy"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "GSQL"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "gsql"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "[highlightjs-gsql](https://github.com/DanBarkus/highlightjs-gsql)"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "Haml"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "haml"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "Handlebars"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "handlebars, hbs, html.hbs, html.handlebars"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "Haskell"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "haskell, hs"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "Haxe"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "haxe, hx"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "High-level shader language"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "hlsl"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "[highlightjs-hlsl](https://github.com/highlightjs/highlightjs-hlsl)"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "HTML, XML"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "xml, html, xhtml, rss, atom, xjb, xsd, xsl, plist, svg"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "HTTP"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "http, https"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "Hy"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "hy, hylang"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "Inform7"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "inform7, i7"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "Ini, TOML"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "ini, toml"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "Iptables"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "iptables"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid ""
+"[highlightjs-iptables](https://github.com/highlightjs/highlightjs-iptables)"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "IRPF90"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "irpf90"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "Java"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "java, jsp"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "JavaScript"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "javascript, js, jsx"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "Jolie"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "jolie, iol, ol"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "[highlightjs-jolie](https://github.com/xiroV/highlightjs-jolie)"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "JSON"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "json, jsonc, json5"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "JSONata"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "jsonata"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "[highlightjs-jsonata](https://github.com/DevDimov/highlightjs-jsonata)"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "Julia"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "julia, jl"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "Julia REPL"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "julia-repl"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "Kotlin"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "kotlin, kt"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "L4"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "l4, legal"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "[highlightjs-l4](https://github.com/legalese/highlightjs-l4)"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "Lang"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "[highlightjs-lang](https://github.com/highlightjs/highlightjs-lang)"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "Lasso"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "lasso, ls, lassoscript"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "LaTeX"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "tex"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "LDIF"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "ldif"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "Leaf"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "leaf"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "Lean"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "lean"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid ""
+"[highlightjs-lean](https://github.com/leanprover-community/highlightjs-lean)"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "Less"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "less"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "Liquid"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "liquid"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "[highlightjs-liquid](https://github.com/highlightjs/highlightjs-liquid)"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "Lisp"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "lisp"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "LiveCode Server"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "livecodeserver"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "LiveScript"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "livescript, ls"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "LookML"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "lookml"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid ""
+"[highlightjs-lookml](https://github.com/spectacles-ci/highlightjs-lookml)"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "Lua"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "lua, pluto"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "Luau"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "luau"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "[highlightjs-luau](https://github.com/highlightjs/highlightjs-luau)"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "Macaulay2"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "macaulay2"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid ""
+"[highlightjs-macaulay2](https://github.com/d-torrance/highlightjs-macaulay2)"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "Magik"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "magik"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid ""
+"[highlightjs-magik](https://github.com/sebastiaanspeck/highlightjs-magik)"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "Makefile"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "makefile, mk, mak, make"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "Markdown"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "markdown, md, mkdown, mkd"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "Mathematica"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "mathematica, mma, wl"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "Matlab"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "matlab"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "Maxima"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "maxima"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "Maya Embedded Language"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "mel"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "Mercury"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "mercury"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "MetaPost"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "metapost"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid ""
+"[highlightjs-metapost](https://github.com/chupinmaxime/highlightjs-metapost)"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "Mint"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "mint"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "[highlightjs-mint](https://github.com/mint-lang/highlightjs-mint)"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "MIPS Assembler"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "mips, mipsasm"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "mIRC Scripting Language"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "mirc, mrc"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "[highlightjs-mirc](https://github.com/highlightjs/highlightjs-mirc)"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "Mirth"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "mirth"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "[highlightjs-mirth](https://github.com/highlightjs/highlightjs-mirth)"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "Mizar"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "mizar"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "MKB"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "mkb"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "[highlightjs-mkb](https://github.com/Dereavy/highlightjs-mkb)"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "MLIR"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "mlir"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "[highlightjs-mlir](https://github.com/highlightjs/highlightjs-mlir)"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "Mojolicious"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "mojolicious"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "Monkey"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "monkey"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "Moonscript"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "moonscript, moon"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "Motoko"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "motoko, mo"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "N1QL"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "n1ql"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "Never"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "never"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "[highlightjs-never](https://github.com/never-lang/highlightjs-never)"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "Nginx"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "nginx, nginxconf"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "Nim"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "nim, nimrod"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "Nix"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "nix"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "NSIS"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "nsis"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "Oak"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "oak"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "[highlightjs-oak](https://github.com/timlabs/highlightjs-oak)"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "Object Constraint Language"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "ocl"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "[highlightjs-ocl](https://github.com/nhomble/highlightjs-ocl)"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "Objective C"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "objectivec, mm, objc, obj-c, obj-c++, objective-c++"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "OCaml"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "ocaml, ml"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "Odin"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "odin"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid ""
+"[highlightjs-odinlang](https://github.com/marianpekar/highlightjs-odinlang)"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "OpenGL Shading Language"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "glsl"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "OpenSCAD"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "openscad, scad"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "Oracle Rules Language"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "ruleslanguage"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "Oxygene"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "oxygene"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "Papyrus"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "papyrus, psc"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid ""
+"[highlightjs-papyrus](https://github.com/Pickysaurus/highlightjs-papyrus)"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "Parser3"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "parser3"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "Perl"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "perl, pl, pm"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "PF"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "pf, pf.conf"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "Phix"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "phix"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "[highlightjs-phix](https://github.com/highlightjs/highlightjs-phix)"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "PHP"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "php"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "Pine Script"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "pine, pinescript"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "[highlightjs-pine](https://github.com/jeyllani/highlightjs-pine)"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "Plaintext"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "plaintext, txt, text"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "Pony"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "pony"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "PostgreSQL & PL/pgSQL"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "pgsql, postgres, postgresql"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "PowerOn"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "poweron, po"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "[highlightjs-poweron](https://github.com/libum-llc/highlightjs-poweron)"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "PowerShell"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "powershell, ps, ps1"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "Prisma"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "prisma"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid ""
+"[highlightjs-prisma](https://github.com/witch-factory/highlightjs-prisma)"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "Processing"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "processing"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "Prolog"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "prolog"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "Properties"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "properties"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "Protocol Buffers"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "proto, protobuf"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "Puppet"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "puppet, pp"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "Python"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "python, py, gyp"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "Python profiler results"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "profile"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "Python REPL"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "python-repl, pycon"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "Q"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "k, kdb"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "Q#"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "qsharp"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "[highlightjs-qsharp](https://github.com/fedonman/highlightjs-qsharp)"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "QML"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "qml"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "R"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "r"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "Raku"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "raku, perl6, p6, pm6, rakumod"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "[highlightjs-raku](https://github.com/highlightjs/highlightjs-raku)"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "RakuDoc"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "pod6, rakudoc"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "RakuQuoting"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "rakuquoting"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "RakuRegexe"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "rakuregexe"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "Razor CSHTML"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "cshtml, razor, razor-cshtml"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid ""
+"[highlightjs-cshtml-razor](https://github.com/highlightjs/highlightjs-cshtml-"
+"razor)"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "ReasonML"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "reasonml, re"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "Rebol & Red"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "redbol, rebol, red, red-system"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "[highlightjs-redbol](https://github.com/oldes/highlightjs-redbol)"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "RenderMan RIB"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "rib"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "RenderMan RSL"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "rsl"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "ReScript"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "rescript, res"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "[highlightjs-rescript](https://github.com/tsnobip/highlightjs-rescript)"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "RISC-V Assembly"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "riscv, riscvasm"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid ""
+"[highlightjs-riscvasm](https://github.com/highlightjs/highlightjs-riscvasm)"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "RiScript"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "risc, riscript"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid ""
+"[highlightjs-riscript](https://github.com/highlightjs/highlightjs-riscript)"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "Roboconf"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "graph, instances"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "Robot Framework"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "robot, rf"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "[highlightjs-robot](https://github.com/highlightjs/highlightjs-robot)"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "RPM spec files"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "rpm-specfile, rpm, spec, rpm-spec, specfile"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid ""
+"[highlightjs-rpm-specfile](https://github.com/highlightjs/highlightjs-rpm-"
+"specfile)"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "Ruby"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "ruby, rb, gemspec, podspec, thor, irb"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "Rust"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "rust, rs"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "RVT Script"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "rvt, rvt-script"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid ""
+"[highlightjs-rvt-script](https://github.com/Sopitive/highlightjs-rvt-script)"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "SAS"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "SAS, sas"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "Scala"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "scala"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "Scheme"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "scheme"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "Scilab"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "scilab, sci"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "SCSS"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "scss"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "SFZ"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "sfz"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "[highlightjs-sfz](https://github.com/sfz/highlight.js)"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "Shape Expressions"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "shexc"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "[highlightjs-shexc](https://github.com/highlightjs/highlightjs-shexc)"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "Shell"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "shell, console"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "Smali"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "smali"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "Smalltalk"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "smalltalk, st"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "SML"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "sml, ml"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "Solidity"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "solidity, sol"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid ""
+"[highlightjs-solidity](https://github.com/highlightjs/highlightjs-solidity)"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "Splunk SPL"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "spl"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "[highlightjs-spl](https://github.com/swsoyee/highlightjs-spl)"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "SQL"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "sql"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "Stan"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "stan, stanfuncs"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "Stata"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "stata"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "STEP Part 21"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "p21, step, stp"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "Structured Text"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "iecst, scl, stl, structured-text"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid ""
+"[highlightjs-structured-text](https://github.com/highlightjs/highlightjs-"
+"structured-text)"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "Stylus"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "stylus, styl"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "SubUnit"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "subunit"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "Supercollider"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "supercollider, sc"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid ""
+"[highlightjs-supercollider](https://github.com/highlightjs/highlightjs-"
+"supercollider)"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "Svelte"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "svelte"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "[highlight.svelte](https://github.com/moonlitgrace/highlight.svelte)"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "Swift"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "swift"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "Tcl"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "tcl, tk"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "Terraform (HCL)"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "terraform, tf, hcl"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid ""
+"[highlightjs-terraform](https://github.com/highlightjs/highlightjs-terraform)"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "Test Anything Protocol"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "tap"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "Thrift"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "thrift"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "Toit"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "toit"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "[toit-highlight](https://github.com/snxx-lppxx/toit-highlight)"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "TP"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "tp"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "Transact-SQL"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "tsql"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "[highlightjs-tsql](https://github.com/highlightjs/highlightjs-tsql)"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "TTCN-3"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "ttcn, ttcnpp, ttcn3"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "[highlightjs-ttcn3](https://gitea.osmocom.org/ttcn3/highlightjs-ttcn3)"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "Twig"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "twig, craftcms"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "TypeScript"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "typescript, ts, tsx, mts, cts"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "Unicorn Rails log"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "unicorn-rails-log"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid ""
+"[highlightjs-unicorn-rails-log](https://github.com/sweetppro/highlightjs-"
+"unicorn-rails-log)"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "Unison"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "unison, u"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "[highlightjs-unison](https://github.com/highlightjs/highlightjs-unison)"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "Vala"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "vala"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "VB.Net"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "vbnet, vb"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "VBA"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "vba"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "[highlightjs-vba](https://github.com/dullin/highlightjs-vba)"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "VBScript"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "vbscript, vbs"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "Verilog"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "verilog, v"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "VHDL"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "vhdl"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "Vim Script"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "vim"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "VoltScript"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "voltscript, vss, lotusscript, lss"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid ""
+"[highlightjs-voltscript](https://github.com/HCL-TECH-SOFTWARE/highlightjs-"
+"voltscript)"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "WGSL"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "wgsl"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "[highlightjs-wgsl](https://github.com/highlightjs/highlightjs-wgsl)"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "X#"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "xsharp, xs, prg"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "[highlightjs-xsharp](https://github.com/InfomindsAg/highlightjs-xsharp)"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "X++"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "axapta, x++"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "x86 Assembly"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "x86asm"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "x86 Assembly (AT&T)"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "x86asmatt"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid ""
+"[highlightjs-x86asmatt](https://github.com/gondow/highlightjs-x86asmatt)"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "XL"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "xl, tao"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "XQuery"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "xquery, xpath, xq, xqm"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "YAML"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "yml, yaml"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "ZenScript"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "zenscript, zs"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid ""
+"[highlightjs-zenscript](https://github.com/highlightjs/highlightjs-zenscript)"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "Zephir"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "zephir, zep"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "Zig"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "zig"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "[highlightjs-zig](https://github.com/fwx5618177/highlightjs-zig)"
+msgstr ""
+
+#: ../../../supported-languages.md:274
+msgid "<!-- LANGLIST_END -->\n"
+msgstr ""
+
+#: ../../../supported-languages.md:276
+msgid "<!-- document it until we can fix it -->\n"
+msgstr ""
+
+#: ../../../supported-languages.md:277
+msgid "Alias Overlap"
+msgstr ""
+
+#: ../../../supported-languages.md:279
+msgid ""
+"If you are using either of these languages at the same time please be sure "
+"to use the full name and not the alias to avoid any ambiguity."
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "Overlap"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "ls"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "ml"
+msgstr ""
