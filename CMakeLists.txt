@@ -2,7 +2,7 @@
 # See accompanying file LICENSE-BSD for details.
 
 cmake_minimum_required(VERSION 3.25)
-project(hightlightjs-docs-l10n NONE)
+project(highlightjs-docs-l10n NONE)
 
 #[============================================================[
 # Environment Variables.
@@ -100,7 +100,7 @@ set(GETTEXT_WRAP_WIDTH 79
 set(BRANCH_OF_WORKTREE "l10n"
     CACHE STRING "The branch of the 'l10n' git worktree.")
 
-set(REMOTE_URL_OF_L10N "https://github.com/localizethedocs/hightlightjs-docs-l10n.git"
+set(REMOTE_URL_OF_L10N "https://github.com/localizethedocs/highlightjs-docs-l10n.git"
     CACHE STRING "The remote URL of the 'l10n' repository.")
 
 set(REMOTE_URL_OF_DOCS "https://github.com/highlightjs/highlight.js.git"
