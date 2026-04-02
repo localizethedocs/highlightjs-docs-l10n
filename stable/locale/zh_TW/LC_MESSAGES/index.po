@@ -23,31 +23,31 @@ msgstr ""
 
 #: ../../../index.rst:9
 msgid "Upgrading to Version 11"
-msgstr ""
+msgstr "升級至版本 11"
 
 #: ../../../index.rst:9
 msgid "Getting Started"
-msgstr ""
+msgstr "開始使用"
 
 #: ../../../index.rst:18
 msgid "Reference"
-msgstr ""
+msgstr "參考"
 
 #: ../../../index.rst:32
 msgid "Which languages are supported?"
-msgstr ""
+msgstr "支援哪些語言？"
 
 #: ../../../index.rst:32
 msgid "Why no line numbers?"
-msgstr ""
+msgstr "為什麼沒有行號？"
 
 #: ../../../index.rst:32
 msgid "How to request a new language?"
-msgstr ""
+msgstr "如何請求新語言？"
 
 #: ../../../index.rst:32
 msgid "How to contribute a new language?"
-msgstr ""
+msgstr "如何貢獻新語言？"
 
 #: ../../../index.rst:32
 msgid "FAQ"
@@ -55,34 +55,36 @@ msgstr ""
 
 #: ../../../index.rst:7
 msgid "Highlight.js Documentation"
-msgstr ""
+msgstr "Highlight.js 文件"
 
 #: ../../../index.rst:44
 msgid "Links"
-msgstr ""
+msgstr "連結"
 
 #: ../../../index.rst:48
 msgid "`Source <https://github.com/highlightjs/highlight.js>`_"
-msgstr ""
+msgstr "`來源碼 <https://github.com/highlightjs/highlight.js>`_"
 
 #: ../../../index.rst:49
 msgid "`Issues <https://github.com/highlightjs/highlight.js/issues>`_"
-msgstr ""
+msgstr "`議題 <https://github.com/highlightjs/highlight.js/issues>`_"
 
 #: ../../../index.rst:50
 msgid "`Discord <https://discord.gg/M24EbU7ja9>`_"
-msgstr ""
+msgstr "`Discord <https://discord.gg/M24EbU7ja9>`_"
 
 #: ../../../index.rst:51
 msgid "`Website <https://highlightjs.org>`_"
-msgstr ""
+msgstr "`網站 <https://highlightjs.org>`_"
 
 #: ../../../index.rst:52
 msgid "`highlight.js npm <https://www.npmjs.com/package/highlight.js>`_"
-msgstr ""
+msgstr "`highlight.js npm <https://www.npmjs.com/package/highlight.js>`_"
 
 #: ../../../index.rst:53
 msgid ""
 "`@highlightjs/cdn-assets npm <https://www.npmjs.com/package/@highlightjs/cdn-"
 "assets>`_"
 msgstr ""
+"`@highlightjs/cdn-assets npm <https://www.npmjs.com/package/@highlightjs/cdn-"
+"assets>`_"

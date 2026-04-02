@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../../building-testing.rst:2
 msgid "Building and Testing"
-msgstr ""
+msgstr "建置與測試"
 
 #: ../../../building-testing.rst:4
 msgid ""
@@ -56,7 +56,7 @@ msgstr ""
 
 #: ../../../building-testing.rst:27
 msgid "Building"
-msgstr ""
+msgstr "建置"
 
 #: ../../../building-testing.rst:29
 msgid ""
@@ -236,7 +236,7 @@ msgstr ""
 
 #: ../../../building-testing.rst:142
 msgid "docker run -d --name highlight-js --rm highlight-js"
-msgstr ""
+msgstr "docker run -d --name highlight-js --rm highlight-js"
 
 #: ../../../building-testing.rst:145
 msgid "Whatever you choose, you can use docker ps to ensure that it's running."
@@ -250,6 +250,11 @@ msgid ""
 "0e15a7c99adf        highlight-js        \"docker-entrypoint.s…\"   8 seconds "
 "ago       Up 7 seconds        0.0.0.0:80->80/tcp   highlight-js"
 msgstr ""
+"$ docker ps\n"
+"CONTAINER ID        IMAGE               COMMAND                  "
+"CREATED             STATUS              PORTS                NAMES\n"
+"0e15a7c99adf        highlight-js        \"docker-entrypoint.s…\"   8 seconds "
+"ago       Up 7 seconds        0.0.0.0:80->80/tcp   highlight-js"
 
 #: ../../../building-testing.rst:154
 msgid ""

@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../../line-numbers.rst:2
 msgid "Line numbers"
-msgstr ""
+msgstr "行號"
 
 #: ../../../line-numbers.rst:4
 msgid ""

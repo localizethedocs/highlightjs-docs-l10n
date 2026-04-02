@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../../supported-languages.md:1
 msgid "Supported Languages"
-msgstr ""
+msgstr "支援的語言"
 
 #: ../../../supported-languages.md:3
 msgid ""
@@ -44,39 +44,39 @@ msgstr ""
 
 #: ../../../supported-languages.md:0
 msgid "Language"
-msgstr ""
+msgstr "語言"
 
 #: ../../../supported-languages.md:0
 msgid "Aliases"
-msgstr ""
+msgstr "別名"
 
 #: ../../../supported-languages.md:0
 msgid "Package"
-msgstr ""
+msgstr "軟體包"
 
 #: ../../../supported-languages.md:0
 msgid "1C"
-msgstr ""
+msgstr "1C"
 
 #: ../../../supported-languages.md:0
 msgid "1c"
-msgstr ""
+msgstr "1c"
 
 #: ../../../supported-languages.md:0
 msgid "4D"
-msgstr ""
+msgstr "4D"
 
 #: ../../../supported-languages.md:0
 msgid "4d"
-msgstr ""
+msgstr "4d"
 
 #: ../../../supported-languages.md:0
 msgid "[highlightjs-4d](https://github.com/highlightjs/highlightjs-4d)"
-msgstr ""
+msgstr "[highlightjs-4d](https://github.com/highlightjs/highlightjs-4d)"
 
 #: ../../../supported-languages.md:0
 msgid "ABAP"
-msgstr ""
+msgstr "ABAP"
 
 #: ../../../supported-languages.md:0
 msgid "sap-abap, abap"
@@ -86,6 +86,7 @@ msgstr ""
 msgid ""
 "[highlight-sap-abap](https://github.com/highlightjs/highlightjs-sap-abap)"
 msgstr ""
+"[highlight-sap-abap](https://github.com/highlightjs/highlightjs-sap-abap)"
 
 #: ../../../supported-languages.md:0
 msgid "ABNF"
