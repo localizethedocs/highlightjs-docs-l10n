@@ -1,0 +1,232 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2012–2024, Ivan Sagalaev
+# This file is distributed under the same license as the highlight.js package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: highlight.js latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-04-02 03:28+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../plugin-api.rst:4
+msgid "Plugin API"
+msgstr ""
+
+#: ../../../plugin-api.rst:6
+msgid ""
+"Highlight.js supports plugins.  You add plugins via the ``addPlugin`` API."
+msgstr ""
+
+#: ../../../plugin-api.rst:10
+msgid ""
+"// a plugin can be a class\n"
+"addPlugin(new SimplePlugin());\n"
+"addPlugin(new MoreComplexPlugin(options));\n"
+"\n"
+"// or simply a keyed object of functions\n"
+"addPlugin({\n"
+"  'after:highlightElement': ({ el, result, text }) => {\n"
+"    // ...\n"
+"  }\n"
+"});"
+msgstr ""
+
+#: ../../../plugin-api.rst:22
+msgid "Types of plugins"
+msgstr ""
+
+#: ../../../plugin-api.rst:25
+msgid "Class based plugins"
+msgstr ""
+
+#: ../../../plugin-api.rst:27
+msgid ""
+"This approach is useful for more complex plugins that need to deal with "
+"configuration options or managing state.  Highlight.js will instantiate a "
+"single instance of your class and execute it's callbacks as necessary."
+msgstr ""
+
+#: ../../../plugin-api.rst:34
+msgid ""
+"class DataLanguagePlugin {\n"
+"  constructor(options) {\n"
+"    self.prefix = options.dataPrefix;\n"
+"  }\n"
+"\n"
+"  'after:highlightElement'({ el, result, text }) {\n"
+"    // ...\n"
+"  }\n"
+"}\n"
+"\n"
+"hljs.addPlugin(new DataLanguagePlugin({ dataPrefix: 'hljs' }));"
+msgstr ""
+
+#: ../../../plugin-api.rst:47
+msgid "Function Based Plugins"
+msgstr ""
+
+#: ../../../plugin-api.rst:49
+msgid "This approach is best for simpler plugins."
+msgstr ""
+
+#: ../../../plugin-api.rst:53
+msgid ""
+"hljs.addPlugin({\n"
+"  'after:highlightElement': ({ el, result }) => {\n"
+"    // move the language from the result into the dataset\n"
+"    el.dataset.language = result.language;\n"
+"  }\n"
+"});"
+msgstr ""
+
+#: ../../../plugin-api.rst:62
+msgid "before:highlight"
+msgstr ""
+
+#: ../../../plugin-api.rst:64
+msgid "``before:highlight({code, language})``"
+msgstr ""
+
+#: ../../../plugin-api.rst:66
+msgid "This callback function is passed a context object with two keys:"
+msgstr ""
+
+#: ../../../plugin-api.rst:68
+msgid "code"
+msgstr ""
+
+#: ../../../plugin-api.rst:69
+msgid "The code to be highlighted."
+msgstr ""
+
+#: ../../../plugin-api.rst:71 ../../../plugin-api.rst:135
+msgid "language"
+msgstr ""
+
+#: ../../../plugin-api.rst:72
+msgid "The language grammar that should be used for highlighting."
+msgstr ""
+
+#: ../../../plugin-api.rst:74
+msgid ""
+"Your plugin may modify either value and those new values will be used as "
+"input to the highlighting engine.  If you add a ``result`` key to the object "
+"that result will be returned as the overall result and the internal "
+"highlighting code will never even be called."
+msgstr ""
+
+#: ../../../plugin-api.rst:79
+msgid ""
+"If you're plugin plans to make its own recursive calls to ``highlight`` "
+"you'll need to manually handle this. Each time ``highlight`` is called your "
+"plugin callbacks will also be called - making it easy to get into an "
+"infinite loop. You'll likely need to use a class based plugin and add a "
+"guard so that your plugin code is only triggered on the initial call to "
+"``highlight`` and not on any internal calls your plugin itself is making."
+msgstr ""
+
+#: ../../../plugin-api.rst:86 ../../../plugin-api.rst:100
+msgid ""
+"Note: This callback does not fire from highlighting resulting from auto-"
+"language detection."
+msgstr ""
+
+#: ../../../plugin-api.rst:88 ../../../plugin-api.rst:102
+#: ../../../plugin-api.rst:122 ../../../plugin-api.rst:138
+msgid "It returns nothing."
+msgstr ""
+
+#: ../../../plugin-api.rst:92
+msgid "after:highlight"
+msgstr ""
+
+#: ../../../plugin-api.rst:94
+msgid "``after:highlight(result)``"
+msgstr ""
+
+#: ../../../plugin-api.rst:96
+msgid ""
+"This callback function is passed the ``result`` object after highlighting is "
+"complete. Your plugin may make any changes it desires to the result object "
+"and that will be the final return value of the initial call to ``highlight``."
+msgstr ""
+
+#: ../../../plugin-api.rst:107
+msgid "after:highlightElement"
+msgstr ""
+
+#: ../../../plugin-api.rst:109
+msgid "``after:highlightElement({el, result, text})``"
+msgstr ""
+
+#: ../../../plugin-api.rst:111 ../../../plugin-api.rst:130
+msgid "This callback function is passed an object with two keys:"
+msgstr ""
+
+#: ../../../plugin-api.rst:113 ../../../plugin-api.rst:132
+msgid "el"
+msgstr ""
+
+#: ../../../plugin-api.rst:114
+msgid "The HTML element that's been highlighted."
+msgstr ""
+
+#: ../../../plugin-api.rst:116
+msgid "result"
+msgstr ""
+
+#: ../../../plugin-api.rst:117
+msgid "The result object returned by `highlight` or `highlightAuto`."
+msgstr ""
+
+#: ../../../plugin-api.rst:119
+msgid "text"
+msgstr ""
+
+#: ../../../plugin-api.rst:120
+msgid "The raw text that was to be highlighted."
+msgstr ""
+
+#: ../../../plugin-api.rst:126
+msgid "before:highlightElement"
+msgstr ""
+
+#: ../../../plugin-api.rst:128
+msgid "``before:highlightElement({el, language})``"
+msgstr ""
+
+#: ../../../plugin-api.rst:133
+msgid "The HTML element that will be highlighted."
+msgstr ""
+
+#: ../../../plugin-api.rst:136
+msgid "The language determined from the class attribute (or undefined)."
+msgstr ""
+
+#: ../../../plugin-api.rst:141
+msgid "Deprecated"
+msgstr ""
+
+#: ../../../plugin-api.rst:144
+msgid "after:highlightBlock"
+msgstr ""
+
+#: ../../../plugin-api.rst:146
+msgid "Please use ``after:highlightElement``."
+msgstr ""
+
+#: ../../../plugin-api.rst:149
+msgid "before:highlightBlock"
+msgstr ""
+
+#: ../../../plugin-api.rst:151
+msgid "Please use ``before:highlightElement``."
+msgstr ""
