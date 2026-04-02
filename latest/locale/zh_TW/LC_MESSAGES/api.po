@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../../api.rst:2
 msgid "Core API"
-msgstr ""
+msgstr "核心 API"
 
 #: ../../../api.rst:4
 msgid "Highlight.js exports a few functions as methods of the ``hljs`` object."

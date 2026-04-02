@@ -19,11 +19,11 @@ msgstr ""
 
 #: ../../../mode-reference.rst:4
 msgid "Mode Reference"
-msgstr ""
+msgstr "模式參考"
 
 #: ../../../mode-reference.rst:6
 msgid "**Data Types**"
-msgstr ""
+msgstr "**資料型別**"
 
 #: ../../../mode-reference.rst:8
 msgid "Types of attributes values in this reference:"
@@ -64,7 +64,7 @@ msgstr ""
 
 #: ../../../mode-reference.rst:19
 msgid "JavaScript boolean: ``true`` or ``false``"
-msgstr ""
+msgstr "JavaScript 布林值：``true`` 或 ``false``"
 
 #: ../../../mode-reference.rst:21
 msgid "string"
@@ -72,7 +72,7 @@ msgstr ""
 
 #: ../../../mode-reference.rst:21
 msgid "JavaScript string"
-msgstr ""
+msgstr "JavaScript 字串"
 
 #: ../../../mode-reference.rst:23
 msgid "number"
@@ -88,7 +88,7 @@ msgstr ""
 
 #: ../../../mode-reference.rst:25
 msgid "JavaScript object: ``{ ... }``"
-msgstr ""
+msgstr "JavaScript 物件：``{ ... }``"
 
 #: ../../../mode-reference.rst:27
 msgid "array"
@@ -96,7 +96,7 @@ msgstr ""
 
 #: ../../../mode-reference.rst:27
 msgid "JavaScript array: ``[ ... ]``"
-msgstr ""
+msgstr "JavaScript 陣列：``[ ... ]``"
 
 #: ../../../mode-reference.rst:32
 msgid "Language Attributes"
@@ -253,15 +253,15 @@ msgstr ""
 
 #: ../../../mode-reference.rst:123
 msgid "``addText(text)``"
-msgstr ""
+msgstr "``addText(text)``"
 
 #: ../../../mode-reference.rst:124
 msgid "``startScope(name)``"
-msgstr ""
+msgstr "``startScope(name)``"
 
 #: ../../../mode-reference.rst:125
 msgid "``endScope()``"
-msgstr ""
+msgstr "``endScope()``"
 
 #: ../../../mode-reference.rst:127
 msgid "Given:"
@@ -379,7 +379,7 @@ msgstr ""
 
 #: ../../../mode-reference.rst:211
 msgid "Use ``scope`` instead."
-msgstr ""
+msgstr "請改用 ``scope``。"
 
 #: ../../../mode-reference.rst:219 ../../../mode-reference.rst:253
 #: ../../../mode-reference.rst:299
@@ -406,6 +406,10 @@ msgid ""
 "  begin: /[a-z]+\\(/\n"
 "}"
 msgstr ""
+"{\n"
+"  scope: \"title.function.call\",\n"
+"  begin: /[a-z]+\\(/\n"
+"}"
 
 #: ../../../mode-reference.rst:234
 msgid ""
@@ -451,6 +455,10 @@ msgid ""
 "  beginScope: \"keyword\"\n"
 "}"
 msgstr ""
+"{\n"
+"  begin: /def/,\n"
+"  beginScope: \"keyword\"\n"
+"}"
 
 #: ../../../mode-reference.rst:265
 msgid ""
@@ -472,6 +480,17 @@ msgid ""
 "},\n"
 "}"
 msgstr ""
+"{\n"
+"begin: [\n"
+"  /function!/,\n"
+"  /\\s+/,\n"
+"  hljs.IDENT_RE\n"
+"],\n"
+"beginScope: {\n"
+"  1: \"keyword\",\n"
+"  3: \"title\"\n"
+"},\n"
+"}"
 
 #: ../../../mode-reference.rst:282
 msgid ""
@@ -516,6 +535,11 @@ msgid ""
 "  endScope: \"built_in\"\n"
 "}"
 msgstr ""
+"{\n"
+"  begin: /FIRST/,\n"
+"  end: /LAST/,\n"
+"  endScope: \"built_in\"\n"
+"}"
 
 #: ../../../mode-reference.rst:315
 msgid "match"
@@ -535,6 +559,10 @@ msgid ""
 "  match: /Fish/\n"
 "}"
 msgstr ""
+"{\n"
+"  scope: \"title\",\n"
+"  match: /Fish/\n"
+"}"
 
 #: ../../../mode-reference.rst:332
 msgid "This is equivalent to:"
@@ -547,6 +575,10 @@ msgid ""
 "  begin: /Fish/\n"
 "}"
 msgstr ""
+"{\n"
+"  scope: \"title\",\n"
+"  begin: /Fish/\n"
+"}"
 
 #: ../../../mode-reference.rst:343
 msgid "on:begin"

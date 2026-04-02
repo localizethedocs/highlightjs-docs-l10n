@@ -19,11 +19,11 @@ msgstr ""
 
 #: ../../../language-guide.rst:4
 msgid "Language Definition Guide"
-msgstr ""
+msgstr "語言定義指南"
 
 #: ../../../language-guide.rst:7
 msgid "Highlighting overview"
-msgstr ""
+msgstr "Highlighting 概覽"
 
 #: ../../../language-guide.rst:9
 msgid ""
@@ -209,6 +209,14 @@ msgid ""
 "  ]\n"
 "}"
 msgstr ""
+"{\n"
+"  keywords: '...',\n"
+"  contains: [\n"
+"    hljs.QUOTE_STRING_MODE,\n"
+"    hljs.C_LINE_COMMENT,\n"
+"    { ... custom mode definition ... }\n"
+"  ]\n"
+"}"
 
 #: ../../../language-guide.rst:132
 msgid ""
@@ -224,6 +232,11 @@ msgid ""
 "  contains: [hljs.QUOTE_STRING_MODE, 'self']\n"
 "}"
 msgstr ""
+"{\n"
+"  scope: 'object',\n"
+"  begin: /\\{/, end: /\\}/,\n"
+"  contains: [hljs.QUOTE_STRING_MODE, 'self']\n"
+"}"
 
 #: ../../../language-guide.rst:143
 msgid ""
@@ -233,7 +246,7 @@ msgstr ""
 
 #: ../../../language-guide.rst:147
 msgid "Comments"
-msgstr ""
+msgstr "註釋"
 
 #: ../../../language-guide.rst:149
 msgid ""
@@ -282,6 +295,18 @@ msgid ""
 "  ]\n"
 "}"
 msgstr ""
+"{\n"
+"  contains: [\n"
+"    {\n"
+"      scope: 'string',\n"
+"      // ... other attributes\n"
+"    },\n"
+"    {\n"
+"      scope: 'number',\n"
+"      // ...\n"
+"    }\n"
+"  ]\n"
+"}"
 
 #: ../../../language-guide.rst:183
 msgid ""
@@ -305,6 +330,11 @@ msgid ""
 "  contains: [{begin: '\\\\\\\\.'}],\n"
 "}"
 msgstr ""
+"{\n"
+"  scope: 'string',\n"
+"  begin: '\"', end: '\"',\n"
+"  contains: [{begin: '\\\\\\\\.'}],\n"
+"}"
 
 #: ../../../language-guide.rst:197
 msgid ""
@@ -357,6 +387,11 @@ msgid ""
 "  relevance: 10\n"
 "}"
 msgstr ""
+"{\n"
+"  scope: 'string',\n"
+"  begin: 'r\"', end: '\"',\n"
+"  relevance: 10\n"
+"}"
 
 #: ../../../language-guide.rst:231
 msgid ""

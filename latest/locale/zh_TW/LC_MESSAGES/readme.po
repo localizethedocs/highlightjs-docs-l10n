@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../../readme.md:1
 msgid "Highlight.js"
-msgstr ""
+msgstr "Highlight.js"
 
 #: ../../../readme.md:3
 msgid ""
@@ -394,7 +394,7 @@ msgstr ""
 
 #: ../../../readme.md:136
 msgid "Supported Languages"
-msgstr ""
+msgstr "支援的語言"
 
 #: ../../../readme.md:138
 msgid ""
