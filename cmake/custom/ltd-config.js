@@ -12,9 +12,9 @@ var CONFIG_OPTIONS = {
   ],
   CONFIG_PROJECTS: [
     ["Index",   "https://projects.localizethedocs.org"],
-    ["Crowdin", "https://localizethedocs.crowdin.com/hightlightjs-docs-l10n"],
-    ["GitHub",  "https://github.com/localizethedocs/hightlightjs-docs-l10n"],
-    ["AtomGit", "https://atomgit.com/localizethedocs/hightlightjs-docs-l10n"],
-    ["GitFlic", "https://gitflic.ru/project/localizethedocs/hightlightjs-docs-l10n"],
+    ["Crowdin", "https://localizethedocs.crowdin.com/highlightjs-docs-l10n"],
+    ["GitHub",  "https://github.com/localizethedocs/highlightjs-docs-l10n"],
+    ["AtomGit", "https://atomgit.com/localizethedocs/highlightjs-docs-l10n"],
+    ["GitFlic", "https://gitflic.ru/project/localizethedocs/highlightjs-docs-l10n"],
   ]
 };
