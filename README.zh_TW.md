@@ -1,5 +1,5 @@
 <div align="center">
-<h1 id="localization-of-the-highlightjs-documentation">Localization of The Highlight.js Documentation</h1>
+<h1 id="localization-of-the-highlightjs-documentation">Highlight.js 文件的在地化</h1>
 </div>
 
 <details><summary><strong>切換語言</strong></summary>
