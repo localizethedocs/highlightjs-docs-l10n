@@ -1,0 +1,1233 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-TW" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>支援的語言 &mdash; highlight.js 11.11.1 說明文件</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=9edc463e" />
+
+  
+    <link rel="canonical" href="https://projects.localizethedocs.org/highlightjs-docs-l10n/supported-languages.html" />
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=c6dbf7b7"></script>
+      <script src="_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="_static/translations.js?v=cbf116e0"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="搜尋" href="search.html" />
+    <link rel="next" title="行號" href="line-numbers.html" />
+    <link rel="prev" title="Plugin Recipes" href="plugin-recipes.html" />
+ 
+<script type="text/javascript" src="ltd-provenance.js"></script>
+<script type="text/javascript" src="ltd-current.js"></script>
+<script type="text/javascript" src="../../ltd-config.js"></script>
+<script type="text/javascript" src="../../ltd-flyout.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            highlight.js
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">開始使用</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="readme.html">README / How to Use</a></li>
+<li class="toctree-l1"><a class="reference internal" href="building-testing.html">建置與測試</a></li>
+<li class="toctree-l1"><a class="reference internal" href="upgrade-11.html">升級至版本 11</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">參考</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="api.html">核心 API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="plugin-api.html">Plugin API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="language-guide.html">語言定義指南</a></li>
+<li class="toctree-l1"><a class="reference internal" href="theme-guide.html">Theme Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mode-reference.html">模式參考</a></li>
+<li class="toctree-l1"><a class="reference internal" href="css-classes-reference.html">Scope Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="plugin-recipes.html">Plugin Recipes</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">FAQ</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">支援哪些語言？</a></li>
+<li class="toctree-l1"><a class="reference internal" href="line-numbers.html">為什麼沒有行號？</a></li>
+<li class="toctree-l1"><a class="reference internal" href="language-requests.html">如何請求新語言？</a></li>
+<li class="toctree-l1"><a class="reference internal" href="language-contribution.html">如何貢獻新語言？</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">highlight.js</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">支援的語言</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/supported-languages.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="supported-languages">
+<h1>支援的語言<a class="headerlink" href="#supported-languages" title="連結到這個標頭"></a></h1>
+<p>The table below shows the full list of languages (and corresponding classes/aliases) supported by Highlight.js.  Languages that list a <strong>Package</strong> below are 3rd party languages and are not bundled with the core library.  You can find their repositories by following the links.</p>
+<p><strong>Note:</strong> The languages available will depend on how you've built or are included the library in your app. For example our default minified web build includes only ~40 popular languages.  See <a class="reference external" href="https://github.com/highlightjs/highlight.js#getting-the-library">Getting the Library</a> and <a class="reference external" href="https://github.com/highlightjs/highlight.js#importing-the-library">Importing the Library</a> in the README for examples of how to load additional/specific languages.</p>
+<!-- LANGLIST -->
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head text-left"><p>語言</p></th>
+<th class="head text-left"><p>別名</p></th>
+<th class="head text-left"><p>軟體包</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p>1C</p></td>
+<td class="text-left"><p>1c</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>4D</p></td>
+<td class="text-left"><p>4d</p></td>
+<td class="text-left"><p><a class="reference external" href="https://github.com/highlightjs/highlightjs-4d">highlightjs-4d</a></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>ABAP</p></td>
+<td class="text-left"><p>sap-abap, abap</p></td>
+<td class="text-left"><p><a class="reference external" href="https://github.com/highlightjs/highlightjs-sap-abap">highlight-sap-abap</a></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Abc Notation</p></td>
+<td class="text-left"><p>abc</p></td>
+<td class="text-left"><p><a class="reference external" href="https://github.com/nocpiun/highlightjs-abc">highlightjs-abc</a></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>ABNF</p></td>
+<td class="text-left"><p>abnf</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Access logs</p></td>
+<td class="text-left"><p>accesslog</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>ActionScript</p></td>
+<td class="text-left"><p>actionscript, as</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Ada</p></td>
+<td class="text-left"><p>ada</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>Aiken</p></td>
+<td class="text-left"><p>aiken, ak</p></td>
+<td class="text-left"><p><a class="reference external" href="https://github.com/yHSJ/highlightjs-aiken">highlightjs-aiken</a></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Alan</p></td>
+<td class="text-left"><p>ln</p></td>
+<td class="text-left"><p><a class="reference external" href="https://github.com/alantech/highlightjs-alan">highlightjs-alan</a></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>Alan IF</p></td>
+<td class="text-left"><p>alan, i</p></td>
+<td class="text-left"><p><a class="reference external" href="https://github.com/highlightjs/highlightjs-alan">highlightjs-alan</a></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>AngelScript</p></td>
+<td class="text-left"><p>angelscript, asc</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>Apache</p></td>
+<td class="text-left"><p>apache, apacheconf</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Apex</p></td>
+<td class="text-left"><p>apex</p></td>
+<td class="text-left"><p><a class="reference external" href="https://github.com/highlightjs/highlightjs-apex/">highlightjs-apex</a></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>AppleScript</p></td>
+<td class="text-left"><p>applescript, osascript</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Arcade</p></td>
+<td class="text-left"><p>arcade</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>Arduino (C++ w/Arduino libs)</p></td>
+<td class="text-left"><p>arduino, ino</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>ARM assembler</p></td>
+<td class="text-left"><p>armasm, arm</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>AsciiDoc</p></td>
+<td class="text-left"><p>asciidoc, adoc</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>AspectJ</p></td>
+<td class="text-left"><p>aspectj</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>AutoHotkey</p></td>
+<td class="text-left"><p>autohotkey</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>AutoIt</p></td>
+<td class="text-left"><p>autoit</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>AVR assembler</p></td>
+<td class="text-left"><p>avrasm</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Awk</p></td>
+<td class="text-left"><p>awk, mawk, nawk, gawk</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>Ballerina</p></td>
+<td class="text-left"><p>ballerina, bal</p></td>
+<td class="text-left"><p><a class="reference external" href="https://github.com/highlightjs/highlightjs-ballerina">highlightjs-ballerina</a></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Bash</p></td>
+<td class="text-left"><p>bash, sh, zsh</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>BASIC</p></td>
+<td class="text-left"><p>basic</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>BBCode</p></td>
+<td class="text-left"><p>bbcode</p></td>
+<td class="text-left"><p><a class="reference external" href="https://github.com/RedGuy12/highlightjs-bbcode">highlightjs-bbcode</a></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>Bicep</p></td>
+<td class="text-left"><p>bicep</p></td>
+<td class="text-left"><p><a class="reference external" href="https://github.com/Azure/bicep/blob/main/docs/highlighting.md#highlightjs">highlightjs-bicep</a></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Blade (Laravel)</p></td>
+<td class="text-left"><p>blade</p></td>
+<td class="text-left"><p><a class="reference external" href="https://github.com/miken32/highlightjs-blade">highlightjs-blade</a></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>BNF</p></td>
+<td class="text-left"><p>bnf</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>BQN</p></td>
+<td class="text-left"><p>bqn</p></td>
+<td class="text-left"><p><a class="reference external" href="https://github.com/razetime/highlightjs-bqn">highlightjs-bqn</a></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>Brainfuck</p></td>
+<td class="text-left"><p>brainfuck, bf</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>C</p></td>
+<td class="text-left"><p>c, h</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>C#</p></td>
+<td class="text-left"><p>csharp, cs</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>C++</p></td>
+<td class="text-left"><p>cpp, hpp, cc, hh, c++, h++, cxx, hxx</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>C/AL</p></td>
+<td class="text-left"><p>cal</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>C3</p></td>
+<td class="text-left"><p>c3</p></td>
+<td class="text-left"><p><a class="reference external" href="https://github.com/highlightjs/highlightjs-c3">highlightjs-c3</a></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>Cache Object Script</p></td>
+<td class="text-left"><p>cos, cls</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Candid</p></td>
+<td class="text-left"><p>candid, did</p></td>
+<td class="text-left"><p><a class="reference external" href="https://github.com/rvanasa/highlightjs-motoko">highlightjs-motoko</a></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>Cap’n Proto</p></td>
+<td class="text-left"><p>capnproto, capnp</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Chaos</p></td>
+<td class="text-left"><p>chaos, kaos</p></td>
+<td class="text-left"><p><a class="reference external" href="https://github.com/chaos-lang/highlightjs-chaos">highlightjs-chaos</a></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>Chapel</p></td>
+<td class="text-left"><p>chapel, chpl</p></td>
+<td class="text-left"><p><a class="reference external" href="https://github.com/chapel-lang/highlightjs-chapel">highlightjs-chapel</a></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Cisco CLI</p></td>
+<td class="text-left"><p>cisco</p></td>
+<td class="text-left"><p><a class="reference external" href="https://github.com/BMatheas/highlightjs-cisco-cli">highlightjs-cisco-cli</a></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>Clojure</p></td>
+<td class="text-left"><p>clojure, clj</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>CMake</p></td>
+<td class="text-left"><p>cmake, cmake.in</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>COBOL</p></td>
+<td class="text-left"><p>cobol, standard-cobol</p></td>
+<td class="text-left"><p><a class="reference external" href="https://github.com/otterkit/highlightjs-cobol">highlightjs-cobol</a></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>CODEOWNERS</p></td>
+<td class="text-left"><p>codeowners</p></td>
+<td class="text-left"><p><a class="reference external" href="https://github.com/highlightjs/highlightjs-codeowners">highlightjs-codeowners</a></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>CoffeeScript</p></td>
+<td class="text-left"><p>coffeescript, coffee, cson, iced</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Coq</p></td>
+<td class="text-left"><p>coq</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>CpcdosC+</p></td>
+<td class="text-left"><p>cpc</p></td>
+<td class="text-left"><p><a class="reference external" href="https://github.com/SPinti-Software/highlightjs-cpcdos">highlightjs-cpcdos</a></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Crmsh</p></td>
+<td class="text-left"><p>crmsh, crm, pcmk</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>Crystal</p></td>
+<td class="text-left"><p>crystal, cr</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>CSP</p></td>
+<td class="text-left"><p>csp</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>CSS</p></td>
+<td class="text-left"><p>css</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>cURL</p></td>
+<td class="text-left"><p>curl</p></td>
+<td class="text-left"><p><a class="reference external" href="https://github.com/highlightjs/highlightjs-curl">highlightjs-curl</a></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>Cypher (Neo4j)</p></td>
+<td class="text-left"><p>cypher</p></td>
+<td class="text-left"><p><a class="reference external" href="https://github.com/highlightjs/highlightjs-cypher">highlightjs-cypher</a></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>D</p></td>
+<td class="text-left"><p>d</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>Dafny</p></td>
+<td class="text-left"><p>dafny</p></td>
+<td class="text-left"><p><a class="reference external" href="https://github.com/ConsenSys/highlightjs-dafny">highlightjs-dafny</a></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Dart</p></td>
+<td class="text-left"><p>dart</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>Delphi</p></td>
+<td class="text-left"><p>dpr, dfm, pas, pascal</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Diff</p></td>
+<td class="text-left"><p>diff, patch</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>Django</p></td>
+<td class="text-left"><p>django, jinja</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>DNS Zone file</p></td>
+<td class="text-left"><p>dns, zone, bind</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>Dockerfile</p></td>
+<td class="text-left"><p>dockerfile, docker</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>DOS</p></td>
+<td class="text-left"><p>dos, bat, cmd</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>dsconfig</p></td>
+<td class="text-left"><p>dsconfig</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>DTS (Device Tree)</p></td>
+<td class="text-left"><p>dts</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>Dust</p></td>
+<td class="text-left"><p>dust, dst</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Dylan</p></td>
+<td class="text-left"><p>dylan</p></td>
+<td class="text-left"><p><a class="reference external" href="https://github.com/highlightjs/highlightjs-dylan">highlightjs-dylan</a></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>EBNF</p></td>
+<td class="text-left"><p>ebnf</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Elixir</p></td>
+<td class="text-left"><p>elixir</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>Elm</p></td>
+<td class="text-left"><p>elm</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Erlang</p></td>
+<td class="text-left"><p>erlang, erl</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>Excel</p></td>
+<td class="text-left"><p>excel, xls, xlsx</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Extempore</p></td>
+<td class="text-left"><p>extempore, xtlang, xtm</p></td>
+<td class="text-left"><p><a class="reference external" href="https://github.com/highlightjs/highlightjs-xtlang">highlightjs-xtlang</a></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>F#</p></td>
+<td class="text-left"><p>fsharp, fs, fsx, fsi, fsscript</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>FIX</p></td>
+<td class="text-left"><p>fix</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>Flix</p></td>
+<td class="text-left"><p>flix</p></td>
+<td class="text-left"><p><a class="reference external" href="https://github.com/flix/highlightjs-flix">highlightjs-flix</a></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Fortran</p></td>
+<td class="text-left"><p>fortran, f90, f95</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>FunC</p></td>
+<td class="text-left"><p>func</p></td>
+<td class="text-left"><p><a class="reference external" href="https://github.com/highlightjs/highlightjs-func">highlightjs-func</a></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>G-Code</p></td>
+<td class="text-left"><p>gcode, nc</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>Gams</p></td>
+<td class="text-left"><p>gams, gms</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>GAUSS</p></td>
+<td class="text-left"><p>gauss, gss</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>GDScript</p></td>
+<td class="text-left"><p>godot, gdscript</p></td>
+<td class="text-left"><p><a class="reference external" href="https://github.com/highlightjs/highlightjs-gdscript">highlightjs-gdscript</a></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Gherkin</p></td>
+<td class="text-left"><p>gherkin</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>Gleam</p></td>
+<td class="text-left"><p>gleam</p></td>
+<td class="text-left"><p><a class="reference external" href="https://github.com/gleam-lang/gleam-highlight.js">gleam-highlight.js</a></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Glimmer and EmberJS</p></td>
+<td class="text-left"><p>hbs, glimmer, html.hbs, html.handlebars, htmlbars</p></td>
+<td class="text-left"><p><a class="reference external" href="https://github.com/NullVoxPopuli/highlightjs-glimmer">highlightjs-glimmer</a></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>GN for Ninja</p></td>
+<td class="text-left"><p>gn, gni</p></td>
+<td class="text-left"><p><a class="reference external" href="https://github.com/highlightjs/highlightjs-GN">highlightjs-GN</a></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Go</p></td>
+<td class="text-left"><p>go, golang</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>Golo</p></td>
+<td class="text-left"><p>golo, gololang</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Gradle</p></td>
+<td class="text-left"><p>gradle</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>Grammatical Framework</p></td>
+<td class="text-left"><p>gf</p></td>
+<td class="text-left"><p><a class="reference external" href="https://github.com/johnjcamilleri/highlightjs-gf">highlightjs-gf</a></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>GraphQL</p></td>
+<td class="text-left"><p>graphql, gql</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>Groovy</p></td>
+<td class="text-left"><p>groovy</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>GSQL</p></td>
+<td class="text-left"><p>gsql</p></td>
+<td class="text-left"><p><a class="reference external" href="https://github.com/DanBarkus/highlightjs-gsql">highlightjs-gsql</a></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>Haml</p></td>
+<td class="text-left"><p>haml</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Handlebars</p></td>
+<td class="text-left"><p>handlebars, hbs, html.hbs, html.handlebars</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>Haskell</p></td>
+<td class="text-left"><p>haskell, hs</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Haxe</p></td>
+<td class="text-left"><p>haxe, hx</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>High-level shader language</p></td>
+<td class="text-left"><p>hlsl</p></td>
+<td class="text-left"><p><a class="reference external" href="https://github.com/highlightjs/highlightjs-hlsl">highlightjs-hlsl</a></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>HTML, XML</p></td>
+<td class="text-left"><p>xml, html, xhtml, rss, atom, xjb, xsd, xsl, plist, svg</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>HTTP</p></td>
+<td class="text-left"><p>http, https</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Hy</p></td>
+<td class="text-left"><p>hy, hylang</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>Inform7</p></td>
+<td class="text-left"><p>inform7, i7</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Ini, TOML</p></td>
+<td class="text-left"><p>ini, toml</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>Iptables</p></td>
+<td class="text-left"><p>iptables</p></td>
+<td class="text-left"><p><a class="reference external" href="https://github.com/highlightjs/highlightjs-iptables">highlightjs-iptables</a></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>IRPF90</p></td>
+<td class="text-left"><p>irpf90</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>Java</p></td>
+<td class="text-left"><p>java, jsp</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>JavaScript</p></td>
+<td class="text-left"><p>javascript, js, jsx</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>Jolie</p></td>
+<td class="text-left"><p>jolie, iol, ol</p></td>
+<td class="text-left"><p><a class="reference external" href="https://github.com/xiroV/highlightjs-jolie">highlightjs-jolie</a></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>JSON</p></td>
+<td class="text-left"><p>json, jsonc, json5</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>JSONata</p></td>
+<td class="text-left"><p>jsonata</p></td>
+<td class="text-left"><p><a class="reference external" href="https://github.com/DevDimov/highlightjs-jsonata">highlightjs-jsonata</a></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Julia</p></td>
+<td class="text-left"><p>julia, jl</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>Julia REPL</p></td>
+<td class="text-left"><p>julia-repl</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Kotlin</p></td>
+<td class="text-left"><p>kotlin, kt</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>L4</p></td>
+<td class="text-left"><p>l4, legal</p></td>
+<td class="text-left"><p><a class="reference external" href="https://github.com/legalese/highlightjs-l4">highlightjs-l4</a></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Lang</p></td>
+<td class="text-left"><p></p></td>
+<td class="text-left"><p><a class="reference external" href="https://github.com/highlightjs/highlightjs-lang">highlightjs-lang</a></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>Lasso</p></td>
+<td class="text-left"><p>lasso, ls, lassoscript</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>LaTeX</p></td>
+<td class="text-left"><p>tex</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>LDIF</p></td>
+<td class="text-left"><p>ldif</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Leaf</p></td>
+<td class="text-left"><p>leaf</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>Lean</p></td>
+<td class="text-left"><p>lean</p></td>
+<td class="text-left"><p><a class="reference external" href="https://github.com/leanprover-community/highlightjs-lean">highlightjs-lean</a></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Less</p></td>
+<td class="text-left"><p>less</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>Liquid</p></td>
+<td class="text-left"><p>liquid</p></td>
+<td class="text-left"><p><a class="reference external" href="https://github.com/highlightjs/highlightjs-liquid">highlightjs-liquid</a></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Lisp</p></td>
+<td class="text-left"><p>lisp</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>LiveCode Server</p></td>
+<td class="text-left"><p>livecodeserver</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>LiveScript</p></td>
+<td class="text-left"><p>livescript, ls</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>LookML</p></td>
+<td class="text-left"><p>lookml</p></td>
+<td class="text-left"><p><a class="reference external" href="https://github.com/spectacles-ci/highlightjs-lookml">highlightjs-lookml</a></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Lua</p></td>
+<td class="text-left"><p>lua, pluto</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>Luau</p></td>
+<td class="text-left"><p>luau</p></td>
+<td class="text-left"><p><a class="reference external" href="https://github.com/highlightjs/highlightjs-luau">highlightjs-luau</a></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Macaulay2</p></td>
+<td class="text-left"><p>macaulay2</p></td>
+<td class="text-left"><p><a class="reference external" href="https://github.com/d-torrance/highlightjs-macaulay2">highlightjs-macaulay2</a></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>Magik</p></td>
+<td class="text-left"><p>magik</p></td>
+<td class="text-left"><p><a class="reference external" href="https://github.com/sebastiaanspeck/highlightjs-magik">highlightjs-magik</a></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Makefile</p></td>
+<td class="text-left"><p>makefile, mk, mak, make</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>Markdown</p></td>
+<td class="text-left"><p>markdown, md, mkdown, mkd</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Mathematica</p></td>
+<td class="text-left"><p>mathematica, mma, wl</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>Matlab</p></td>
+<td class="text-left"><p>matlab</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Maxima</p></td>
+<td class="text-left"><p>maxima</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>Maya Embedded Language</p></td>
+<td class="text-left"><p>mel</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Mercury</p></td>
+<td class="text-left"><p>mercury</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>MetaPost</p></td>
+<td class="text-left"><p>metapost</p></td>
+<td class="text-left"><p><a class="reference external" href="https://github.com/chupinmaxime/highlightjs-metapost">highlightjs-metapost</a></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Mint</p></td>
+<td class="text-left"><p>mint</p></td>
+<td class="text-left"><p><a class="reference external" href="https://github.com/mint-lang/highlightjs-mint">highlightjs-mint</a></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>MIPS Assembler</p></td>
+<td class="text-left"><p>mips, mipsasm</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>mIRC Scripting Language</p></td>
+<td class="text-left"><p>mirc, mrc</p></td>
+<td class="text-left"><p><a class="reference external" href="https://github.com/highlightjs/highlightjs-mirc">highlightjs-mirc</a></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>Mirth</p></td>
+<td class="text-left"><p>mirth</p></td>
+<td class="text-left"><p><a class="reference external" href="https://github.com/highlightjs/highlightjs-mirth">highlightjs-mirth</a></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Mizar</p></td>
+<td class="text-left"><p>mizar</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>MKB</p></td>
+<td class="text-left"><p>mkb</p></td>
+<td class="text-left"><p><a class="reference external" href="https://github.com/Dereavy/highlightjs-mkb">highlightjs-mkb</a></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>MLIR</p></td>
+<td class="text-left"><p>mlir</p></td>
+<td class="text-left"><p><a class="reference external" href="https://github.com/highlightjs/highlightjs-mlir">highlightjs-mlir</a></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>Mojolicious</p></td>
+<td class="text-left"><p>mojolicious</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Monkey</p></td>
+<td class="text-left"><p>monkey</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>Moonscript</p></td>
+<td class="text-left"><p>moonscript, moon</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Motoko</p></td>
+<td class="text-left"><p>motoko, mo</p></td>
+<td class="text-left"><p><a class="reference external" href="https://github.com/rvanasa/highlightjs-motoko">highlightjs-motoko</a></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>N1QL</p></td>
+<td class="text-left"><p>n1ql</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Never</p></td>
+<td class="text-left"><p>never</p></td>
+<td class="text-left"><p><a class="reference external" href="https://github.com/never-lang/highlightjs-never">highlightjs-never</a></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>Nginx</p></td>
+<td class="text-left"><p>nginx, nginxconf</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Nim</p></td>
+<td class="text-left"><p>nim, nimrod</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>Nix</p></td>
+<td class="text-left"><p>nix</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>NSIS</p></td>
+<td class="text-left"><p>nsis</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>Oak</p></td>
+<td class="text-left"><p>oak</p></td>
+<td class="text-left"><p><a class="reference external" href="https://github.com/timlabs/highlightjs-oak">highlightjs-oak</a></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Object Constraint Language</p></td>
+<td class="text-left"><p>ocl</p></td>
+<td class="text-left"><p><a class="reference external" href="https://github.com/nhomble/highlightjs-ocl">highlightjs-ocl</a></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>Objective C</p></td>
+<td class="text-left"><p>objectivec, mm, objc, obj-c, obj-c++, objective-c++</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>OCaml</p></td>
+<td class="text-left"><p>ocaml, ml</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>Odin</p></td>
+<td class="text-left"><p>odin</p></td>
+<td class="text-left"><p><a class="reference external" href="https://github.com/marianpekar/highlightjs-odinlang">highlightjs-odinlang</a></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>OpenGL Shading Language</p></td>
+<td class="text-left"><p>glsl</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>OpenSCAD</p></td>
+<td class="text-left"><p>openscad, scad</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Oracle Rules Language</p></td>
+<td class="text-left"><p>ruleslanguage</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>Oxygene</p></td>
+<td class="text-left"><p>oxygene</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Papyrus</p></td>
+<td class="text-left"><p>papyrus, psc</p></td>
+<td class="text-left"><p><a class="reference external" href="https://github.com/Pickysaurus/highlightjs-papyrus">highlightjs-papyrus</a></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>Parser3</p></td>
+<td class="text-left"><p>parser3</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Perl</p></td>
+<td class="text-left"><p>perl, pl, pm</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>PF</p></td>
+<td class="text-left"><p>pf, pf.conf</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Phix</p></td>
+<td class="text-left"><p>phix</p></td>
+<td class="text-left"><p><a class="reference external" href="https://github.com/highlightjs/highlightjs-phix">highlightjs-phix</a></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>PHP</p></td>
+<td class="text-left"><p>php</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Pine Script</p></td>
+<td class="text-left"><p>pine, pinescript</p></td>
+<td class="text-left"><p><a class="reference external" href="https://github.com/jeyllani/highlightjs-pine">highlightjs-pine</a></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>Plaintext</p></td>
+<td class="text-left"><p>plaintext, txt, text</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Pony</p></td>
+<td class="text-left"><p>pony</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>PostgreSQL &amp; PL/pgSQL</p></td>
+<td class="text-left"><p>pgsql, postgres, postgresql</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>PowerOn</p></td>
+<td class="text-left"><p>poweron, po</p></td>
+<td class="text-left"><p><a class="reference external" href="https://github.com/libum-llc/highlightjs-poweron">highlightjs-poweron</a></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>PowerShell</p></td>
+<td class="text-left"><p>powershell, ps, ps1</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Prisma</p></td>
+<td class="text-left"><p>prisma</p></td>
+<td class="text-left"><p><a class="reference external" href="https://github.com/witch-factory/highlightjs-prisma">highlightjs-prisma</a></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>Processing</p></td>
+<td class="text-left"><p>processing</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Prolog</p></td>
+<td class="text-left"><p>prolog</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>Properties</p></td>
+<td class="text-left"><p>properties</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Protocol Buffers</p></td>
+<td class="text-left"><p>proto, protobuf</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>Puppet</p></td>
+<td class="text-left"><p>puppet, pp</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Python</p></td>
+<td class="text-left"><p>python, py, gyp</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>Python profiler results</p></td>
+<td class="text-left"><p>profile</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Python REPL</p></td>
+<td class="text-left"><p>python-repl, pycon</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>Q</p></td>
+<td class="text-left"><p>k, kdb</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Q#</p></td>
+<td class="text-left"><p>qsharp</p></td>
+<td class="text-left"><p><a class="reference external" href="https://github.com/fedonman/highlightjs-qsharp">highlightjs-qsharp</a></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>QML</p></td>
+<td class="text-left"><p>qml</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>R</p></td>
+<td class="text-left"><p>r</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>Raku</p></td>
+<td class="text-left"><p>raku, perl6, p6, pm6, rakumod</p></td>
+<td class="text-left"><p><a class="reference external" href="https://github.com/highlightjs/highlightjs-raku">highlightjs-raku</a></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>RakuDoc</p></td>
+<td class="text-left"><p>pod6, rakudoc</p></td>
+<td class="text-left"><p><a class="reference external" href="https://github.com/highlightjs/highlightjs-raku">highlightjs-raku</a></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>RakuQuoting</p></td>
+<td class="text-left"><p>rakuquoting</p></td>
+<td class="text-left"><p><a class="reference external" href="https://github.com/highlightjs/highlightjs-raku">highlightjs-raku</a></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>RakuRegexe</p></td>
+<td class="text-left"><p>rakuregexe</p></td>
+<td class="text-left"><p><a class="reference external" href="https://github.com/highlightjs/highlightjs-raku">highlightjs-raku</a></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>Razor CSHTML</p></td>
+<td class="text-left"><p>cshtml, razor, razor-cshtml</p></td>
+<td class="text-left"><p><a class="reference external" href="https://github.com/highlightjs/highlightjs-cshtml-razor">highlightjs-cshtml-razor</a></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>ReasonML</p></td>
+<td class="text-left"><p>reasonml, re</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>Rebol &amp; Red</p></td>
+<td class="text-left"><p>redbol, rebol, red, red-system</p></td>
+<td class="text-left"><p><a class="reference external" href="https://github.com/oldes/highlightjs-redbol">highlightjs-redbol</a></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>RenderMan RIB</p></td>
+<td class="text-left"><p>rib</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>RenderMan RSL</p></td>
+<td class="text-left"><p>rsl</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>ReScript</p></td>
+<td class="text-left"><p>rescript, res</p></td>
+<td class="text-left"><p><a class="reference external" href="https://github.com/tsnobip/highlightjs-rescript">highlightjs-rescript</a></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>RISC-V Assembly</p></td>
+<td class="text-left"><p>riscv, riscvasm</p></td>
+<td class="text-left"><p><a class="reference external" href="https://github.com/highlightjs/highlightjs-riscvasm">highlightjs-riscvasm</a></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>RiScript</p></td>
+<td class="text-left"><p>risc, riscript</p></td>
+<td class="text-left"><p><a class="reference external" href="https://github.com/highlightjs/highlightjs-riscript">highlightjs-riscript</a></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>Roboconf</p></td>
+<td class="text-left"><p>graph, instances</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Robot Framework</p></td>
+<td class="text-left"><p>robot, rf</p></td>
+<td class="text-left"><p><a class="reference external" href="https://github.com/highlightjs/highlightjs-robot">highlightjs-robot</a></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>RPM spec files</p></td>
+<td class="text-left"><p>rpm-specfile, rpm, spec, rpm-spec, specfile</p></td>
+<td class="text-left"><p><a class="reference external" href="https://github.com/highlightjs/highlightjs-rpm-specfile">highlightjs-rpm-specfile</a></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Ruby</p></td>
+<td class="text-left"><p>ruby, rb, gemspec, podspec, thor, irb</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>Rust</p></td>
+<td class="text-left"><p>rust, rs</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>RVT Script</p></td>
+<td class="text-left"><p>rvt, rvt-script</p></td>
+<td class="text-left"><p><a class="reference external" href="https://github.com/Sopitive/highlightjs-rvt-script">highlightjs-rvt-script</a></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>SAS</p></td>
+<td class="text-left"><p>SAS, sas</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Scala</p></td>
+<td class="text-left"><p>scala</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>Scheme</p></td>
+<td class="text-left"><p>scheme</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Scilab</p></td>
+<td class="text-left"><p>scilab, sci</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>SCSS</p></td>
+<td class="text-left"><p>scss</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>SFZ</p></td>
+<td class="text-left"><p>sfz</p></td>
+<td class="text-left"><p><a class="reference external" href="https://github.com/sfz/highlight.js">highlightjs-sfz</a></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>Shape Expressions</p></td>
+<td class="text-left"><p>shexc</p></td>
+<td class="text-left"><p><a class="reference external" href="https://github.com/highlightjs/highlightjs-shexc">highlightjs-shexc</a></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Shell</p></td>
+<td class="text-left"><p>shell, console</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>Smali</p></td>
+<td class="text-left"><p>smali</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Smalltalk</p></td>
+<td class="text-left"><p>smalltalk, st</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>SML</p></td>
+<td class="text-left"><p>sml, ml</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Solidity</p></td>
+<td class="text-left"><p>solidity, sol</p></td>
+<td class="text-left"><p><a class="reference external" href="https://github.com/highlightjs/highlightjs-solidity">highlightjs-solidity</a></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>Splunk SPL</p></td>
+<td class="text-left"><p>spl</p></td>
+<td class="text-left"><p><a class="reference external" href="https://github.com/swsoyee/highlightjs-spl">highlightjs-spl</a></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>SQL</p></td>
+<td class="text-left"><p>sql</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>Stan</p></td>
+<td class="text-left"><p>stan, stanfuncs</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Stata</p></td>
+<td class="text-left"><p>stata</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>STEP Part 21</p></td>
+<td class="text-left"><p>p21, step, stp</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Structured Text</p></td>
+<td class="text-left"><p>iecst, scl, stl, structured-text</p></td>
+<td class="text-left"><p><a class="reference external" href="https://github.com/highlightjs/highlightjs-structured-text">highlightjs-structured-text</a></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>Stylus</p></td>
+<td class="text-left"><p>stylus, styl</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>SubUnit</p></td>
+<td class="text-left"><p>subunit</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>Supercollider</p></td>
+<td class="text-left"><p>supercollider, sc</p></td>
+<td class="text-left"><p><a class="reference external" href="https://github.com/highlightjs/highlightjs-supercollider">highlightjs-supercollider</a></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Svelte</p></td>
+<td class="text-left"><p>svelte</p></td>
+<td class="text-left"><p><a class="reference external" href="https://github.com/moonlitgrace/highlight.svelte">highlight.svelte</a></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>Swift</p></td>
+<td class="text-left"><p>swift</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Tcl</p></td>
+<td class="text-left"><p>tcl, tk</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>Terraform (HCL)</p></td>
+<td class="text-left"><p>terraform, tf, hcl</p></td>
+<td class="text-left"><p><a class="reference external" href="https://github.com/highlightjs/highlightjs-terraform">highlightjs-terraform</a></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Test Anything Protocol</p></td>
+<td class="text-left"><p>tap</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>Thrift</p></td>
+<td class="text-left"><p>thrift</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Toit</p></td>
+<td class="text-left"><p>toit</p></td>
+<td class="text-left"><p><a class="reference external" href="https://github.com/snxx-lppxx/toit-highlight">toit-highlight</a></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>TP</p></td>
+<td class="text-left"><p>tp</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Transact-SQL</p></td>
+<td class="text-left"><p>tsql</p></td>
+<td class="text-left"><p><a class="reference external" href="https://github.com/highlightjs/highlightjs-tsql">highlightjs-tsql</a></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>TTCN-3</p></td>
+<td class="text-left"><p>ttcn, ttcnpp, ttcn3</p></td>
+<td class="text-left"><p><a class="reference external" href="https://gitea.osmocom.org/ttcn3/highlightjs-ttcn3">highlightjs-ttcn3</a></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Twig</p></td>
+<td class="text-left"><p>twig, craftcms</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>TypeScript</p></td>
+<td class="text-left"><p>typescript, ts, tsx, mts, cts</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Unicorn Rails log</p></td>
+<td class="text-left"><p>unicorn-rails-log</p></td>
+<td class="text-left"><p><a class="reference external" href="https://github.com/sweetppro/highlightjs-unicorn-rails-log">highlightjs-unicorn-rails-log</a></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>Unison</p></td>
+<td class="text-left"><p>unison, u</p></td>
+<td class="text-left"><p><a class="reference external" href="https://github.com/highlightjs/highlightjs-unison">highlightjs-unison</a></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Vala</p></td>
+<td class="text-left"><p>vala</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>VB.Net</p></td>
+<td class="text-left"><p>vbnet, vb</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>VBA</p></td>
+<td class="text-left"><p>vba</p></td>
+<td class="text-left"><p><a class="reference external" href="https://github.com/dullin/highlightjs-vba">highlightjs-vba</a></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>VBScript</p></td>
+<td class="text-left"><p>vbscript, vbs</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Verilog</p></td>
+<td class="text-left"><p>verilog, v</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>VHDL</p></td>
+<td class="text-left"><p>vhdl</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Vim Script</p></td>
+<td class="text-left"><p>vim</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>VoltScript</p></td>
+<td class="text-left"><p>voltscript, vss, lotusscript, lss</p></td>
+<td class="text-left"><p><a class="reference external" href="https://github.com/HCL-TECH-SOFTWARE/highlightjs-voltscript">highlightjs-voltscript</a></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>WGSL</p></td>
+<td class="text-left"><p>wgsl</p></td>
+<td class="text-left"><p><a class="reference external" href="https://github.com/highlightjs/highlightjs-wgsl">highlightjs-wgsl</a></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>X#</p></td>
+<td class="text-left"><p>xsharp, xs, prg</p></td>
+<td class="text-left"><p><a class="reference external" href="https://github.com/InfomindsAg/highlightjs-xsharp">highlightjs-xsharp</a></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>X++</p></td>
+<td class="text-left"><p>axapta, x++</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>x86 Assembly</p></td>
+<td class="text-left"><p>x86asm</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>x86 Assembly (AT&amp;T)</p></td>
+<td class="text-left"><p>x86asmatt</p></td>
+<td class="text-left"><p><a class="reference external" href="https://github.com/gondow/highlightjs-x86asmatt">highlightjs-x86asmatt</a></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>XL</p></td>
+<td class="text-left"><p>xl, tao</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>XQuery</p></td>
+<td class="text-left"><p>xquery, xpath, xq, xqm</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>YAML</p></td>
+<td class="text-left"><p>yml, yaml</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>ZenScript</p></td>
+<td class="text-left"><p>zenscript, zs</p></td>
+<td class="text-left"><p><a class="reference external" href="https://github.com/highlightjs/highlightjs-zenscript">highlightjs-zenscript</a></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>Zephir</p></td>
+<td class="text-left"><p>zephir, zep</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Zig</p></td>
+<td class="text-left"><p>zig</p></td>
+<td class="text-left"><p><a class="reference external" href="https://github.com/fwx5618177/highlightjs-zig">highlightjs-zig</a></p></td>
+</tr>
+</tbody>
+</table>
+<!-- LANGLIST_END -->
+<!-- document it until we can fix it -->
+<section id="alias-overlap">
+<h2>Alias Overlap<a class="headerlink" href="#alias-overlap" title="連結到這個標頭"></a></h2>
+<p>If you are using either of these languages at the same time please be sure to
+use the full name and not the alias to avoid any ambiguity.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head text-left"><p>語言</p></th>
+<th class="head text-left"><p>Overlap</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p>Lasso</p></td>
+<td class="text-left"><p>ls</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>LiveScript</p></td>
+<td class="text-left"><p>ls</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>OCaml</p></td>
+<td class="text-left"><p>ml</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>SML</p></td>
+<td class="text-left"><p>ml</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="plugin-recipes.html" class="btn btn-neutral float-left" title="Plugin Recipes" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="line-numbers.html" class="btn btn-neutral float-right" title="行號" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2012–2024, Ivan Sagalaev.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
