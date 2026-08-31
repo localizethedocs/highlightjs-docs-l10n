@@ -1,0 +1,434 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2012–2024, Ivan Sagalaev
+# This file is distributed under the same license as the highlight.js package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: highlight.js stable\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-04-02 03:28+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../api.rst:2
+msgid "Core API"
+msgstr "核心 API"
+
+#: ../../../api.rst:4
+msgid "Highlight.js exports a few functions as methods of the ``hljs`` object."
+msgstr ""
+
+#: ../../../api.rst:9 ../../../api.rst:236
+msgid "highlight"
+msgstr ""
+
+#: ../../../api.rst:13
+msgid "highlight(code, {language, ignoreIllegals})"
+msgstr ""
+
+#: ../../../api.rst:15
+msgid ""
+"Core highlighting function.  Accepts the code to highlight (string) and a "
+"list of options (object). The ``language`` parameter must be present and "
+"specify the language name or alias of the grammar to be used for "
+"highlighting. The ``ignoreIllegals`` is an optional parameter that when "
+"``true`` forces highlighting to finish even in case of detecting illegal "
+"syntax for the language instead of throwing an exception."
+msgstr ""
+
+#: ../../../api.rst:22 ../../../api.rst:43
+msgid "Returns an object with the following properties:"
+msgstr ""
+
+#: ../../../api.rst:24
+msgid ""
+"``language``: language name, same as the name passed in ``languageName``, "
+"returned for consistency with ``highlightAuto``"
+msgstr ""
+
+#: ../../../api.rst:25 ../../../api.rst:46
+msgid "``relevance``: integer value representing the relevance score"
+msgstr ""
+
+#: ../../../api.rst:26 ../../../api.rst:47
+msgid "``value``: HTML string with highlighting markup"
+msgstr ""
+
+#: ../../../api.rst:27
+msgid "``top``: top of the current mode stack"
+msgstr ""
+
+#: ../../../api.rst:28
+msgid ""
+"``illegal``: boolean representing whether any illegal matches were found"
+msgstr ""
+
+#: ../../../api.rst:29
+msgid "``code``: the original raw code"
+msgstr ""
+
+#: ../../../api.rst:34
+msgid "highlightAuto"
+msgstr ""
+
+#: ../../../api.rst:38
+msgid "highlightAuto(code, languageSubset)"
+msgstr ""
+
+#: ../../../api.rst:40
+msgid ""
+"Highlighting with language detection. Accepts a string with the code to "
+"highlight and an optional array of language names and aliases restricting "
+"detection to only those languages. The subset can also be set with "
+"``configure``, but the local parameter overrides the option if set."
+msgstr ""
+
+#: ../../../api.rst:45
+msgid "``language``: detected language"
+msgstr ""
+
+#: ../../../api.rst:48
+msgid ""
+"``secondBest``: object with the same structure for second-best heuristically "
+"detected language (may be absent)"
+msgstr ""
+
+#: ../../../api.rst:52
+msgid "highlightElement"
+msgstr ""
+
+#: ../../../api.rst:56
+msgid "highlightElement(element)"
+msgstr ""
+
+#: ../../../api.rst:58
+msgid "Applies highlighting to a DOM node containing code."
+msgstr ""
+
+#: ../../../api.rst:60
+msgid ""
+"This function is the one to use to apply highlighting dynamically after page "
+"load or within initialization code of third-party JavaScript frameworks."
+msgstr ""
+
+#: ../../../api.rst:63
+msgid ""
+"The function uses language detection by default but you can specify the "
+"language in the ``class`` attribute of the DOM node. See the :doc:`scopes "
+"reference </css-classes-reference>` for all available language names and "
+"scopes."
+msgstr ""
+
+#: ../../../api.rst:71
+msgid "highlightAll"
+msgstr ""
+
+#: ../../../api.rst:73
+msgid ""
+"Applies highlighting to all elements on a page matching the configured "
+"``cssSelector``. The default ``cssSelector`` value is ``'pre code'``, which "
+"highlights all code blocks. This can be called before or after the page's "
+"``onload`` event has fired."
+msgstr ""
+
+#: ../../../api.rst:79
+msgid "newInstance"
+msgstr ""
+
+#: ../../../api.rst:81
+msgid "Returns a new instance of the highlighter with default configuration."
+msgstr ""
+
+#: ../../../api.rst:85
+msgid "configure"
+msgstr ""
+
+#: ../../../api.rst:89
+msgid "configure(options)"
+msgstr ""
+
+#: ../../../api.rst:91
+msgid "Configures global options:"
+msgstr ""
+
+#: ../../../api.rst:93
+msgid ""
+"``classPrefix``: a string prefix added before class names in the generated "
+"markup, used for backwards compatibility with stylesheets."
+msgstr ""
+
+#: ../../../api.rst:94
+msgid ""
+"``languages``: an array of language names and aliases restricting auto "
+"detection to only these languages."
+msgstr ""
+
+#: ../../../api.rst:95
+msgid ""
+"``languageDetectRe``: a regex to configure how CSS class names map to "
+"language (allows class names like say `color-as-php` vs the default of "
+"`language-php`, etc.)"
+msgstr ""
+
+#: ../../../api.rst:96
+msgid ""
+"``noHighlightRe``: a regex to configure which CSS classes are to be skipped "
+"completely."
+msgstr ""
+
+#: ../../../api.rst:97
+msgid ""
+"``cssSelector``: a CSS selector to configure which elements are affected by "
+"``hljs.highlightAll``. Defaults to ``'pre code'``."
+msgstr ""
+
+#: ../../../api.rst:98
+msgid ""
+"``ignoreUnescapedHTML``: do not log warnings to console about unescaped HTML "
+"in code blocks"
+msgstr ""
+
+#: ../../../api.rst:99
+msgid ""
+"``throwUnescapedHTML``: throw a ``HTMLInjectionError`` when "
+"``highlightElement`` is asked to highlight content that includes unescaped "
+"HTML"
+msgstr ""
+
+#: ../../../api.rst:102
+msgid ""
+"Accepts an object representing options with the values to updated. Other "
+"options don't change ::"
+msgstr ""
+
+#: ../../../api.rst:105
+msgid ""
+"hljs.configure({\n"
+"  noHighlightRe: /^do-not-highlightme$/i,\n"
+"  languageDetectRe: /\\bgrammar-([\\w-]+)\\b/i, // for `grammar-swift` style "
+"CSS naming\n"
+"  classPrefix: ''     // don't append class prefix\n"
+"                      // … other options aren't changed\n"
+"});"
+msgstr ""
+
+#: ../../../api.rst:114
+msgid "registerLanguage"
+msgstr ""
+
+#: ../../../api.rst:118
+msgid "registerLanguage(languageName, languageDefinition)"
+msgstr ""
+
+#: ../../../api.rst:120
+msgid ""
+"Adds new language to the library under the specified name. Used mostly "
+"internally."
+msgstr ""
+
+#: ../../../api.rst:122
+msgid ""
+"``languageName``: a string with the name of the language being registered"
+msgstr ""
+
+#: ../../../api.rst:123
+msgid ""
+"``languageDefinition``: a function that returns an object which represents "
+"the language definition. The function is passed the ``hljs`` object to be "
+"able to use common regular expressions defined within it."
+msgstr ""
+
+#: ../../../api.rst:129
+msgid "unregisterLanguage"
+msgstr ""
+
+#: ../../../api.rst:133
+msgid "unregisterLanguage(languageName)"
+msgstr ""
+
+#: ../../../api.rst:135
+msgid ""
+"Removes a language and its aliases from the library. Used mostly internally."
+msgstr ""
+
+#: ../../../api.rst:137
+msgid "``languageName``: a string with the name of the language being removed."
+msgstr ""
+
+#: ../../../api.rst:141
+msgid "registerAliases"
+msgstr ""
+
+#: ../../../api.rst:145
+msgid "registerAliases(alias|aliases, {languageName})"
+msgstr ""
+
+#: ../../../api.rst:147
+msgid ""
+"Adds new language alias or aliases to the library for the specified language "
+"name defined under ``languageName`` key."
+msgstr ""
+
+#: ../../../api.rst:149
+msgid ""
+"``alias|aliases``: a string or array with the name of alias being registered"
+msgstr ""
+
+#: ../../../api.rst:150
+msgid ""
+"``languageName``: the language name as specified by ``registerLanguage``."
+msgstr ""
+
+#: ../../../api.rst:154
+msgid "listLanguages"
+msgstr ""
+
+#: ../../../api.rst:156
+msgid "Returns the languages names list."
+msgstr ""
+
+#: ../../../api.rst:163
+msgid "getLanguage"
+msgstr ""
+
+#: ../../../api.rst:167
+msgid "getLanguage(name)"
+msgstr ""
+
+#: ../../../api.rst:169
+msgid "Looks up a language by name or alias."
+msgstr ""
+
+#: ../../../api.rst:171
+msgid "Returns the language object if found, ``undefined`` otherwise."
+msgstr ""
+
+#: ../../../api.rst:175 ../../../api.rst:179
+msgid "versionString"
+msgstr ""
+
+#: ../../../api.rst:181
+msgid "Returns the full Highlight.js version as a string, ie: ``\"11.0.1\"``."
+msgstr ""
+
+#: ../../../api.rst:185
+msgid "safeMode"
+msgstr ""
+
+#: ../../../api.rst:189
+msgid "safeMode()"
+msgstr ""
+
+#: ../../../api.rst:191
+msgid ""
+"Enables safe mode. This is the default mode, providing the most reliable "
+"experience for production usage."
+msgstr ""
+
+#: ../../../api.rst:195
+msgid "debugMode"
+msgstr ""
+
+#: ../../../api.rst:199
+msgid "debugMode()"
+msgstr ""
+
+#: ../../../api.rst:201
+msgid "Enables *debug/development* mode."
+msgstr ""
+
+#: ../../../api.rst:205
+msgid ""
+"This mode purposely makes Highlight.js more fragile!  It should only be used "
+"for testing and local development (of languages or the library itself)."
+msgstr ""
+
+#: ../../../api.rst:207
+msgid ""
+"For example, if a new version suddenly had a serious bug (or breaking "
+"change) that affected only a single language:"
+msgstr ""
+
+#: ../../../api.rst:209
+msgid ""
+"**In Safe Mode** all other languages would continue to highlight just fine. "
+"The broken language would appear as a code block, but without any "
+"highlighting (as if it were plaintext)."
+msgstr ""
+
+#: ../../../api.rst:210
+msgid ""
+"**In Debug Mode** all highlighting would stop and a JavaScript error would "
+"be thrown."
+msgstr ""
+
+#: ../../../api.rst:213
+msgid "addPlugin"
+msgstr ""
+
+#: ../../../api.rst:217
+msgid "addPlugin(plugin)"
+msgstr ""
+
+#: ../../../api.rst:219
+msgid ""
+"Add a plugin to this instance of Highlight.js.  See the :doc:`plugin api </"
+"plugin-api>` for additional plugin information."
+msgstr ""
+
+#: ../../../api.rst:223
+msgid "removePlugin"
+msgstr ""
+
+#: ../../../api.rst:227
+msgid "removePlugin(plugin)"
+msgstr ""
+
+#: ../../../api.rst:229
+msgid ""
+"Remove the specified plugin from this instance.  ``plugin`` must be exactly "
+"the same object that was passed to ``addPlugin``."
+msgstr ""
+
+#: ../../../api.rst:233
+msgid "Deprecated API"
+msgstr ""
+
+#: ../../../api.rst:238
+msgid "This will be removed entirely in v12."
+msgstr ""
+
+#: ../../../api.rst:242
+msgid "highlight(languageName, code)"
+msgstr ""
+
+#: ../../../api.rst:245
+msgid "Please see the :ref:`newer API<newerapi>` shown above."
+msgstr ""
+
+#: ../../../api.rst:249
+msgid "highlightBlock"
+msgstr ""
+
+#: ../../../api.rst:251
+msgid "Please use ``highlightElement()`` instead."
+msgstr ""
+
+#: ../../../api.rst:255
+msgid "initHighlighting"
+msgstr ""
+
+#: ../../../api.rst:257 ../../../api.rst:264
+msgid "Please use ``highlightAll()`` instead."
+msgstr ""
+
+#: ../../../api.rst:262
+msgid "initHighlightingOnLoad"
+msgstr ""
