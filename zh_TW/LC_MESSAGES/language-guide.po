@@ -1,0 +1,533 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2012–2024, Ivan Sagalaev
+# This file is distributed under the same license as the highlight.js package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: highlight.js latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-04-02 03:28+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../language-guide.rst:4
+msgid "Language Definition Guide"
+msgstr "語言定義指南"
+
+#: ../../../language-guide.rst:7
+msgid "Highlighting overview"
+msgstr "Highlighting 概覽"
+
+#: ../../../language-guide.rst:9
+msgid ""
+"Programming language code consists of parts with different rules of parsing: "
+"keywords like ``for`` or ``if`` don't make sense inside strings, strings may "
+"contain backslash-escaped symbols like ``\\\"``, and comments usually don't "
+"contain anything interesting except the end of the comment."
+msgstr ""
+
+#: ../../../language-guide.rst:13
+msgid "In Highlight.js such parts are called \"modes\"."
+msgstr ""
+
+#: ../../../language-guide.rst:15
+msgid "Each mode consists of:"
+msgstr ""
+
+#: ../../../language-guide.rst:17
+msgid "starting condition"
+msgstr ""
+
+#: ../../../language-guide.rst:18
+msgid "ending condition"
+msgstr ""
+
+#: ../../../language-guide.rst:19
+msgid "list of contained sub-modes"
+msgstr ""
+
+#: ../../../language-guide.rst:20
+msgid "lexing rules and keywords"
+msgstr ""
+
+#: ../../../language-guide.rst:21
+msgid "…exotic stuff like another language inside a language"
+msgstr ""
+
+#: ../../../language-guide.rst:23
+msgid ""
+"The parser's work is to look for modes and their keywords. Upon finding "
+"them, it wraps them into the markup ``<span class=\"...\">...</span>`` and "
+"puts the name of the mode (\"string\", \"comment\", \"number\") or a keyword "
+"group name (\"keyword\", \"literal\", \"built-in\") as the span's class name."
+msgstr ""
+
+#: ../../../language-guide.rst:30
+msgid "General syntax"
+msgstr ""
+
+#: ../../../language-guide.rst:32
+msgid ""
+"A language definition is a JavaScript object describing the default parsing "
+"mode for the language. This default mode contains sub-modes which in turn "
+"contain other sub-modes, effectively making the language definition a tree "
+"of modes."
+msgstr ""
+
+#: ../../../language-guide.rst:35
+msgid "Here's an example:"
+msgstr ""
+
+#: ../../../language-guide.rst:39
+msgid ""
+"{\n"
+"  case_insensitive: true, // language is case-insensitive\n"
+"  keywords: 'for if while',\n"
+"  contains: [\n"
+"    {\n"
+"      scope: 'string',\n"
+"      begin: '\"', end: '\"'\n"
+"    },\n"
+"    hljs.COMMENT(\n"
+"      '/\\\\*', // begin\n"
+"      '\\\\*/', // end\n"
+"      {\n"
+"        contains: [\n"
+"          {\n"
+"            scope: 'doc', begin: '@\\\\w+'\n"
+"          }\n"
+"        ]\n"
+"      }\n"
+"    )\n"
+"  ]\n"
+"}"
+msgstr ""
+
+#: ../../../language-guide.rst:61
+msgid ""
+"Usually the default mode accounts for the majority of the code and describes "
+"all language keywords. A notable exception here is XML in which a default "
+"mode is just a user text that doesn't contain any keywords, and most "
+"interesting parsing happens inside tags."
+msgstr ""
+
+#: ../../../language-guide.rst:67
+msgid "Keywords"
+msgstr ""
+
+#: ../../../language-guide.rst:69
+msgid ""
+"In the simple case language keywords can be defined with a string (space "
+"delimited) or array:"
+msgstr ""
+
+#: ../../../language-guide.rst:73
+msgid ""
+"{\n"
+"  keywords: 'else for if while',\n"
+"  // or with an array\n"
+"  keywords: ['else', 'for', 'if', 'while']\n"
+"}"
+msgstr ""
+
+#: ../../../language-guide.rst:79
+msgid ""
+"Some languages have different kinds of \"keywords\" that might not be called "
+"as such by the language spec but are very close to them from the point of "
+"view of a syntax highlighter. These are all sorts of \"literals\", \"built-"
+"ins\", \"symbols\" and such. To define such keyword groups, the attribute "
+"``keywords`` becomes an object, each property of which defines its own group "
+"of keywords:"
+msgstr ""
+
+#: ../../../language-guide.rst:87
+msgid ""
+"{\n"
+"  keywords: {\n"
+"    keyword: 'else for if while',\n"
+"    literal: ['false','true','null'],\n"
+"    _relevance_only: 'one two three four'\n"
+"  }\n"
+"}"
+msgstr ""
+
+#: ../../../language-guide.rst:95
+msgid ""
+"The group name becomes the class name in the generated markup, enabling "
+"different theming for different kinds of keywords.  Any property starting "
+"with a ``_`` will only use those keywords to increase relevance, they will "
+"not be highlighted."
+msgstr ""
+
+#: ../../../language-guide.rst:99
+msgid ""
+"To detect keywords, highlight.js breaks the processed chunk of code into "
+"separate words — a process called lexing. By default, \"words\" are matched "
+"with the regexp ``\\w+``, and that works well for many languages. Different "
+"lexing rules can be defined by the magic ``$pattern`` attribute:"
+msgstr ""
+
+#: ../../../language-guide.rst:106
+msgid ""
+"{\n"
+"  keywords: {\n"
+"    $pattern: /-[a-z]+/,        // allow keywords to begin with dash\n"
+"    keyword: '-import -export'\n"
+"  }\n"
+"}"
+msgstr ""
+
+#: ../../../language-guide.rst:113
+msgid ""
+"Note: The older ``lexemes`` setting has been deprecated in favor of using "
+"``keywords.$pattern``. They are functionally identical."
+msgstr ""
+
+#: ../../../language-guide.rst:117
+msgid "Sub-modes"
+msgstr ""
+
+#: ../../../language-guide.rst:119
+msgid "Sub-modes are listed in the ``contains`` attribute:"
+msgstr ""
+
+#: ../../../language-guide.rst:123
+msgid ""
+"{\n"
+"  keywords: '...',\n"
+"  contains: [\n"
+"    hljs.QUOTE_STRING_MODE,\n"
+"    hljs.C_LINE_COMMENT,\n"
+"    { ... custom mode definition ... }\n"
+"  ]\n"
+"}"
+msgstr ""
+"{\n"
+"  keywords: '...',\n"
+"  contains: [\n"
+"    hljs.QUOTE_STRING_MODE,\n"
+"    hljs.C_LINE_COMMENT,\n"
+"    { ... custom mode definition ... }\n"
+"  ]\n"
+"}"
+
+#: ../../../language-guide.rst:132
+msgid ""
+"A mode can reference itself in the ``contains`` array by using a special "
+"keyword ``'self``'. This is commonly used to define nested modes:"
+msgstr ""
+
+#: ../../../language-guide.rst:137
+msgid ""
+"{\n"
+"  scope: 'object',\n"
+"  begin: /\\{/, end: /\\}/,\n"
+"  contains: [hljs.QUOTE_STRING_MODE, 'self']\n"
+"}"
+msgstr ""
+"{\n"
+"  scope: 'object',\n"
+"  begin: /\\{/, end: /\\}/,\n"
+"  contains: [hljs.QUOTE_STRING_MODE, 'self']\n"
+"}"
+
+#: ../../../language-guide.rst:143
+msgid ""
+"Note: ``self`` may not be used in the root level ``contains`` of a "
+"language.  The root level mode is special and may not be self-referential."
+msgstr ""
+
+#: ../../../language-guide.rst:147
+msgid "Comments"
+msgstr "註釋"
+
+#: ../../../language-guide.rst:149
+msgid ""
+"To define custom comments it is recommended to use a built-in helper "
+"function ``hljs.COMMENT`` instead of describing the mode directly, as it "
+"also defines a few default sub-modes that improve language detection and do "
+"other nice things."
+msgstr ""
+
+#: ../../../language-guide.rst:151
+msgid "Parameters for the function are:"
+msgstr ""
+
+#: ../../../language-guide.rst:155
+msgid ""
+"hljs.COMMENT(\n"
+"  begin,      // begin regex\n"
+"  end,        // end regex\n"
+"  extra       // optional object with extra attributes to override defaults\n"
+"              // (for example {relevance: 0})\n"
+")"
+msgstr ""
+
+#: ../../../language-guide.rst:164
+msgid "Markup generation"
+msgstr ""
+
+#: ../../../language-guide.rst:166
+msgid ""
+"Modes usually generate actual highlighting markup — ``<span>`` elements with "
+"specific class names that are defined by the ``scope`` attribute:"
+msgstr ""
+
+#: ../../../language-guide.rst:170
+msgid ""
+"{\n"
+"  contains: [\n"
+"    {\n"
+"      scope: 'string',\n"
+"      // ... other attributes\n"
+"    },\n"
+"    {\n"
+"      scope: 'number',\n"
+"      // ...\n"
+"    }\n"
+"  ]\n"
+"}"
+msgstr ""
+"{\n"
+"  contains: [\n"
+"    {\n"
+"      scope: 'string',\n"
+"      // ... other attributes\n"
+"    },\n"
+"    {\n"
+"      scope: 'number',\n"
+"      // ...\n"
+"    }\n"
+"  ]\n"
+"}"
+
+#: ../../../language-guide.rst:183
+msgid ""
+"Scopes are not required to be unique; it's quite common to have several "
+"definitions with the same scope. For example, many languages have various "
+"syntaxes for strings, comments, etc…"
+msgstr ""
+
+#: ../../../language-guide.rst:186
+msgid ""
+"Sometimes modes are defined only to support specific parsing rules and "
+"aren't needed in the final markup. A classic example is an escaping sequence "
+"inside strings allowing them to contain an ending quote."
+msgstr ""
+
+#: ../../../language-guide.rst:191
+msgid ""
+"{\n"
+"  scope: 'string',\n"
+"  begin: '\"', end: '\"',\n"
+"  contains: [{begin: '\\\\\\\\.'}],\n"
+"}"
+msgstr ""
+"{\n"
+"  scope: 'string',\n"
+"  begin: '\"', end: '\"',\n"
+"  contains: [{begin: '\\\\\\\\.'}],\n"
+"}"
+
+#: ../../../language-guide.rst:197
+msgid ""
+"For such modes, the ``scope`` attribute should be omitted so they won't "
+"generate excessive markup."
+msgstr ""
+
+#: ../../../language-guide.rst:199
+msgid ""
+"For a list of all supported scope names please see the :doc:`Scopes "
+"Reference </css-classes-reference>`."
+msgstr ""
+
+#: ../../../language-guide.rst:204
+msgid "Mode attributes"
+msgstr ""
+
+#: ../../../language-guide.rst:206
+msgid ""
+"Other useful attributes are defined in the :doc:`mode reference </mode-"
+"reference>`."
+msgstr ""
+
+#: ../../../language-guide.rst:212
+msgid "Relevance"
+msgstr ""
+
+#: ../../../language-guide.rst:214
+msgid ""
+"Highlight.js tries to automatically detect the language of a code fragment. "
+"The heuristics is essentially simple: it tries to highlight a fragment with "
+"all the language definitions and the one that yields most specific modes and "
+"keywords wins. The job of a language definition is to help this heuristics "
+"by hinting relative relevance (or irrelevance) of modes."
+msgstr ""
+
+#: ../../../language-guide.rst:219
+msgid ""
+"This is best illustrated by example. Python has special kinds of strings "
+"defined by prefix letters before the quotes: ``r\"...\"``, ``u\"...\"``. If "
+"a code fragment contains such strings there is a good chance that it's in "
+"Python. So these string modes are given high relevance:"
+msgstr ""
+
+#: ../../../language-guide.rst:225
+msgid ""
+"{\n"
+"  scope: 'string',\n"
+"  begin: 'r\"', end: '\"',\n"
+"  relevance: 10\n"
+"}"
+msgstr ""
+"{\n"
+"  scope: 'string',\n"
+"  begin: 'r\"', end: '\"',\n"
+"  relevance: 10\n"
+"}"
+
+#: ../../../language-guide.rst:231
+msgid ""
+"On the other hand, conventional strings in plain single or double quotes "
+"aren't specific to any language and it makes sense to bring their relevance "
+"to zero to lessen statistical noise:"
+msgstr ""
+
+#: ../../../language-guide.rst:236
+msgid ""
+"{\n"
+"  scope: 'string',\n"
+"  begin: '\"', end: '\"',\n"
+"  relevance: 0\n"
+"}"
+msgstr ""
+
+#: ../../../language-guide.rst:242
+msgid ""
+"The default value for relevance is always 1. When setting an explicit value "
+"typically either 10 or 0 is used. A 0 means this match should not be "
+"considered for language detection purposes. 0 should be used for very common "
+"matches that might be found in ANY language (basic numbers, strings, etc) or "
+"things that would otherwise create too many false positives. A 10 means "
+"\"this is almost guaranteed to be XYZ code\". 10 should be used sparingly."
+msgstr ""
+
+#: ../../../language-guide.rst:249
+msgid ""
+"Keywords also influence relevance. Each of them usually has a relevance of "
+"1, but there are some unique names that aren't likely to be found outside of "
+"their languages, even in the form of variable names. For example just having "
+"``reinterpret_cast`` somewhere in the code is a good indicator that we're "
+"looking at C++. It's worth to set relevance of such keywords a bit higher. "
+"This is done with a pipe:"
+msgstr ""
+
+#: ../../../language-guide.rst:256
+msgid ""
+"{\n"
+"  keywords: 'for if reinterpret_cast|10'\n"
+"}"
+msgstr ""
+
+#: ../../../language-guide.rst:262
+msgid "Illegal symbols"
+msgstr ""
+
+#: ../../../language-guide.rst:264
+msgid ""
+"Another way to improve language detection is to define illegal symbols for a "
+"mode. For example, in Python the first line of a class definition (``class "
+"MyClass(object):``) cannot contain the symbol ``{`` or a newline. The "
+"presence of these symbols clearly shows that the language is not Python, and "
+"the parser can drop this attempt early."
+msgstr ""
+
+#: ../../../language-guide.rst:268
+msgid "Illegal symbols are defined using a single regular expression:"
+msgstr ""
+
+#: ../../../language-guide.rst:272
+msgid ""
+"{\n"
+"  scope: 'class',\n"
+"  illegal: '[${]'\n"
+"}"
+msgstr ""
+
+#: ../../../language-guide.rst:279
+msgid "Pre-defined modes and regular expressions"
+msgstr ""
+
+#: ../../../language-guide.rst:281
+msgid ""
+"Many languages share common modes and regular expressions. These expressions "
+"are defined in `lib/modes.js <https://github.com/highlightjs/highlight.js/"
+"blob/main/src/lib/modes.js>`_ and should be used whenever possible."
+msgstr ""
+
+#: ../../../language-guide.rst:285
+msgid "Regular Expression Features"
+msgstr ""
+
+#: ../../../language-guide.rst:287
+msgid ""
+"The goal of Highlight.js is to support whatever regex features our supported "
+"JavaScript runtimes universally support.  You're using real regular "
+"expressions, use them responsibly.  That said, due to the design of the "
+"parser, there are some caveats.  These are addressed below."
+msgstr ""
+
+#: ../../../language-guide.rst:289
+msgid "Things we fully support now that we did not always:"
+msgstr ""
+
+#: ../../../language-guide.rst:291
+msgid "look-ahead regex matching for `begin` (#2135)"
+msgstr ""
+
+#: ../../../language-guide.rst:292
+msgid "look-ahead regex matching for `end` (#2237)"
+msgstr ""
+
+#: ../../../language-guide.rst:293
+msgid "look-ahead regex matching for `illegal` (#2135)"
+msgstr ""
+
+#: ../../../language-guide.rst:294
+msgid "back-references within your regex matches (#1897)"
+msgstr ""
+
+#: ../../../language-guide.rst:296
+msgid ""
+"Things that technically would work, but we do not allow (because Safari does "
+"not support look-behind):"
+msgstr ""
+
+#: ../../../language-guide.rst:298
+msgid "look-behind matching for `begin` (#2135)"
+msgstr ""
+
+#: ../../../language-guide.rst:300
+msgid ""
+"Things that are not supported because of issues with the parsing engine "
+"itself:"
+msgstr ""
+
+#: ../../../language-guide.rst:302
+msgid "look-behind matching for `end` matchers"
+msgstr ""
+
+#: ../../../language-guide.rst:306
+msgid "Contributing"
+msgstr ""
+
+#: ../../../language-guide.rst:308
+msgid "Follow the :doc:`contributor checklist </language-contribution>`."
+msgstr ""
