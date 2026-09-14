@@ -1,0 +1,396 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-CN" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Language Definition Guide &mdash; highlight.js 11.11.1 文档</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=9edc463e" />
+
+  
+    <link rel="canonical" href="https://projects.localizethedocs.org/highlightjs-docs-l10n/language-guide.html" />
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=b6c4d740"></script>
+      <script src="_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="_static/translations.js?v=540d3cec"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="搜索" href="search.html" />
+    <link rel="next" title="Theme Guide" href="theme-guide.html" />
+    <link rel="prev" title="Plugin API" href="plugin-api.html" />
+ 
+<script type="text/javascript" src="ltd-provenance.js"></script>
+<script type="text/javascript" src="ltd-current.js"></script>
+<script type="text/javascript" src="../../ltd-config.js"></script>
+<script type="text/javascript" src="../../ltd-flyout.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            highlight.js
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="搜索文档" aria-label="搜索文档" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="导航菜单">
+              <p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="readme.html">README / How to Use</a></li>
+<li class="toctree-l1"><a class="reference internal" href="building-testing.html">Building and Testing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="upgrade-11.html">Upgrading to Version 11</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Reference</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="api.html">Core API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="plugin-api.html">Plugin API</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Language Definition Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#highlighting-overview">Highlighting overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#general-syntax">General syntax</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#keywords">Keywords</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#sub-modes">Sub-modes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#comments">Comments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#markup-generation">Markup generation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#mode-attributes">Mode attributes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#relevance">Relevance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#illegal-symbols">Illegal symbols</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#pre-defined-modes-and-regular-expressions">Pre-defined modes and regular expressions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#regular-expression-features">Regular Expression Features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#contributing">Contributing</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="theme-guide.html">Theme Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mode-reference.html">Mode Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="css-classes-reference.html">Scope Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="plugin-recipes.html">Plugin Recipes</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">FAQ</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="supported-languages.html">Which languages are supported?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="line-numbers.html">Why no line numbers?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="language-requests.html">How to request a new language?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="language-contribution.html">How to contribute a new language?</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="移动版导航菜单" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">highlight.js</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="页面导航">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Language Definition Guide</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/language-guide.rst.txt" rel="nofollow"> 查看页面源码</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="language-definition-guide">
+<h1>Language Definition Guide<a class="headerlink" href="#language-definition-guide" title="链接到此标题。"></a></h1>
+<section id="highlighting-overview">
+<h2>Highlighting overview<a class="headerlink" href="#highlighting-overview" title="链接到此标题。"></a></h2>
+<p>Programming language code consists of parts with different rules of parsing: keywords like <code class="docutils literal notranslate"><span class="pre">for</span></code> or <code class="docutils literal notranslate"><span class="pre">if</span></code>
+don't make sense inside strings, strings may contain backslash-escaped symbols like <code class="docutils literal notranslate"><span class="pre">\&quot;</span></code>,
+and comments usually don't contain anything interesting except the end of the comment.</p>
+<p>In Highlight.js such parts are called &quot;modes&quot;.</p>
+<p>Each mode consists of:</p>
+<ul class="simple">
+<li><p>starting condition</p></li>
+<li><p>ending condition</p></li>
+<li><p>list of contained sub-modes</p></li>
+<li><p>lexing rules and keywords</p></li>
+<li><p>…exotic stuff like another language inside a language</p></li>
+</ul>
+<p>The parser's work is to look for modes and their keywords.
+Upon finding them, it wraps them into the markup <code class="docutils literal notranslate"><span class="pre">&lt;span</span> <span class="pre">class=&quot;...&quot;&gt;...&lt;/span&gt;</span></code>
+and puts the name of the mode (&quot;string&quot;, &quot;comment&quot;, &quot;number&quot;)
+or a keyword group name (&quot;keyword&quot;, &quot;literal&quot;, &quot;built-in&quot;) as the span's class name.</p>
+</section>
+<section id="general-syntax">
+<h2>General syntax<a class="headerlink" href="#general-syntax" title="链接到此标题。"></a></h2>
+<p>A language definition is a JavaScript object describing the default parsing mode for the language.
+This default mode contains sub-modes which in turn contain other sub-modes, effectively making the language definition a tree of modes.</p>
+<p>Here's an example:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">  </span><span class="nx">case_insensitive</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"> </span><span class="c1">// language is case-insensitive</span>
+<span class="w">  </span><span class="nx">keywords</span><span class="o">:</span><span class="w"> </span><span class="s1">'for if while'</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">contains</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">scope</span><span class="o">:</span><span class="w"> </span><span class="s1">'string'</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">begin</span><span class="o">:</span><span class="w"> </span><span class="s1">'"'</span><span class="p">,</span><span class="w"> </span><span class="nx">end</span><span class="o">:</span><span class="w"> </span><span class="s1">'"'</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="nx">hljs</span><span class="p">.</span><span class="nx">COMMENT</span><span class="p">(</span>
+<span class="w">      </span><span class="s1">'/\\*'</span><span class="p">,</span><span class="w"> </span><span class="c1">// begin</span>
+<span class="w">      </span><span class="s1">'\\*/'</span><span class="p">,</span><span class="w"> </span><span class="c1">// end</span>
+<span class="w">      </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">contains</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">          </span><span class="p">{</span>
+<span class="w">            </span><span class="nx">scope</span><span class="o">:</span><span class="w"> </span><span class="s1">'doc'</span><span class="p">,</span><span class="w"> </span><span class="nx">begin</span><span class="o">:</span><span class="w"> </span><span class="s1">'@\\w+'</span>
+<span class="w">          </span><span class="p">}</span>
+<span class="w">        </span><span class="p">]</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">    </span><span class="p">)</span>
+<span class="w">  </span><span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Usually the default mode accounts for the majority of the code and describes all language keywords.
+A notable exception here is XML in which a default mode is just a user text that doesn't contain any keywords,
+and most interesting parsing happens inside tags.</p>
+</section>
+<section id="keywords">
+<h2>Keywords<a class="headerlink" href="#keywords" title="链接到此标题。"></a></h2>
+<p>In the simple case language keywords can be defined with a string (space delimited) or array:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">  </span><span class="nx">keywords</span><span class="o">:</span><span class="w"> </span><span class="s1">'else for if while'</span><span class="p">,</span>
+<span class="w">  </span><span class="c1">// or with an array</span>
+<span class="w">  </span><span class="nx">keywords</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s1">'else'</span><span class="p">,</span><span class="w"> </span><span class="s1">'for'</span><span class="p">,</span><span class="w"> </span><span class="s1">'if'</span><span class="p">,</span><span class="w"> </span><span class="s1">'while'</span><span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Some languages have different kinds of &quot;keywords&quot; that might not be called as
+such by the language spec but are very close to them from the point of view of a
+syntax highlighter. These are all sorts of &quot;literals&quot;, &quot;built-ins&quot;, &quot;symbols&quot;
+and such. To define such keyword groups, the attribute <code class="docutils literal notranslate"><span class="pre">keywords</span></code> becomes an
+object, each property of which defines its own group of keywords:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">  </span><span class="nx">keywords</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">keyword</span><span class="o">:</span><span class="w"> </span><span class="s1">'else for if while'</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">literal</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s1">'false'</span><span class="p">,</span><span class="s1">'true'</span><span class="p">,</span><span class="s1">'null'</span><span class="p">],</span>
+<span class="w">    </span><span class="nx">_relevance_only</span><span class="o">:</span><span class="w"> </span><span class="s1">'one two three four'</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>The group name becomes the class name in the generated markup, enabling different
+theming for different kinds of keywords.  Any property starting with a <code class="docutils literal notranslate"><span class="pre">_</span></code> will
+only use those keywords to increase relevance, they will not be highlighted.</p>
+<p>To detect keywords, highlight.js breaks the processed chunk of code into separate
+words — a process called lexing. By default, &quot;words&quot; are matched with the regexp
+<code class="docutils literal notranslate"><span class="pre">\w+</span></code>, and that works well for many languages. Different lexing rules can be
+defined by the magic <code class="docutils literal notranslate"><span class="pre">$pattern</span></code> attribute:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">  </span><span class="nx">keywords</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">$pattern</span><span class="o">:</span><span class="w"> </span><span class="sr">/-[a-z]+/</span><span class="p">,</span><span class="w">        </span><span class="c1">// allow keywords to begin with dash</span>
+<span class="w">    </span><span class="nx">keyword</span><span class="o">:</span><span class="w"> </span><span class="s1">'-import -export'</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Note: The older <code class="docutils literal notranslate"><span class="pre">lexemes</span></code> setting has been deprecated in favor of using
+<code class="docutils literal notranslate"><span class="pre">keywords.$pattern</span></code>. They are functionally identical.</p>
+</section>
+<section id="sub-modes">
+<h2>Sub-modes<a class="headerlink" href="#sub-modes" title="链接到此标题。"></a></h2>
+<p>Sub-modes are listed in the <code class="docutils literal notranslate"><span class="pre">contains</span></code> attribute:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">  </span><span class="nx">keywords</span><span class="o">:</span><span class="w"> </span><span class="s1">'...'</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">contains</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="nx">hljs</span><span class="p">.</span><span class="nx">QUOTE_STRING_MODE</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">hljs</span><span class="p">.</span><span class="nx">C_LINE_COMMENT</span><span class="p">,</span>
+<span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="nx">custom</span><span class="w"> </span><span class="nx">mode</span><span class="w"> </span><span class="nx">definition</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="p">}</span>
+<span class="w">  </span><span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>A mode can reference itself in the <code class="docutils literal notranslate"><span class="pre">contains</span></code> array by using a special keyword <code class="docutils literal notranslate"><span class="pre">'self</span></code>'.
+This is commonly used to define nested modes:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">  </span><span class="nx">scope</span><span class="o">:</span><span class="w"> </span><span class="s1">'object'</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">begin</span><span class="o">:</span><span class="w"> </span><span class="sr">/\{/</span><span class="p">,</span><span class="w"> </span><span class="nx">end</span><span class="o">:</span><span class="w"> </span><span class="sr">/\}/</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">contains</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="nx">hljs</span><span class="p">.</span><span class="nx">QUOTE_STRING_MODE</span><span class="p">,</span><span class="w"> </span><span class="s1">'self'</span><span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Note: <code class="docutils literal notranslate"><span class="pre">self</span></code> may not be used in the root level <code class="docutils literal notranslate"><span class="pre">contains</span></code> of a language.  The root level mode is special and may not be self-referential.</p>
+</section>
+<section id="comments">
+<h2>Comments<a class="headerlink" href="#comments" title="链接到此标题。"></a></h2>
+<p>To define custom comments it is recommended to use a built-in helper function <code class="docutils literal notranslate"><span class="pre">hljs.COMMENT</span></code> instead of describing the mode directly, as it also defines a few default sub-modes that improve language detection and do other nice things.</p>
+<p>Parameters for the function are:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">hljs</span><span class="p">.</span><span class="nx">COMMENT</span><span class="p">(</span>
+<span class="w">  </span><span class="nx">begin</span><span class="p">,</span><span class="w">      </span><span class="c1">// begin regex</span>
+<span class="w">  </span><span class="nx">end</span><span class="p">,</span><span class="w">        </span><span class="c1">// end regex</span>
+<span class="w">  </span><span class="nx">extra</span><span class="w">       </span><span class="c1">// optional object with extra attributes to override defaults</span>
+<span class="w">              </span><span class="c1">// (for example {relevance: 0})</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="markup-generation">
+<h2>Markup generation<a class="headerlink" href="#markup-generation" title="链接到此标题。"></a></h2>
+<p>Modes usually generate actual highlighting markup — <code class="docutils literal notranslate"><span class="pre">&lt;span&gt;</span></code> elements with specific class names that are defined by the <code class="docutils literal notranslate"><span class="pre">scope</span></code> attribute:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">  </span><span class="nx">contains</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">scope</span><span class="o">:</span><span class="w"> </span><span class="s1">'string'</span><span class="p">,</span>
+<span class="w">      </span><span class="c1">// ... other attributes</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">scope</span><span class="o">:</span><span class="w"> </span><span class="s1">'number'</span><span class="p">,</span>
+<span class="w">      </span><span class="c1">// ...</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Scopes are not required to be unique; it's quite common to have several definitions with the same scope.
+For example, many languages have various syntaxes for strings, comments, etc…</p>
+<p>Sometimes modes are defined only to support specific parsing rules and aren't needed in the final markup.
+A classic example is an escaping sequence inside strings allowing them to contain an ending quote.</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">  </span><span class="nx">scope</span><span class="o">:</span><span class="w"> </span><span class="s1">'string'</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">begin</span><span class="o">:</span><span class="w"> </span><span class="s1">'"'</span><span class="p">,</span><span class="w"> </span><span class="nx">end</span><span class="o">:</span><span class="w"> </span><span class="s1">'"'</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">contains</span><span class="o">:</span><span class="w"> </span><span class="p">[{</span><span class="nx">begin</span><span class="o">:</span><span class="w"> </span><span class="s1">'\\\\.'</span><span class="p">}],</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>For such modes, the <code class="docutils literal notranslate"><span class="pre">scope</span></code> attribute should be omitted so they won't generate excessive markup.</p>
+<p>For a list of all supported scope names please see the <a class="reference internal" href="css-classes-reference.html"><span class="doc">Scopes Reference</span></a>.</p>
+</section>
+<section id="mode-attributes">
+<h2>Mode attributes<a class="headerlink" href="#mode-attributes" title="链接到此标题。"></a></h2>
+<p>Other useful attributes are defined in the <a class="reference internal" href="mode-reference.html"><span class="doc">mode reference</span></a>.</p>
+</section>
+<section id="relevance">
+<span id="id1"></span><h2>Relevance<a class="headerlink" href="#relevance" title="链接到此标题。"></a></h2>
+<p>Highlight.js tries to automatically detect the language of a code fragment.
+The heuristics is essentially simple: it tries to highlight a fragment with all the language definitions
+and the one that yields most specific modes and keywords wins. The job of a language definition
+is to help this heuristics by hinting relative relevance (or irrelevance) of modes.</p>
+<p>This is best illustrated by example. Python has special kinds of strings defined by prefix letters before the quotes:
+<code class="docutils literal notranslate"><span class="pre">r&quot;...&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">u&quot;...&quot;</span></code>. If a code fragment contains such strings there is a good chance that it's in Python.
+So these string modes are given high relevance:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">  </span><span class="nx">scope</span><span class="o">:</span><span class="w"> </span><span class="s1">'string'</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">begin</span><span class="o">:</span><span class="w"> </span><span class="s1">'r"'</span><span class="p">,</span><span class="w"> </span><span class="nx">end</span><span class="o">:</span><span class="w"> </span><span class="s1">'"'</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">relevance</span><span class="o">:</span><span class="w"> </span><span class="mf">10</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>On the other hand, conventional strings in plain single or double quotes aren't specific to any language
+and it makes sense to bring their relevance to zero to lessen statistical noise:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">  </span><span class="nx">scope</span><span class="o">:</span><span class="w"> </span><span class="s1">'string'</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">begin</span><span class="o">:</span><span class="w"> </span><span class="s1">'"'</span><span class="p">,</span><span class="w"> </span><span class="nx">end</span><span class="o">:</span><span class="w"> </span><span class="s1">'"'</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">relevance</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>The default value for relevance is always 1. When setting an explicit value
+typically either 10 or 0 is used. A 0 means this match should not be considered
+for language detection purposes. 0 should be used for very common matches that
+might be found in ANY language (basic numbers, strings, etc) or things that
+would otherwise create too many false positives. A 10 means &quot;this is almost
+guaranteed to be XYZ code&quot;. 10 should be used sparingly.</p>
+<p>Keywords also influence relevance. Each of them usually has a relevance of 1, but there are some unique names
+that aren't likely to be found outside of their languages, even in the form of variable names.
+For example just having <code class="docutils literal notranslate"><span class="pre">reinterpret_cast</span></code> somewhere in the code is a good indicator that we're looking at C++.
+It's worth to set relevance of such keywords a bit higher. This is done with a pipe:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">  </span><span class="nx">keywords</span><span class="o">:</span><span class="w"> </span><span class="s1">'for if reinterpret_cast|10'</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="illegal-symbols">
+<h2>Illegal symbols<a class="headerlink" href="#illegal-symbols" title="链接到此标题。"></a></h2>
+<p>Another way to improve language detection is to define illegal symbols for a mode.
+For example, in Python the first line of a class definition (<code class="docutils literal notranslate"><span class="pre">class</span> <span class="pre">MyClass(object):</span></code>) cannot contain the symbol <code class="docutils literal notranslate"><span class="pre">{</span></code> or a newline.
+The presence of these symbols clearly shows that the language is not Python, and the parser can drop this attempt early.</p>
+<p>Illegal symbols are defined using a single regular expression:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">  </span><span class="nx">scope</span><span class="o">:</span><span class="w"> </span><span class="s1">'class'</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">illegal</span><span class="o">:</span><span class="w"> </span><span class="s1">'[${]'</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="pre-defined-modes-and-regular-expressions">
+<h2>Pre-defined modes and regular expressions<a class="headerlink" href="#pre-defined-modes-and-regular-expressions" title="链接到此标题。"></a></h2>
+<p>Many languages share common modes and regular expressions. These expressions are defined in <a class="reference external" href="https://github.com/highlightjs/highlight.js/blob/main/src/lib/modes.js">lib/modes.js</a> and should be used whenever possible.</p>
+</section>
+<section id="regular-expression-features">
+<h2>Regular Expression Features<a class="headerlink" href="#regular-expression-features" title="链接到此标题。"></a></h2>
+<p>The goal of Highlight.js is to support whatever regex features our supported JavaScript runtimes universally support.  You're using real regular expressions, use them responsibly.  That said, due to the design of the parser, there are some caveats.  These are addressed below.</p>
+<p>Things we fully support now that we did not always:</p>
+<ul class="simple">
+<li><p>look-ahead regex matching for <cite>begin</cite> (#2135)</p></li>
+<li><p>look-ahead regex matching for <cite>end</cite> (#2237)</p></li>
+<li><p>look-ahead regex matching for <cite>illegal</cite> (#2135)</p></li>
+<li><p>back-references within your regex matches (#1897)</p></li>
+</ul>
+<p>Things that technically would work, but we do not allow (because Safari does not support look-behind):</p>
+<ul class="simple">
+<li><p>look-behind matching for <cite>begin</cite> (#2135)</p></li>
+</ul>
+<p>Things that are not supported because of issues with the parsing engine itself:</p>
+<ul class="simple">
+<li><p>look-behind matching for <cite>end</cite> matchers</p></li>
+</ul>
+</section>
+<section id="contributing">
+<h2>Contributing<a class="headerlink" href="#contributing" title="链接到此标题。"></a></h2>
+<p>Follow the <a class="reference internal" href="language-contribution.html"><span class="doc">contributor checklist</span></a>.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="页脚">
+        <a href="plugin-api.html" class="btn btn-neutral float-left" title="Plugin API" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
+        <a href="theme-guide.html" class="btn btn-neutral float-right" title="Theme Guide" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; 版权所有 2012–2024, Ivan Sagalaev。</p>
+  </div>
+
+  利用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 构建，使用的 
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">主题</a>
+    由 <a href="https://readthedocs.org">Read the Docs</a> 开发.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
