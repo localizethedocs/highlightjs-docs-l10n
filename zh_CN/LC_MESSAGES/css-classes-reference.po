@@ -1,0 +1,637 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2012–2024, Ivan Sagalaev
+# This file is distributed under the same license as the highlight.js package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: highlight.js stable\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-04-02 03:28+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../css-classes-reference.rst:2
+msgid "Scope Reference"
+msgstr ""
+
+#: ../../../css-classes-reference.rst:6
+msgid "Stylable Scopes"
+msgstr ""
+
+#: ../../../css-classes-reference.rst:8
+msgid ""
+"The general purpose scopes are intended to be used for any language, but the "
+"other scopes may also be used when semantically correct.  For example if you "
+"had a general purpose language that allowed inline URLs:"
+msgstr ""
+
+#: ../../../css-classes-reference.rst:14
+msgid "var GOOGLE = https://www.google.com/"
+msgstr ""
+
+#: ../../../css-classes-reference.rst:16
+msgid ""
+"It would be reasonable to use the ``link`` class for this, even if your "
+"language is not a markup language.  However, many themes might not be "
+"designed with this in mind so a better choice (for best theme support) might "
+"possibly be ``string``."
+msgstr ""
+
+#: ../../../css-classes-reference.rst:21
+msgid "**General purpose**"
+msgstr ""
+
+#: ../../../css-classes-reference.rst:23
+msgid "keyword"
+msgstr ""
+
+#: ../../../css-classes-reference.rst:23
+msgid "keyword in a regular Algol-style language"
+msgstr ""
+
+#: ../../../css-classes-reference.rst:25
+msgid "built_in"
+msgstr ""
+
+#: ../../../css-classes-reference.rst:25
+msgid "built-in or library object (constant, class, function)"
+msgstr ""
+
+#: ../../../css-classes-reference.rst:28
+msgid "type"
+msgstr ""
+
+#: ../../../css-classes-reference.rst:28
+msgid ""
+"data type (in a language with syntactically significant types) (``string``, "
+"``int``, ``array``, etc.)"
+msgstr ""
+
+#: ../../../css-classes-reference.rst:32
+msgid "literal"
+msgstr ""
+
+#: ../../../css-classes-reference.rst:32
+msgid ""
+"special identifier for a built-in value (``true``, ``false``, ``null``, etc.)"
+msgstr ""
+
+#: ../../../css-classes-reference.rst:35
+msgid "number"
+msgstr ""
+
+#: ../../../css-classes-reference.rst:35
+msgid "number, including units and modifiers, if any."
+msgstr ""
+
+#: ../../../css-classes-reference.rst:37 ../../../css-classes-reference.rst:195
+msgid "operator"
+msgstr ""
+
+#: ../../../css-classes-reference.rst:37
+msgid "operators: ``+``, ``-``, ``>>``, ``|``, ``==``"
+msgstr ""
+
+#: ../../../css-classes-reference.rst:39 ../../../css-classes-reference.rst:196
+msgid "punctuation"
+msgstr ""
+
+#: ../../../css-classes-reference.rst:39
+msgid ""
+"aux. punctuation that should be subtly highlighted (parentheses, brackets, "
+"etc.)"
+msgstr ""
+
+#: ../../../css-classes-reference.rst:42 ../../../css-classes-reference.rst:197
+msgid "property"
+msgstr ""
+
+#: ../../../css-classes-reference.rst:42
+msgid "object property ``obj.prop1.prop2.value``"
+msgstr ""
+
+#: ../../../css-classes-reference.rst:44
+msgid "regexp"
+msgstr ""
+
+#: ../../../css-classes-reference.rst:44
+msgid "literal regular expression"
+msgstr ""
+
+#: ../../../css-classes-reference.rst:46
+msgid "string"
+msgstr ""
+
+#: ../../../css-classes-reference.rst:46
+msgid "literal string, character"
+msgstr ""
+
+#: ../../../css-classes-reference.rst:48
+msgid "char.escape"
+msgstr ""
+
+#: ../../../css-classes-reference.rst:48
+msgid "an escape character such as ``\\n``"
+msgstr ""
+
+#: ../../../css-classes-reference.rst:50
+msgid "subst"
+msgstr ""
+
+#: ../../../css-classes-reference.rst:50
+msgid "parsed section inside a literal string"
+msgstr ""
+
+#: ../../../css-classes-reference.rst:52
+msgid "symbol"
+msgstr ""
+
+#: ../../../css-classes-reference.rst:52
+msgid "symbolic constant, interned string, goto label"
+msgstr ""
+
+#: ../../../css-classes-reference.rst:54
+msgid "class"
+msgstr ""
+
+#: ../../../css-classes-reference.rst:54
+msgid "**deprecated** You probably want ``title.class``"
+msgstr ""
+
+#: ../../../css-classes-reference.rst:56
+msgid "function"
+msgstr ""
+
+#: ../../../css-classes-reference.rst:56
+msgid "**deprecated** You probably want ``title.function``"
+msgstr ""
+
+#: ../../../css-classes-reference.rst:58
+msgid "variable"
+msgstr ""
+
+#: ../../../css-classes-reference.rst:58
+msgid "variables"
+msgstr ""
+
+#: ../../../css-classes-reference.rst:60
+msgid "variable.language"
+msgstr ""
+
+#: ../../../css-classes-reference.rst:60
+msgid ""
+"variable with special meaning in a language, e.g.: ``this``, ``window``, "
+"``super``, ``self``, etc."
+msgstr ""
+
+#: ../../../css-classes-reference.rst:63
+msgid "variable.constant"
+msgstr ""
+
+#: ../../../css-classes-reference.rst:63
+msgid "variable that is a constant value, ie ``MAX_FILES``"
+msgstr ""
+
+#: ../../../css-classes-reference.rst:65
+msgid "title"
+msgstr ""
+
+#: ../../../css-classes-reference.rst:65
+msgid "name of a class or a function"
+msgstr ""
+
+#: ../../../css-classes-reference.rst:67
+msgid "title.class"
+msgstr ""
+
+#: ../../../css-classes-reference.rst:67
+msgid "name of a class (interface, trait, module, etc)"
+msgstr ""
+
+#: ../../../css-classes-reference.rst:69
+msgid "title.class.inherited"
+msgstr ""
+
+#: ../../../css-classes-reference.rst:69
+msgid "name of class being inherited from, extended, etc."
+msgstr ""
+
+#: ../../../css-classes-reference.rst:71
+msgid "title.function"
+msgstr ""
+
+#: ../../../css-classes-reference.rst:71
+msgid "name of a function"
+msgstr ""
+
+#: ../../../css-classes-reference.rst:73
+msgid "title.function.invoke"
+msgstr ""
+
+#: ../../../css-classes-reference.rst:73
+msgid "name of a function (when being invoked)"
+msgstr ""
+
+#: ../../../css-classes-reference.rst:75
+msgid "params"
+msgstr ""
+
+#: ../../../css-classes-reference.rst:75
+msgid "block of function arguments (parameters) at the place of declaration"
+msgstr ""
+
+#: ../../../css-classes-reference.rst:78
+msgid "comment"
+msgstr ""
+
+#: ../../../css-classes-reference.rst:78
+msgid "comments"
+msgstr ""
+
+#: ../../../css-classes-reference.rst:80
+msgid "doctag"
+msgstr ""
+
+#: ../../../css-classes-reference.rst:80
+msgid "documentation markup within comments, e.g. ``@params``"
+msgstr ""
+
+#: ../../../css-classes-reference.rst:82
+msgid "**Meta**"
+msgstr ""
+
+#: ../../../css-classes-reference.rst:84
+msgid "meta"
+msgstr ""
+
+#: ../../../css-classes-reference.rst:84
+msgid ""
+"flags, modifiers, annotations, processing instructions, preprocessor "
+"directives, etc"
+msgstr ""
+
+#: ../../../css-classes-reference.rst:87
+msgid "meta.prompt"
+msgstr ""
+
+#: ../../../css-classes-reference.rst:87
+msgid "REPL or shell prompts or similar"
+msgstr ""
+
+#: ../../../css-classes-reference.rst:89
+msgid "meta keyword"
+msgstr ""
+
+#: ../../../css-classes-reference.rst:89
+msgid "a keyword inside a meta block (note this is nested, not subscoped)"
+msgstr ""
+
+#: ../../../css-classes-reference.rst:92
+msgid "meta string"
+msgstr ""
+
+#: ../../../css-classes-reference.rst:92
+msgid "a string inside a meta block (note this is nested, not subscoped)"
+msgstr ""
+
+#: ../../../css-classes-reference.rst:95
+msgid "**Tags, attributes, configs**"
+msgstr ""
+
+#: ../../../css-classes-reference.rst:97
+msgid "section"
+msgstr ""
+
+#: ../../../css-classes-reference.rst:97
+msgid "heading of a section in a config file, heading in text markup"
+msgstr ""
+
+#: ../../../css-classes-reference.rst:100
+msgid "tag"
+msgstr ""
+
+#: ../../../css-classes-reference.rst:100
+msgid "XML/HTML tag"
+msgstr ""
+
+#: ../../../css-classes-reference.rst:102
+msgid "name"
+msgstr ""
+
+#: ../../../css-classes-reference.rst:102
+msgid "name of an XML tag, the first word in an s-expression"
+msgstr ""
+
+#: ../../../css-classes-reference.rst:105
+msgid "attr"
+msgstr ""
+
+#: ../../../css-classes-reference.rst:105
+msgid ""
+"name of an attribute with no language defined semantics (keys in JSON, "
+"setting names in .ini), also sub-attribute within another highlighted "
+"object, like XML tag"
+msgstr ""
+
+#: ../../../css-classes-reference.rst:110
+msgid "attribute"
+msgstr ""
+
+#: ../../../css-classes-reference.rst:110
+msgid ""
+"name of an attribute followed by a structured value part, like CSS properties"
+msgstr ""
+
+#: ../../../css-classes-reference.rst:113
+msgid "**Text Markup**"
+msgstr ""
+
+#: ../../../css-classes-reference.rst:115
+msgid "bullet"
+msgstr ""
+
+#: ../../../css-classes-reference.rst:115
+msgid "list item bullet"
+msgstr ""
+
+#: ../../../css-classes-reference.rst:117
+msgid "code"
+msgstr ""
+
+#: ../../../css-classes-reference.rst:117
+msgid "code block"
+msgstr ""
+
+#: ../../../css-classes-reference.rst:119
+msgid "emphasis"
+msgstr ""
+
+#: ../../../css-classes-reference.rst:121
+msgid "strong"
+msgstr ""
+
+#: ../../../css-classes-reference.rst:121
+msgid "strong emphasis"
+msgstr ""
+
+#: ../../../css-classes-reference.rst:123
+msgid "formula"
+msgstr ""
+
+#: ../../../css-classes-reference.rst:123
+msgid "mathematical formula"
+msgstr ""
+
+#: ../../../css-classes-reference.rst:125
+msgid "link"
+msgstr ""
+
+#: ../../../css-classes-reference.rst:125
+msgid "hyperlink"
+msgstr ""
+
+#: ../../../css-classes-reference.rst:127
+msgid "quote"
+msgstr ""
+
+#: ../../../css-classes-reference.rst:127
+msgid "quotation or blockquote"
+msgstr ""
+
+#: ../../../css-classes-reference.rst:129
+msgid "**CSS**"
+msgstr ""
+
+#: ../../../css-classes-reference.rst:131
+msgid "selector-tag"
+msgstr ""
+
+#: ../../../css-classes-reference.rst:131
+msgid "tag selector"
+msgstr ""
+
+#: ../../../css-classes-reference.rst:133
+msgid "selector-id"
+msgstr ""
+
+#: ../../../css-classes-reference.rst:133
+msgid "#id selector"
+msgstr ""
+
+#: ../../../css-classes-reference.rst:135
+msgid "selector-class"
+msgstr ""
+
+#: ../../../css-classes-reference.rst:135
+msgid ".class selector"
+msgstr ""
+
+#: ../../../css-classes-reference.rst:137
+msgid "selector-attr"
+msgstr ""
+
+#: ../../../css-classes-reference.rst:137
+msgid "[attr] selector"
+msgstr ""
+
+#: ../../../css-classes-reference.rst:139
+msgid "selector-pseudo"
+msgstr ""
+
+#: ../../../css-classes-reference.rst:139
+msgid ":pseudo selector"
+msgstr ""
+
+#: ../../../css-classes-reference.rst:141
+msgid "**Templates**"
+msgstr ""
+
+#: ../../../css-classes-reference.rst:143
+msgid "template-tag"
+msgstr ""
+
+#: ../../../css-classes-reference.rst:143
+msgid "tag of a template language"
+msgstr ""
+
+#: ../../../css-classes-reference.rst:145
+msgid "template-variable"
+msgstr ""
+
+#: ../../../css-classes-reference.rst:145
+msgid "variable in a template language"
+msgstr ""
+
+#: ../../../css-classes-reference.rst:147
+msgid "**diff**"
+msgstr ""
+
+#: ../../../css-classes-reference.rst:149
+msgid "addition"
+msgstr ""
+
+#: ../../../css-classes-reference.rst:149
+msgid "added or changed line"
+msgstr ""
+
+#: ../../../css-classes-reference.rst:151
+msgid "deletion"
+msgstr ""
+
+#: ../../../css-classes-reference.rst:151
+msgid "deleted line"
+msgstr ""
+
+#: ../../../css-classes-reference.rst:155
+msgid "A note on scopes with sub-scopes"
+msgstr ""
+
+#: ../../../css-classes-reference.rst:157
+msgid ""
+"Some scope names above have a ``.`` in them.  We use this notation to "
+"specify sub-scopes.  In the generated HTML this will output multiple "
+"computed class names. The depth of nesting determines the number of "
+"underscores appended to sub-scope names. For example, Lets say the scope is "
+"``title.class.other``."
+msgstr ""
+
+#: ../../../css-classes-reference.rst:162
+msgid "The CSS class names generated would be:"
+msgstr ""
+
+#: ../../../css-classes-reference.rst:164
+msgid "``hljs-title``"
+msgstr ""
+
+#: ../../../css-classes-reference.rst:165
+msgid "``class_``"
+msgstr ""
+
+#: ../../../css-classes-reference.rst:166
+msgid "``other__``"
+msgstr ""
+
+#: ../../../css-classes-reference.rst:168
+msgid ""
+"The top-level scope is always the one that has the configured prefix applied."
+msgstr ""
+
+#: ../../../css-classes-reference.rst:170
+msgid "The generated HTML would be:"
+msgstr ""
+
+#: ../../../css-classes-reference.rst:174
+msgid "<span class=\"hljs-title class_ other__\">Render</span>"
+msgstr ""
+
+#: ../../../css-classes-reference.rst:176
+msgid "A theme could then simply target that using the following CSS:"
+msgstr ""
+
+#: ../../../css-classes-reference.rst:178
+msgid ""
+".hljs-title.class_.other__ {\n"
+"   color: blue;\n"
+"}"
+msgstr ""
+
+#: ../../../css-classes-reference.rst:186
+msgid "A note on newer scopes"
+msgstr ""
+
+#: ../../../css-classes-reference.rst:188
+msgid ""
+"Some scopes have been added more recently and do not enjoy universal theme "
+"support.  For themes without support, these items will simply not be "
+"highlighted.  This doesn't mean not to use them, only that they will be "
+"highlighted better as support improves over time."
+msgstr ""
+
+#: ../../../css-classes-reference.rst:193
+msgid "A list of these scopes:"
+msgstr ""
+
+#: ../../../css-classes-reference.rst:201
+msgid "Reserved scopes"
+msgstr ""
+
+#: ../../../css-classes-reference.rst:203
+msgid ""
+"The below scopes (ReasonML) are left here for documentation purposes but may "
+"not be used in other grammars because they are very poorly supported by all "
+"themes."
+msgstr ""
+
+#: ../../../css-classes-reference.rst:207
+msgid "If you'd like to help out with the larger issue here:"
+msgstr ""
+
+#: ../../../css-classes-reference.rst:209
+msgid "https://github.com/highlightjs/highlight.js/issues/2521"
+msgstr ""
+
+#: ../../../css-classes-reference.rst:210
+msgid "https://github.com/highlightjs/highlight.js/issues/2500"
+msgstr ""
+
+#: ../../../css-classes-reference.rst:213
+msgid "**ReasonML**"
+msgstr ""
+
+#: ../../../css-classes-reference.rst:215
+msgid "pattern-match"
+msgstr ""
+
+#: ../../../css-classes-reference.rst:215
+msgid "pattern matching matchers"
+msgstr ""
+
+#: ../../../css-classes-reference.rst:217
+msgid "typing"
+msgstr ""
+
+#: ../../../css-classes-reference.rst:217
+msgid "type signatures on function parameters"
+msgstr ""
+
+#: ../../../css-classes-reference.rst:219
+msgid "constructor"
+msgstr ""
+
+#: ../../../css-classes-reference.rst:219
+msgid "type constructors"
+msgstr ""
+
+#: ../../../css-classes-reference.rst:221
+msgid "module-access"
+msgstr ""
+
+#: ../../../css-classes-reference.rst:221
+msgid "scope access into a module"
+msgstr ""
+
+#: ../../../css-classes-reference.rst:223
+msgid "module"
+msgstr ""
+
+#: ../../../css-classes-reference.rst:223
+msgid "module reference within scope access"
+msgstr ""
+
+#: ../../../css-classes-reference.rst:228
+msgid "Language names and aliases"
+msgstr ""
+
+#: ../../../css-classes-reference.rst:230
+msgid ""
+"The language names and aliases table has moved to `SUPPORTED_LANGUAGES.md "
+"<https://github.com/highlightjs/highlight.js/blob/main/SUPPORTED_LANGUAGES."
+"md>`_."
+msgstr ""
