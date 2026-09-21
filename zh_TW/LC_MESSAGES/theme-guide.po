@@ -1,0 +1,213 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2012–2024, Ivan Sagalaev
+# This file is distributed under the same license as the highlight.js package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: highlight.js latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-04-02 03:28+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../theme-guide.rst:2
+msgid "Theme Guide"
+msgstr ""
+
+#: ../../../theme-guide.rst:6
+msgid "Key principle"
+msgstr ""
+
+#: ../../../theme-guide.rst:8
+msgid ""
+"**Highlight.js themes are language agnostic.** Instead of trying to make a "
+"*rich* set of highlightable classes look great in a handful of languages we "
+"have a *limited* set of classes that work well for many languages."
+msgstr ""
+
+#: ../../../theme-guide.rst:12
+msgid "Hence, there are two important implications:"
+msgstr ""
+
+#: ../../../theme-guide.rst:14
+msgid ""
+"Highlight.js themes can tend to be minimalistic (this has improved over "
+"time)."
+msgstr ""
+
+#: ../../../theme-guide.rst:15
+msgid ""
+"It's not always possible to exactly emulate themes from other highlighting "
+"engines."
+msgstr ""
+
+#: ../../../theme-guide.rst:19
+msgid "Defining a theme"
+msgstr ""
+
+#: ../../../theme-guide.rst:21
+msgid ""
+"A theme is a single CSS file defining styles for the scopes listed in the :"
+"doc:`scopes reference </css-classes-reference>`. The general guideline is to "
+"style the core/common set of classes, however an author may deliberately "
+"choose to exclude some (for example, ``.attr`` is usually left unstyled).  "
+"Use our :ref:`auto-check<autocheck>` tool to provide additional guidance on "
+"this."
+msgstr ""
+
+#: ../../../theme-guide.rst:27
+msgid ""
+"You are not required to invent a separate styling for every group of class "
+"names, it's perfectly okay to group them:"
+msgstr ""
+
+#: ../../../theme-guide.rst:32
+msgid ""
+".hljs-string,\n"
+".hljs-section,\n"
+".hljs-selector-class,\n"
+".hljs-template-variable,\n"
+".hljs-deletion {\n"
+"  color: #800;\n"
+"}"
+msgstr ""
+
+#: ../../../theme-guide.rst:40
+msgid "Use as few or as many unique style combinations as you want."
+msgstr ""
+
+#: ../../../theme-guide.rst:46
+msgid "Auto-checking your theme"
+msgstr ""
+
+#: ../../../theme-guide.rst:48
+msgid ""
+"We provide a tool to auto-checking your theme to see that it provides good "
+"scope coverage."
+msgstr ""
+
+#: ../../../theme-guide.rst:52
+msgid "./tools/checkTheme.js src/styles/your_theme.css"
+msgstr ""
+
+#: ../../../theme-guide.rst:54
+msgid "Follow the simple guidance provided to fix any issues."
+msgstr ""
+
+#: ../../../theme-guide.rst:57
+msgid "Theming dos and don'ts"
+msgstr ""
+
+#: ../../../theme-guide.rst:59
+msgid "Don't use:"
+msgstr ""
+
+#: ../../../theme-guide.rst:61
+msgid "non-standard borders/margin/paddings for the root container ``.hljs``"
+msgstr ""
+
+#: ../../../theme-guide.rst:62
+msgid "specific font faces"
+msgstr ""
+
+#: ../../../theme-guide.rst:63
+msgid ""
+"font size, line height and anything that affects position and size of "
+"characters within the container"
+msgstr ""
+
+#: ../../../theme-guide.rst:66
+msgid "Okay to use:"
+msgstr ""
+
+#: ../../../theme-guide.rst:68
+msgid "colors (obviously!)"
+msgstr ""
+
+#: ../../../theme-guide.rst:69
+msgid "italic, bold, underlining, etc."
+msgstr ""
+
+#: ../../../theme-guide.rst:70
+msgid "image backgrounds"
+msgstr ""
+
+#: ../../../theme-guide.rst:72
+msgid ""
+"These may seem arbitrary at first but it's what has shown to make sense in "
+"practice."
+msgstr ""
+
+#: ../../../theme-guide.rst:75
+msgid ""
+"There's also a common set of rules that *must* to be defined for the root "
+"container verbatim:"
+msgstr ""
+
+#: ../../../theme-guide.rst:80
+msgid ""
+".hljs {\n"
+"  display: block;\n"
+"  overflow-x: auto;\n"
+"  padding: 0.5em;\n"
+"}"
+msgstr ""
+
+#: ../../../theme-guide.rst:86
+msgid ""
+"If your theme lives within the core project you do not need to add these "
+"rules by hand as they are added by default during the build process."
+msgstr ""
+
+#: ../../../theme-guide.rst:91
+msgid "``.subst``"
+msgstr ""
+
+#: ../../../theme-guide.rst:93
+msgid ""
+"One important caveat: don't forget to style ``.subst``. It's used for parsed "
+"sections within strings and almost always should be reset to the default "
+"color:"
+msgstr ""
+
+#: ../../../theme-guide.rst:98
+msgid ""
+".hljs,\n"
+".hljs-subst {\n"
+"  color: black;\n"
+"}"
+msgstr ""
+
+#: ../../../theme-guide.rst:105
+msgid "Contributing"
+msgstr ""
+
+#: ../../../theme-guide.rst:107
+msgid ""
+"You should include a comment at the top of the CSS file with attribution and "
+"other meta data if necessary. The format is free:"
+msgstr ""
+
+#: ../../../theme-guide.rst:112
+msgid ""
+"/*\n"
+"\n"
+"Fancy style (c) John Smith <email@domain.com>\n"
+"\n"
+"*/"
+msgstr ""
+
+#: ../../../theme-guide.rst:118
+msgid "Also update CHANGES.md with your contribution."
+msgstr ""
+
+#: ../../../theme-guide.rst:120
+msgid "Send your contribution as a pull request on GitHub."
+msgstr ""
