@@ -1,0 +1,274 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en-US" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Building and Testing &mdash; highlight.js 11.11.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=9edc463e" />
+
+  
+    <link rel="canonical" href="https://projects.localizethedocs.org/highlightjs-docs-l10n/building-testing.html" />
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=07939543"></script>
+      <script src="_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Upgrading to Highlight.js v11.0" href="upgrade-11.html" />
+    <link rel="prev" title="Highlight.js" href="readme.html" />
+ 
+<script type="text/javascript" src="ltd-provenance.js"></script>
+<script type="text/javascript" src="ltd-current.js"></script>
+<script type="text/javascript" src="../../ltd-config.js"></script>
+<script type="text/javascript" src="../../ltd-flyout.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            highlight.js
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="readme.html">README / How to Use</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Building and Testing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#tldr">TLDR</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#building">Building</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#basic-testing">Basic testing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#testing-markup">Testing markup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#building-and-testing-with-docker">Building and Testing with Docker</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="upgrade-11.html">Upgrading to Version 11</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Reference</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="api.html">Core API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="plugin-api.html">Plugin API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="language-guide.html">Language Definition Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="theme-guide.html">Theme Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mode-reference.html">Mode Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="css-classes-reference.html">Scope Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="plugin-recipes.html">Plugin Recipes</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">FAQ</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="supported-languages.html">Which languages are supported?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="line-numbers.html">Why no line numbers?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="language-requests.html">How to request a new language?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="language-contribution.html">How to contribute a new language?</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">highlight.js</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Building and Testing</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/building-testing.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="building-and-testing">
+<h1>Building and Testing<a class="headerlink" href="#building-and-testing" title="Link to this heading"></a></h1>
+<p>To use Highlight.js it is first necessary to build it for the environment
+where you plan to execute it: the browser, the Node.js server, etc.</p>
+<section id="tldr">
+<h2>TLDR<a class="headerlink" href="#tldr" title="Link to this heading"></a></h2>
+<p>Often when contributing a pull-request it’s sufficient to build and test only
+the Node.js build. Our CI process will guarantee the browser build tests are all
+still green if you don’t run them during development.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">npm</span> <span class="n">run</span> <span class="n">build</span>
+<span class="n">npm</span> <span class="n">run</span> <span class="n">test</span>
+</pre></div>
+</div>
+<p>The browser library must be built and tested separately:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">npm</span> <span class="n">run</span> <span class="n">build</span><span class="o">-</span><span class="n">browser</span>
+<span class="n">npm</span> <span class="n">run</span> <span class="n">test</span><span class="o">-</span><span class="n">browser</span>
+</pre></div>
+</div>
+</section>
+<section id="building">
+<h2>Building<a class="headerlink" href="#building" title="Link to this heading"></a></h2>
+<p>The build tool is written in JavaScript using node.js. Before running the
+script, make sure to have node installed and run <code class="docutils literal notranslate"><span class="pre">npm</span> <span class="pre">install</span></code> to get the
+dependencies.</p>
+<p>The tool is located in <code class="docutils literal notranslate"><span class="pre">tools/build.js</span></code>. A few useful examples:</p>
+<ul>
+<li><p>Build for a browser using only common languages:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">node</span> <span class="n">tools</span><span class="o">/</span><span class="n">build</span><span class="o">.</span><span class="n">js</span> <span class="p">:</span><span class="n">common</span>
+</pre></div>
+</div>
+</li>
+<li><p>Build for node.js including all available languages:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">node</span> <span class="n">tools</span><span class="o">/</span><span class="n">build</span><span class="o">.</span><span class="n">js</span> <span class="o">-</span><span class="n">t</span> <span class="n">node</span>
+</pre></div>
+</div>
+</li>
+<li><p>Build two specific languages for debugging, skipping compression in this case:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">node</span> <span class="n">tools</span><span class="o">/</span><span class="n">build</span><span class="o">.</span><span class="n">js</span> <span class="o">-</span><span class="n">n</span> <span class="n">python</span> <span class="n">ruby</span>
+</pre></div>
+</div>
+</li>
+</ul>
+<p>On some systems the node binary is named <code class="docutils literal notranslate"><span class="pre">nodejs</span></code>; simply replace <code class="docutils literal notranslate"><span class="pre">node</span></code>
+with <code class="docutils literal notranslate"><span class="pre">nodejs</span></code> in the examples above if that is the case.</p>
+<p>The full option reference is available with the usual <code class="docutils literal notranslate"><span class="pre">--help</span></code> option.</p>
+<p>The build result will be in the <code class="docutils literal notranslate"><span class="pre">build/</span></code> directory.</p>
+</section>
+<section id="basic-testing">
+<span id="id1"></span><h2>Basic testing<a class="headerlink" href="#basic-testing" title="Link to this heading"></a></h2>
+<p>The usual approach to debugging and testing a language is first doing it
+visually. You need to build highlight.js with only the language you’re working
+on (without compression, to have readable code in browser error messages) and
+then use the Developer tool in <code class="docutils literal notranslate"><span class="pre">tools/developer.html</span></code> to see how it highlights
+a test snippet in that language.</p>
+<p>A test snippet should be short and give the idea of the overall look of the
+language. It shouldn’t include every possible syntactic element and shouldn’t
+even make practical sense.</p>
+<p>After you satisfied with the result you need to make sure that language
+detection still works with your language definition included in the whole suite.</p>
+<p>Testing is done using <a class="reference external" href="http://mochajs.org/">Mocha</a> and the
+files are found in the <code class="docutils literal notranslate"><span class="pre">test/</span></code> directory. You can use the node build to
+run the tests from the command line with <code class="docutils literal notranslate"><span class="pre">npm</span> <span class="pre">test</span></code> after <a class="reference internal" href="#building">building</a>. (Using
+<code class="docutils literal notranslate"><span class="pre">npm</span> <span class="pre">run</span> <span class="pre">build_and_test</span></code> you can build and then test with one command.)</p>
+<p><strong>Note</strong>: for Debian-based machine, like Ubuntu, you might need to create an
+alias or symbolic link for nodejs to node. The reason for this is the
+dependencies that are requires to test highlight.js has a reference to
+“node”.</p>
+<p>Place the snippet you used inside the browser in
+<code class="docutils literal notranslate"><span class="pre">test/detect/&lt;language&gt;/default.txt</span></code>, build the package with all the languages
+for node and run the test suite. If your language breaks auto-detection, it
+should be fixed by <a class="reference internal" href="language-guide.html#relevance"><span class="std std-ref">improving relevance</span></a>, which is a black art
+in and of itself. When in doubt, please refer to the discussion group!</p>
+</section>
+<section id="testing-markup">
+<h2>Testing markup<a class="headerlink" href="#testing-markup" title="Link to this heading"></a></h2>
+<p>You can also provide additional markup tests for the language to test isolated
+cases of various syntactic construct. If your language has 19 different string
+literals or complicated heuristics for telling division (<code class="docutils literal notranslate"><span class="pre">/</span></code>) apart from
+regexes (<code class="docutils literal notranslate"><span class="pre">/</span> <span class="pre">..</span> <span class="pre">/</span></code>) – this is the place.</p>
+<p>A test case consists of two files:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">test/markup/&lt;language&gt;/&lt;test_name&gt;.txt</span></code>: test code</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">test/markup/&lt;language&gt;/&lt;test_name&gt;.expect.txt</span></code>: reference rendering</p></li>
+</ul>
+<p>To generate reference rendering use the Developer tool located at
+<code class="docutils literal notranslate"><span class="pre">tools/developer.html</span></code>. Make sure to explicitly select your language in the
+drop-down menu, as automatic detection is unlikely to work in this case.</p>
+</section>
+<section id="building-and-testing-with-docker">
+<h2>Building and Testing with Docker<a class="headerlink" href="#building-and-testing-with-docker" title="Link to this heading"></a></h2>
+<p>If you don’t want to install dependencies on your system, you can use the
+included Dockerfile to build a container that will add the source code
+and then deploy a web server for you to preview it. Specifically, after you
+finish with your changes you can build the container from the root of the repository:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">build</span> <span class="o">-</span><span class="n">t</span> <span class="n">highlight</span><span class="o">-</span><span class="n">js</span> <span class="o">.</span>
+</pre></div>
+</div>
+<p>And then run the container. You will need to expose port 80 on the host for the
+web interface, and note that we are running it in detached (-d) mode.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">run</span> <span class="o">-</span><span class="n">d</span> <span class="o">--</span><span class="n">name</span> <span class="n">highlight</span><span class="o">-</span><span class="n">js</span> <span class="o">--</span><span class="n">rm</span> <span class="o">-</span><span class="n">p</span> <span class="mi">80</span><span class="p">:</span><span class="mi">80</span> <span class="n">highlight</span><span class="o">-</span><span class="n">js</span>
+</pre></div>
+</div>
+<p>If your preference is for another port, you can do that too:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">run</span> <span class="o">-</span><span class="n">d</span> <span class="o">--</span><span class="n">name</span> <span class="n">highlight</span><span class="o">-</span><span class="n">js</span> <span class="o">--</span><span class="n">rm</span> <span class="o">-</span><span class="n">p</span> <span class="mi">80</span><span class="p">:</span><span class="mi">8080</span> <span class="n">highlight</span><span class="o">-</span><span class="n">js</span>
+</pre></div>
+</div>
+<p>Or you can skip binding a port if your intention is to interactively shell
+into the container to use it as a development environment.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">run</span> <span class="o">-</span><span class="n">d</span> <span class="o">--</span><span class="n">name</span> <span class="n">highlight</span><span class="o">-</span><span class="n">js</span> <span class="o">--</span><span class="n">rm</span> <span class="n">highlight</span><span class="o">-</span><span class="n">js</span>
+</pre></div>
+</div>
+<p>Whatever you choose, you can use docker ps to ensure that it’s running.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ docker ps
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                NAMES
+0e15a7c99adf        highlight-js        "docker-entrypoint.s…"   8 seconds ago       Up 7 seconds        0.0.0.0:80-&gt;80/tcp   highlight-js
+</pre></div>
+</div>
+<p>Then, open up to <a class="reference external" href="http://127.0.0.1/tools/developer.html">http://127.0.0.1/tools/developer.html</a> to see the developer page
+for preview. When you are done, clean up your container.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">stop</span> <span class="n">highlight</span><span class="o">-</span><span class="n">js</span>
+</pre></div>
+</div>
+<p>If you want a more advanced testing setup, you can bind the source folder when you
+run the container.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>docker run -d --name highlight-js --volume $PWD/src:/var/www/html/src --rm -p 80:80 highlight-js
+</pre></div>
+</div>
+<p>Then if you want to make changes, you can do so locally (the folder is bound as a volume),
+and execute a command to the container to trigger a rebuild:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">exec</span> <span class="n">highlight</span><span class="o">-</span><span class="n">js</span> <span class="n">node</span> <span class="n">tools</span><span class="o">/</span><span class="n">build</span><span class="o">.</span><span class="n">js</span> <span class="p">:</span><span class="n">common</span>
+</pre></div>
+</div>
+<p>And then reload the page to see changes. When you finish, don’t forget to remove the container.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="readme.html" class="btn btn-neutral float-left" title="Highlight.js" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="upgrade-11.html" class="btn btn-neutral float-right" title="Upgrading to Highlight.js v11.0" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2012–2024, Ivan Sagalaev.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
