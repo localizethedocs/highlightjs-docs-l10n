@@ -1,0 +1,417 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-TW" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Scope Reference &mdash; highlight.js 11.11.1 說明文件</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=9edc463e" />
+
+  
+    <link rel="canonical" href="https://projects.localizethedocs.org/highlightjs-docs-l10n/css-classes-reference.html" />
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=c6dbf7b7"></script>
+      <script src="_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="_static/translations.js?v=cbf116e0"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="搜尋" href="search.html" />
+    <link rel="next" title="Plugin Recipes" href="plugin-recipes.html" />
+    <link rel="prev" title="模式參考" href="mode-reference.html" />
+ 
+<script type="text/javascript" src="ltd-provenance.js"></script>
+<script type="text/javascript" src="ltd-current.js"></script>
+<script type="text/javascript" src="../../ltd-config.js"></script>
+<script type="text/javascript" src="../../ltd-flyout.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            highlight.js
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">開始使用</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="readme.html">README / How to Use</a></li>
+<li class="toctree-l1"><a class="reference internal" href="building-testing.html">建置與測試</a></li>
+<li class="toctree-l1"><a class="reference internal" href="upgrade-11.html">升級至版本 11</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">參考</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="api.html">核心 API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="plugin-api.html">Plugin API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="language-guide.html">語言定義指南</a></li>
+<li class="toctree-l1"><a class="reference internal" href="theme-guide.html">Theme Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mode-reference.html">模式參考</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Scope Reference</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#stylable-scopes">Stylable Scopes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#a-note-on-scopes-with-sub-scopes">A note on scopes with sub-scopes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#a-note-on-newer-scopes">A note on newer scopes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#reserved-scopes">Reserved scopes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#language-names-and-aliases">Language names and aliases</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="plugin-recipes.html">Plugin Recipes</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">FAQ</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="supported-languages.html">支援哪些語言？</a></li>
+<li class="toctree-l1"><a class="reference internal" href="line-numbers.html">為什麼沒有行號？</a></li>
+<li class="toctree-l1"><a class="reference internal" href="language-requests.html">如何請求新語言？</a></li>
+<li class="toctree-l1"><a class="reference internal" href="language-contribution.html">如何貢獻新語言？</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">highlight.js</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Scope Reference</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/css-classes-reference.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="scope-reference">
+<h1>Scope Reference<a class="headerlink" href="#scope-reference" title="連結到這個標頭"></a></h1>
+<section id="stylable-scopes">
+<h2>Stylable Scopes<a class="headerlink" href="#stylable-scopes" title="連結到這個標頭"></a></h2>
+<p>The general purpose scopes are intended to be used for any language, but the
+other scopes may also be used when semantically correct.  For example if you had
+a general purpose language that allowed inline URLs:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">var</span> <span class="n">GOOGLE</span> <span class="o">=</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">google</span><span class="o">.</span><span class="n">com</span><span class="o">/</span>
+</pre></div>
+</div>
+<p>It would be reasonable to use the <code class="docutils literal notranslate"><span class="pre">link</span></code> class for this, even if your language
+is not a markup language.  However, many themes might not be designed with this
+in mind so a better choice (for best theme support) might possibly be <code class="docutils literal notranslate"><span class="pre">string</span></code>.</p>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td colspan="2"><p><strong>General purpose</strong></p></td>
+</tr>
+<tr class="row-even"><td><p>keyword</p></td>
+<td><p>keyword in a regular Algol-style language</p></td>
+</tr>
+<tr class="row-odd"><td><p>built_in</p></td>
+<td><p>built-in or library object (constant, class,
+function)</p></td>
+</tr>
+<tr class="row-even"><td><p>type</p></td>
+<td><p>data type (in a language with syntactically
+significant types) (<code class="docutils literal notranslate"><span class="pre">string</span></code>, <code class="docutils literal notranslate"><span class="pre">int</span></code>,
+<code class="docutils literal notranslate"><span class="pre">array</span></code>, etc.)</p></td>
+</tr>
+<tr class="row-odd"><td><p>literal</p></td>
+<td><p>special identifier for a built-in value
+(<code class="docutils literal notranslate"><span class="pre">true</span></code>, <code class="docutils literal notranslate"><span class="pre">false</span></code>, <code class="docutils literal notranslate"><span class="pre">null</span></code>, etc.)</p></td>
+</tr>
+<tr class="row-even"><td><p>number</p></td>
+<td><p>number, including units and modifiers, if any.</p></td>
+</tr>
+<tr class="row-odd"><td><p>operator</p></td>
+<td><p>operators: <code class="docutils literal notranslate"><span class="pre">+</span></code>, <code class="docutils literal notranslate"><span class="pre">-</span></code>, <code class="docutils literal notranslate"><span class="pre">&gt;&gt;</span></code>, <code class="docutils literal notranslate"><span class="pre">|</span></code>, <code class="docutils literal notranslate"><span class="pre">==</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>punctuation</p></td>
+<td><p>aux. punctuation that should be subtly highlighted
+(parentheses, brackets, etc.)</p></td>
+</tr>
+<tr class="row-odd"><td><p>property</p></td>
+<td><p>object property <code class="docutils literal notranslate"><span class="pre">obj.prop1.prop2.value</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>regexp</p></td>
+<td><p>literal regular expression</p></td>
+</tr>
+<tr class="row-odd"><td><p>string</p></td>
+<td><p>literal string, character</p></td>
+</tr>
+<tr class="row-even"><td><p>char.escape</p></td>
+<td><p>an escape character such as <code class="docutils literal notranslate"><span class="pre">\n</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>subst</p></td>
+<td><p>parsed section inside a literal string</p></td>
+</tr>
+<tr class="row-even"><td><p>symbol</p></td>
+<td><p>symbolic constant, interned string, goto label</p></td>
+</tr>
+<tr class="row-odd"><td><p>class</p></td>
+<td><p><strong>deprecated</strong> You probably want <code class="docutils literal notranslate"><span class="pre">title.class</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>function</p></td>
+<td><p><strong>deprecated</strong> You probably want <code class="docutils literal notranslate"><span class="pre">title.function</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>variable</p></td>
+<td><p>variables</p></td>
+</tr>
+<tr class="row-even"><td><p>variable.language</p></td>
+<td><p>variable with special meaning in a language, e.g.:
+<code class="docutils literal notranslate"><span class="pre">this</span></code>, <code class="docutils literal notranslate"><span class="pre">window</span></code>, <code class="docutils literal notranslate"><span class="pre">super</span></code>, <code class="docutils literal notranslate"><span class="pre">self</span></code>, etc.</p></td>
+</tr>
+<tr class="row-odd"><td><p>variable.constant</p></td>
+<td><p>variable that is a constant value, ie <code class="docutils literal notranslate"><span class="pre">MAX_FILES</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>title</p></td>
+<td><p>name of a class or a function</p></td>
+</tr>
+<tr class="row-odd"><td><p>title.class</p></td>
+<td><p>name of a class (interface, trait, module, etc)</p></td>
+</tr>
+<tr class="row-even"><td><p>title.class.inherited</p></td>
+<td><p>name of class being inherited from, extended, etc.</p></td>
+</tr>
+<tr class="row-odd"><td><p>title.function</p></td>
+<td><p>name of a function</p></td>
+</tr>
+<tr class="row-even"><td><p>title.function.invoke</p></td>
+<td><p>name of a function (when being invoked)</p></td>
+</tr>
+<tr class="row-odd"><td><p>params</p></td>
+<td><p>block of function arguments (parameters) at the
+place of declaration</p></td>
+</tr>
+<tr class="row-even"><td><p>comment</p></td>
+<td><p>comments</p></td>
+</tr>
+<tr class="row-odd"><td><p>doctag</p></td>
+<td><p>documentation markup within comments, e.g. <code class="docutils literal notranslate"><span class="pre">&#64;params</span></code></p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p><strong>Meta</strong></p></td>
+</tr>
+<tr class="row-odd"><td><p>meta</p></td>
+<td><p>flags, modifiers, annotations, processing
+instructions, preprocessor directives, etc</p></td>
+</tr>
+<tr class="row-even"><td><p>meta.prompt</p></td>
+<td><p>REPL or shell prompts or similar</p></td>
+</tr>
+<tr class="row-odd"><td><p>meta keyword</p></td>
+<td><p>a keyword inside a meta block
+(note this is nested, not subscoped)</p></td>
+</tr>
+<tr class="row-even"><td><p>meta string</p></td>
+<td><p>a string inside a meta block
+(note this is nested, not subscoped)</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p><strong>Tags, attributes, configs</strong></p></td>
+</tr>
+<tr class="row-even"><td><p>section</p></td>
+<td><p>heading of a section in a config file, heading in
+text markup</p></td>
+</tr>
+<tr class="row-odd"><td><p>tag</p></td>
+<td><p>XML/HTML tag</p></td>
+</tr>
+<tr class="row-even"><td><p>name</p></td>
+<td><p>name of an XML tag, the first word in an
+s-expression</p></td>
+</tr>
+<tr class="row-odd"><td><p>attr</p></td>
+<td><p>name of an attribute with no language defined
+semantics (keys in JSON, setting names in .ini),
+also sub-attribute within another highlighted
+object, like XML tag</p></td>
+</tr>
+<tr class="row-even"><td><p>attribute</p></td>
+<td><p>name of an attribute followed by a structured
+value part, like CSS properties</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p><strong>Text Markup</strong></p></td>
+</tr>
+<tr class="row-even"><td><p>bullet</p></td>
+<td><p>list item bullet</p></td>
+</tr>
+<tr class="row-odd"><td><p>code</p></td>
+<td><p>code block</p></td>
+</tr>
+<tr class="row-even"><td><p>emphasis</p></td>
+<td><p>emphasis</p></td>
+</tr>
+<tr class="row-odd"><td><p>strong</p></td>
+<td><p>strong emphasis</p></td>
+</tr>
+<tr class="row-even"><td><p>formula</p></td>
+<td><p>mathematical formula</p></td>
+</tr>
+<tr class="row-odd"><td><p>link</p></td>
+<td><p>hyperlink</p></td>
+</tr>
+<tr class="row-even"><td><p>quote</p></td>
+<td><p>quotation or blockquote</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p><strong>CSS</strong></p></td>
+</tr>
+<tr class="row-even"><td><p>selector-tag</p></td>
+<td><p>tag selector</p></td>
+</tr>
+<tr class="row-odd"><td><p>selector-id</p></td>
+<td><p>#id selector</p></td>
+</tr>
+<tr class="row-even"><td><p>selector-class</p></td>
+<td><p>.class selector</p></td>
+</tr>
+<tr class="row-odd"><td><p>selector-attr</p></td>
+<td><p>[attr] selector</p></td>
+</tr>
+<tr class="row-even"><td><p>selector-pseudo</p></td>
+<td><p>:pseudo selector</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p><strong>Templates</strong></p></td>
+</tr>
+<tr class="row-even"><td><p>template-tag</p></td>
+<td><p>tag of a template language</p></td>
+</tr>
+<tr class="row-odd"><td><p>template-variable</p></td>
+<td><p>variable in a template language</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p><strong>diff</strong></p></td>
+</tr>
+<tr class="row-odd"><td><p>addition</p></td>
+<td><p>added or changed line</p></td>
+</tr>
+<tr class="row-even"><td><p>deletion</p></td>
+<td><p>deleted line</p></td>
+</tr>
+</tbody>
+</table>
+<section id="a-note-on-scopes-with-sub-scopes">
+<h3>A note on scopes with sub-scopes<a class="headerlink" href="#a-note-on-scopes-with-sub-scopes" title="連結到這個標頭"></a></h3>
+<p>Some scope names above have a <code class="docutils literal notranslate"><span class="pre">.</span></code> in them.  We use this notation to specify
+sub-scopes.  In the generated HTML this will output multiple computed class
+names. The depth of nesting determines the number of underscores appended to
+sub-scope names. For example, Lets say the scope is <code class="docutils literal notranslate"><span class="pre">title.class.other</span></code>.</p>
+<p>The CSS class names generated would be:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">hljs-title</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">class_</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">other__</span></code></p></li>
+</ul>
+<p>The top-level scope is always the one that has the configured prefix applied.</p>
+<p>The generated HTML would be:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">span</span> <span class="n">class</span><span class="o">=</span><span class="s2">"hljs-title class_ other__"</span><span class="o">&gt;</span><span class="n">Render</span><span class="o">&lt;/</span><span class="n">span</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>A theme could then simply target that using the following CSS:</p>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="p">.</span><span class="nc">hljs-title</span><span class="p">.</span><span class="nc">class_</span><span class="p">.</span><span class="nc">other__</span><span class="w"> </span><span class="p">{</span>
+<span class="w">   </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">blue</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="a-note-on-newer-scopes">
+<h3>A note on newer scopes<a class="headerlink" href="#a-note-on-newer-scopes" title="連結到這個標頭"></a></h3>
+<p>Some scopes have been added more recently and do not enjoy universal theme
+support.  For themes without support, these items will simply not be
+highlighted.  This doesn't mean not to use them, only that they will be
+highlighted better as support improves over time.</p>
+<p>A list of these scopes:</p>
+<ul class="simple">
+<li><p>operator</p></li>
+<li><p>punctuation</p></li>
+<li><p>property</p></li>
+</ul>
+</section>
+<section id="reserved-scopes">
+<h3>Reserved scopes<a class="headerlink" href="#reserved-scopes" title="連結到這個標頭"></a></h3>
+<p>The below scopes (ReasonML) are left here for documentation purposes but may
+not be used in other grammars because they are very poorly supported by all
+themes.</p>
+<p>If you'd like to help out with the larger issue here:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/highlightjs/highlight.js/issues/2521">https://github.com/highlightjs/highlight.js/issues/2521</a></p></li>
+<li><p><a class="reference external" href="https://github.com/highlightjs/highlight.js/issues/2500">https://github.com/highlightjs/highlight.js/issues/2500</a></p></li>
+</ul>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td colspan="2"><p><strong>ReasonML</strong></p></td>
+</tr>
+<tr class="row-even"><td><p>pattern-match</p></td>
+<td><p>pattern matching matchers</p></td>
+</tr>
+<tr class="row-odd"><td><p>typing</p></td>
+<td><p>type signatures on function parameters</p></td>
+</tr>
+<tr class="row-even"><td><p>constructor</p></td>
+<td><p>type constructors</p></td>
+</tr>
+<tr class="row-odd"><td><p>module-access</p></td>
+<td><p>scope access into a module</p></td>
+</tr>
+<tr class="row-even"><td><p>module</p></td>
+<td><p>module reference within scope access</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="language-names-and-aliases">
+<h2>Language names and aliases<a class="headerlink" href="#language-names-and-aliases" title="連結到這個標頭"></a></h2>
+<p>The language names and aliases table has moved to <a class="reference external" href="https://github.com/highlightjs/highlight.js/blob/main/SUPPORTED_LANGUAGES.md">SUPPORTED_LANGUAGES.md</a>.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="mode-reference.html" class="btn btn-neutral float-left" title="模式參考" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="plugin-recipes.html" class="btn btn-neutral float-right" title="Plugin Recipes" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2012–2024, Ivan Sagalaev.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
