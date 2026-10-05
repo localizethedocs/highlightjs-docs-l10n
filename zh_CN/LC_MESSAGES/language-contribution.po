@@ -1,0 +1,204 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2012–2024, Ivan Sagalaev
+# This file is distributed under the same license as the highlight.js package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: highlight.js stable\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-04-02 03:28+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../language-contribution.rst:2
+msgid "Language contributor checklist"
+msgstr ""
+
+#: ../../../language-contribution.rst:5
+msgid "1. Know that you are creating a 3rd party grammar"
+msgstr ""
+
+#: ../../../language-contribution.rst:7
+msgid ""
+"*Sadly, due to lack of maintainer time we no longer merge new languages "
+"grammars into the core library.* Instead, the project works by encouraging "
+"3rd party language grammar development by willing contributors ready to help "
+"and maintain them. We're also happy to host those 3rd party language "
+"grammars at the ``highlightjs`` GitHub organization. Or you're welcome to "
+"host yourself - we're always happy to link to to new language grammars."
+msgstr ""
+
+#: ../../../language-contribution.rst:14
+msgid ""
+"We also make it easy to build, maintain, and distribute 3rd party grammar "
+"modules so that Highlight.js can always be easily extended with new "
+"languages. Using a 3rd party language (for end users) is often as simple as "
+"just adding a single line of code to their JavaScript or build system."
+msgstr ""
+
+#: ../../../language-contribution.rst:19
+msgid ""
+"We'd love to have your grammar as a 3rd party language module if you'd be "
+"willing to maintain it over time.  It's easy to develop and publish a 3rd "
+"party language module.  If you already started work in the main source tree "
+"- it's trivial to convert your existing work into a 3rd party module. (you "
+"pretty much just move your files into a new project folder)"
+msgstr ""
+
+#: ../../../language-contribution.rst:27
+msgid "2. Read extra/3RD_PARTY_QUICK_START.md"
+msgstr ""
+
+#: ../../../language-contribution.rst:29
+msgid ""
+"Next, read ``extra/3RD_PARTY_QUICK_START.md``.  This should provide you with "
+"a very high-level overview of the steps for creating a third-party language "
+"grammar for Highlight.js."
+msgstr ""
+
+#: ../../../language-contribution.rst:35
+msgid "3. Create a language grammar definition file"
+msgstr ""
+
+#: ../../../language-contribution.rst:37
+msgid ""
+"The file defines a function accepting a reference to the library and "
+"returning a language object. The library parameter (``hljs``) is useful to "
+"access common modes and regexps. You should not immediately call this "
+"function (you only need to export it). Calling it is handled by the build "
+"process and details differ for different build targets."
+msgstr ""
+
+#: ../../../language-contribution.rst:44
+msgid ""
+"export default function(hljs) {\n"
+"  return {\n"
+"    name: \"Language Name\",\n"
+"    keywords: 'foo bar',\n"
+"    contains: [ ..., hljs.NUMBER_MODE, ... ]\n"
+"  }\n"
+"}"
+msgstr ""
+
+#: ../../../language-contribution.rst:52
+msgid ""
+"The name of the file is used as a short language identifier and should be "
+"usable as a class name in HTML and CSS.  Typically you'll place this file in "
+"your new grammar repository under ``my_new_grammar/src/languages/``."
+msgstr ""
+
+#: ../../../language-contribution.rst:58
+msgid "4. Add language metadata"
+msgstr ""
+
+#: ../../../language-contribution.rst:60
+msgid ""
+"At the top of the file there is a specially formatted comment with meta data "
+"processed by a build system. Meta data format is simply key-value pairs each "
+"occupying its own line:"
+msgstr ""
+
+#: ../../../language-contribution.rst:65
+msgid ""
+"/*\n"
+"Language: Superlanguage\n"
+"Requires: java.js, sql.js\n"
+"Author: John Smith <email@domain.com>\n"
+"Contributors: Mike Johnson <...@...>, Matt Wilson <...@...>\n"
+"Description: Some cool language definition\n"
+"Website: https://superlanguage.example.com\n"
+"*/"
+msgstr ""
+
+#: ../../../language-contribution.rst:74
+msgid ""
+"``Language`` — the only required header giving a human-readable language "
+"name."
+msgstr ""
+
+#: ../../../language-contribution.rst:76
+msgid ""
+"``Requires`` — a list of other language files required for this language to "
+"work. This make it possible to describe languages that extend definitions of "
+"other ones. Required files aren't processed in any special way. The build "
+"system just makes sure that they will be in the final package in "
+"``LANGUAGES`` object."
+msgstr ""
+
+#: ../../../language-contribution.rst:82
+msgid "The meaning of the other headers should be pretty obvious."
+msgstr ""
+
+#: ../../../language-contribution.rst:86
+msgid "5. Create a code example"
+msgstr ""
+
+#: ../../../language-contribution.rst:88
+msgid ""
+"The code example is used both to test language detection and for the demo "
+"page on https://highlightjs.org/. Put it in ``test/detect/<language>/default."
+"txt``."
+msgstr ""
+
+#: ../../../language-contribution.rst:91
+msgid ""
+"Take inspiration from other languages in ``test/detect/`` and read :ref:"
+"`testing instructions <basic-testing>` for more details."
+msgstr ""
+
+#: ../../../language-contribution.rst:96
+msgid "6. Write a class reference if your class uses custom classes"
+msgstr ""
+
+#: ../../../language-contribution.rst:98
+msgid ""
+"A class reference document should typically be placed at the root of your "
+"language repository: ``css-class-reference.md``"
+msgstr ""
+
+#: ../../../language-contribution.rst:101
+msgid ""
+"Describe shortly names of all meaningful modes used in your language "
+"definition."
+msgstr ""
+
+#: ../../../language-contribution.rst:103
+msgid ""
+"Note: If you use custom classes please be aware that all the build-in themes "
+"are not going to support your custom classes and you should likely also "
+"distribute your own custom theme."
+msgstr ""
+
+#: ../../../language-contribution.rst:109
+msgid "7. Request a repository at the ``highlightjs`` organization"
+msgstr ""
+
+#: ../../../language-contribution.rst:111
+msgid ""
+"*This is optional.* Of course you are free to host your repository anywhere "
+"you would like."
+msgstr ""
+
+#: ../../../language-contribution.rst:114
+msgid ""
+"Request a new 3rd party grammar repository hosted in highlightjs with Issue "
+"Type `**Issue: Request a new 3rd party grammar repository** <https://github."
+"com/highlightjs/highlight.js/issues/new/choose>`_"
+msgstr ""
+
+#: ../../../language-contribution.rst:119
+msgid "8. Create a pull request"
+msgstr ""
+
+#: ../../../language-contribution.rst:121
+msgid ""
+"Submit a PR to add your language to `SUPPORTED_LANGUAGES.md <https://github."
+"com/highlightjs/highlight.js/blob/main/SUPPORTED_LANGUAGES.md>`_."
+msgstr ""
