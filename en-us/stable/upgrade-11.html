@@ -1,0 +1,354 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en-US" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Upgrading to Highlight.js v11.0 &mdash; highlight.js 11.11.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=9edc463e" />
+
+  
+    <link rel="canonical" href="https://projects.localizethedocs.org/highlightjs-docs-l10n/upgrade-11.html" />
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=07939543"></script>
+      <script src="_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Core API" href="api.html" />
+    <link rel="prev" title="Building and Testing" href="building-testing.html" />
+ 
+<script type="text/javascript" src="ltd-provenance.js"></script>
+<script type="text/javascript" src="ltd-current.js"></script>
+<script type="text/javascript" src="../../ltd-config.js"></script>
+<script type="text/javascript" src="../../ltd-flyout.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            highlight.js
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="readme.html">README / How to Use</a></li>
+<li class="toctree-l1"><a class="reference internal" href="building-testing.html">Building and Testing</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Upgrading to Version 11</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#overview-of-breaking-changes">Overview of Breaking Changes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#built-in-set-of-common-languages">Built-in set of “Common” Languages</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#language-files">Language Files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#language-aliases">Language Aliases</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#styles-and-css">Styles and CSS</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#grammar-scopes">Grammar Scopes</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#behavioral-changes">Behavioral changes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#api-changes">API changes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#feature-removal">Feature Removal</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#small-things">Small Things</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#upgrading-from-version-9-x">Upgrading from Version 9.x</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Reference</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="api.html">Core API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="plugin-api.html">Plugin API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="language-guide.html">Language Definition Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="theme-guide.html">Theme Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mode-reference.html">Mode Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="css-classes-reference.html">Scope Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="plugin-recipes.html">Plugin Recipes</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">FAQ</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="supported-languages.html">Which languages are supported?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="line-numbers.html">Why no line numbers?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="language-requests.html">How to request a new language?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="language-contribution.html">How to contribute a new language?</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">highlight.js</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Upgrading to Highlight.js v11.0</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/upgrade-11.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="upgrading-to-highlight-js-v11-0">
+<h1>Upgrading to Highlight.js v11.0<a class="headerlink" href="#upgrading-to-highlight-js-v11-0" title="Link to this heading"></a></h1>
+<ul class="simple">
+<li><p><a class="reference internal" href="#overview-of-breaking-changes"><span class="xref myst">Overview of Breaking Changes</span></a></p>
+<ul>
+<li><p><a class="reference internal" href="#built-in-set-of-common-languages"><span class="xref myst">Built-in set of “Common” Languages</span></a></p></li>
+<li><p><a class="reference internal" href="#language-files"><span class="xref myst">Language Files</span></a></p></li>
+<li><p><a class="reference internal" href="#language-aliases"><span class="xref myst">Language Aliases</span></a></p></li>
+<li><p><a class="reference internal" href="#styles-and-css"><span class="xref myst">Styles and CSS</span></a></p>
+<ul>
+<li><p><a class="reference internal" href="#grammar-scopes"><span class="xref myst">Grammar Scopes</span></a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#behavioral-changes"><span class="xref myst">Behavioral changes</span></a></p>
+<ul>
+<li><p><a class="reference internal" href="#api-changes"><span class="xref myst">API changes</span></a></p>
+<ul>
+<li><p><a class="reference internal" href="#changes-to-result-data"><span class="xref myst">Changes to Result Data</span></a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#feature-removal"><span class="xref myst">Feature Removal</span></a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#small-things"><span class="xref myst">Small Things</span></a></p></li>
+<li><p><a class="reference internal" href="#upgrading-from-version-9x"><span class="xref myst">Upgrading from Version 9.x</span></a></p></li>
+</ul>
+</li>
+</ul>
+<section id="overview-of-breaking-changes">
+<h2>Overview of Breaking Changes<a class="headerlink" href="#overview-of-breaking-changes" title="Link to this heading"></a></h2>
+<p>Welcome to version 11.0.  This a major release and therefore contains breaking changes.  Below is a complete list of those such changes.</p>
+<section id="built-in-set-of-common-languages">
+<h3>Built-in set of “Common” Languages<a class="headerlink" href="#built-in-set-of-common-languages" title="Link to this heading"></a></h3>
+<p>The default <code class="docutils literal notranslate"><span class="pre">highlight.min.js</span></code> build <strong>removes</strong> a few less popular grammars:</p>
+<ul class="simple">
+<li><p>apache</p></li>
+<li><p>http</p></li>
+<li><p>nginx</p></li>
+<li><p>properties</p></li>
+<li><p>coffeescript</p></li>
+</ul>
+<p>If you need any of these, you can always create a custom build.</p>
+<p>Ref: https://github.com/highlightjs/highlight.js/issues/2848</p>
+</section>
+<section id="language-files">
+<h3>Language Files<a class="headerlink" href="#language-files" title="Link to this heading"></a></h3>
+<p>This would matter if you are requiring any of these files directly (via Node.js or CDN).</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">htmlbars</span></code> has been removed. Use <code class="docutils literal notranslate"><span class="pre">handlebars</span></code> instead.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">c-like</span></code> has been removed. Use <code class="docutils literal notranslate"><span class="pre">c</span></code>, <code class="docutils literal notranslate"><span class="pre">cpp</span></code>, or <code class="docutils literal notranslate"><span class="pre">arduino</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sql_more</span></code> has been removed. Use <code class="docutils literal notranslate"><span class="pre">sql</span></code> instead or a more specific 3rd party grammar.</p></li>
+</ul>
+</section>
+<section id="language-aliases">
+<h3>Language Aliases<a class="headerlink" href="#language-aliases" title="Link to this heading"></a></h3>
+<p>This would matter if you are using these aliases.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">php3</span></code>,<code class="docutils literal notranslate"><span class="pre">php4</span></code>,<code class="docutils literal notranslate"><span class="pre">php5</span></code>, <code class="docutils literal notranslate"><span class="pre">php6</span></code>, <code class="docutils literal notranslate"><span class="pre">php7</span></code>, and <code class="docutils literal notranslate"><span class="pre">php8</span></code> have been removed. Use <code class="docutils literal notranslate"><span class="pre">php</span></code> instead.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">zsh</span></code> has been removed. Use <code class="docutils literal notranslate"><span class="pre">sh</span></code> or <code class="docutils literal notranslate"><span class="pre">bash</span></code> instead.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">freepascal</span></code>, <code class="docutils literal notranslate"><span class="pre">lazarus</span></code>, <code class="docutils literal notranslate"><span class="pre">lpr</span></code>, and <code class="docutils literal notranslate"><span class="pre">lpm</span></code> removed. Use <code class="docutils literal notranslate"><span class="pre">delphi</span></code> instead.</p></li>
+</ul>
+<p>You can of course re-register any of these aliases easily if necessary. For example to restore the PHP aliases:</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="nx">hljs</span><span class="p">.</span><span class="nx">registerAliases</span><span class="p">([</span><span class="s2">"php3"</span><span class="p">,</span><span class="s2">"php4"</span><span class="p">,</span><span class="s2">"php5"</span><span class="p">,</span><span class="s2">"php6"</span><span class="p">,</span><span class="s2">"php7"</span><span class="p">,</span><span class="s2">"php8"</span><span class="p">],{</span><span class="w"> </span><span class="nx">languageName</span><span class="o">:</span><span class="w"> </span><span class="s2">"php"</span><span class="w"> </span><span class="p">})</span>
+</pre></div>
+</div>
+</section>
+<section id="styles-and-css">
+<h3>Styles and CSS<a class="headerlink" href="#styles-and-css" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>The default padding on <code class="docutils literal notranslate"><span class="pre">.hljs</span></code> element has been increased and is now <code class="docutils literal notranslate"><span class="pre">1em</span></code> (it was <code class="docutils literal notranslate"><span class="pre">0.5em</span></code> previously). If your design depends on the smaller spacing you may need to update your CSS to override.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">schoolbook</span></code> no longer has a custom lined background, it is solid color now.  The old image and CSS can be found in the <a class="reference external" href="https://github.com/highlightjs/highlight.js/tree/10-stable/src/styles">10-stable branch</a> if you wish to manually copy it into your project.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">github</span></code> includes significant changes to more properly match modern GitHub syntax highlighting. If you desire the old theme you can manually copy it into your project from the <a class="reference external" href="https://github.com/highlightjs/highlight.js/tree/10-stable/src/styles">10-stable branch</a>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">github-gist</span></code> has been removed in favor of <code class="docutils literal notranslate"><span class="pre">github</span></code> as GitHub and GitHub Gist have converged. If you desire the theme you can manually copy it into your project from the <a class="reference external" href="https://github.com/highlightjs/highlight.js/tree/10-stable/src/styles">10-stable branch</a>.</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">.hljs</span></code> CSS selector is now further scoped.  It now targets <code class="docutils literal notranslate"><span class="pre">code.hljs</span></code> (inline code) and <code class="docutils literal notranslate"><span class="pre">pre</span> <span class="pre">code.hljs</span></code> (code blocks). If you are using a different element you may need to update your CSS to reapply some styling.</p></li>
+<li><p>All <a class="reference external" href="https://github.com/highlightjs/base16-highlightjs">Base16 themes</a> now live in the <code class="docutils literal notranslate"><span class="pre">styles/base16</span></code> directory - this means some CSS files have moved.  Please confirm themes you use reference the new locations.</p></li>
+</ul>
+<section id="grammar-scopes">
+<h4>Grammar Scopes<a class="headerlink" href="#grammar-scopes" title="Link to this heading"></a></h4>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">.meta-string</span></code> removed/deprecated.  Use <code class="docutils literal notranslate"><span class="pre">.meta</span> <span class="pre">.string</span></code> (a nested scope) instead. See <a class="reference external" href="https://github.com/highlightjs/highlight.js/pull/3167">meta-keyword</a>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">.meta-keyword</span></code> removed/deprecated.  Use <code class="docutils literal notranslate"><span class="pre">.meta</span> <span class="pre">.keyword</span></code> (a nested scope) instead. See <a class="reference external" href="https://github.com/highlightjs/highlight.js/pull/3167">meta-keyword</a>.</p></li>
+</ul>
+</section>
+</section>
+<section id="behavioral-changes">
+<h3>Behavioral changes<a class="headerlink" href="#behavioral-changes" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">after:highlightElement</span></code> plugin callback is now fired <em>after</em> the DOM has been updated, not before.</p></li>
+</ul>
+<section id="api-changes">
+<h4>API changes<a class="headerlink" href="#api-changes" title="Link to this heading"></a></h4>
+<ul class="simple">
+<li><p>The option <code class="docutils literal notranslate"><span class="pre">ignoreIllegals</span></code> is now <code class="docutils literal notranslate"><span class="pre">true</span></code> by default (for <code class="docutils literal notranslate"><span class="pre">highlight()</span></code>). Previously it was <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">highlight(language,code,</span> <span class="pre">...args)</span></code> API no longer accepts <code class="docutils literal notranslate"><span class="pre">continuation</span></code> as a 4th argument.</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">highlight(language,code,</span> <span class="pre">...args)</span></code> API is deprecated (to be removed in 12.0).</p></li>
+</ul>
+<p>The new call signature is <code class="docutils literal notranslate"><span class="pre">highlight(code,</span> <span class="pre">{options})</span></code>. (<a class="reference external" href="https://highlightjs.readthedocs.io/en/latest/api.html#highlight">see docs</a>)</p>
+<p>Code using the old API:</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="c1">// highlight(language, code, ignoreIllegals, continuation)</span>
+<span class="nx">highlight</span><span class="p">(</span><span class="s2">"javascript"</span><span class="p">,</span><span class="w"> </span><span class="s2">"var a = 5;"</span><span class="p">,</span><span class="w"> </span><span class="kc">true</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>…would be upgraded to the newer API as follows:</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="c1">// highlight(code, {language, ignoreIllegals})</span>
+<span class="nx">highlight</span><span class="p">(</span><span class="s2">"var a = 5;"</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="nx">language</span><span class="o">:</span><span class="w"> </span><span class="s2">"javascript"</span><span class="p">,</span><span class="w"> </span><span class="nx">ignoreIllegals</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">})</span>
+</pre></div>
+</div>
+<p>The new API purposely does not support <code class="docutils literal notranslate"><span class="pre">continuation</span></code> as this is only intended for internal library usage.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">initHighlighting()</span></code> is deprecated (to be removed in 12.0).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">initHighlightingOnLoad()</span></code> is deprecated (to be removed in 12.0).</p></li>
+</ul>
+<p><strong>Use <code class="docutils literal notranslate"><span class="pre">highlightAll()</span></code> instead.</strong> (<a class="reference external" href="https://highlightjs.readthedocs.io/en/latest/api.html#highlight-all">see docs</a>) The old functions are now simply aliases of <code class="docutils literal notranslate"><span class="pre">highlightAll()</span></code>. The new function may be called before or after the DOM is loaded and should do the correct thing in all cases, replacing the need for the previous individual functions.</p>
+<p>Note: <code class="docutils literal notranslate"><span class="pre">highlightAll()</span></code> does not guard against calling itself repeatedly as the previous functions did. Your code should be careful to avoid doing this.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">highlightBlock()</span></code> is deprecated (to be removed in 12.0).</p></li>
+</ul>
+<p><strong>Use <code class="docutils literal notranslate"><span class="pre">highlightElement()</span></code> instead.</strong> (<a class="reference external" href="https://highlightjs.readthedocs.io/en/latest/api.html#highlight-element">see docs</a>) This is merely a naming change.</p>
+<p>Note: The object literal passed to the <code class="docutils literal notranslate"><span class="pre">before:highlightElement</span></code> callback now passes the element in the <code class="docutils literal notranslate"><span class="pre">el</span></code> key vs the <code class="docutils literal notranslate"><span class="pre">block</span></code> key.</p>
+<section id="changes-to-result-data">
+<h5>Changes to Result Data<a class="headerlink" href="#changes-to-result-data" title="Link to this heading"></a></h5>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">highlightAuto()</span></code>’s <code class="docutils literal notranslate"><span class="pre">second_best</span></code> key has been renamed to <code class="docutils literal notranslate"><span class="pre">secondBest</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">highlightElement()</span></code>’s result now no longer includes a <code class="docutils literal notranslate"><span class="pre">re</span></code> key. Use the <code class="docutils literal notranslate"><span class="pre">relevance</span></code> key now.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">highlight()</span></code> renames some result keys to more clearly mark them as private: <code class="docutils literal notranslate"><span class="pre">_top</span></code>, <code class="docutils literal notranslate"><span class="pre">_emitter</span></code>, and <code class="docutils literal notranslate"><span class="pre">_illegalBy</span></code>. You should not depend on these keys as they are subject to change at any time.</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">relevance</span></code> key returned by <code class="docutils literal notranslate"><span class="pre">highlight()</span></code> is no longer guaranteed to be an even integer.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">highlightElement</span></code> now always tags blocks with a consistent <code class="docutils literal notranslate"><span class="pre">language-[name]</span></code> class</p></li>
+</ul>
+<p>This behavior was inconsistent before.  Sometimes <code class="docutils literal notranslate"><span class="pre">[name]</span></code> class would be added, sometimes the alias name would be added, something no class would be added.  now <code class="docutils literal notranslate"><span class="pre">language-[name]</span></code> is always added. This also affects sublanguage <code class="docutils literal notranslate"><span class="pre">span</span></code> tags which now also include the <code class="docutils literal notranslate"><span class="pre">language-</span></code> prefix.</p>
+</section>
+</section>
+<section id="feature-removal">
+<h4>Feature Removal<a class="headerlink" href="#feature-removal" title="Link to this heading"></a></h4>
+<ul class="simple">
+<li><p>HTML auto-passthru is now no longer included in core.  Use a plugin instead. For a possible plugin please see <a class="reference external" href="https://github.com/highlightjs/highlight.js/issues/2889">#2889</a>.</p></li>
+</ul>
+<p>An example:</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">pre</span><span class="p">&gt;&lt;</span><span class="nt">code</span> <span class="na">class</span><span class="o">=</span><span class="s">"lang-js"</span><span class="p">&gt;</span>
+var a = 4;
+<span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">"yellow"</span><span class="p">&gt;</span>var a = 4;<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">code</span><span class="p">&gt;&lt;/</span><span class="nt">pre</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<p>Unescaped HTML like this will now be ignored (stripped before highlighting) and a warning will be logged to the console.  All HTML to be highlighted should be properly escaped to avoid potential HTML/JS injection attacks.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">fixMarkup</span></code> has been removed.</p></li>
+</ul>
+<p>This function was deprecated in v10.2.  It is not our goal to provide random string utilities. You may need to provide your own replacement <a class="reference external" href="https://github.com/highlightjs/highlight.js/issues/2634">Ref: #2534</a></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">CSS_NUMBER_MODE</span></code> has been removed.</p></li>
+</ul>
+<p>This rule was too broad for bring inclusion in core and has been removed.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">lexemes</span></code> mode attribute has been removed.</p></li>
+</ul>
+<p>Use the new <code class="docutils literal notranslate"><span class="pre">keywords.$pattern</span></code> instead.</p>
+<p>Before:</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">  </span><span class="nx">keywords</span><span class="o">:</span><span class="w"> </span><span class="s2">"do.it start.now begin.later end.immediately"</span>
+<span class="w">  </span><span class="nx">lexemes</span><span class="o">:</span><span class="w"> </span><span class="sr">/[a-z.]+/</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>After:</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">  </span><span class="nx">keywords</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">$pattern</span><span class="o">:</span><span class="w"> </span><span class="sr">/[a-z.]+/</span>
+<span class="w">    </span><span class="nx">keyword</span><span class="o">:</span><span class="w"> </span><span class="s2">"do.it start.now begin.later end.immediately"</span><span class="p">,</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>This may required converting your <code class="docutils literal notranslate"><span class="pre">keywords</span></code> key into an object if it’s not already (as shown above).</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">endSameAsBegin</span></code> mode attribute has been removed.</p></li>
+</ul>
+<p>Use the new <code class="docutils literal notranslate"><span class="pre">END_SAME_AS_BEGIN</span></code> mode rule/function instead.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">useBR</span></code> configuration has been removed.</p></li>
+</ul>
+<p>This configuration option was deprecated in v10.1. Use a plugin or preferably simply CSS <code class="docutils literal notranslate"><span class="pre">white-space:</span> <span class="pre">pre</span></code>. <a class="reference external" href="https://github.com/highlightjs/highlight.js/issues/2559">Ref: #2559</a></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">tabReplace</span></code> configuration has been removed.</p></li>
+</ul>
+<p>This configuration option was deprecated in v10.5. Use a plugin or pre-render content instead with desired spacing. <a class="reference external" href="https://github.com/highlightjs/highlight.js/issues/2874">Ref: #2874</a></p>
+</section>
+</section>
+<section id="small-things">
+<h3>Small Things<a class="headerlink" href="#small-things" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>The <code class="docutils literal notranslate"><span class="pre">regex</span></code> utility <code class="docutils literal notranslate"><span class="pre">join</span></code> has been renamed to <code class="docutils literal notranslate"><span class="pre">_eitherRewriteBackreferences</span></code> (this has always been intended for internal use only)</p></li>
+</ul>
+</section>
+<section id="upgrading-from-version-9-x">
+<h3>Upgrading from Version 9.x<a class="headerlink" href="#upgrading-from-version-9-x" title="Link to this heading"></a></h3>
+<p>If you’re upgrading all the way from version 9 it may still be helpful to review all the breaking changes in version 10 as well:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/highlightjs/highlight.js/blob/main/VERSION_10_UPGRADE.md">VERSION_10_UPGRADE.md</a></p></li>
+<li><p><a class="reference external" href="https://github.com/highlightjs/highlight.js/blob/main/VERSION_10_BREAKING_CHANGES.md">VERSION_10_BREAKING_CHANGES.md</a></p></li>
+</ul>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="building-testing.html" class="btn btn-neutral float-left" title="Building and Testing" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="api.html" class="btn btn-neutral float-right" title="Core API" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2012–2024, Ivan Sagalaev.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
