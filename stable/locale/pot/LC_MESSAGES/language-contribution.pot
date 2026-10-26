@@ -8,10 +8,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: highlight.js stable\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-04-02 03:28+0000\n"
+"POT-Creation-Date: 2026-10-26 15:09+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -142,14 +143,14 @@ msgstr ""
 #: ../../../language-contribution.rst:88
 msgid ""
 "The code example is used both to test language detection and for the demo "
-"page on https://highlightjs.org/. Put it in ``test/detect/<language>/default."
-"txt``."
+"page on https://highlightjs.org/. Put it in ``test/detect/<language>/"
+"default.txt``."
 msgstr ""
 
 #: ../../../language-contribution.rst:91
 msgid ""
-"Take inspiration from other languages in ``test/detect/`` and read :ref:"
-"`testing instructions <basic-testing>` for more details."
+"Take inspiration from other languages in ``test/detect/`` and "
+"read :ref:`testing instructions <basic-testing>` for more details."
 msgstr ""
 
 #: ../../../language-contribution.rst:96
@@ -188,8 +189,8 @@ msgstr ""
 #: ../../../language-contribution.rst:114
 msgid ""
 "Request a new 3rd party grammar repository hosted in highlightjs with Issue "
-"Type `**Issue: Request a new 3rd party grammar repository** <https://github."
-"com/highlightjs/highlight.js/issues/new/choose>`_"
+"Type `**Issue: Request a new 3rd party grammar repository** <https://"
+"github.com/highlightjs/highlight.js/issues/new/choose>`_"
 msgstr ""
 
 #: ../../../language-contribution.rst:119
@@ -198,6 +199,6 @@ msgstr ""
 
 #: ../../../language-contribution.rst:121
 msgid ""
-"Submit a PR to add your language to `SUPPORTED_LANGUAGES.md <https://github."
-"com/highlightjs/highlight.js/blob/main/SUPPORTED_LANGUAGES.md>`_."
+"Submit a PR to add your language to `SUPPORTED_LANGUAGES.md <https://"
+"github.com/highlightjs/highlight.js/blob/main/SUPPORTED_LANGUAGES.md>`_."
 msgstr ""

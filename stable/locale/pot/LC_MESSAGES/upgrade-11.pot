@@ -8,10 +8,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: highlight.js stable\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-04-02 03:28+0000\n"
+"POT-Creation-Date: 2026-10-26 15:09+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -122,8 +123,8 @@ msgstr ""
 
 #: ../../../upgrade-11.md:39
 msgid ""
-"This would matter if you are requiring any of these files directly (via Node."
-"js or CDN)."
+"This would matter if you are requiring any of these files directly (via "
+"Node.js or CDN)."
 msgstr ""
 
 #: ../../../upgrade-11.md:41
@@ -314,11 +315,11 @@ msgstr ""
 
 #: ../../../upgrade-11.md:105
 msgid ""
-"**Use `highlightAll()` instead.** ([see docs](https://highlightjs."
-"readthedocs.io/en/latest/api.html#highlight-all)) The old functions are now "
-"simply aliases of `highlightAll()`. The new function may be called before or "
-"after the DOM is loaded and should do the correct thing in all cases, "
-"replacing the need for the previous individual functions."
+"**Use `highlightAll()` instead.** ([see docs](https://"
+"highlightjs.readthedocs.io/en/latest/api.html#highlight-all)) The old "
+"functions are now simply aliases of `highlightAll()`. The new function may "
+"be called before or after the DOM is loaded and should do the correct thing "
+"in all cases, replacing the need for the previous individual functions."
 msgstr ""
 
 #: ../../../upgrade-11.md:107
@@ -333,9 +334,9 @@ msgstr ""
 
 #: ../../../upgrade-11.md:111
 msgid ""
-"**Use `highlightElement()` instead.** ([see docs](https://highlightjs."
-"readthedocs.io/en/latest/api.html#highlight-element)) This is merely a "
-"naming change."
+"**Use `highlightElement()` instead.** ([see docs](https://"
+"highlightjs.readthedocs.io/en/latest/api.html#highlight-element)) This is "
+"merely a naming change."
 msgstr ""
 
 #: ../../../upgrade-11.md:113
