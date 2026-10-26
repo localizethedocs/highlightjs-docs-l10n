@@ -1,0 +1,226 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-TW" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Language contributor checklist &mdash; highlight.js 11.11.1 說明文件</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=9edc463e" />
+
+  
+    <link rel="canonical" href="https://projects.localizethedocs.org/highlightjs-docs-l10n/language-contribution.html" />
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=c6dbf7b7"></script>
+      <script src="_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="_static/translations.js?v=cbf116e0"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="搜尋" href="search.html" />
+    <link rel="prev" title="On requesting new languages" href="language-requests.html" />
+ 
+<script type="text/javascript" src="ltd-provenance.js"></script>
+<script type="text/javascript" src="ltd-current.js"></script>
+<script type="text/javascript" src="../../ltd-config.js"></script>
+<script type="text/javascript" src="../../ltd-flyout.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            highlight.js
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">開始使用</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="readme.html">README / How to Use</a></li>
+<li class="toctree-l1"><a class="reference internal" href="building-testing.html">建置與測試</a></li>
+<li class="toctree-l1"><a class="reference internal" href="upgrade-11.html">升級至版本 11</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">參考</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="api.html">核心 API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="plugin-api.html">Plugin API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="language-guide.html">語言定義指南</a></li>
+<li class="toctree-l1"><a class="reference internal" href="theme-guide.html">Theme Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mode-reference.html">模式參考</a></li>
+<li class="toctree-l1"><a class="reference internal" href="css-classes-reference.html">Scope Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="plugin-recipes.html">Plugin Recipes</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">FAQ</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="supported-languages.html">支援哪些語言？</a></li>
+<li class="toctree-l1"><a class="reference internal" href="line-numbers.html">為什麼沒有行號？</a></li>
+<li class="toctree-l1"><a class="reference internal" href="language-requests.html">如何請求新語言？</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">如何貢獻新語言？</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">highlight.js</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Language contributor checklist</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/language-contribution.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="language-contributor-checklist">
+<h1>Language contributor checklist<a class="headerlink" href="#language-contributor-checklist" title="連結到這個標頭"></a></h1>
+<section id="know-that-you-are-creating-a-3rd-party-grammar">
+<h2>1. Know that you are creating a 3rd party grammar<a class="headerlink" href="#know-that-you-are-creating-a-3rd-party-grammar" title="連結到這個標頭"></a></h2>
+<p><em>Sadly, due to lack of maintainer time we no longer merge new languages grammars
+into the core library.</em> Instead, the project works by encouraging 3rd party
+language grammar development by willing contributors ready to help and maintain
+them. We're also happy to host those 3rd party language grammars at the
+<code class="docutils literal notranslate"><span class="pre">highlightjs</span></code> GitHub organization. Or you're welcome to host yourself - we're
+always happy to link to to new language grammars.</p>
+<p>We also make it easy to build, maintain, and distribute 3rd party grammar
+modules so that Highlight.js can always be easily extended with new languages.
+Using a 3rd party language (for end users) is often as simple as just adding a
+single line of code to their JavaScript or build system.</p>
+<p>We'd love to have your grammar as a 3rd party language module if you'd be
+willing to maintain it over time.  It's easy to develop and publish a 3rd party
+language module.  If you already started work in the main source tree - it's
+trivial to convert your existing work into a 3rd party module. (you pretty much
+just move your files into a new project folder)</p>
+</section>
+<section id="read-extra-3rd-party-quick-start-md">
+<h2>2. Read extra/3RD_PARTY_QUICK_START.md<a class="headerlink" href="#read-extra-3rd-party-quick-start-md" title="連結到這個標頭"></a></h2>
+<p>Next, read <code class="docutils literal notranslate"><span class="pre">extra/3RD_PARTY_QUICK_START.md</span></code>.  This should provide you with a
+very high-level overview of the steps for creating a third-party language
+grammar for Highlight.js.</p>
+</section>
+<section id="create-a-language-grammar-definition-file">
+<h2>3. Create a language grammar definition file<a class="headerlink" href="#create-a-language-grammar-definition-file" title="連結到這個標頭"></a></h2>
+<p>The file defines a function accepting a reference to the library and returning a language object.
+The library parameter (<code class="docutils literal notranslate"><span class="pre">hljs</span></code>) is useful to access common modes and regexps. You should not
+immediately call this function (you only need to export it). Calling it is handled by the build
+process and details differ for different build targets.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">export</span> <span class="n">default</span> <span class="n">function</span><span class="p">(</span><span class="n">hljs</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="p">{</span>
+    <span class="n">name</span><span class="p">:</span> <span class="s2">"Language Name"</span><span class="p">,</span>
+    <span class="n">keywords</span><span class="p">:</span> <span class="s1">'foo bar'</span><span class="p">,</span>
+    <span class="n">contains</span><span class="p">:</span> <span class="p">[</span> <span class="o">...</span><span class="p">,</span> <span class="n">hljs</span><span class="o">.</span><span class="n">NUMBER_MODE</span><span class="p">,</span> <span class="o">...</span> <span class="p">]</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>The name of the file is used as a short language identifier and should be usable
+as a class name in HTML and CSS.  Typically you'll place this file in your
+new grammar repository under <code class="docutils literal notranslate"><span class="pre">my_new_grammar/src/languages/</span></code>.</p>
+</section>
+<section id="add-language-metadata">
+<h2>4. Add language metadata<a class="headerlink" href="#add-language-metadata" title="連結到這個標頭"></a></h2>
+<p>At the top of the file there is a specially formatted comment with meta data processed by a build system.
+Meta data format is simply key-value pairs each occupying its own line:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">/*</span>
+<span class="n">Language</span><span class="p">:</span> <span class="n">Superlanguage</span>
+<span class="n">Requires</span><span class="p">:</span> <span class="n">java</span><span class="o">.</span><span class="n">js</span><span class="p">,</span> <span class="n">sql</span><span class="o">.</span><span class="n">js</span>
+<span class="n">Author</span><span class="p">:</span> <span class="n">John</span> <span class="n">Smith</span> <span class="o">&lt;</span><span class="n">email</span><span class="nd">@domain</span><span class="o">.</span><span class="n">com</span><span class="o">&gt;</span>
+<span class="n">Contributors</span><span class="p">:</span> <span class="n">Mike</span> <span class="n">Johnson</span> <span class="o">&lt;...@...&gt;</span><span class="p">,</span> <span class="n">Matt</span> <span class="n">Wilson</span> <span class="o">&lt;...@...&gt;</span>
+<span class="n">Description</span><span class="p">:</span> <span class="n">Some</span> <span class="n">cool</span> <span class="n">language</span> <span class="n">definition</span>
+<span class="n">Website</span><span class="p">:</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">superlanguage</span><span class="o">.</span><span class="n">example</span><span class="o">.</span><span class="n">com</span>
+<span class="o">*/</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">Language</span></code> — the only required header giving a human-readable language name.</p>
+<p><code class="docutils literal notranslate"><span class="pre">Requires</span></code> — a list of other language files required for this language to work.
+This make it possible to describe languages that extend definitions of other ones.
+Required files aren't processed in any special way.
+The build system just makes sure that they will be in the final package in
+<code class="docutils literal notranslate"><span class="pre">LANGUAGES</span></code> object.</p>
+<p>The meaning of the other headers should be pretty obvious.</p>
+</section>
+<section id="create-a-code-example">
+<h2>5. Create a code example<a class="headerlink" href="#create-a-code-example" title="連結到這個標頭"></a></h2>
+<p>The code example is used both to test language detection and for the demo page
+on <a class="reference external" href="https://highlightjs.org/">https://highlightjs.org/</a>. Put it in <code class="docutils literal notranslate"><span class="pre">test/detect/&lt;language&gt;/default.txt</span></code>.</p>
+<p>Take inspiration from other languages in <code class="docutils literal notranslate"><span class="pre">test/detect/</span></code> and read
+<a class="reference internal" href="building-testing.html#basic-testing"><span class="std std-ref">testing instructions</span></a> for more details.</p>
+</section>
+<section id="write-a-class-reference-if-your-class-uses-custom-classes">
+<h2>6. Write a class reference if your class uses custom classes<a class="headerlink" href="#write-a-class-reference-if-your-class-uses-custom-classes" title="連結到這個標頭"></a></h2>
+<p>A class reference document should typically be placed at the root of your
+language repository: <code class="docutils literal notranslate"><span class="pre">css-class-reference.md</span></code></p>
+<p>Describe shortly names of all meaningful modes used in your language definition.</p>
+<p>Note: If you use custom classes please be aware that all the build-in themes
+are not going to support your custom classes and you should likely also
+distribute your own custom theme.</p>
+</section>
+<section id="request-a-repository-at-the-highlightjs-organization">
+<h2>7. Request a repository at the <code class="docutils literal notranslate"><span class="pre">highlightjs</span></code> organization<a class="headerlink" href="#request-a-repository-at-the-highlightjs-organization" title="連結到這個標頭"></a></h2>
+<p><em>This is optional.</em>
+Of course you are free to host your repository anywhere you would like.</p>
+<p>Request a new 3rd party grammar repository hosted in highlightjs with Issue Type
+<a class="reference external" href="https://github.com/highlightjs/highlight.js/issues/new/choose">**Issue: Request a new 3rd party grammar repository**</a></p>
+</section>
+<section id="create-a-pull-request">
+<h2>8. Create a pull request<a class="headerlink" href="#create-a-pull-request" title="連結到這個標頭"></a></h2>
+<p>Submit a PR to add your language to <a class="reference external" href="https://github.com/highlightjs/highlight.js/blob/main/SUPPORTED_LANGUAGES.md">SUPPORTED_LANGUAGES.md</a>.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="language-requests.html" class="btn btn-neutral float-left" title="On requesting new languages" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2012–2024, Ivan Sagalaev.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
