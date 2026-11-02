@@ -160,8 +160,8 @@ msgstr ""
 #: ../../../mode-reference.rst:68
 msgid ""
 "A list of additional names (besides the canonical one given by the filename) "
-"that can be used to identify a language in HTML classes and in a call to :"
-"ref:`getLanguage <getLanguage>`."
+"that can be used to identify a language in HTML classes and in a call "
+"to :ref:`getLanguage <getLanguage>`."
 msgstr ""
 
 #: ../../../mode-reference.rst:72
