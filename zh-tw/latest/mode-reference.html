@@ -1,0 +1,783 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-TW" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>模式參考 &mdash; highlight.js 11.11.1 說明文件</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=9edc463e" />
+
+  
+    <link rel="canonical" href="https://projects.localizethedocs.org/highlightjs-docs-l10n/mode-reference.html" />
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=c6dbf7b7"></script>
+      <script src="_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="_static/translations.js?v=cbf116e0"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="搜尋" href="search.html" />
+    <link rel="next" title="Scope Reference" href="css-classes-reference.html" />
+    <link rel="prev" title="Theme Guide" href="theme-guide.html" />
+ 
+<script type="text/javascript" src="ltd-provenance.js"></script>
+<script type="text/javascript" src="ltd-current.js"></script>
+<script type="text/javascript" src="../../ltd-config.js"></script>
+<script type="text/javascript" src="../../ltd-flyout.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            highlight.js
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">開始使用</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="readme.html">README / How to Use</a></li>
+<li class="toctree-l1"><a class="reference internal" href="building-testing.html">建置與測試</a></li>
+<li class="toctree-l1"><a class="reference internal" href="upgrade-11.html">升級至版本 11</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">參考</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="api.html">核心 API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="plugin-api.html">Plugin API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="language-guide.html">語言定義指南</a></li>
+<li class="toctree-l1"><a class="reference internal" href="theme-guide.html">Theme Guide</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">模式參考</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#language-attributes">Language Attributes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#name">name</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#unicoderegex">unicodeRegex</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#case-insensitive">case_insensitive</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#aliases">aliases</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#classnamealiases">classNameAliases</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#disableautodetect">disableAutodetect</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#emittokens">__emitTokens</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#compilerextensions">compilerExtensions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#mode-attributes">Mode Attributes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#classname">className</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#scope">scope</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#begin">begin</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#beginscope">beginScope</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#endscope">endScope</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#match">match</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#on-begin">on:begin</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#end">end</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#on-end">on:end</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#beginkeywords">beginKeywords</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#endswithparent">endsWithParent</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#endsparent">endsParent</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#keywords">keywords</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#illegal">illegal</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#excludebegin-excludeend">excludeBegin, excludeEnd</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#returnbegin">returnBegin</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#returnend">returnEnd</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#contains">contains</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#starts">starts</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#variants">variants</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#sublanguage">subLanguage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#skip">skip</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="css-classes-reference.html">Scope Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="plugin-recipes.html">Plugin Recipes</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">FAQ</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="supported-languages.html">支援哪些語言？</a></li>
+<li class="toctree-l1"><a class="reference internal" href="line-numbers.html">為什麼沒有行號？</a></li>
+<li class="toctree-l1"><a class="reference internal" href="language-requests.html">如何請求新語言？</a></li>
+<li class="toctree-l1"><a class="reference internal" href="language-contribution.html">如何貢獻新語言？</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">highlight.js</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">模式參考</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/mode-reference.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="mode-reference">
+<h1>模式參考<a class="headerlink" href="#mode-reference" title="連結到這個標頭"></a></h1>
+<p><strong>資料型別</strong></p>
+<p>Types of attributes values in this reference:</p>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p>mode</p></td>
+<td><p>A valid Highlight.js Mode (as defined by this very reference)</p></td>
+</tr>
+<tr class="row-even"><td><p>scope</p></td>
+<td><p>A valid grammar scope: <code class="docutils literal notranslate"><span class="pre">title.class.inherited</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>regexp</p></td>
+<td><p>JavaScript regexp literal (recommended) or string representing a regexp.</p>
+<p>(note when using a string proper escaping is critical)</p>
+</td>
+</tr>
+<tr class="row-even"><td><p>boolean</p></td>
+<td><p>JavaScript 布林值：<code class="docutils literal notranslate"><span class="pre">true</span></code> 或 <code class="docutils literal notranslate"><span class="pre">false</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>string</p></td>
+<td><p>JavaScript 字串</p></td>
+</tr>
+<tr class="row-even"><td><p>number</p></td>
+<td><p>JavaScript number</p></td>
+</tr>
+<tr class="row-odd"><td><p>object</p></td>
+<td><p>JavaScript 物件：<code class="docutils literal notranslate"><span class="pre">{</span> <span class="pre">...</span> <span class="pre">}</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>array</p></td>
+<td><p>JavaScript 陣列：<code class="docutils literal notranslate"><span class="pre">[</span> <span class="pre">...</span> <span class="pre">]</span></code></p></td>
+</tr>
+</tbody>
+</table>
+<section id="language-attributes">
+<h2>Language Attributes<a class="headerlink" href="#language-attributes" title="連結到這個標頭"></a></h2>
+<p>These attributes are only valid at the language level (ie, they many only exist on the top-most language object and have no meaning if specified in children modes).</p>
+<section id="name">
+<h3>name<a class="headerlink" href="#name" title="連結到這個標頭"></a></h3>
+<ul class="simple">
+<li><p><strong>type</strong>: string</p></li>
+</ul>
+<p>The canonical name of this language, ie &quot;JavaScript&quot;, etc.</p>
+</section>
+<section id="unicoderegex">
+<h3>unicodeRegex<a class="headerlink" href="#unicoderegex" title="連結到這個標頭"></a></h3>
+<ul class="simple">
+<li><p><strong>type</strong>: boolean</p></li>
+</ul>
+<p>Expresses whether the grammar in question uses Unicode (<code class="docutils literal notranslate"><span class="pre">u</span></code> flag) regular expressions.
+(defaults to false)</p>
+</section>
+<section id="case-insensitive">
+<h3>case_insensitive<a class="headerlink" href="#case-insensitive" title="連結到這個標頭"></a></h3>
+<ul class="simple">
+<li><p><strong>type</strong>: boolean</p></li>
+</ul>
+<p>Case insensitivity of language keywords and regexps. Used only on the top-level mode.
+(defaults to false)</p>
+</section>
+<section id="aliases">
+<h3>aliases<a class="headerlink" href="#aliases" title="連結到這個標頭"></a></h3>
+<ul class="simple">
+<li><p><strong>type</strong>: array of strings</p></li>
+</ul>
+<p>A list of additional names (besides the canonical one given by the filename) that can be used to identify a language in HTML classes and in a call to <a class="reference internal" href="api.html#getlanguage"><span class="std std-ref">getLanguage</span></a>.</p>
+</section>
+<section id="classnamealiases">
+<h3>classNameAliases<a class="headerlink" href="#classnamealiases" title="連結到這個標頭"></a></h3>
+<ul class="simple">
+<li><p><strong>type</strong>: object</p></li>
+</ul>
+<p>A mapping table of any custom scope names your grammar uses and their supported equivalencies.  Perhaps your language has a concept of &quot;slots&quot; that roughly correspond to variables in other languages.  This allows you to write grammar code like:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">  </span><span class="nx">classNameAliases</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">slot</span><span class="o">:</span><span class="w"> </span><span class="s2">"variable"</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">"message-name"</span><span class="o">:</span><span class="w"> </span><span class="s2">"string"</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nx">contains</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">scope</span><span class="o">:</span><span class="w"> </span><span class="s2">"slot"</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">begin</span><span class="o">:</span><span class="w"> </span><span class="c1">// ...</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>The final HTML output will render slots with a CSS class of <code class="docutils literal notranslate"><span class="pre">hljs-variable</span></code>.  This feature exists to make it easier for grammar maintainers to think in their own language when maintaining a grammar.</p>
+<p>For a list of all supported scope names please see the <a class="reference internal" href="css-classes-reference.html"><span class="doc">Scopes Reference</span></a>.</p>
+</section>
+<section id="disableautodetect">
+<h3>disableAutodetect<a class="headerlink" href="#disableautodetect" title="連結到這個標頭"></a></h3>
+<ul class="simple">
+<li><p><strong>type</strong>: boolean</p></li>
+</ul>
+<p>Disables autodetection for this language.
+(defaults to false, meaning auto-detect is enabled)</p>
+</section>
+<section id="emittokens">
+<h3>__emitTokens<a class="headerlink" href="#emittokens" title="連結到這個標頭"></a></h3>
+<div class="admonition warning">
+<p class="admonition-title">警告</p>
+<p><strong>This is currently still private/beta API</strong>, though it's expected to be fairly stable.</p>
+<p>It should land in version 12.0.</p>
+</div>
+<p>Allows grammars to bundle custom parsers - bypassing the default parser and grammar mode definitions.  This should be a function that accepts the raw source code as the first argument and an &quot;Emitter&quot; object as the second.</p>
+<p>A custom parser may parse the source as it sees fit - making calls to the Emitter along the way - allowing Highlight.js to generate and theme the final HTML.</p>
+<p>The <strong>Emitter</strong> API is trivial:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">addText(text)</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">startScope(name)</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">endScope()</span></code></p></li>
+</ul>
+<p>Given:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">hello</span><span class="w"> </span><span class="nx">beautiful</span><span class="w"> </span><span class="nx">world</span><span class="o">!</span>
+</pre></div>
+</div>
+<p>Assuming beautiful is a keyword our Emitter calls might look something like:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">addText</span><span class="p">(</span><span class="s2">"hello "</span><span class="p">)</span>
+<span class="nx">startScope</span><span class="p">(</span><span class="s2">"keyword"</span><span class="p">)</span>
+<span class="nx">addText</span><span class="p">(</span><span class="s2">"beautiful"</span><span class="p">)</span>
+<span class="nx">endScope</span><span class="p">()</span>
+<span class="nx">addText</span><span class="p">(</span><span class="s2">" world!"</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Resulting in the following generated HTML:</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span>hello <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">"hljs-keyword"</span><span class="p">&gt;</span>beautiful<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span> world!
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">備註</p>
+<p>The intended use of <code class="docutils literal notranslate"><span class="pre">addText</span></code> is larger chunks of plain text, not individual characters.  Custom parsers should buffer plain text output into complete strings rather than sending output one character at a time.</p>
+</div>
+</section>
+<section id="compilerextensions">
+<h3>compilerExtensions<a class="headerlink" href="#compilerextensions" title="連結到這個標頭"></a></h3>
+<div class="admonition warning">
+<p class="admonition-title">警告</p>
+<p><strong>This is heavily dependent upon compiler internals and may NOT be
+stable from minor release to minor release.</strong> <em>It is currently recommended
+only for 1st party grammars.</em></p>
+</div>
+<ul class="simple">
+<li><p><strong>type</strong>: an array of compiler extensions ie: <code class="docutils literal notranslate"><span class="pre">(mode,</span> <span class="pre">parentMode)</span> <span class="pre">-&gt;</span> <span class="pre">{}</span></code></p></li>
+</ul>
+<p>This allows grammars to extend the mode compiler to add their own syntactic
+sugar to make reading and writing grammars easier.  The
+intention is that we use grammars to &quot;test&quot; out new compiler extensions and if
+they perform well promote them into the core library.</p>
+<dl class="simple">
+<dt>mode</dt><dd><p>The incoming mode object</p>
+</dd>
+<dt>parentMode</dt><dd><p>The parent mode of the mode (null for the top level language mode)</p>
+</dd>
+</dl>
+<p>For example lets look at a tiny well behaved extension to allow us to write
+<code class="docutils literal notranslate"><span class="pre">match</span></code> as sugar to better express the intent to &quot;match a single thing, then
+end mode&quot;.</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">compilerExtensions</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">  </span><span class="p">(</span><span class="nx">mode</span><span class="p">,</span><span class="w"> </span><span class="nx">_parentMode</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// first some quick sanity checks</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="nx">mode</span><span class="p">.</span><span class="nx">match</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">// then check for users doing things that would make no sense</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">mode</span><span class="p">.</span><span class="nx">begin</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nx">mode</span><span class="p">.</span><span class="nx">end</span><span class="p">)</span><span class="w"> </span><span class="k">throw</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="ne">Error</span><span class="p">(</span><span class="s2">"begin &amp; end are not supported with match"</span><span class="p">);</span>
+
+<span class="w">    </span><span class="c1">// copy the match regex into begin</span>
+<span class="w">    </span><span class="nx">mode</span><span class="p">.</span><span class="nx">begin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">mode</span><span class="p">.</span><span class="nx">match</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">// cleanup: delete our syntactic construct</span>
+<span class="w">    </span><span class="ow">delete</span><span class="w"> </span><span class="nx">mode</span><span class="p">.</span><span class="nx">match</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+<p>Compiler extension functions return nothing. They are expected to mutate the
+mode itself.</p>
+</section>
+</section>
+<section id="mode-attributes">
+<h2>Mode Attributes<a class="headerlink" href="#mode-attributes" title="連結到這個標頭"></a></h2>
+<section id="classname">
+<h3>className<a class="headerlink" href="#classname" title="連結到這個標頭"></a></h3>
+<div class="deprecated">
+<p><span class="versionmodified deprecated">在 11.0 版之後被棄用: </span>請改用 <code class="docutils literal notranslate"><span class="pre">scope</span></code>。</p>
+</div>
+</section>
+<section id="scope">
+<h3>scope<a class="headerlink" href="#scope" title="連結到這個標頭"></a></h3>
+<div class="versionadded">
+<p><span class="versionmodified added">在 11.0 版被加入.</span></p>
+</div>
+<ul class="simple">
+<li><p><strong>type</strong>: scope</p></li>
+</ul>
+<p>The scope of a given mode. Scopes are converted to CSS class names in HTML markup.</p>
+<p>Multiple modes can have the same scope. This is useful when a language has multiple variants of syntax
+for one thing like string in single or double quotes.</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">  </span><span class="nx">scope</span><span class="o">:</span><span class="w"> </span><span class="s2">"title.function.call"</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">begin</span><span class="o">:</span><span class="w"> </span><span class="sr">/[a-z]+\(/</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>See <a class="reference internal" href="css-classes-reference.html"><span class="doc">scopes reference</span></a> for details on scopes and CSS classes.</p>
+</section>
+<section id="begin">
+<h3>begin<a class="headerlink" href="#begin" title="連結到這個標頭"></a></h3>
+<ul class="simple">
+<li><p><strong>type</strong>: regexp or array of regexp</p></li>
+</ul>
+<p>Regular expression starting a mode. For example a single quote for strings or two forward slashes for C-style comments.
+If absent, <code class="docutils literal notranslate"><span class="pre">begin</span></code> defaults to a regexp that matches anything, so the mode starts immediately.</p>
+<p>This may also be an array.  See <a class="reference internal" href="#beginscope"><span class="std std-ref">beginScope</span></a>.</p>
+</section>
+<section id="beginscope">
+<span id="id1"></span><h3>beginScope<a class="headerlink" href="#beginscope" title="連結到這個標頭"></a></h3>
+<div class="versionadded">
+<p><span class="versionmodified added">在 11.0 版被加入.</span></p>
+</div>
+<ul class="simple">
+<li><p><strong>type</strong>: scope</p></li>
+<li><p><strong>type</strong>: numeric index of scopes (when <code class="docutils literal notranslate"><span class="pre">begin</span></code> is an array)</p></li>
+</ul>
+<p>This can be used to apply a scope to just the begin match portion.</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">  </span><span class="nx">begin</span><span class="o">:</span><span class="w"> </span><span class="sr">/def/</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">beginScope</span><span class="o">:</span><span class="w"> </span><span class="s2">"keyword"</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>You can also use <code class="docutils literal notranslate"><span class="pre">beginScope</span></code> to individually highlight portions of the match
+with different scopes by passing an array to <code class="docutils literal notranslate"><span class="pre">begin</span></code>.</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="nx">begin</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">  </span><span class="sr">/function!/</span><span class="p">,</span>
+<span class="w">  </span><span class="sr">/\s+/</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">hljs</span><span class="p">.</span><span class="nx">IDENT_RE</span>
+<span class="p">],</span>
+<span class="nx">beginScope</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="mf">1</span><span class="o">:</span><span class="w"> </span><span class="s2">"keyword"</span><span class="p">,</span>
+<span class="w">  </span><span class="mf">3</span><span class="o">:</span><span class="w"> </span><span class="s2">"title"</span>
+<span class="p">},</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>This would highlight <code class="docutils literal notranslate"><span class="pre">function!</span></code> as a <code class="docutils literal notranslate"><span class="pre">keyword</span></code> while highlighting the name
+of the function as <code class="docutils literal notranslate"><span class="pre">title</span></code>. The space(s) between would be matched, but not
+highlighted.</p>
+<p>Note: Internally, each regular expression in the array becomes a capture group
+inside a larger concatenated regex.  If your regular expressions use capture
+groups (or references) they will be auto-magically renumerated so that they
+continue to work without any changes.</p>
+<p>For more info see issue <a class="reference external" href="https://github.com/highlightjs/highlight.js/issues/3095">#3095</a>.</p>
+</section>
+<section id="endscope">
+<h3>endScope<a class="headerlink" href="#endscope" title="連結到這個標頭"></a></h3>
+<div class="versionadded">
+<p><span class="versionmodified added">在 11.0 版被加入.</span></p>
+</div>
+<ul class="simple">
+<li><p><strong>type</strong>: scope</p></li>
+<li><p><strong>type</strong>: numeric index of scopes (when <code class="docutils literal notranslate"><span class="pre">end</span></code> is an array)</p></li>
+</ul>
+<p>This has the same behavior as <code class="docutils literal notranslate"><span class="pre">beginScope</span></code> but applies to the content of the
+<code class="docutils literal notranslate"><span class="pre">end</span></code> match.</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">  </span><span class="nx">begin</span><span class="o">:</span><span class="w"> </span><span class="sr">/FIRST/</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">end</span><span class="o">:</span><span class="w"> </span><span class="sr">/LAST/</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">endScope</span><span class="o">:</span><span class="w"> </span><span class="s2">"built_in"</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="match">
+<h3>match<a class="headerlink" href="#match" title="連結到這個標頭"></a></h3>
+<div class="versionadded">
+<p><span class="versionmodified added">在 11.0 版被加入.</span></p>
+</div>
+<ul class="simple">
+<li><p><strong>type</strong>: regexp or array of regexp</p></li>
+</ul>
+<p>This is simply syntactic sugar for a <code class="docutils literal notranslate"><span class="pre">begin</span></code> when no <code class="docutils literal notranslate"><span class="pre">end</span></code> expression is
+necessary.   It may not be used with <code class="docutils literal notranslate"><span class="pre">begin</span></code> or <code class="docutils literal notranslate"><span class="pre">end</span></code> keys (that would make
+no sense).  It exists simply to help make grammars more readable.</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">  </span><span class="nx">scope</span><span class="o">:</span><span class="w"> </span><span class="s2">"title"</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">match</span><span class="o">:</span><span class="w"> </span><span class="sr">/Fish/</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>This is equivalent to:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">  </span><span class="nx">scope</span><span class="o">:</span><span class="w"> </span><span class="s2">"title"</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">begin</span><span class="o">:</span><span class="w"> </span><span class="sr">/Fish/</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="on-begin">
+<h3>on:begin<a class="headerlink" href="#on-begin" title="連結到這個標頭"></a></h3>
+<ul class="simple">
+<li><p><strong>type</strong>: callback (matchData, response)</p></li>
+</ul>
+<p>This callback is triggered the moment a begin match is detected. <code class="docutils literal notranslate"><span class="pre">matchData</span></code> includes the typical regex match data; the full match, match groups, etc. The <code class="docutils literal notranslate"><span class="pre">response</span></code> object is used to tell the parser how it should handle the match. It can be also used to temporarily store data.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">response.data</span></code> - a simple object data store.  Can be used for building more complex rules where the end rule is dependent on the content of begin, etc.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">response.ignoreMatch()</span></code> - pretend as if this match never happened. The mode is not entered. Continues trying subsequent modes in the current mode's <code class="docutils literal notranslate"><span class="pre">contains</span></code> list</p></li>
+</ul>
+<p>For an example of usage see <code class="docutils literal notranslate"><span class="pre">END_SAME_AS_BEGIN</span></code> in <code class="docutils literal notranslate"><span class="pre">modes.js</span></code>.</p>
+</section>
+<section id="end">
+<h3>end<a class="headerlink" href="#end" title="連結到這個標頭"></a></h3>
+<ul class="simple">
+<li><p><strong>type</strong>: regexp</p></li>
+</ul>
+<p>Regular expression ending a mode. For example a single quote for strings or &quot;$&quot; (end of line) for one-line comments.</p>
+<p>It's often the case that a beginning regular expression defines the entire mode and doesn't need any special ending.
+For example a number can be defined with <code class="docutils literal notranslate"><span class="pre">begin:</span> <span class="pre">&quot;\\b\\d+&quot;</span></code> which spans all the digits.</p>
+<p>If absent, <code class="docutils literal notranslate"><span class="pre">end</span></code> defaults to a regexp that matches anything, so the mode ends immediately (after possibly
+matching any <code class="docutils literal notranslate"><span class="pre">contains</span></code> sub-modes).</p>
+<p>Sometimes a mode can end not by itself but implicitly with its containing (parent) mode.
+This is achieved with <a class="reference internal" href="#endswithparent"><span class="std std-ref">endsWithParent</span></a> attribute.</p>
+</section>
+<section id="on-end">
+<h3>on:end<a class="headerlink" href="#on-end" title="連結到這個標頭"></a></h3>
+<ul class="simple">
+<li><p><strong>type</strong>: callback (matchData, response)</p></li>
+</ul>
+<p>This callback is triggered the moment an end match is detected. <code class="docutils literal notranslate"><span class="pre">matchData</span></code> includes the typical regex match data; the full match, match groups, etc. The <code class="docutils literal notranslate"><span class="pre">response</span></code> object is used to tell the parser how it should handle the match. It can also be used to retrieve data stored from a <cite>begin</cite> callback.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">response.data</span></code> - a simple object data store.  Can be used for building more complex rules where the end rule is dependent on the content of begin, etc.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">response.ignoreMatch()</span></code> - pretend as if this match never happened. The mode is not entered. Continues trying subsequent modes in the current mode's <code class="docutils literal notranslate"><span class="pre">contains</span></code> list</p></li>
+</ul>
+<p>For an example of usage see <code class="docutils literal notranslate"><span class="pre">END_SAME_AS_BEGIN</span></code> in <code class="docutils literal notranslate"><span class="pre">modes.js</span></code>.</p>
+</section>
+<section id="beginkeywords">
+<h3>beginKeywords<a class="headerlink" href="#beginkeywords" title="連結到這個標頭"></a></h3>
+<ul class="simple">
+<li><p><strong>type</strong>: string</p></li>
+</ul>
+<p>Used instead of <code class="docutils literal notranslate"><span class="pre">begin</span></code> for modes starting with keywords to avoid needless repetition:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">  </span><span class="nx">begin</span><span class="o">:</span><span class="w"> </span><span class="s1">'\\b(class|interface)\\b'</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">keywords</span><span class="o">:</span><span class="w"> </span><span class="s1">'class interface'</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>… can often be shortened to:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">  </span><span class="nx">beginKeywords</span><span class="o">:</span><span class="w"> </span><span class="s1">'class interface'</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Unlike the <a class="reference internal" href="#keywords"><span class="std std-ref">keywords</span></a> attribute, this one allows only a simple list of space separated keywords.
+If you do need additional features of <code class="docutils literal notranslate"><span class="pre">keywords</span></code> or you just need more keywords for this mode you may include <code class="docutils literal notranslate"><span class="pre">keywords</span></code> along with <code class="docutils literal notranslate"><span class="pre">beginKeywords</span></code>.</p>
+<div class="admonition note">
+<p class="admonition-title">備註</p>
+<p><code class="docutils literal notranslate"><span class="pre">beginKeywords</span></code> also checks for a <code class="docutils literal notranslate"><span class="pre">.</span></code> before or after the keywords and will fail to match if one is found.
+This is to avoid false positives for method calls or property accesses.</p>
+<p>Ex. <code class="docutils literal notranslate"><span class="pre">class</span> <span class="pre">A</span> <span class="pre">{</span> <span class="pre">...</span> <span class="pre">}</span></code> would match while <code class="docutils literal notranslate"><span class="pre">A.class</span> <span class="pre">==</span> <span class="pre">B.class</span></code> would not.</p>
+</div>
+</section>
+<section id="endswithparent">
+<span id="id3"></span><h3>endsWithParent<a class="headerlink" href="#endswithparent" title="連結到這個標頭"></a></h3>
+<ul class="simple">
+<li><p><strong>type</strong>: boolean</p></li>
+</ul>
+<p>A flag indicating that a mode ends when its parent ends.</p>
+<p>This is best demonstrated by example. In CSS syntax a selector has a set of rules contained within symbols &quot;{&quot; and &quot;}&quot;.
+Individual rules are separated by &quot;;&quot; but the last rule may omit the terminating semicolon:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">p</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">width</span><span class="o">:</span><span class="w"> </span><span class="mf">100</span><span class="o">%</span><span class="p">;</span>
+<span class="w">  </span><span class="nx">color</span><span class="o">:</span><span class="w"> </span><span class="nx">red</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>A simple <code class="docutils literal notranslate"><span class="pre">end:</span> <span class="pre">/;/</span></code> rule is problematic - the parser could get &quot;stuck&quot; looking
+for a <code class="docutils literal notranslate"><span class="pre">;</span></code> that it will never find (or find much later) - skipping over valid content that should be
+highlighted. This is where <code class="docutils literal notranslate"><span class="pre">endsWithParent</span></code> proves useful:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">  </span><span class="nx">scope</span><span class="o">:</span><span class="w"> </span><span class="s1">'rules'</span><span class="p">,</span><span class="w"> </span><span class="nx">begin</span><span class="o">:</span><span class="w"> </span><span class="sr">/\{/</span><span class="p">,</span><span class="w"> </span><span class="nx">end</span><span class="o">:</span><span class="w"> </span><span class="sr">/\}/</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">contains</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span><span class="nx">scope</span><span class="o">:</span><span class="w"> </span><span class="s1">'rule'</span><span class="p">,</span><span class="w"> </span><span class="cm">/* ... */</span><span class="w"> </span><span class="nx">end</span><span class="o">:</span><span class="w"> </span><span class="s1">';'</span><span class="p">,</span><span class="w"> </span><span class="nx">endsWithParent</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">}</span>
+<span class="w">  </span><span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">rule</span></code> scope now will end when the parser sees <em>either</em> a <code class="docutils literal notranslate"><span class="pre">;</span></code> or a <code class="docutils literal notranslate"><span class="pre">}</span></code> (from the parent).</p>
+</section>
+<section id="endsparent">
+<span id="id4"></span><h3>endsParent<a class="headerlink" href="#endsparent" title="連結到這個標頭"></a></h3>
+<ul class="simple">
+<li><p><strong>type</strong>: boolean</p></li>
+</ul>
+<p>Forces closing of the parent mode right after the current mode is closed.</p>
+<p>This is used for modes that don't have an easily expressible ending lexeme but
+instead could be closed after the last interesting sub-mode is found.</p>
+<p>Here's an example with two ways of defining functions in Elixir, one using a
+keyword <code class="docutils literal notranslate"><span class="pre">do</span></code> and another using a comma:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">def</span><span class="w"> </span><span class="nx">foo</span><span class="w"> </span><span class="o">:</span><span class="nx">clear</span><span class="p">,</span><span class="w"> </span><span class="nx">list</span><span class="w"> </span><span class="k">do</span>
+<span class="w">  </span><span class="o">:</span><span class="nx">ok</span>
+<span class="nx">end</span>
+
+<span class="nx">def</span><span class="w"> </span><span class="nx">foo</span><span class="p">,</span><span class="w"> </span><span class="k">do</span><span class="o">:</span><span class="w"> </span><span class="nx">IO</span><span class="p">.</span><span class="nx">puts</span><span class="w"> </span><span class="s2">"hello world"</span>
+</pre></div>
+</div>
+<p>Note that in the first case the parameter list after the function title may also
+include a comma. And if we're only interested in highlighting a title we can
+tell it to end the function definition after itself:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">  </span><span class="nx">scope</span><span class="o">:</span><span class="w"> </span><span class="s1">'function'</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">beginKeywords</span><span class="o">:</span><span class="w"> </span><span class="s1">'def'</span><span class="p">,</span><span class="w"> </span><span class="nx">end</span><span class="o">:</span><span class="w"> </span><span class="nx">hljs</span><span class="p">.</span><span class="nx">MATCH_NOTHING_RE</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">contains</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">scope</span><span class="o">:</span><span class="w"> </span><span class="s1">'title'</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">begin</span><span class="o">:</span><span class="w"> </span><span class="nx">hljs</span><span class="p">.</span><span class="nx">IDENT_RE</span><span class="p">,</span><span class="w"> </span><span class="nx">endsParent</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">end:</span> <span class="pre">hljs.MATCH_NOTHING_RE</span></code> ensures that function will never end itself.</p>
+</section>
+<section id="keywords">
+<span id="id5"></span><h3>keywords<a class="headerlink" href="#keywords" title="連結到這個標頭"></a></h3>
+<ul class="simple">
+<li><p><strong>type</strong>: object / string / array</p></li>
+</ul>
+<p><em>Keyword definition comes in three forms.</em></p>
+<p>A string of space-separated keywords with an optional relevance following a pipe (<code class="docutils literal notranslate"><span class="pre">|</span></code>):</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="s1">'for while if|0 else weird_voodoo|10 ...'</span>
+</pre></div>
+</div>
+<p>An array of keywords (with optional relevance  following a <code class="docutils literal notranslate"><span class="pre">|</span></code>):</p>
+<blockquote>
+<div><div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">[</span>
+<span class="w">  </span><span class="s2">"for"</span><span class="p">,</span>
+<span class="w">  </span><span class="s2">"while"</span><span class="p">,</span>
+<span class="w">  </span><span class="s2">"if|0"</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+</div></blockquote>
+<div class="admonition note">
+<p class="admonition-title">備註</p>
+<p>It's recommended that the array form be used (one keyword per line) rather
+than a string to simplify future maintenance. This is the style followed by
+grammars part of the core library.</p>
+</div>
+<p>An object that describing multiple sets of keywords and (optionally) the pattern
+used to locate them:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">  </span><span class="nx">keyword</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="s1">'for'</span><span class="p">,</span><span class="w"> </span><span class="s1">'while'</span><span class="p">,</span><span class="w"> </span><span class="s1">'if|0'</span><span class="w"> </span><span class="p">],</span>
+<span class="w">  </span><span class="nx">literal</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="s1">'true'</span><span class="p">,</span><span class="w"> </span><span class="s1">'false'</span><span class="w"> </span><span class="p">],</span>
+<span class="w">  </span><span class="nx">$pattern</span><span class="o">:</span><span class="w"> </span><span class="sr">/\w+/</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>For a more detailed explanation see <a class="reference internal" href="language-guide.html"><span class="doc">Language definition guide</span></a>.</p>
+</section>
+<section id="illegal">
+<h3>illegal<a class="headerlink" href="#illegal" title="連結到這個標頭"></a></h3>
+<ul class="simple">
+<li><p><strong>type</strong>: regexp or array</p></li>
+</ul>
+<p>A regular expression or array that defines symbols illegal for the mode. When
+the parser finds an illegal match it may immediately stop parsing the whole
+language altogether (see <code class="docutils literal notranslate"><span class="pre">ignoreIllegals</span></code>). Smart use of illegal can greatly
+improve auto-detection by quickly ruling out a language (when an illegal match
+is found).</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">  </span><span class="nx">illegal</span><span class="o">:</span><span class="w"> </span><span class="sr">/%/</span><span class="p">,</span>
+<span class="w">  </span><span class="c1">// or using an array</span>
+<span class="w">  </span><span class="nx">illegal</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="sr">/%/</span><span class="p">,</span><span class="w"> </span><span class="sr">/cookies/</span><span class="w"> </span><span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="excludebegin-excludeend">
+<h3>excludeBegin, excludeEnd<a class="headerlink" href="#excludebegin-excludeend" title="連結到這個標頭"></a></h3>
+<ul class="simple">
+<li><p><strong>type</strong>: boolean</p></li>
+</ul>
+<p>Excludes beginning or ending matches from a mode's content. For example in CSS
+syntax a rule ends with a semicolon. However visually it's better not to
+consider the semicolon as part of the rule's contents. Using <code class="docutils literal notranslate"><span class="pre">excludeEnd:</span>
+<span class="pre">true</span></code> forces a <code class="docutils literal notranslate"><span class="pre">&lt;span&gt;</span></code> element for the rule to close before the semicolon.</p>
+<p>The semicolon is still consumed by the rule though and cannot be matched by
+other subsequent rules. (it's effectively been skipped over)</p>
+</section>
+<section id="returnbegin">
+<h3>returnBegin<a class="headerlink" href="#returnbegin" title="連結到這個標頭"></a></h3>
+<ul class="simple">
+<li><p><strong>type</strong>: boolean</p></li>
+</ul>
+<p>Returns just found beginning lexeme back into parser. This is used when beginning of a sub-mode is a complex expression
+that should not only be found within a parent mode but also parsed according to the rules of a sub-mode.</p>
+<div class="admonition warning">
+<p class="admonition-title">警告</p>
+<p>Since the parser is effectively goes back it's quite possible to create a infinite loop here so use with caution!
+A look-ahead regex is almost always preferable.</p>
+</div>
+</section>
+<section id="returnend">
+<h3>returnEnd<a class="headerlink" href="#returnend" title="連結到這個標頭"></a></h3>
+<ul class="simple">
+<li><p><strong>type</strong>: boolean</p></li>
+</ul>
+<p>Returns just found ending lexeme back into parser. This is used for example to parse JavaScript embedded into HTML.
+A JavaScript block ends with the HTML closing tag <code class="docutils literal notranslate"><span class="pre">&lt;/script&gt;</span></code> that cannot be parsed with JavaScript rules.
+So it is returned back into its parent HTML mode that knows what to do with it.</p>
+<div class="admonition warning">
+<p class="admonition-title">警告</p>
+<p>Since the parser is effectively goes back it's quite possible to create a infinite loop here so use with caution!
+A look-ahead regex is almost always preferable.</p>
+</div>
+</section>
+<section id="contains">
+<h3>contains<a class="headerlink" href="#contains" title="連結到這個標頭"></a></h3>
+<ul class="simple">
+<li><p><strong>type</strong>: array</p></li>
+</ul>
+<p>The list of sub-modes that can be found inside the mode. For detailed explanation see <a class="reference internal" href="language-guide.html"><span class="doc">Language definition guide</span></a>.</p>
+</section>
+<section id="starts">
+<h3>starts<a class="headerlink" href="#starts" title="連結到這個標頭"></a></h3>
+<ul class="simple">
+<li><p><strong>type</strong>: mode</p></li>
+</ul>
+<p>The the mode that will start right after the current mode ends. The new mode will not be contained within the current one.</p>
+<p>Currently this attribute is used to highlight JavaScript and CSS contained within HTML.
+Tags <code class="docutils literal notranslate"><span class="pre">&lt;script&gt;</span></code> and <code class="docutils literal notranslate"><span class="pre">&lt;style&gt;</span></code> start sub-modes that use another language definition to parse their contents (see <a class="reference internal" href="#sublanguage"><span class="std std-ref">subLanguage</span></a>).</p>
+</section>
+<section id="variants">
+<h3>variants<a class="headerlink" href="#variants" title="連結到這個標頭"></a></h3>
+<ul class="simple">
+<li><p><strong>type</strong>: array</p></li>
+</ul>
+<p>Modification to the main definitions of the mode, effectively expanding it into several similar modes
+each having all the attributes from the main definition augmented or overridden by the variants:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">  </span><span class="nx">scope</span><span class="o">:</span><span class="w"> </span><span class="s1">'string'</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">contains</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s1">'self'</span><span class="p">,</span><span class="w"> </span><span class="nx">hljs</span><span class="p">.</span><span class="nx">BACKSLASH_ESCAPE</span><span class="p">],</span>
+<span class="w">  </span><span class="nx">relevance</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">variants</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span><span class="nx">begin</span><span class="o">:</span><span class="w"> </span><span class="sr">/"/</span><span class="p">,</span><span class="w"> </span><span class="nx">end</span><span class="o">:</span><span class="w"> </span><span class="sr">/"/</span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span><span class="nx">begin</span><span class="o">:</span><span class="w"> </span><span class="sr">/'/</span><span class="p">,</span><span class="w"> </span><span class="nx">end</span><span class="o">:</span><span class="w"> </span><span class="sr">/'/</span><span class="p">,</span><span class="w"> </span><span class="nx">relevance</span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="p">}</span>
+<span class="w">  </span><span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">備註</p>
+<p><code class="docutils literal notranslate"><span class="pre">variants</span></code> has very specific behavior with regards to <code class="docutils literal notranslate"><span class="pre">contains:</span> <span class="pre">['self']</span></code>.
+Lets consider the example above. While you might think this would allow you to
+embed any type of string (double or single quoted) within any other string, <strong>it
+does not</strong>.</p>
+</div>
+<p>The variants are instead compiled into to two <em>discrete</em> modes:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="w"> </span><span class="nx">scope</span><span class="o">:</span><span class="w"> </span><span class="s1">'string'</span><span class="p">,</span><span class="w"> </span><span class="nx">begin</span><span class="o">:</span><span class="w"> </span><span class="sr">/"/</span><span class="p">,</span><span class="w"> </span><span class="nx">contains</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s1">'self'</span><span class="p">,</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="p">}</span>
+<span class="p">{</span><span class="w"> </span><span class="nx">scope</span><span class="o">:</span><span class="w"> </span><span class="s1">'string'</span><span class="p">,</span><span class="w"> </span><span class="nx">begin</span><span class="o">:</span><span class="w"> </span><span class="sr">/'/</span><span class="p">,</span><span class="w"> </span><span class="nx">contains</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s1">'self'</span><span class="p">,</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="p">}</span>
+</pre></div>
+</div>
+<p>Each mode's <code class="docutils literal notranslate"><span class="pre">self</span></code> refers only to the new expanded mode, not the original mode
+with variants (which no longer exists after compiling).</p>
+<p>Further info: <a class="reference external" href="https://github.com/highlightjs/highlight.js/issues/826">https://github.com/highlightjs/highlight.js/issues/826</a></p>
+</section>
+<section id="sublanguage">
+<span id="id6"></span><h3>subLanguage<a class="headerlink" href="#sublanguage" title="連結到這個標頭"></a></h3>
+<ul class="simple">
+<li><p><strong>type</strong>: string or array</p></li>
+</ul>
+<p>Highlights the entire contents of the mode with another language.</p>
+<p>When using this attribute there's no point to define internal parsing rules like
+<a class="reference internal" href="#keywords"><span class="std std-ref">keywords</span></a>, etc. Also it is recommended to avoid the <code class="docutils literal notranslate"><span class="pre">scope</span></code> attribute
+since the sublanguage already wraps the text in its own <code class="docutils literal notranslate"><span class="pre">&lt;span</span>
+<span class="pre">class=&quot;language-name&quot;&gt;</span></code> tag.</p>
+<p>The value of the attribute controls which language or languages will be used for highlighting:</p>
+<ul class="simple">
+<li><p>language name: explicit highlighting with the specified language</p></li>
+<li><p>empty array: auto detection with all the languages available</p></li>
+<li><p>array of language names: auto detection constrained to the specified set</p></li>
+</ul>
+</section>
+<section id="skip">
+<h3>skip<a class="headerlink" href="#skip" title="連結到這個標頭"></a></h3>
+<ul class="simple">
+<li><p><strong>type</strong>: boolean</p></li>
+</ul>
+<p>Skips any markup processing for the mode ensuring that it remains a part of its
+parent buffer along with the starting and the ending lexemes. This works in
+conjunction with the parent's <a class="reference internal" href="#sublanguage"><span class="std std-ref">subLanguage</span></a> when it requires complex
+parsing.</p>
+<p>Consider parsing PHP inside HTML:</p>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="x">&lt;p&gt;</span><span class="cp">&lt;?</span> <span class="k">echo</span> <span class="s1">'PHP'</span><span class="p">;</span> <span class="cm">/* ?&gt; */</span> <span class="cp">?&gt;</span><span class="x">&lt;/p&gt;</span>
+</pre></div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">?&gt;</span></code> inside the comment should <strong>not</strong> end the PHP part, so we have to
+handle pairs of <code class="docutils literal notranslate"><span class="pre">/*</span> <span class="pre">..</span> <span class="pre">*/</span></code> to correctly find the ending <code class="docutils literal notranslate"><span class="pre">?&gt;</span></code>:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">  </span><span class="nx">begin</span><span class="o">:</span><span class="w"> </span><span class="sr">/&lt;\?/</span><span class="p">,</span><span class="w"> </span><span class="nx">end</span><span class="o">:</span><span class="w"> </span><span class="sr">/\?&gt;/</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">subLanguage</span><span class="o">:</span><span class="w"> </span><span class="s1">'php'</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">contains</span><span class="o">:</span><span class="w"> </span><span class="p">[{</span><span class="nx">begin</span><span class="o">:</span><span class="w"> </span><span class="s1">'/\\*'</span><span class="p">,</span><span class="w"> </span><span class="nx">end</span><span class="o">:</span><span class="w"> </span><span class="s1">'\\*/'</span><span class="p">,</span><span class="w"> </span><span class="nx">skip</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">}]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Without <code class="docutils literal notranslate"><span class="pre">skip:</span> <span class="pre">true</span></code> every comment would cause the parser to drop out back
+into the HTML mode.</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="theme-guide.html" class="btn btn-neutral float-left" title="Theme Guide" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="css-classes-reference.html" class="btn btn-neutral float-right" title="Scope Reference" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2012–2024, Ivan Sagalaev.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

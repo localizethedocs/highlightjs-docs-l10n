@@ -1,0 +1,365 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-CN" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Core API &mdash; highlight.js 11.11.1 文档</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=9edc463e" />
+
+  
+    <link rel="canonical" href="https://projects.localizethedocs.org/highlightjs-docs-l10n/api.html" />
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=b6c4d740"></script>
+      <script src="_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="_static/translations.js?v=540d3cec"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="搜索" href="search.html" />
+    <link rel="next" title="Plugin API" href="plugin-api.html" />
+    <link rel="prev" title="Upgrading to Highlight.js v11.0" href="upgrade-11.html" />
+ 
+<script type="text/javascript" src="ltd-provenance.js"></script>
+<script type="text/javascript" src="ltd-current.js"></script>
+<script type="text/javascript" src="../../ltd-config.js"></script>
+<script type="text/javascript" src="../../ltd-flyout.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            highlight.js
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="搜索文档" aria-label="搜索文档" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="导航菜单">
+              <p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="readme.html">README / How to Use</a></li>
+<li class="toctree-l1"><a class="reference internal" href="building-testing.html">Building and Testing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="upgrade-11.html">Upgrading to Version 11</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Reference</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Core API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#highlight">highlight</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#highlightauto">highlightAuto</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#highlightelement">highlightElement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#highlightall">highlightAll</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#newinstance">newInstance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#configure">configure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#registerlanguage">registerLanguage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#unregisterlanguage">unregisterLanguage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#registeraliases">registerAliases</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#listlanguages">listLanguages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#getlanguage">getLanguage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#versionstring">versionString</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#safemode">safeMode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#debugmode">debugMode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#addplugin">addPlugin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#removeplugin">removePlugin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#deprecated-api">Deprecated API</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id2">highlight</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#highlightblock">highlightBlock</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#inithighlighting">initHighlighting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#inithighlightingonload">initHighlightingOnLoad</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="plugin-api.html">Plugin API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="language-guide.html">Language Definition Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="theme-guide.html">Theme Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mode-reference.html">Mode Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="css-classes-reference.html">Scope Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="plugin-recipes.html">Plugin Recipes</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">FAQ</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="supported-languages.html">Which languages are supported?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="line-numbers.html">Why no line numbers?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="language-requests.html">How to request a new language?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="language-contribution.html">How to contribute a new language?</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="移动版导航菜单" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">highlight.js</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="页面导航">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Core API</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/api.rst.txt" rel="nofollow"> 查看页面源码</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="core-api">
+<h1>Core API<a class="headerlink" href="#core-api" title="链接到此标题。"></a></h1>
+<p>Highlight.js exports a few functions as methods of the <code class="docutils literal notranslate"><span class="pre">hljs</span></code> object.</p>
+<section id="highlight">
+<span id="newerapi"></span><h2>highlight<a class="headerlink" href="#highlight" title="链接到此标题。"></a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">highlight</span><span class="p">(</span><span class="n">code</span><span class="p">,</span> <span class="p">{</span><span class="n">language</span><span class="p">,</span> <span class="n">ignoreIllegals</span><span class="p">})</span>
+</pre></div>
+</div>
+<p>Core highlighting function.  Accepts the code to highlight (string) and a list of options (object).
+The <code class="docutils literal notranslate"><span class="pre">language</span></code> parameter must be present and specify the language name or alias
+of the grammar to be used for highlighting.
+The <code class="docutils literal notranslate"><span class="pre">ignoreIllegals</span></code> is an optional parameter that when <code class="docutils literal notranslate"><span class="pre">true</span></code> forces highlighting
+to finish even in case of detecting illegal syntax for the
+language instead of throwing an exception.</p>
+<p>Returns an object with the following properties:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">language</span></code>: language name, same as the name passed in <code class="docutils literal notranslate"><span class="pre">languageName</span></code>, returned for consistency with <code class="docutils literal notranslate"><span class="pre">highlightAuto</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">relevance</span></code>: integer value representing the relevance score</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code>: HTML string with highlighting markup</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">top</span></code>: top of the current mode stack</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">illegal</span></code>: boolean representing whether any illegal matches were found</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">code</span></code>: the original raw code</p></li>
+</ul>
+</section>
+<section id="highlightauto">
+<h2>highlightAuto<a class="headerlink" href="#highlightauto" title="链接到此标题。"></a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">highlightAuto</span><span class="p">(</span><span class="n">code</span><span class="p">,</span> <span class="n">languageSubset</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Highlighting with language detection.
+Accepts a string with the code to highlight and an optional array of language names and aliases restricting detection to only those languages. The subset can also be set with <code class="docutils literal notranslate"><span class="pre">configure</span></code>, but the local parameter overrides the option if set.</p>
+<p>Returns an object with the following properties:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">language</span></code>: detected language</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">relevance</span></code>: integer value representing the relevance score</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code>: HTML string with highlighting markup</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">secondBest</span></code>: object with the same structure for second-best heuristically detected language (may be absent)</p></li>
+</ul>
+</section>
+<section id="highlightelement">
+<h2>highlightElement<a class="headerlink" href="#highlightelement" title="链接到此标题。"></a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">highlightElement</span><span class="p">(</span><span class="n">element</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Applies highlighting to a DOM node containing code.</p>
+<p>This function is the one to use to apply highlighting dynamically after page load
+or within initialization code of third-party JavaScript frameworks.</p>
+<p>The function uses language detection by default but you can specify the language
+in the <code class="docutils literal notranslate"><span class="pre">class</span></code> attribute of the DOM node. See the <a class="reference internal" href="css-classes-reference.html"><span class="doc">scopes reference</span></a> for all available language names and scopes.</p>
+</section>
+<section id="highlightall">
+<h2>highlightAll<a class="headerlink" href="#highlightall" title="链接到此标题。"></a></h2>
+<p>Applies highlighting to all elements on a page matching the configured <code class="docutils literal notranslate"><span class="pre">cssSelector</span></code>.
+The default <code class="docutils literal notranslate"><span class="pre">cssSelector</span></code> value is <code class="docutils literal notranslate"><span class="pre">'pre</span> <span class="pre">code'</span></code>, which highlights all code blocks.
+This can be called before or after the page's <code class="docutils literal notranslate"><span class="pre">onload</span></code> event has fired.</p>
+</section>
+<section id="newinstance">
+<h2>newInstance<a class="headerlink" href="#newinstance" title="链接到此标题。"></a></h2>
+<p>Returns a new instance of the highlighter with default configuration.</p>
+</section>
+<section id="configure">
+<h2>configure<a class="headerlink" href="#configure" title="链接到此标题。"></a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">configure</span><span class="p">(</span><span class="n">options</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Configures global options:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">classPrefix</span></code>: a string prefix added before class names in the generated markup, used for backwards compatibility with stylesheets.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">languages</span></code>: an array of language names and aliases restricting auto detection to only these languages.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">languageDetectRe</span></code>: a regex to configure how CSS class names map to language (allows class names like say <cite>color-as-php</cite> vs the default of <cite>language-php</cite>, etc.)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">noHighlightRe</span></code>: a regex to configure which CSS classes are to be skipped completely.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cssSelector</span></code>: a CSS selector to configure which elements are affected by <code class="docutils literal notranslate"><span class="pre">hljs.highlightAll</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">'pre</span> <span class="pre">code'</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ignoreUnescapedHTML</span></code>: do not log warnings to console about unescaped HTML in code blocks</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">throwUnescapedHTML</span></code>: throw a <code class="docutils literal notranslate"><span class="pre">HTMLInjectionError</span></code> when <code class="docutils literal notranslate"><span class="pre">highlightElement</span></code> is asked to highlight content that includes unescaped HTML</p></li>
+</ul>
+<p>Accepts an object representing options with the values to updated. Other options don't change</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>hljs.configure({
+  noHighlightRe: /^do-not-highlightme$/i,
+  languageDetectRe: /\bgrammar-([\w-]+)\b/i, // for `grammar-swift` style CSS naming
+  classPrefix: ''     // don't append class prefix
+                      // … other options aren't changed
+});
+</pre></div>
+</div>
+</section>
+<section id="registerlanguage">
+<h2>registerLanguage<a class="headerlink" href="#registerlanguage" title="链接到此标题。"></a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">registerLanguage</span><span class="p">(</span><span class="n">languageName</span><span class="p">,</span> <span class="n">languageDefinition</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Adds new language to the library under the specified name. Used mostly internally.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">languageName</span></code>: a string with the name of the language being registered</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">languageDefinition</span></code>: a function that returns an object which represents the
+language definition. The function is passed the <code class="docutils literal notranslate"><span class="pre">hljs</span></code> object to be able
+to use common regular expressions defined within it.</p></li>
+</ul>
+</section>
+<section id="unregisterlanguage">
+<h2>unregisterLanguage<a class="headerlink" href="#unregisterlanguage" title="链接到此标题。"></a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">unregisterLanguage</span><span class="p">(</span><span class="n">languageName</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Removes a language and its aliases from the library. Used mostly internally.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">languageName</span></code>: a string with the name of the language being removed.</p></li>
+</ul>
+</section>
+<section id="registeraliases">
+<h2>registerAliases<a class="headerlink" href="#registeraliases" title="链接到此标题。"></a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">registerAliases</span><span class="p">(</span><span class="n">alias</span><span class="o">|</span><span class="n">aliases</span><span class="p">,</span> <span class="p">{</span><span class="n">languageName</span><span class="p">})</span>
+</pre></div>
+</div>
+<p>Adds new language alias or aliases to the library for the specified language name defined under <code class="docutils literal notranslate"><span class="pre">languageName</span></code> key.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">alias|aliases</span></code>: a string or array with the name of alias being registered</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">languageName</span></code>: the language name as specified by <code class="docutils literal notranslate"><span class="pre">registerLanguage</span></code>.</p></li>
+</ul>
+</section>
+<section id="listlanguages">
+<h2>listLanguages<a class="headerlink" href="#listlanguages" title="链接到此标题。"></a></h2>
+<p>Returns the languages names list.</p>
+</section>
+<section id="getlanguage">
+<span id="id1"></span><h2>getLanguage<a class="headerlink" href="#getlanguage" title="链接到此标题。"></a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">getLanguage</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Looks up a language by name or alias.</p>
+<p>Returns the language object if found, <code class="docutils literal notranslate"><span class="pre">undefined</span></code> otherwise.</p>
+</section>
+<section id="versionstring">
+<h2>versionString<a class="headerlink" href="#versionstring" title="链接到此标题。"></a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">versionString</span>
+</pre></div>
+</div>
+<p>Returns the full Highlight.js version as a string, ie: <code class="docutils literal notranslate"><span class="pre">&quot;11.0.1&quot;</span></code>.</p>
+</section>
+<section id="safemode">
+<h2>safeMode<a class="headerlink" href="#safemode" title="链接到此标题。"></a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">safeMode</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Enables safe mode. This is the default mode, providing the most reliable experience for production usage.</p>
+</section>
+<section id="debugmode">
+<h2>debugMode<a class="headerlink" href="#debugmode" title="链接到此标题。"></a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">debugMode</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Enables <em>debug/development</em> mode.</p>
+<div class="admonition warning">
+<p class="admonition-title">警告</p>
+<p>This mode purposely makes Highlight.js more fragile!  It should only be used for testing and local development (of languages or the library itself).</p>
+</div>
+<p>For example, if a new version suddenly had a serious bug (or breaking change) that affected only a single language:</p>
+<ul class="simple">
+<li><p><strong>In Safe Mode</strong> all other languages would continue to highlight just fine. The broken language would appear as a code block, but without any highlighting (as if it were plaintext).</p></li>
+<li><p><strong>In Debug Mode</strong> all highlighting would stop and a JavaScript error would be thrown.</p></li>
+</ul>
+</section>
+<section id="addplugin">
+<h2>addPlugin<a class="headerlink" href="#addplugin" title="链接到此标题。"></a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">addPlugin</span><span class="p">(</span><span class="n">plugin</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Add a plugin to this instance of Highlight.js.  See the <a class="reference internal" href="plugin-api.html"><span class="doc">plugin api</span></a> for additional plugin information.</p>
+</section>
+<section id="removeplugin">
+<h2>removePlugin<a class="headerlink" href="#removeplugin" title="链接到此标题。"></a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">removePlugin</span><span class="p">(</span><span class="n">plugin</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Remove the specified plugin from this instance.  <code class="docutils literal notranslate"><span class="pre">plugin</span></code> must be exactly the same object that was passed to <code class="docutils literal notranslate"><span class="pre">addPlugin</span></code>.</p>
+</section>
+<section id="deprecated-api">
+<h2>Deprecated API<a class="headerlink" href="#deprecated-api" title="链接到此标题。"></a></h2>
+<section id="id2">
+<h3>highlight<a class="headerlink" href="#id2" title="链接到此标题。"></a></h3>
+<div class="deprecated">
+<p><span class="versionmodified deprecated">自 10.7 版本弃用: </span>This will be removed entirely in v12.</p>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">highlight</span><span class="p">(</span><span class="n">languageName</span><span class="p">,</span> <span class="n">code</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Please see the <a class="reference internal" href="#newerapi"><span class="std std-ref">newer API</span></a> shown above.</p>
+</section>
+<section id="highlightblock">
+<h3>highlightBlock<a class="headerlink" href="#highlightblock" title="链接到此标题。"></a></h3>
+<div class="deprecated">
+<p><span class="versionmodified deprecated">自 11.0 版本弃用: </span>Please use <code class="docutils literal notranslate"><span class="pre">highlightElement()</span></code> instead.</p>
+</div>
+</section>
+<section id="inithighlighting">
+<h3>initHighlighting<a class="headerlink" href="#inithighlighting" title="链接到此标题。"></a></h3>
+<div class="deprecated">
+<p><span class="versionmodified deprecated">自 10.6 版本弃用: </span>Please use <code class="docutils literal notranslate"><span class="pre">highlightAll()</span></code> instead.</p>
+</div>
+</section>
+<section id="inithighlightingonload">
+<h3>initHighlightingOnLoad<a class="headerlink" href="#inithighlightingonload" title="链接到此标题。"></a></h3>
+<div class="deprecated">
+<p><span class="versionmodified deprecated">自 10.6 版本弃用: </span>Please use <code class="docutils literal notranslate"><span class="pre">highlightAll()</span></code> instead.</p>
+</div>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="页脚">
+        <a href="upgrade-11.html" class="btn btn-neutral float-left" title="Upgrading to Highlight.js v11.0" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
+        <a href="plugin-api.html" class="btn btn-neutral float-right" title="Plugin API" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; 版权所有 2012–2024, Ivan Sagalaev。</p>
+  </div>
+
+  利用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 构建，使用的 
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">主题</a>
+    由 <a href="https://readthedocs.org">Read the Docs</a> 开发.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

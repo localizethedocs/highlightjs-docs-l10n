@@ -1,0 +1,623 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-TW" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Highlight.js &mdash; highlight.js 11.11.1 說明文件</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=9edc463e" />
+
+  
+    <link rel="canonical" href="https://projects.localizethedocs.org/highlightjs-docs-l10n/readme.html" />
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=c6dbf7b7"></script>
+      <script src="_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="_static/translations.js?v=cbf116e0"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="搜尋" href="search.html" />
+    <link rel="next" title="建置與測試" href="building-testing.html" />
+    <link rel="prev" title="Highlight.js 文件" href="index.html" />
+ 
+<script type="text/javascript" src="ltd-provenance.js"></script>
+<script type="text/javascript" src="ltd-current.js"></script>
+<script type="text/javascript" src="../../ltd-config.js"></script>
+<script type="text/javascript" src="../../ltd-flyout.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            highlight.js
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">開始使用</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">README / How to Use</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#upgrading-to-version-11">Upgrading to Version 11</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#support-for-older-versions">Support for older versions <!-- omit in toc --></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#basic-usage">Basic Usage</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#in-the-browser">In the Browser</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#plaintext-code-blocks">Plaintext Code Blocks</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ignoring-a-code-block">Ignoring a Code Block</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#node-js-on-the-server">Node.js on the Server</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#supported-languages">支援的語言</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#custom-usage">Custom Usage</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#using-custom-html">Using custom HTML</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#using-with-vue-js">Using with Vue.js</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#using-web-workers">Using Web Workers</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#importing-the-library">Importing the Library</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#node-js-commonjs-modules-require">Node.js CommonJS Modules / <code class="docutils literal notranslate"><span class="pre">require</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#node-js-es6-modules-import">Node.js ES6 Modules / <code class="docutils literal notranslate"><span class="pre">import</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#browser-es6-modules">Browser ES6 Modules</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#getting-the-library">Getting the Library</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#fetch-via-cdn">Fetch via CDN</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#cdnjs-link">cdnjs (link)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#jsdelivr-link">jsdelivr (link)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#unpkg-link">unpkg (link)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#download-prebuilt-cdn-assets">Download prebuilt CDN assets</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#download-from-our-website">Download from our website</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#install-via-npm-package">Install via NPM package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#build-from-source">Build from Source</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#requirements">Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#license">License</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#links">Links</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="building-testing.html">建置與測試</a></li>
+<li class="toctree-l1"><a class="reference internal" href="upgrade-11.html">升級至版本 11</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">參考</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="api.html">核心 API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="plugin-api.html">Plugin API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="language-guide.html">語言定義指南</a></li>
+<li class="toctree-l1"><a class="reference internal" href="theme-guide.html">Theme Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mode-reference.html">模式參考</a></li>
+<li class="toctree-l1"><a class="reference internal" href="css-classes-reference.html">Scope Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="plugin-recipes.html">Plugin Recipes</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">FAQ</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="supported-languages.html">支援哪些語言？</a></li>
+<li class="toctree-l1"><a class="reference internal" href="line-numbers.html">為什麼沒有行號？</a></li>
+<li class="toctree-l1"><a class="reference internal" href="language-requests.html">如何請求新語言？</a></li>
+<li class="toctree-l1"><a class="reference internal" href="language-contribution.html">如何貢獻新語言？</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">highlight.js</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Highlight.js</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/readme.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="highlight-js">
+<h1>Highlight.js<a class="headerlink" href="#highlight-js" title="連結到這個標頭"></a></h1>
+<p><a class="reference external" href="https://www.npmjs.com/package/highlight.js"><img alt="latest version" src="https://badgen.net/npm/v/highlight.js?label=latest" /></a>
+<a class="reference external" href="https://github.com/highlightjs/highlight.js/blob/main/LICENSE"><img alt="license" src="https://badgen.net/github/license/highlightjs/highlight.js?color=cyan" /></a>
+<a class="reference external" href="https://packagephobia.now.sh/result?p=highlight.js"><img alt="install size" src="https://badgen.net/packagephobia/install/highlight.js?label=npm+install" /></a>
+<img alt="minified" src="https://img.shields.io/github/size/highlightjs/cdn-release/build/highlight.min.js?label=minified" />
+<a class="reference external" href="https://www.npmjs.com/package/highlight.js"><img alt="NPM downloads weekly" src="https://badgen.net/npm/dw/highlight.js?label=npm+downloads&amp;color=purple" /></a>
+<a class="reference external" href="https://www.jsdelivr.com/package/gh/highlightjs/cdn-release"><img alt="jsDelivr CDN downloads" src="https://badgen.net/jsdelivr/hits/gh/highlightjs/cdn-release?label=jsDelivr+CDN&amp;color=purple" /></a></p>
+<p><a class="reference external" href="https://github.com/highlightjs/highlight.js/actions/workflows/tests.js.yml"><img alt="ci status" src="https://badgen.net/github/checks/highlightjs/highlight.js/main?label=build" /></a>
+<a class="reference external" href="https://github.com/highlightjs/highlight.js/actions/workflows/github-code-scanning/codeql"><img alt="CodeQL" src="https://github.com/highlightjs/highlight.js/workflows/CodeQL/badge.svg" /></a>
+<a class="reference external" href="https://snyk.io/test/github/highlightjs/highlight.js?targetFile=package.json"><img alt="vulnerabilities" src="https://badgen.net/snyk/highlightjs/highlight.js" /></a></p>
+<p><a class="reference external" href="https://discord.gg/M24EbU7ja9"><img alt="discord" src="https://badgen.net/badge/icon/discord?icon=discord&amp;label&amp;color=pink" /></a>
+<a class="reference external" href="https://github.com/highlightjs/highlight.js/issues"><img alt="open issues" src="https://badgen.net/github/open-issues/highlightjs/highlight.js?label=issues" /></a>
+<a class="reference external" href="https://github.com/highlightjs/highlight.js/issues?q=is%3Aopen+is%3Aissue+label%3A%22help+welcome%22"><img alt="help welcome issues" src="https://badgen.net/github/label-issues/highlightjs/highlight.js/help%20welcome/open" /></a>
+<a class="reference external" href="https://github.com/highlightjs/highlight.js/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22"><img alt="good first issue" src="https://badgen.net/github/label-issues/highlightjs/highlight.js/good%20first%20issue/open" /></a></p>
+<!-- [![Build CI](https://img.shields.io/github/workflow/status/highlightjs/highlight.js/Node.js%20CI)](https://github.com/highlightjs/highlight.js/actions?query=workflow%3A%22Node.js+CI%22) -->
+<!-- [![commits since release](https://img.shields.io/github/commits-since/highlightjs/highlight.js/latest?label=commits+since)](https://github.com/highlightjs/highlight.js/commits/main) -->
+<!-- [![](https://data.jsdelivr.com/v1/package/gh/highlightjs/cdn-release/badge?style=rounded)](https://www.jsdelivr.com/package/gh/highlightjs/cdn-release) -->
+<!-- [![Total Lines](https://img.shields.io/tokei/lines/github/highlightjs/highlight.js)]() -->
+<!-- [![npm bundle size (minified + gzip)](https://img.shields.io/bundlephobia/minzip/highlight.js.svg)](https://bundlephobia.com/result?p=highlight.js) -->
+<p>Highlight.js is a syntax highlighter written in JavaScript. It works in
+the browser as well as on the server. It can work with pretty much any
+markup, doesn’t depend on any other frameworks, and has automatic language
+detection.</p>
+<p><strong>Contents</strong></p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#basic-usage"><span class="xref myst">Basic Usage</span></a></p>
+<ul>
+<li><p><a class="reference internal" href="#in-the-browser"><span class="xref myst">In the Browser</span></a></p>
+<ul>
+<li><p><a class="reference internal" href="#plaintext-code-blocks"><span class="xref myst">Plaintext Code Blocks</span></a></p></li>
+<li><p><a class="reference internal" href="#ignoring-a-code-block"><span class="xref myst">Ignoring a Code Block</span></a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#nodejs-on-the-server"><span class="xref myst">Node.js on the Server</span></a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="supported-languages.html"><span class="doc std std-doc">Supported Languages</span></a></p></li>
+<li><p><a class="reference internal" href="#custom-usage"><span class="xref myst">Custom Usage</span></a></p>
+<ul>
+<li><p><a class="reference internal" href="#using-custom-html"><span class="xref myst">Using custom HTML</span></a></p></li>
+<li><p><a class="reference internal" href="#using-with-vuejs"><span class="xref myst">Using with Vue.js</span></a></p></li>
+<li><p><a class="reference internal" href="#using-web-workers"><span class="xref myst">Using Web Workers</span></a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#importing-the-library"><span class="xref myst">Importing the Library</span></a></p>
+<ul>
+<li><p><a class="reference internal" href="#nodejs-commonjs-modules--require"><span class="xref myst">Node.js CommonJS Modules / <code class="docutils literal notranslate"><span class="pre">require</span></code></span></a></p></li>
+<li><p><a class="reference internal" href="#nodejs-es6-modules--import"><span class="xref myst">Node.js ES6 Modules / <code class="docutils literal notranslate"><span class="pre">import</span></code></span></a></p></li>
+<li><p><a class="reference internal" href="#browser-es6-modules"><span class="xref myst">Browser ES6 Modules</span></a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#getting-the-library"><span class="xref myst">Getting the Library</span></a></p>
+<ul>
+<li><p><a class="reference internal" href="#fetch-via-cdn"><span class="xref myst">Fetch via CDN</span></a></p>
+<ul>
+<li><p><a class="reference internal" href="#cdnjs-link"><span class="xref myst">cdnjs (link)</span></a></p></li>
+<li><p><a class="reference internal" href="#jsdelivr-link"><span class="xref myst">jsdelivr (link)</span></a></p></li>
+<li><p><a class="reference internal" href="#unpkg-link"><span class="xref myst">unpkg (link)</span></a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#download-prebuilt-cdn-assets"><span class="xref myst">Download prebuilt CDN assets</span></a></p></li>
+<li><p><a class="reference internal" href="#download-from-our-website"><span class="xref myst">Download from our website</span></a></p></li>
+<li><p><a class="reference internal" href="#install-via-npm-package"><span class="xref myst">Install via NPM package</span></a></p></li>
+<li><p><a class="reference internal" href="#build-from-source"><span class="xref myst">Build from Source</span></a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#requirements"><span class="xref myst">Requirements</span></a></p></li>
+<li><p><a class="reference internal" href="#license"><span class="xref myst">License</span></a></p></li>
+<li><p><a class="reference internal" href="#links"><span class="xref myst">Links</span></a></p></li>
+</ul>
+<hr class="docutils" />
+<section id="upgrading-to-version-11">
+<h2>Upgrading to Version 11<a class="headerlink" href="#upgrading-to-version-11" title="連結到這個標頭"></a></h2>
+<p>As always, major releases do contain breaking changes which may require action from users.  Please read <a class="reference external" href="https://github.com/highlightjs/highlight.js/blob/main/VERSION_11_UPGRADE.md">VERSION_11_UPGRADE.md</a> for a detailed summary of breaking changes and any actions you may need to take.</p>
+</section>
+<section id="support-for-older-versions">
+<h2>Support for older versions <!-- omit in toc --><a class="headerlink" href="#support-for-older-versions" title="連結到這個標頭"></a></h2>
+<p>Please see <a class="reference external" href="https://github.com/highlightjs/highlight.js/blob/main/SECURITY.md">SECURITY.md</a> for long-term support information.</p>
+</section>
+<hr class="docutils" />
+<section id="basic-usage">
+<h2>Basic Usage<a class="headerlink" href="#basic-usage" title="連結到這個標頭"></a></h2>
+<section id="in-the-browser">
+<h3>In the Browser<a class="headerlink" href="#in-the-browser" title="連結到這個標頭"></a></h3>
+<p>The bare minimum for using highlight.js on a web page is linking to the
+library along with one of the themes and calling <a class="reference external" href="http://highlightjs.readthedocs.io/en/latest/api.html#highlightall"><code class="docutils literal notranslate"><span class="pre">highlightAll</span></code></a>:</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">"stylesheet"</span> <span class="na">href</span><span class="o">=</span><span class="s">"/path/to/styles/default.min.css"</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">"/path/to/highlight.min.js"</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span><span class="nx">hljs</span><span class="p">.</span><span class="nx">highlightAll</span><span class="p">();&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<p>This will find and highlight code inside of <code class="docutils literal notranslate"><span class="pre">&lt;pre&gt;&lt;code&gt;</span></code> tags; it tries
+to detect the language automatically. If automatic detection doesn’t
+work for you, or you simply prefer to be explicit, you can specify the language manually by using the <code class="docutils literal notranslate"><span class="pre">class</span></code> attribute:</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">pre</span><span class="p">&gt;&lt;</span><span class="nt">code</span> <span class="na">class</span><span class="o">=</span><span class="s">"language-html"</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">code</span><span class="p">&gt;&lt;/</span><span class="nt">pre</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<section id="plaintext-code-blocks">
+<h4>Plaintext Code Blocks<a class="headerlink" href="#plaintext-code-blocks" title="連結到這個標頭"></a></h4>
+<p>To apply the Highlight.js styling to plaintext without actually highlighting it, use the <code class="docutils literal notranslate"><span class="pre">plaintext</span></code> language:</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">pre</span><span class="p">&gt;&lt;</span><span class="nt">code</span> <span class="na">class</span><span class="o">=</span><span class="s">"language-plaintext"</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">code</span><span class="p">&gt;&lt;/</span><span class="nt">pre</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</section>
+<section id="ignoring-a-code-block">
+<h4>Ignoring a Code Block<a class="headerlink" href="#ignoring-a-code-block" title="連結到這個標頭"></a></h4>
+<p>To skip highlighting of a code block completely, use the <code class="docutils literal notranslate"><span class="pre">nohighlight</span></code> class:</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">pre</span><span class="p">&gt;&lt;</span><span class="nt">code</span> <span class="na">class</span><span class="o">=</span><span class="s">"nohighlight"</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">code</span><span class="p">&gt;&lt;/</span><span class="nt">pre</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="node-js-on-the-server">
+<h3>Node.js on the Server<a class="headerlink" href="#node-js-on-the-server" title="連結到這個標頭"></a></h3>
+<p>The bare minimum to auto-detect the language and highlight some code.</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="c1">// load the library and ALL languages</span>
+<span class="nx">hljs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">'highlight.js'</span><span class="p">);</span>
+<span class="nx">html</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">hljs</span><span class="p">.</span><span class="nx">highlightAuto</span><span class="p">(</span><span class="s1">'&lt;h1&gt;Hello World!&lt;/h1&gt;'</span><span class="p">).</span><span class="nx">value</span>
+</pre></div>
+</div>
+<p>To load only a &quot;common&quot; subset of popular languages:</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="nx">hljs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">'highlight.js/lib/common'</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>To highlight code with a specific language, use <code class="docutils literal notranslate"><span class="pre">highlight</span></code>:</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="nx">html</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">hljs</span><span class="p">.</span><span class="nx">highlight</span><span class="p">(</span><span class="s1">'&lt;h1&gt;Hello World!&lt;/h1&gt;'</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="nx">language</span><span class="o">:</span><span class="w"> </span><span class="s1">'xml'</span><span class="p">}).</span><span class="nx">value</span>
+</pre></div>
+</div>
+<p>See <a class="reference internal" href="#importing-the-library"><span class="xref myst">Importing the Library</span></a> for more examples of <code class="docutils literal notranslate"><span class="pre">require</span></code> vs <code class="docutils literal notranslate"><span class="pre">import</span></code> usage, etc.  For more information about the result object returned by <code class="docutils literal notranslate"><span class="pre">highlight</span></code> or <code class="docutils literal notranslate"><span class="pre">highlightAuto</span></code> refer to the <a class="reference external" href="https://highlightjs.readthedocs.io/en/latest/api.html">api docs</a>.</p>
+</section>
+</section>
+<section id="supported-languages">
+<h2>支援的語言<a class="headerlink" href="#supported-languages" title="連結到這個標頭"></a></h2>
+<p>Highlight.js supports over 180 languages in the core library.  There are also 3rd party
+language definitions available to support even more languages. You can find the full list of supported languages in <a class="reference external" href="https://github.com/highlightjs/highlight.js/blob/main/SUPPORTED_LANGUAGES.md">SUPPORTED_LANGUAGES.md</a>.</p>
+</section>
+<section id="custom-usage">
+<h2>Custom Usage<a class="headerlink" href="#custom-usage" title="連結到這個標頭"></a></h2>
+<p>If you need a bit more control over the initialization of
+Highlight.js, you can use the <a class="reference external" href="http://highlightjs.readthedocs.io/en/latest/api.html#highlightelement"><code class="docutils literal notranslate"><span class="pre">highlightElement</span></code></a> and <a class="reference external" href="http://highlightjs.readthedocs.io/en/latest/api.html#configure"><code class="docutils literal notranslate"><span class="pre">configure</span></code></a>
+functions. This allows you to better control <em>what</em> to highlight and <em>when</em>.</p>
+<p>For example, here’s the rough equivalent of calling <a class="reference external" href="http://highlightjs.readthedocs.io/en/latest/api.html#highlightall"><code class="docutils literal notranslate"><span class="pre">highlightAll</span></code></a> but doing the work manually instead:</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">'DOMContentLoaded'</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="nx">event</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="s1">'pre code'</span><span class="p">).</span><span class="nx">forEach</span><span class="p">((</span><span class="nx">el</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">hljs</span><span class="p">.</span><span class="nx">highlightElement</span><span class="p">(</span><span class="nx">el</span><span class="p">);</span>
+<span class="w">  </span><span class="p">});</span>
+<span class="p">});</span>
+</pre></div>
+</div>
+<p>Please refer to the documentation for <a class="reference external" href="http://highlightjs.readthedocs.io/en/latest/api.html#configure"><code class="docutils literal notranslate"><span class="pre">configure</span></code></a> options.</p>
+<section id="using-custom-html">
+<h3>Using custom HTML<a class="headerlink" href="#using-custom-html" title="連結到這個標頭"></a></h3>
+<p>We strongly recommend <code class="docutils literal notranslate"><span class="pre">&lt;pre&gt;&lt;code&gt;</span></code> wrapping for code blocks. It's quite
+semantic and &quot;just works&quot; out of the box with zero fiddling. It is possible to
+use other HTML elements (or combos), but you may need to pay special attention to
+preserving linebreaks.</p>
+<p>Let's say your markup for code blocks uses divs:</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">'code'</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<p>To highlight such blocks manually:</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="c1">// first, find all the div.code blocks</span>
+<span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="s1">'div.code'</span><span class="p">).</span><span class="nx">forEach</span><span class="p">(</span><span class="nx">el</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="c1">// then highlight each</span>
+<span class="w">  </span><span class="nx">hljs</span><span class="p">.</span><span class="nx">highlightElement</span><span class="p">(</span><span class="nx">el</span><span class="p">);</span>
+<span class="p">});</span>
+</pre></div>
+</div>
+<p>Without using a tag that preserves linebreaks (like <code class="docutils literal notranslate"><span class="pre">pre</span></code>) you'll need some
+additional CSS to help preserve them.  You could also <a class="reference external" href="https://github.com/highlightjs/highlight.js/issues/2559">pre and post-process line
+breaks with a plug-in</a>, but <em>we recommend using CSS</em>.</p>
+<p>To preserve linebreaks inside a <code class="docutils literal notranslate"><span class="pre">div</span></code> using CSS:</p>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="nt">div</span><span class="p">.</span><span class="nc">code</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">white-space</span><span class="p">:</span><span class="w"> </span><span class="kc">pre</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="using-with-vue-js">
+<h3>Using with Vue.js<a class="headerlink" href="#using-with-vue-js" title="連結到這個標頭"></a></h3>
+<p>See <a class="reference external" href="https://github.com/highlightjs/vue-plugin">highlightjs/vue-plugin</a> for a simple Vue plugin that works great with Highlight.js.</p>
+<p>An example of <code class="docutils literal notranslate"><span class="pre">vue-plugin</span></code> in action:</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span>  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">"app"</span><span class="p">&gt;</span>
+    <span class="cm">&lt;!-- bind to a data property named `code` --&gt;</span>
+    <span class="p">&lt;</span><span class="nt">highlightjs</span> <span class="na">autodetect</span> <span class="na">:code</span><span class="o">=</span><span class="s">"code"</span> <span class="p">/&gt;</span>
+    <span class="cm">&lt;!-- or literal code works as well --&gt;</span>
+    <span class="p">&lt;</span><span class="nt">highlightjs</span> <span class="na">language</span><span class="o">=</span><span class="s">'javascript'</span> <span class="na">code</span><span class="o">=</span><span class="s">"var x = 5;"</span> <span class="p">/&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</section>
+<section id="using-web-workers">
+<h3>Using Web Workers<a class="headerlink" href="#using-web-workers" title="連結到這個標頭"></a></h3>
+<p>You can run highlighting inside a web worker to avoid freezing the browser
+window while dealing with very big chunks of code.</p>
+<p>In your main script:</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">'load'</span><span class="p">,</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">code</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">'#code'</span><span class="p">);</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">worker</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Worker</span><span class="p">(</span><span class="s1">'worker.js'</span><span class="p">);</span>
+<span class="w">  </span><span class="nx">worker</span><span class="p">.</span><span class="nx">onmessage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="nx">event</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">code</span><span class="p">.</span><span class="nx">innerHTML</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">event</span><span class="p">.</span><span class="nx">data</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="w">  </span><span class="nx">worker</span><span class="p">.</span><span class="nx">postMessage</span><span class="p">(</span><span class="nx">code</span><span class="p">.</span><span class="nx">textContent</span><span class="p">);</span>
+<span class="p">});</span>
+</pre></div>
+</div>
+<p>In worker.js:</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="nx">onmessage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="nx">event</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">importScripts</span><span class="p">(</span><span class="s1">'&lt;path&gt;/highlight.min.js'</span><span class="p">);</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">self</span><span class="p">.</span><span class="nx">hljs</span><span class="p">.</span><span class="nx">highlightAuto</span><span class="p">(</span><span class="nx">event</span><span class="p">.</span><span class="nx">data</span><span class="p">);</span>
+<span class="w">  </span><span class="nx">postMessage</span><span class="p">(</span><span class="nx">result</span><span class="p">.</span><span class="nx">value</span><span class="p">);</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="importing-the-library">
+<h2>Importing the Library<a class="headerlink" href="#importing-the-library" title="連結到這個標頭"></a></h2>
+<p>First, you'll likely be installing the library via <code class="docutils literal notranslate"><span class="pre">npm</span></code> or <code class="docutils literal notranslate"><span class="pre">yarn</span></code> -- see <a class="reference internal" href="#getting-the-library"><span class="xref myst">Getting the Library</span></a>.</p>
+<section id="node-js-commonjs-modules-require">
+<h3>Node.js CommonJS Modules / <code class="docutils literal notranslate"><span class="pre">require</span></code><a class="headerlink" href="#node-js-commonjs-modules-require" title="連結到這個標頭"></a></h3>
+<p>Requiring the top-level library will load all languages:</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="c1">// require the highlight.js library, including all languages</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">hljs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">'./highlight.js'</span><span class="p">);</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">highlightedCode</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">hljs</span><span class="p">.</span><span class="nx">highlightAuto</span><span class="p">(</span><span class="s1">'&lt;span&gt;Hello World!&lt;/span&gt;'</span><span class="p">).</span><span class="nx">value</span>
+</pre></div>
+</div>
+<p>For a smaller footprint, load our common subset of languages (the same set used for our default web build).</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">hljs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">'highlight.js/lib/common'</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>For the smallest footprint, load only the languages you need:</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">hljs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">'highlight.js/lib/core'</span><span class="p">);</span>
+<span class="nx">hljs</span><span class="p">.</span><span class="nx">registerLanguage</span><span class="p">(</span><span class="s1">'xml'</span><span class="p">,</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">'highlight.js/lib/languages/xml'</span><span class="p">));</span>
+
+<span class="kd">const</span><span class="w"> </span><span class="nx">highlightedCode</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">hljs</span><span class="p">.</span><span class="nx">highlight</span><span class="p">(</span><span class="s1">'&lt;span&gt;Hello World!&lt;/span&gt;'</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="nx">language</span><span class="o">:</span><span class="w"> </span><span class="s1">'xml'</span><span class="p">}).</span><span class="nx">value</span>
+</pre></div>
+</div>
+</section>
+<section id="node-js-es6-modules-import">
+<h3>Node.js ES6 Modules / <code class="docutils literal notranslate"><span class="pre">import</span></code><a class="headerlink" href="#node-js-es6-modules-import" title="連結到這個標頭"></a></h3>
+<p>The default import will register all languages:</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="k">import</span><span class="w"> </span><span class="nx">hljs</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">'highlight.js'</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>It is more efficient to import only the library and register the languages you need:</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="k">import</span><span class="w"> </span><span class="nx">hljs</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">'highlight.js/lib/core'</span><span class="p">;</span>
+<span class="k">import</span><span class="w"> </span><span class="nx">javascript</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">'highlight.js/lib/languages/javascript'</span><span class="p">;</span>
+<span class="nx">hljs</span><span class="p">.</span><span class="nx">registerLanguage</span><span class="p">(</span><span class="s1">'javascript'</span><span class="p">,</span><span class="w"> </span><span class="nx">javascript</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>If your build tool processes CSS imports, you can also import the theme directly as a module:</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="k">import</span><span class="w"> </span><span class="nx">hljs</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">'highlight.js'</span><span class="p">;</span>
+<span class="k">import</span><span class="w"> </span><span class="s1">'highlight.js/styles/github.css'</span><span class="p">;</span>
+</pre></div>
+</div>
+</section>
+<section id="browser-es6-modules">
+<h3>Browser ES6 Modules<a class="headerlink" href="#browser-es6-modules" title="連結到這個標頭"></a></h3>
+<p><em>Note: For now you'll want to install <code class="docutils literal notranslate"><span class="pre">&#64;highlightjs/cdn-assets</span></code> package instead of <code class="docutils literal notranslate"><span class="pre">highlight.js</span></code>.
+See <a class="reference internal" href="#download-prebuilt-cdn-assets"><span class="xref myst">Download prebuilt CDN assets</span></a></em></p>
+<p>To import the library and register only those languages that you need:</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="k">import</span><span class="w"> </span><span class="nx">hljs</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">'./assets/js/@highlightjs/cdn-assets/es/core.js'</span><span class="p">;</span>
+<span class="k">import</span><span class="w"> </span><span class="nx">javascript</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">'./assets/js/@highlightjs/cdn-assets/es/languages/javascript.min.js'</span><span class="p">;</span>
+
+<span class="nx">hljs</span><span class="p">.</span><span class="nx">registerLanguage</span><span class="p">(</span><span class="s1">'javascript'</span><span class="p">,</span><span class="w"> </span><span class="nx">javascript</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>To import the library and register all languages:</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="k">import</span><span class="w"> </span><span class="nx">hljs</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">'./assets/js/@highlightjs/cdn-assets/es/highlight.js'</span><span class="p">;</span>
+</pre></div>
+</div>
+<p><em>Note: The path to these files will vary depending on where you have installed/copied them
+within your project or site. The above path is only an example.</em></p>
+<p>You can also use <a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script/type/importmap"><code class="docutils literal notranslate"><span class="pre">importmap</span></code></a> to import in similar way as Node:</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">script</span> <span class="na">type</span><span class="o">=</span><span class="s">"importmap"</span><span class="p">&gt;</span>
+<span class="p">{</span>
+<span class="w">	</span><span class="s2">"imports"</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">		</span><span class="s2">"@highlightjs"</span><span class="o">:</span><span class="w"> </span><span class="s2">"./assets/js/@highlightjs/cdn-assets/es/"</span>
+<span class="w">	</span><span class="p">}</span>
+<span class="p">}</span>
+<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<p>Use the above code in your HTML. After that, your JavaScript can import using the named key from
+your <code class="docutils literal notranslate"><span class="pre">importmap</span></code>, for example <code class="docutils literal notranslate"><span class="pre">&#64;highlightjs</span></code> in this case:</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="k">import</span><span class="w"> </span><span class="nx">hljs</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">'@highlightjs/core.js'</span><span class="p">;</span>
+<span class="k">import</span><span class="w"> </span><span class="nx">javascript</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">'@highlightjs/languages/javascript.min.js'</span><span class="p">;</span>
+
+<span class="nx">hljs</span><span class="p">.</span><span class="nx">registerLanguage</span><span class="p">(</span><span class="s1">'javascript'</span><span class="p">,</span><span class="w"> </span><span class="nx">javascript</span><span class="p">);</span>
+</pre></div>
+</div>
+<p><em>Note: You can also import directly from fully static URLs, such as our very own pre-built ES6 Module CDN resources. See <a class="reference internal" href="#fetch-via-cdn"><span class="xref myst">Fetch via CDN</span></a> for specific examples.</em></p>
+</section>
+</section>
+<section id="getting-the-library">
+<h2>Getting the Library<a class="headerlink" href="#getting-the-library" title="連結到這個標頭"></a></h2>
+<p>You can get highlight.js as a hosted, or custom-build, browser script or
+as a server module. Right out of the box the browser script supports
+both AMD and CommonJS, so if you wish you can use RequireJS or
+Browserify without having to build from source. The server module also
+works perfectly fine with Browserify, but there is the option to use a
+build specific to browsers rather than something meant for a server.</p>
+<p><strong>Do not link to GitHub directly.</strong> The library is not supposed to work straight
+from the source, it requires building. If none of the pre-packaged options
+work for you refer to the <a class="reference external" href="http://highlightjs.readthedocs.io/en/latest/building-testing.html">building documentation</a>.</p>
+<p><strong>On Almond.</strong> You need to use the optimizer to give the module a name. For
+example:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>r.js<span class="w"> </span>-o<span class="w"> </span><span class="nv">name</span><span class="o">=</span>hljs<span class="w"> </span>paths.hljs<span class="o">=</span>/path/to/highlight<span class="w"> </span><span class="nv">out</span><span class="o">=</span>highlight.js
+</pre></div>
+</div>
+<section id="fetch-via-cdn">
+<h3>Fetch via CDN<a class="headerlink" href="#fetch-via-cdn" title="連結到這個標頭"></a></h3>
+<p>A prebuilt version of Highlight.js bundled with many common languages is hosted by several popular CDNs.
+When using Highlight.js via CDN you can use Subresource Integrity for additional security.  For details
+see <a class="reference external" href="https://github.com/highlightjs/cdn-release/blob/main/DIGESTS.md">DIGESTS.md</a>.</p>
+<section id="cdnjs-link">
+<h4>cdnjs (<a class="reference external" href="https://cdnjs.com/libraries/highlight.js">link</a>)<a class="headerlink" href="#cdnjs-link" title="連結到這個標頭"></a></h4>
+<section id="common-js">
+<h5>Common JS <!-- omit in toc --><a class="headerlink" href="#common-js" title="連結到這個標頭"></a></h5>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">"stylesheet"</span> <span class="na">href</span><span class="o">=</span><span class="s">"https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/default.min.css"</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">"https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="cm">&lt;!-- and it's easy to individually load additional languages --&gt;</span>
+<span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">"https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/go.min.js"</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</section>
+<section id="es6-modules">
+<h5>ES6 Modules <!-- omit in toc --><a class="headerlink" href="#es6-modules" title="連結到這個標頭"></a></h5>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">"stylesheet"</span> <span class="na">href</span><span class="o">=</span><span class="s">"https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/dark.min.css"</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">script</span> <span class="na">type</span><span class="o">=</span><span class="s">"module"</span><span class="p">&gt;</span>
+<span class="k">import</span><span class="w"> </span><span class="nx">hljs</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/es/highlight.min.js'</span><span class="p">;</span>
+<span class="c1">//  and it's easy to individually load additional languages</span>
+<span class="k">import</span><span class="w"> </span><span class="nx">go</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/es/languages/go.min.js'</span><span class="p">;</span>
+<span class="nx">hljs</span><span class="p">.</span><span class="nx">registerLanguage</span><span class="p">(</span><span class="s1">'go'</span><span class="p">,</span><span class="w"> </span><span class="nx">go</span><span class="p">);</span>
+<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="jsdelivr-link">
+<h4>jsdelivr (<a class="reference external" href="https://www.jsdelivr.com/package/gh/highlightjs/cdn-release">link</a>)<a class="headerlink" href="#jsdelivr-link" title="連結到這個標頭"></a></h4>
+<section id="id1">
+<h5>Common JS <!-- omit in toc --><a class="headerlink" href="#id1" title="連結到這個標頭"></a></h5>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">"stylesheet"</span> <span class="na">href</span><span class="o">=</span><span class="s">"https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.11.1/build/styles/default.min.css"</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">"https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.11.1/build/highlight.min.js"</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="cm">&lt;!-- and it's easy to individually load additional languages --&gt;</span>
+<span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">"https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.11.1/build/languages/go.min.js"</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</section>
+<section id="id2">
+<h5>ES6 Modules <!-- omit in toc --><a class="headerlink" href="#id2" title="連結到這個標頭"></a></h5>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">"stylesheet"</span> <span class="na">href</span><span class="o">=</span><span class="s">"https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.11.1/build/styles/default.min.css"</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">script</span> <span class="na">type</span><span class="o">=</span><span class="s">"module"</span><span class="p">&gt;</span>
+<span class="k">import</span><span class="w"> </span><span class="nx">hljs</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">'https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.11.1/build/es/highlight.min.js'</span><span class="p">;</span>
+<span class="c1">//  and it's easy to individually load additional languages</span>
+<span class="k">import</span><span class="w"> </span><span class="nx">go</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">'https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.11.1/build/es/languages/go.min.js'</span><span class="p">;</span>
+<span class="nx">hljs</span><span class="p">.</span><span class="nx">registerLanguage</span><span class="p">(</span><span class="s1">'go'</span><span class="p">,</span><span class="w"> </span><span class="nx">go</span><span class="p">);</span>
+<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="unpkg-link">
+<h4>unpkg (<a class="reference external" href="https://unpkg.com/browse/&#64;highlightjs/cdn-assets/">link</a>)<a class="headerlink" href="#unpkg-link" title="連結到這個標頭"></a></h4>
+<section id="id3">
+<h5>Common JS <!-- omit in toc --><a class="headerlink" href="#id3" title="連結到這個標頭"></a></h5>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">"stylesheet"</span> <span class="na">href</span><span class="o">=</span><span class="s">"https://unpkg.com/@highlightjs/cdn-assets@11.11.1/styles/default.min.css"</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">"https://unpkg.com/@highlightjs/cdn-assets@11.11.1/highlight.min.js"</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="cm">&lt;!-- and it's easy to individually load additional languages --&gt;</span>
+<span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">"https://unpkg.com/@highlightjs/cdn-assets@11.11.1/languages/go.min.js"</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</section>
+<section id="id4">
+<h5>ES6 Modules <!-- omit in toc --><a class="headerlink" href="#id4" title="連結到這個標頭"></a></h5>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">"stylesheet"</span> <span class="na">href</span><span class="o">=</span><span class="s">"https://unpkg.com/@highlightjs/cdn-assets@11.11.1/styles/default.min.css"</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">script</span> <span class="na">type</span><span class="o">=</span><span class="s">"module"</span><span class="p">&gt;</span>
+<span class="k">import</span><span class="w"> </span><span class="nx">hljs</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">'https://unpkg.com/@highlightjs/cdn-assets@11.11.1/es/highlight.min.js'</span><span class="p">;</span>
+<span class="c1">//  and it's easy to individually load &amp; register additional languages</span>
+<span class="k">import</span><span class="w"> </span><span class="nx">go</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">'https://unpkg.com/@highlightjs/cdn-assets@11.11.1/es/languages/go.min.js'</span><span class="p">;</span>
+<span class="nx">hljs</span><span class="p">.</span><span class="nx">registerLanguage</span><span class="p">(</span><span class="s1">'go'</span><span class="p">,</span><span class="w"> </span><span class="nx">go</span><span class="p">);</span>
+<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<p><strong>Note:</strong> <em>The CDN-hosted <code class="docutils literal notranslate"><span class="pre">highlight.min.js</span></code> package doesn't bundle every language.</em> It would be
+very large. You can find our list of &quot;common&quot; languages that we bundle by default on our <a class="reference external" href="https://highlightjs.org/download/">download page</a>.</p>
+</section>
+</section>
+</section>
+<section id="download-prebuilt-cdn-assets">
+<h3>Download prebuilt CDN assets<a class="headerlink" href="#download-prebuilt-cdn-assets" title="連結到這個標頭"></a></h3>
+<p>You can also download and self-host the same assets we serve up via our own CDNs.  We publish those builds to the <a class="reference external" href="https://github.com/highlightjs/cdn-release">cdn-release</a> GitHub repository.  You can easily pull individual files off the CDN endpoints with <code class="docutils literal notranslate"><span class="pre">curl</span></code>, etc; if say you only needed <code class="docutils literal notranslate"><span class="pre">highlight.min.js</span></code> and a single CSS file.</p>
+<p>There is also an npm package <a class="reference external" href="https://www.npmjs.com/package/&#64;highlightjs/cdn-assets">&#64;highlightjs/cdn-assets</a> if pulling the assets in via <code class="docutils literal notranslate"><span class="pre">npm</span></code> or <code class="docutils literal notranslate"><span class="pre">yarn</span></code> would be easier for your build process.</p>
+</section>
+<section id="download-from-our-website">
+<h3>Download from our website<a class="headerlink" href="#download-from-our-website" title="連結到這個標頭"></a></h3>
+<p>The <a class="reference external" href="https://highlightjs.org/download/">download page</a> can quickly generate a custom single-file minified bundle including only the languages you desire.</p>
+<p><strong>Note:</strong> <a class="reference internal" href="#build-from-source"><span class="xref myst">Building from source</span></a> can produce slightly smaller builds than the website download.</p>
+</section>
+<section id="install-via-npm-package">
+<h3>Install via NPM package<a class="headerlink" href="#install-via-npm-package" title="連結到這個標頭"></a></h3>
+<p>Our NPM package including all supported languages can be installed with NPM or Yarn:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>npm<span class="w"> </span>install<span class="w"> </span>highlight.js
+<span class="c1"># or</span>
+yarn<span class="w"> </span>add<span class="w"> </span>highlight.js
+</pre></div>
+</div>
+<p>There is also another npm package <a class="reference external" href="https://www.npmjs.com/package/&#64;highlightjs/cdn-assets">&#64;highlightjs/cdn-assets</a> that contains prebuilt CDN assets including <a class="reference internal" href="#browser-es6-modules"><span class="xref myst">ES6 Modules that can be imported in browser</span></a>:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>npm<span class="w"> </span>install<span class="w"> </span>@highlightjs/cdn-assets
+<span class="c1"># or</span>
+yarn<span class="w"> </span>add<span class="w"> </span>@highlightjs/cdn-assets
+</pre></div>
+</div>
+<p>Alternatively, you can build the NPM package from source.</p>
+</section>
+<section id="build-from-source">
+<h3>Build from Source<a class="headerlink" href="#build-from-source" title="連結到這個標頭"></a></h3>
+<p>The <a class="reference external" href="https://github.com/highlightjs/">current source code</a> is always available on GitHub.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>node<span class="w"> </span>tools/build.js<span class="w"> </span>-t<span class="w"> </span>node
+node<span class="w"> </span>tools/build.js<span class="w"> </span>-t<span class="w"> </span>browser<span class="w"> </span>:common
+node<span class="w"> </span>tools/build.js<span class="w"> </span>-t<span class="w"> </span>cdn<span class="w"> </span>:common
+</pre></div>
+</div>
+<p>See our <a class="reference external" href="http://highlightjs.readthedocs.io/en/latest/building-testing.html">building documentation</a> for more information.</p>
+</section>
+</section>
+<section id="requirements">
+<h2>Requirements<a class="headerlink" href="#requirements" title="連結到這個標頭"></a></h2>
+<p>Highlight.js works on all modern browsers and currently supported Node.js versions.  You'll need the following software to contribute to the core library:</p>
+<ul class="simple">
+<li><p>Node.js &gt;= 12.x</p></li>
+<li><p>npm &gt;= 6.x</p></li>
+</ul>
+</section>
+<section id="license">
+<h2>License<a class="headerlink" href="#license" title="連結到這個標頭"></a></h2>
+<p>Highlight.js is released under the BSD License. See our <a class="reference external" href="https://github.com/highlightjs/highlight.js/blob/main/LICENSE">LICENSE</a> file
+for details.</p>
+</section>
+<section id="links">
+<h2>Links<a class="headerlink" href="#links" title="連結到這個標頭"></a></h2>
+<p>The official website for the library is <a class="reference external" href="https://highlightjs.org/">https://highlightjs.org/</a>.</p>
+<p>Further in-depth documentation for the API and other topics is at
+<a class="reference external" href="http://highlightjs.readthedocs.io/">http://highlightjs.readthedocs.io/</a>.</p>
+<p>A list of the Core Team and contributors can be found in the <a class="reference external" href="https://github.com/highlightjs/highlight.js/blob/main/CONTRIBUTORS.md">CONTRIBUTORS.md</a> file.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="Highlight.js 文件" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="building-testing.html" class="btn btn-neutral float-right" title="建置與測試" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2012–2024, Ivan Sagalaev.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
