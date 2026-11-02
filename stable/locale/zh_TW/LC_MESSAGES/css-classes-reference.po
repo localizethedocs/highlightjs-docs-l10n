@@ -632,6 +632,6 @@ msgstr ""
 #: ../../../css-classes-reference.rst:230
 msgid ""
 "The language names and aliases table has moved to `SUPPORTED_LANGUAGES.md "
-"<https://github.com/highlightjs/highlight.js/blob/main/SUPPORTED_LANGUAGES."
-"md>`_."
+"<https://github.com/highlightjs/highlight.js/blob/main/"
+"SUPPORTED_LANGUAGES.md>`_."
 msgstr ""
