@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: highlight.js latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-08-10 09:35+0000\n"
+"POT-Creation-Date: 2026-11-13 13:47+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -244,11 +244,23 @@ msgid "aspectj"
 msgstr ""
 
 #: ../../../supported-languages.md:0
+msgid "Astro"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "astro, astrojs"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "[highlightjs-astro](https://github.com/chrisknepper/highlightjs-astro)"
+msgstr ""
+
+#: ../../../supported-languages.md:0
 msgid "AutoHotkey"
 msgstr ""
 
 #: ../../../supported-languages.md:0
-msgid "autohotkey"
+msgid "autohotkey, ahk"
 msgstr ""
 
 #: ../../../supported-languages.md:0
@@ -272,7 +284,7 @@ msgid "Awk"
 msgstr ""
 
 #: ../../../supported-languages.md:0
-msgid "awk, mawk, nawk, gawk"
+msgid "awk"
 msgstr ""
 
 #: ../../../supported-languages.md:0
@@ -383,7 +395,7 @@ msgid "C#"
 msgstr ""
 
 #: ../../../supported-languages.md:0
-msgid "csharp, cs"
+msgid "csharp, cs, c#"
 msgstr ""
 
 #: ../../../supported-languages.md:0
@@ -455,6 +467,14 @@ msgid "[highlightjs-cedar](https://github.com/cedar-policy/highlightjs-cedar)"
 msgstr ""
 
 #: ../../../supported-languages.md:0
+msgid "Ceylon"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "ceylon"
+msgstr ""
+
+#: ../../../supported-languages.md:0
 msgid "Chaos"
 msgstr ""
 
@@ -492,11 +512,27 @@ msgid ""
 msgstr ""
 
 #: ../../../supported-languages.md:0
+msgid "Clean"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "clean, icl, dcl"
+msgstr ""
+
+#: ../../../supported-languages.md:0
 msgid "Clojure"
 msgstr ""
 
 #: ../../../supported-languages.md:0
-msgid "clojure, clj"
+msgid "clojure, clj, edn"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "Clojure REPL"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "clojure-repl"
 msgstr ""
 
 #: ../../../supported-languages.md:0
@@ -663,7 +699,7 @@ msgid "Delphi"
 msgstr ""
 
 #: ../../../supported-languages.md:0
-msgid "dpr, dfm, pas, pascal"
+msgid "delphi, dpr, dfm, pas, pascal"
 msgstr ""
 
 #: ../../../supported-languages.md:0
@@ -763,7 +799,7 @@ msgid "Elixir"
 msgstr ""
 
 #: ../../../supported-languages.md:0
-msgid "elixir"
+msgid "elixir, ex, exs"
 msgstr ""
 
 #: ../../../supported-languages.md:0
@@ -775,11 +811,27 @@ msgid "elm"
 msgstr ""
 
 #: ../../../supported-languages.md:0
+msgid "ERB"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "erb"
+msgstr ""
+
+#: ../../../supported-languages.md:0
 msgid "Erlang"
 msgstr ""
 
 #: ../../../supported-languages.md:0
 msgid "erlang, erl"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "Erlang REPL"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "erlang-repl"
 msgstr ""
 
 #: ../../../supported-languages.md:0
@@ -819,7 +871,7 @@ msgid "F#"
 msgstr ""
 
 #: ../../../supported-languages.md:0
-msgid "fsharp, fs, fsx, fsi, fsscript"
+msgid "fsharp, fs, f#"
 msgstr ""
 
 #: ../../../supported-languages.md:0
@@ -851,6 +903,14 @@ msgid "fortran, f90, f95"
 msgstr ""
 
 #: ../../../supported-languages.md:0
+msgid "FreeDesktop config"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "freedesktop, desktop, systemd"
+msgstr ""
+
+#: ../../../supported-languages.md:0
 msgid "FunC"
 msgstr ""
 
@@ -868,6 +928,14 @@ msgstr ""
 
 #: ../../../supported-languages.md:0
 msgid "gcode, nc"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "GameMaker Language"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "gml"
 msgstr ""
 
 #: ../../../supported-languages.md:0
@@ -904,7 +972,7 @@ msgid "Gherkin"
 msgstr ""
 
 #: ../../../supported-languages.md:0
-msgid "gherkin"
+msgid "gherkin, feature"
 msgstr ""
 
 #: ../../../supported-languages.md:0
@@ -957,7 +1025,7 @@ msgid "Golo"
 msgstr ""
 
 #: ../../../supported-languages.md:0
-msgid "golo, gololang"
+msgid "golo"
 msgstr ""
 
 #: ../../../supported-languages.md:0
@@ -1021,7 +1089,7 @@ msgid "Handlebars"
 msgstr ""
 
 #: ../../../supported-languages.md:0
-msgid "handlebars, hbs, html.hbs, html.handlebars"
+msgid "handlebars, hbs, html.hbs, html.handlebars, htmlbars"
 msgstr ""
 
 #: ../../../supported-languages.md:0
@@ -1053,11 +1121,19 @@ msgid "[highlightjs-hlsl](https://github.com/highlightjs/highlightjs-hlsl)"
 msgstr ""
 
 #: ../../../supported-languages.md:0
+msgid "HSP"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "hsp"
+msgstr ""
+
+#: ../../../supported-languages.md:0
 msgid "HTML, XML"
 msgstr ""
 
 #: ../../../supported-languages.md:0
-msgid "xml, html, xhtml, rss, atom, xjb, xsd, xsl, plist, svg"
+msgid "xml, html, xhtml, rss, atom, xjb, xsd, xsl, plist, wsf, svg"
 msgstr ""
 
 #: ../../../supported-languages.md:0
@@ -1128,6 +1204,14 @@ msgid "irpf90"
 msgstr ""
 
 #: ../../../supported-languages.md:0
+msgid "ISBL"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "isbl"
+msgstr ""
+
+#: ../../../supported-languages.md:0
 msgid "Jaiva"
 msgstr ""
 
@@ -1152,7 +1236,15 @@ msgid "JavaScript"
 msgstr ""
 
 #: ../../../supported-languages.md:0
-msgid "javascript, js, jsx"
+msgid "javascript, js, jsx, mjs, cjs"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "JBoss CLI"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "jboss-cli, wildfly-cli"
 msgstr ""
 
 #: ../../../supported-languages.md:0
@@ -1192,7 +1284,7 @@ msgid "Julia"
 msgstr ""
 
 #: ../../../supported-languages.md:0
-msgid "julia, jl"
+msgid "julia"
 msgstr ""
 
 #: ../../../supported-languages.md:0
@@ -1200,7 +1292,7 @@ msgid "Julia REPL"
 msgstr ""
 
 #: ../../../supported-languages.md:0
-msgid "julia-repl"
+msgid "julia-repl, jldoctest"
 msgstr ""
 
 #: ../../../supported-languages.md:0
@@ -1208,7 +1300,19 @@ msgid "Kotlin"
 msgstr ""
 
 #: ../../../supported-languages.md:0
-msgid "kotlin, kt"
+msgid "kotlin, kt, kts, ktm, ktx"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "Kusto Query Language"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "kql, kusto"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "[highlightjs-kql](https://github.com/ivanduplenskikh/highlightjs-kql)"
 msgstr ""
 
 #: ../../../supported-languages.md:0
@@ -1244,7 +1348,7 @@ msgid "LaTeX"
 msgstr ""
 
 #: ../../../supported-languages.md:0
-msgid "tex"
+msgid "latex, tex"
 msgstr ""
 
 #: ../../../supported-languages.md:0
@@ -1318,6 +1422,18 @@ msgid "lisp"
 msgstr ""
 
 #: ../../../supported-languages.md:0
+msgid "Lispex"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "lispex, lspx"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "[highlightjs-lispex](https://github.com/studiohaze/highlightjs-lispex)"
+msgstr ""
+
+#: ../../../supported-languages.md:0
 msgid "LiveCode Server"
 msgstr ""
 
@@ -1352,6 +1468,14 @@ msgstr ""
 #: ../../../supported-languages.md:0
 msgid ""
 "[highlightjs-lookml](https://github.com/spectacles-ci/highlightjs-lookml)"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "LSL (Linden Scripting Language)"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "lsl"
 msgstr ""
 
 #: ../../../supported-languages.md:0
@@ -1465,7 +1589,7 @@ msgid "Mercury"
 msgstr ""
 
 #: ../../../supported-languages.md:0
-msgid "mercury"
+msgid "mercury, m, moo"
 msgstr ""
 
 #: ../../../supported-languages.md:0
@@ -1479,6 +1603,14 @@ msgstr ""
 #: ../../../supported-languages.md:0
 msgid ""
 "[highlightjs-metapost](https://github.com/chupinmaxime/highlightjs-metapost)"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "MikroTik RouterOS script"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "routeros, mikrotik"
 msgstr ""
 
 #: ../../../supported-languages.md:0
@@ -1611,6 +1743,14 @@ msgid "n1ql"
 msgstr ""
 
 #: ../../../supported-languages.md:0
+msgid "Nested Text"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "nestedtext, nt"
+msgstr ""
+
+#: ../../../supported-languages.md:0
 msgid "Never"
 msgstr ""
 
@@ -1635,7 +1775,7 @@ msgid "Nim"
 msgstr ""
 
 #: ../../../supported-languages.md:0
-msgid "nim, nimrod"
+msgid "nim"
 msgstr ""
 
 #: ../../../supported-languages.md:0
@@ -1643,7 +1783,15 @@ msgid "Nix"
 msgstr ""
 
 #: ../../../supported-languages.md:0
-msgid "nix"
+msgid "nix, nixos"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "Node REPL"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "node-repl"
 msgstr ""
 
 #: ../../../supported-languages.md:0
@@ -1699,12 +1847,7 @@ msgid "Odin"
 msgstr ""
 
 #: ../../../supported-languages.md:0
-msgid "odin"
-msgstr ""
-
-#: ../../../supported-languages.md:0
-msgid ""
-"[highlightjs-odinlang](https://github.com/marianpekar/highlightjs-odinlang)"
+msgid "odin, odinlang"
 msgstr ""
 
 #: ../../../supported-languages.md:0
@@ -1797,6 +1940,14 @@ msgid "php"
 msgstr ""
 
 #: ../../../supported-languages.md:0
+msgid "PHP template"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "php-template"
+msgstr ""
+
+#: ../../../supported-languages.md:0
 msgid "Pine Script"
 msgstr ""
 
@@ -1882,7 +2033,7 @@ msgid "Processing"
 msgstr ""
 
 #: ../../../supported-languages.md:0
-msgid "processing"
+msgid "processing, pde"
 msgstr ""
 
 #: ../../../supported-languages.md:0
@@ -1910,6 +2061,20 @@ msgid "proto, protobuf"
 msgstr ""
 
 #: ../../../supported-languages.md:0
+msgid "Pug"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "pug, jade"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid ""
+"[@nera-static/highlightjs-pug](https://github.com/seebaermichi/nera-"
+"highlightjs-pug)"
+msgstr ""
+
+#: ../../../supported-languages.md:0
 msgid "Puppet"
 msgstr ""
 
@@ -1918,11 +2083,19 @@ msgid "puppet, pp"
 msgstr ""
 
 #: ../../../supported-languages.md:0
+msgid "PureBASIC"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "purebasic, pb, pbi"
+msgstr ""
+
+#: ../../../supported-languages.md:0
 msgid "Python"
 msgstr ""
 
 #: ../../../supported-languages.md:0
-msgid "python, py, gyp"
+msgid "python, py, gyp, ipython"
 msgstr ""
 
 #: ../../../supported-languages.md:0
@@ -1946,7 +2119,7 @@ msgid "Q"
 msgstr ""
 
 #: ../../../supported-languages.md:0
-msgid "k, kdb"
+msgid "q, k, kdb"
 msgstr ""
 
 #: ../../../supported-languages.md:0
@@ -1966,7 +2139,7 @@ msgid "QML"
 msgstr ""
 
 #: ../../../supported-languages.md:0
-msgid "qml"
+msgid "qml, qt"
 msgstr ""
 
 #: ../../../supported-languages.md:0
@@ -2119,7 +2292,7 @@ msgid "Roboconf"
 msgstr ""
 
 #: ../../../supported-languages.md:0
-msgid "graph, instances"
+msgid "roboconf, graph, instances"
 msgstr ""
 
 #: ../../../supported-languages.md:0
@@ -2182,7 +2355,7 @@ msgid "SAS"
 msgstr ""
 
 #: ../../../supported-languages.md:0
-msgid "SAS, sas"
+msgid "sas"
 msgstr ""
 
 #: ../../../supported-languages.md:0
@@ -2198,7 +2371,7 @@ msgid "Scheme"
 msgstr ""
 
 #: ../../../supported-languages.md:0
-msgid "scheme"
+msgid "scheme, scm"
 msgstr ""
 
 #: ../../../supported-languages.md:0
@@ -2246,7 +2419,7 @@ msgid "Shell"
 msgstr ""
 
 #: ../../../supported-languages.md:0
-msgid "shell, console"
+msgid "shell, console, shellsession"
 msgstr ""
 
 #: ../../../supported-languages.md:0
@@ -2287,6 +2460,18 @@ msgid ""
 msgstr ""
 
 #: ../../../supported-languages.md:0
+msgid "SOML"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "soml"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "[highlightjs-soml](https://github.com/soml-lang/highlightjs-soml)"
+msgstr ""
+
+#: ../../../supported-languages.md:0
 msgid "Splunk SPL"
 msgstr ""
 
@@ -2296,6 +2481,14 @@ msgstr ""
 
 #: ../../../supported-languages.md:0
 msgid "[highlightjs-spl](https://github.com/swsoyee/highlightjs-spl)"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "SQF"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "sqf"
 msgstr ""
 
 #: ../../../supported-languages.md:0
@@ -2319,7 +2512,7 @@ msgid "Stata"
 msgstr ""
 
 #: ../../../supported-languages.md:0
-msgid "stata"
+msgid "stata, do, ado"
 msgstr ""
 
 #: ../../../supported-languages.md:0
@@ -2327,7 +2520,7 @@ msgid "STEP Part 21"
 msgstr ""
 
 #: ../../../supported-languages.md:0
-msgid "p21, step, stp"
+msgid "step21, p21, step, stp"
 msgstr ""
 
 #: ../../../supported-languages.md:0
@@ -2395,6 +2588,14 @@ msgid "swift"
 msgstr ""
 
 #: ../../../supported-languages.md:0
+msgid "Tagger Script"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "taggerscript"
+msgstr ""
+
+#: ../../../supported-languages.md:0
 msgid "Tcl"
 msgstr ""
 
@@ -2441,6 +2642,18 @@ msgstr ""
 
 #: ../../../supported-languages.md:0
 msgid "[toit-highlight](https://github.com/snxx-lppxx/toit-highlight)"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "Topaz"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "topaz, tpz"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "[highlightjs-topaz](https://github.com/studiohaze/highlightjs-topaz)"
 msgstr ""
 
 #: ../../../supported-languages.md:0
@@ -2554,11 +2767,31 @@ msgid "vbscript, vbs"
 msgstr ""
 
 #: ../../../supported-languages.md:0
+msgid "VBScript in HTML"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "vbscript-html"
+msgstr ""
+
+#: ../../../supported-languages.md:0
 msgid "Verilog"
 msgstr ""
 
 #: ../../../supported-languages.md:0
-msgid "verilog, v"
+msgid "verilog, v, sv, svh"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "Verse"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "verse"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "[highlightjs-verse](https://github.com/simnJS/highlightjs-verse)"
 msgstr ""
 
 #: ../../../supported-languages.md:0
@@ -2606,6 +2839,14 @@ msgid ""
 msgstr ""
 
 #: ../../../supported-languages.md:0
+msgid "WebAssembly"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "wasm"
+msgstr ""
+
+#: ../../../supported-languages.md:0
 msgid "WGSL"
 msgstr ""
 
@@ -2627,6 +2868,14 @@ msgstr ""
 
 #: ../../../supported-languages.md:0
 msgid "[highlightjs-why3](https://github.com/JGalego/highlightjs-why3)"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "Wren"
+msgstr ""
+
+#: ../../../supported-languages.md:0
+msgid "wren"
 msgstr ""
 
 #: ../../../supported-languages.md:0
@@ -2739,15 +2988,15 @@ msgstr ""
 msgid "[highlightjs-zig](https://github.com/fwx5618177/highlightjs-zig)"
 msgstr ""
 
-#: ../../../supported-languages.md:289
+#: ../../../supported-languages.md:317
 msgid "<!-- LANGLIST_END -->\n"
 msgstr ""
 
-#: ../../../supported-languages.md:291
+#: ../../../supported-languages.md:319
 msgid "The following languages are included in the \"common\" subset:"
 msgstr ""
 
-#: ../../../supported-languages.md:293
+#: ../../../supported-languages.md:321
 msgid ""
 "Bash, C, C++, C#, CSS, Diff, Go, GraphQL, HTML (XML), Ini (TOML), Java, "
 "JavaScript, JSON, Kotlin, Less, Lua, Makefile, Markdown, Objective C, Perl, "
@@ -2755,15 +3004,15 @@ msgid ""
 "TypeScript, VB.Net, WASM, YAML"
 msgstr ""
 
-#: ../../../supported-languages.md:295
+#: ../../../supported-languages.md:323
 msgid "<!-- document it until we can fix it -->\n"
 msgstr ""
 
-#: ../../../supported-languages.md:296
+#: ../../../supported-languages.md:324
 msgid "Alias Overlap"
 msgstr ""
 
-#: ../../../supported-languages.md:298
+#: ../../../supported-languages.md:326
 msgid ""
 "If you are using either of these languages at the same time please be sure "
 "to use the full name and not the alias to avoid any ambiguity."

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: highlight.js latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-04-02 03:28+0000\n"
+"POT-Creation-Date: 2026-11-13 13:47+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -946,7 +946,7 @@ msgstr ""
 
 #: ../../../mode-reference.rst:618
 msgid ""
-"The the mode that will start right after the current mode ends. The new mode "
+"The mode that will start right after the current mode ends. The new mode "
 "will not be contained within the current one."
 msgstr ""
 

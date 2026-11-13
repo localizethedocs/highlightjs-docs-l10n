@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: highlight.js latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-04-02 03:28+0000\n"
+"POT-Creation-Date: 2026-11-13 13:47+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -205,9 +205,5 @@ msgid ""
 msgstr ""
 
 #: ../../../theme-guide.rst:118
-msgid "Also update CHANGES.md with your contribution."
-msgstr ""
-
-#: ../../../theme-guide.rst:120
 msgid "Send your contribution as a pull request on GitHub."
 msgstr ""
