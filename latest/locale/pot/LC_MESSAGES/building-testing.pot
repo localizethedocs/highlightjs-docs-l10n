@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: highlight.js latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-08-10 09:35+0000\n"
+"POT-Creation-Date: 2026-11-13 13:47+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -157,8 +157,8 @@ msgstr ""
 msgid ""
 "Place the snippet you used inside the browser in ``test/detect/<language>/"
 "default.txt``, build the package with all the languages for node and run the "
-"test suite. If your language breaks auto-detection, it should be fixed by :"
-"ref:`improving relevance <relevance>`, which is a black art in and of "
+"test suite. If your language breaks auto-detection, it should be fixed "
+"by :ref:`improving relevance <relevance>`, which is a black art in and of "
 "itself. When in doubt, please refer to the discussion group!"
 msgstr ""
 
@@ -193,11 +193,38 @@ msgid ""
 "down menu, as automatic detection is unlikely to work in this case."
 msgstr ""
 
-#: ../../../building-testing.rst:108
+#: ../../../building-testing.rst:107
+msgid "Skipped markup tests (unsupported edge cases)"
+msgstr ""
+
+#: ../../../building-testing.rst:109
+msgid ""
+"The suite must not ship failing markup tests. For edge cases that are not "
+"supported yet (or are tracked as future work), commit the pair with a "
+"``.skip`` suffix on the base name:"
+msgstr ""
+
+#: ../../../building-testing.rst:113
+msgid "``test/markup/<language>/<test_name>.skip.txt``"
+msgstr ""
+
+#: ../../../building-testing.rst:114
+msgid "``test/markup/<language>/<test_name>.skip.expect.txt``"
+msgstr ""
+
+#: ../../../building-testing.rst:116
+msgid ""
+"These are registered with Mocha as skipped tests: they appear in the report "
+"but do not fail CI. Prefer this over omitting the case entirely so the gap "
+"stays visible. Link a tracking issue in the PR or a nearby comment when you "
+"add a skip."
+msgstr ""
+
+#: ../../../building-testing.rst:123
 msgid "Building and Testing with Docker"
 msgstr ""
 
-#: ../../../building-testing.rst:110
+#: ../../../building-testing.rst:125
 msgid ""
 "If you don't want to install dependencies on your system, you can use the "
 "included Dockerfile to build a container that will add the source code and "
@@ -206,43 +233,43 @@ msgid ""
 "repository:"
 msgstr ""
 
-#: ../../../building-testing.rst:117
+#: ../../../building-testing.rst:132
 msgid "docker build -t highlight-js ."
 msgstr ""
 
-#: ../../../building-testing.rst:120
+#: ../../../building-testing.rst:135
 msgid ""
 "And then run the container. You will need to expose port 80 on the host for "
 "the web interface, and note that we are running it in detached (-d) mode."
 msgstr ""
 
-#: ../../../building-testing.rst:125
+#: ../../../building-testing.rst:140
 msgid "docker run -d --name highlight-js --rm -p 80:80 highlight-js"
 msgstr ""
 
-#: ../../../building-testing.rst:128
+#: ../../../building-testing.rst:143
 msgid "If your preference is for another port, you can do that too:"
 msgstr ""
 
-#: ../../../building-testing.rst:133
+#: ../../../building-testing.rst:148
 msgid "docker run -d --name highlight-js --rm -p 80:8080 highlight-js"
 msgstr ""
 
-#: ../../../building-testing.rst:136
+#: ../../../building-testing.rst:151
 msgid ""
 "Or you can skip binding a port if your intention is to interactively shell "
 "into the container to use it as a development environment."
 msgstr ""
 
-#: ../../../building-testing.rst:142
+#: ../../../building-testing.rst:157
 msgid "docker run -d --name highlight-js --rm highlight-js"
 msgstr ""
 
-#: ../../../building-testing.rst:145
+#: ../../../building-testing.rst:160
 msgid "Whatever you choose, you can use docker ps to ensure that it's running."
 msgstr ""
 
-#: ../../../building-testing.rst:149
+#: ../../../building-testing.rst:164
 msgid ""
 "$ docker ps\n"
 "CONTAINER ID        IMAGE               COMMAND                  "
@@ -251,39 +278,39 @@ msgid ""
 "ago       Up 7 seconds        0.0.0.0:80->80/tcp   highlight-js"
 msgstr ""
 
-#: ../../../building-testing.rst:154
+#: ../../../building-testing.rst:169
 msgid ""
 "Then, open up to http://127.0.0.1/tools/developer.html to see the developer "
 "page for preview. When you are done, clean up your container."
 msgstr ""
 
-#: ../../../building-testing.rst:159
+#: ../../../building-testing.rst:174
 msgid "docker stop highlight-js"
 msgstr ""
 
-#: ../../../building-testing.rst:161
+#: ../../../building-testing.rst:176
 msgid ""
 "If you want a more advanced testing setup, you can bind the source folder "
 "when you run the container."
 msgstr ""
 
-#: ../../../building-testing.rst:166
+#: ../../../building-testing.rst:181
 msgid ""
-"docker run -d --name highlight-js --volume $PWD/src:/var/www/html/src --rm -"
-"p 80:80 highlight-js"
+"docker run -d --name highlight-js --volume $PWD/src:/var/www/html/src --rm "
+"-p 80:80 highlight-js"
 msgstr ""
 
-#: ../../../building-testing.rst:168
+#: ../../../building-testing.rst:183
 msgid ""
 "Then if you want to make changes, you can do so locally (the folder is bound "
 "as a volume), and execute a command to the container to trigger a rebuild:"
 msgstr ""
 
-#: ../../../building-testing.rst:173
+#: ../../../building-testing.rst:188
 msgid "docker exec highlight-js node tools/build.js :common"
 msgstr ""
 
-#: ../../../building-testing.rst:176
+#: ../../../building-testing.rst:191
 msgid ""
 "And then reload the page to see changes. When you finish, don't forget to "
 "remove the container."

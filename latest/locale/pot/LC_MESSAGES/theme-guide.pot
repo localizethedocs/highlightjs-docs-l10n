@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: highlight.js latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-08-10 09:35+0000\n"
+"POT-Creation-Date: 2026-11-13 13:47+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -54,12 +54,12 @@ msgstr ""
 
 #: ../../../theme-guide.rst:21
 msgid ""
-"A theme is a single CSS file defining styles for the scopes listed in the :"
-"doc:`scopes reference </css-classes-reference>`. The general guideline is to "
-"style the core/common set of classes, however an author may deliberately "
-"choose to exclude some (for example, ``.attr`` is usually left unstyled).  "
-"Use our :ref:`auto-check<autocheck>` tool to provide additional guidance on "
-"this."
+"A theme is a single CSS file defining styles for the scopes listed in "
+"the :doc:`scopes reference </css-classes-reference>`. The general guideline "
+"is to style the core/common set of classes, however an author may "
+"deliberately choose to exclude some (for example, ``.attr`` is usually left "
+"unstyled).  Use our :ref:`auto-check<autocheck>` tool to provide additional "
+"guidance on this."
 msgstr ""
 
 #: ../../../theme-guide.rst:27
@@ -205,9 +205,5 @@ msgid ""
 msgstr ""
 
 #: ../../../theme-guide.rst:118
-msgid "Also update CHANGES.md with your contribution."
-msgstr ""
-
-#: ../../../theme-guide.rst:120
 msgid "Send your contribution as a pull request on GitHub."
 msgstr ""
