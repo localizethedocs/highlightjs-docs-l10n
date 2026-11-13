@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: highlight.js latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-08-10 09:35+0000\n"
+"POT-Creation-Date: 2026-11-13 13:47+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,72 +17,82 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../../../index.rst:9
+#: ../../../index.rst:28
 msgid "README / How to Use"
 msgstr ""
 
-#: ../../../index.rst:9
+#: ../../../index.rst:28
 msgid "Upgrading to Version 11"
 msgstr ""
 
-#: ../../../index.rst:9
+#: ../../../index.rst:28
 msgid "Getting Started"
 msgstr ""
 
-#: ../../../index.rst:18
+#: ../../../index.rst:38
 msgid "Reference"
 msgstr ""
 
-#: ../../../index.rst:32
+#: ../../../index.rst:52
 msgid "Which languages are supported?"
 msgstr ""
 
-#: ../../../index.rst:32
+#: ../../../index.rst:52
 msgid "Why no line numbers?"
 msgstr ""
 
-#: ../../../index.rst:32
+#: ../../../index.rst:52
 msgid "How to request a new language?"
 msgstr ""
 
-#: ../../../index.rst:32
+#: ../../../index.rst:52
 msgid "How to contribute a new language?"
 msgstr ""
 
-#: ../../../index.rst:32
+#: ../../../index.rst:52
 msgid "FAQ"
 msgstr ""
 
-#: ../../../index.rst:7
-msgid "Highlight.js Documentation"
+#: ../../../index.rst:64
+msgid "Source"
 msgstr ""
 
-#: ../../../index.rst:44
+#: ../../../index.rst:64
+msgid "Issues"
+msgstr ""
+
+#: ../../../index.rst:64
+msgid "Discord"
+msgstr ""
+
+#: ../../../index.rst:64
+msgid "Website"
+msgstr ""
+
+#: ../../../index.rst:64
+msgid "highlight.js npm"
+msgstr ""
+
+#: ../../../index.rst:64
+msgid "@highlightjs/cdn-assets npm"
+msgstr ""
+
+#: ../../../index.rst:64
 msgid "Links"
 msgstr ""
 
-#: ../../../index.rst:48
-msgid "`Source <https://github.com/highlightjs/highlight.js>`_"
+#: ../../../index.rst:11
+msgid "Highlight.js"
 msgstr ""
 
-#: ../../../index.rst:49
-msgid "`Issues <https://github.com/highlightjs/highlight.js/issues>`_"
-msgstr ""
-
-#: ../../../index.rst:50
-msgid "`Discord <https://discord.gg/M24EbU7ja9>`_"
-msgstr ""
-
-#: ../../../index.rst:51
-msgid "`Website <https://highlightjs.org>`_"
-msgstr ""
-
-#: ../../../index.rst:52
-msgid "`highlight.js npm <https://www.npmjs.com/package/highlight.js>`_"
-msgstr ""
-
-#: ../../../index.rst:53
+#: ../../../index.rst:15
 msgid ""
-"`@highlightjs/cdn-assets npm <https://www.npmjs.com/package/@highlightjs/cdn-"
-"assets>`_"
+"JavaScript syntax highlighter with language auto-detection and zero "
+"dependencies."
+msgstr ""
+
+#: ../../../index.rst:19
+msgid ""
+"`Website <https://highlightjs.org/>`_ :doc:`Docs <readme>` `GitHub <https://"
+"github.com/highlightjs/highlight.js>`_"
 msgstr ""
