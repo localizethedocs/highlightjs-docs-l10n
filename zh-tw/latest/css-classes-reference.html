@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="zh-TW" data-accent-color="red" data-content_root="./">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Scope Reference - highlight.js 11.12.0 說明文件</title><link rel="index" title="索引" href="genindex.html" /><link rel="search" title="搜尋" href="search.html" /><link rel="next" title="Plugin Recipes" href="plugin-recipes.html" /><link rel="prev" title="模式參考" href="mode-reference.html" />
+      <link rel="canonical" href="https://projects.localizethedocs.org/highlightjs-docs-l10n/css-classes-reference.html" /><script>
+    function setColorMode(t){let e=document.documentElement;e.setAttribute("data-color-mode",t);let a=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches,s=t;"auto"===t&&(s=a?"dark":"light"),"light"===s?(e.classList.remove("dark"),e.classList.add("light")):(e.classList.remove("light"),e.classList.add("dark"))}
+    setColorMode(localStorage._theme||"auto");
+  </script><link rel="stylesheet" type="text/css" href="_static/pygments.css?v=ad592e98" />
+    <link rel="stylesheet" type="text/css" href="_static/shibuya.css?v=9454f7d5" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+    <link media="print" rel="stylesheet" type="text/css" href="_static/print.css?v=20ff2c19" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css?v=e91073b2" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --sy-f-text: "Inter", var(--sy-f-sys), var(--sy-f-cjk), sans-serif;
+  --sy-f-heading: "Inter", var(--sy-f-sys), var(--sy-f-cjk), sans-serif;
+}
+</style>
+    
+
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="https://projects.localizethedocs.org/highlightjs-docs-l10n/css-classes-reference.html"/>
+  <meta property="og:title" content="Scope Reference"/>
+    <meta name="twitter:card" content="summary"/>
+  
+<script type="text/javascript" src="ltd-provenance.js"></script>
+<script type="text/javascript" src="ltd-current.js"></script>
+<script type="text/javascript" src="../../ltd-config.js"></script>
+<script type="text/javascript" src="../../ltd-flyout.js"></script>
+</head>
+<body><div class="sy-head">
+  <div class="sy-head-blur"></div>
+  <div class="sy-head-inner sy-container mx-auto">
+    <a class="sy-head-brand" href="index.html">
+      
+      
+      <strong>highlight.js</strong>
+    </a>
+    <div class="sy-head-nav" id="head-nav">
+      <nav class="sy-head-links"></nav>
+      <div class="sy-head-extra flex items-center print:hidden"><form class="searchbox flex items-center" action="search.html" method="get">
+  <input type="text" name="q" placeholder="搜尋" />
+  <kbd>/</kbd>
+</form><div class="sy-head-socials">
+  <a href="https://github.com/highlightjs/highlight.js" aria-label="GitHub">
+    <iconify-icon icon="simple-icons:github"></iconify-icon>
+  </a>
+  <a href="https://discord.gg/M24EbU7ja9" aria-label="Discord">
+    <iconify-icon icon="simple-icons:discord"></iconify-icon>
+  </a></div></div>
+    </div>
+    <div class="sy-head-actions flex items-center shrink-0 print:hidden"><button class="js-theme theme-switch flex items-center"
+data-aria-auto="切換到亮色模式"
+data-aria-light="切換到暗黑模式"
+data-aria-dark="切換到自動模式">
+<i class="i-lucide theme-icon"></i>
+</button><button class="md:hidden flex items-center js-menu" aria-label="Menu" type="button" aria-controls="head-nav" aria-expanded="false">
+        <div class="hamburger">
+          <span class="hamburger_1"></span>
+          <span class="hamburger_2"></span>
+          <span class="hamburger_3"></span>
+        </div>
+      </button>
+    </div>
+  </div>
+</div>
+<div class="sy-page sy-container flex mx-auto">
+  <aside id="lside" class="sy-lside md:w-72 md:shrink-0 print:hidden">
+    <div class="sy-lside-inner md:sticky">
+      <div class="sy-scrollbar p-6">
+        <div class="globaltoc" data-expand-depth="0"><p class="caption" role="heading" aria-level="3"><span class="caption-text">開始使用</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="readme.html">README / How to Use</a></li>
+<li class="toctree-l1"><a class="reference internal" href="building-testing.html">建置與測試</a></li>
+<li class="toctree-l1"><a class="reference internal" href="upgrade-11.html">升級至版本 11</a></li>
+</ul>
+<p class="caption" role="heading" aria-level="3"><span class="caption-text">參考</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="api.html">核心 API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="plugin-api.html">Plugin API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="language-guide.html">語言定義指南</a></li>
+<li class="toctree-l1"><a class="reference internal" href="theme-guide.html">Theme Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mode-reference.html">模式參考</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Scope Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="plugin-recipes.html">Plugin Recipes</a></li>
+</ul>
+<p class="caption" role="heading" aria-level="3"><span class="caption-text">FAQ</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="supported-languages.html">支援哪些語言？</a></li>
+<li class="toctree-l1"><a class="reference internal" href="line-numbers.html">為什麼沒有行號？</a></li>
+<li class="toctree-l1"><a class="reference internal" href="language-requests.html">如何請求新語言？</a></li>
+<li class="toctree-l1"><a class="reference internal" href="language-contribution.html">如何貢獻新語言？</a></li>
+</ul>
+<p class="caption" role="heading" aria-level="3"><span class="caption-text">連結</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/highlightjs/highlight.js">Source</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/highlightjs/highlight.js/issues">Issues</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://discord.gg/M24EbU7ja9">Discord</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://highlightjs.org">Website</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.npmjs.com/package/highlight.js">highlight.js npm</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.npmjs.com/package/&#64;highlightjs/cdn-assets">&#64;highlightjs/cdn-assets npm</a></li>
+</ul>
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="lside-overlay js-menu" role="button" aria-label="Close left sidebar" aria-controls="lside" aria-expanded="false"></div>
+  <aside id="rside" class="sy-rside pb-3 w-64 shrink-0 order-last">
+    <button class="rside-close js-menu xl:hidden" aria-label="Close Table of Contents" type="button" aria-controls="rside" aria-expanded="false">
+      <i class="i-lucide close"></i>
+    </button>
+    <div class="sy-scrollbar sy-rside-inner px-6 xl:top-16 xl:sticky xl:pl-0 pt-6 pb-4"><div class="localtoc"><h3>該頁內容</h3><ul>
+<li><a class="reference internal" href="#stylable-scopes">Stylable Scopes</a><ul>
+<li><a class="reference internal" href="#a-note-on-scopes-with-sub-scopes">A note on scopes with sub-scopes</a></li>
+<li><a class="reference internal" href="#a-note-on-newer-scopes">A note on newer scopes</a></li>
+<li><a class="reference internal" href="#reserved-scopes">Reserved scopes</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#language-names-and-aliases">Language names and aliases</a></li>
+</ul>
+</div><a class="js-repo-stats repo-stats flex items-center" href="https://github.com/highlightjs/highlight.js"
+  data-type="github" data-user="highlightjs" data-repo="highlight.js">
+  <span class="w-8 flex items-center justify-around shrink-0 text-3xl">
+    <iconify-icon icon="simple-icons:github"></iconify-icon>
+  </span>
+  <span class="flex-grow px-2 break-all">
+    
+    
+      <span>highlight.js</span>
+    
+    <span class="flex text-sm repo-stats-count">
+      <span class="flex items-center pr-3">
+        <iconify-icon icon="lucide:star"></iconify-icon>
+        <strong class="js-repo-stars ml-1">0</strong>
+      </span>
+      <span class="flex items-center">
+        <iconify-icon icon="lucide:git-fork"></iconify-icon>
+        <strong class="js-repo-forks ml-1">0</strong>
+      </span>
+    </span>
+  </span>
+</a><div class="edit-this-page">
+  <a href="https://github.com/highlightjs/highlight.js/blob/main/docs/css-classes-reference.rst">編輯此頁面</a>
+</div><div id="ethical-ad-placement" data-ea-publisher="readthedocs"></div></div>
+  </aside>
+  <div class="rside-overlay js-menu" role="button" aria-label="Close Table of Contents" aria-controls="rside" aria-expanded="false"></div>
+  <main class="sy-main w-full max-sm:max-w-full print:pt-6">
+<div class="sy-breadcrumbs" role="navigation">
+  <div class="sy-breadcrumbs-inner flex items-center">
+    <div class="md:hidden mr-3">
+      <button class="js-menu" aria-label="Menu" type="button" aria-controls="lside" aria-expanded="false">
+        <i class="i-lucide menu"></i>
+      </button>
+    </div>
+    <ol class="flex-1" itemscope itemtype="https://schema.org/BreadcrumbList"><li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <a itemprop="item" href="index.html"><span itemprop="name">highlight.js</span></a>
+        <span>/</span>
+        <meta itemprop="position" content="1" />
+      </li><li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <strong itemprop="name">Scope Reference</strong>
+        <meta itemprop="position" content="2" />
+      </li></ol>
+    <div class="xl:hidden ml-1">
+      <button class="js-menu" aria-label="Show table of contents" type="button" aria-controls="rside"
+        aria-expanded="false">
+        <i class="i-lucide outdent"></i>
+      </button>
+    </div>
+  </div>
+</div><div class="flex flex-col break-words justify-between">
+      <div class="relative min-w-0 max-w-6xl px-6 pb-6 pt-8 xl:px-12">
+  <article class="yue" role="main">
+          <section id="scope-reference">
+<h1>Scope Reference<a class="headerlink" href="#scope-reference" title="連結到這個標頭">¶</a></h1>
+<section id="stylable-scopes">
+<h2>Stylable Scopes<a class="headerlink" href="#stylable-scopes" title="連結到這個標頭">¶</a></h2>
+<p>The general purpose scopes are intended to be used for any language, but the
+other scopes may also be used when semantically correct.  For example if you had
+a general purpose language that allowed inline URLs:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span data-line="1"><span class="n">var</span> <span class="n">GOOGLE</span> <span class="o">=</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">google</span><span class="o">.</span><span class="n">com</span><span class="o">/</span>
+</span></pre></div>
+</div>
+<p>It would be reasonable to use the <code class="docutils literal notranslate"><span class="pre">link</span></code> class for this, even if your language
+is not a markup language.  However, many themes might not be designed with this
+in mind so a better choice (for best theme support) might possibly be <code class="docutils literal notranslate"><span class="pre">string</span></code>.</p>
+<div class="table-wrapper docutils container">
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td colspan="2"><p><strong>General purpose</strong></p></td>
+</tr>
+<tr class="row-even"><td><p>keyword</p></td>
+<td><p>keyword in a regular Algol-style language</p></td>
+</tr>
+<tr class="row-odd"><td><p>built_in</p></td>
+<td><p>built-in or library object (constant, class,
+function)</p></td>
+</tr>
+<tr class="row-even"><td><p>type</p></td>
+<td><p>data type (in a language with syntactically
+significant types) (<code class="docutils literal notranslate"><span class="pre">string</span></code>, <code class="docutils literal notranslate"><span class="pre">int</span></code>,
+<code class="docutils literal notranslate"><span class="pre">array</span></code>, etc.)</p></td>
+</tr>
+<tr class="row-odd"><td><p>literal</p></td>
+<td><p>special identifier for a built-in value
+(<code class="docutils literal notranslate"><span class="pre">true</span></code>, <code class="docutils literal notranslate"><span class="pre">false</span></code>, <code class="docutils literal notranslate"><span class="pre">null</span></code>, etc.)</p></td>
+</tr>
+<tr class="row-even"><td><p>number</p></td>
+<td><p>number, including units and modifiers, if any.</p></td>
+</tr>
+<tr class="row-odd"><td><p>operator</p></td>
+<td><p>operators: <code class="docutils literal notranslate"><span class="pre">+</span></code>, <code class="docutils literal notranslate"><span class="pre">-</span></code>, <code class="docutils literal notranslate"><span class="pre">&gt;&gt;</span></code>, <code class="docutils literal notranslate"><span class="pre">|</span></code>, <code class="docutils literal notranslate"><span class="pre">==</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>punctuation</p></td>
+<td><p>aux. punctuation that should be subtly highlighted
+(parentheses, brackets, etc.)</p></td>
+</tr>
+<tr class="row-odd"><td><p>property</p></td>
+<td><p>object property <code class="docutils literal notranslate"><span class="pre">obj.prop1.prop2.value</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>regexp</p></td>
+<td><p>literal regular expression</p></td>
+</tr>
+<tr class="row-odd"><td><p>string</p></td>
+<td><p>literal string, character</p></td>
+</tr>
+<tr class="row-even"><td><p>char.escape</p></td>
+<td><p>an escape character such as <code class="docutils literal notranslate"><span class="pre">\n</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>subst</p></td>
+<td><p>parsed section inside a literal string</p></td>
+</tr>
+<tr class="row-even"><td><p>symbol</p></td>
+<td><p>symbolic constant, interned string, goto label</p></td>
+</tr>
+<tr class="row-odd"><td><p>class</p></td>
+<td><p><strong>deprecated</strong> You probably want <code class="docutils literal notranslate"><span class="pre">title.class</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>function</p></td>
+<td><p><strong>deprecated</strong> You probably want <code class="docutils literal notranslate"><span class="pre">title.function</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>variable</p></td>
+<td><p>variables</p></td>
+</tr>
+<tr class="row-even"><td><p>variable.language</p></td>
+<td><p>variable with special meaning in a language, e.g.:
+<code class="docutils literal notranslate"><span class="pre">this</span></code>, <code class="docutils literal notranslate"><span class="pre">window</span></code>, <code class="docutils literal notranslate"><span class="pre">super</span></code>, <code class="docutils literal notranslate"><span class="pre">self</span></code>, etc.</p></td>
+</tr>
+<tr class="row-odd"><td><p>variable.constant</p></td>
+<td><p>variable that is a constant value, ie <code class="docutils literal notranslate"><span class="pre">MAX_FILES</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>title</p></td>
+<td><p>name of a class or a function</p></td>
+</tr>
+<tr class="row-odd"><td><p>title.class</p></td>
+<td><p>name of a class (interface, trait, module, etc)</p></td>
+</tr>
+<tr class="row-even"><td><p>title.class.inherited</p></td>
+<td><p>name of class being inherited from, extended, etc.</p></td>
+</tr>
+<tr class="row-odd"><td><p>title.function</p></td>
+<td><p>name of a function</p></td>
+</tr>
+<tr class="row-even"><td><p>title.function.invoke</p></td>
+<td><p>name of a function (when being invoked)</p></td>
+</tr>
+<tr class="row-odd"><td><p>params</p></td>
+<td><p>block of function arguments (parameters) at the
+place of declaration</p></td>
+</tr>
+<tr class="row-even"><td><p>comment</p></td>
+<td><p>comments</p></td>
+</tr>
+<tr class="row-odd"><td><p>doctag</p></td>
+<td><p>documentation markup within comments, e.g. <code class="docutils literal notranslate"><span class="pre">&#64;params</span></code></p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p><strong>Meta</strong></p></td>
+</tr>
+<tr class="row-odd"><td><p>meta</p></td>
+<td><p>flags, modifiers, annotations, processing
+instructions, preprocessor directives, etc</p></td>
+</tr>
+<tr class="row-even"><td><p>meta.prompt</p></td>
+<td><p>REPL or shell prompts or similar</p></td>
+</tr>
+<tr class="row-odd"><td><p>meta keyword</p></td>
+<td><p>a keyword inside a meta block
+(note this is nested, not subscoped)</p></td>
+</tr>
+<tr class="row-even"><td><p>meta string</p></td>
+<td><p>a string inside a meta block
+(note this is nested, not subscoped)</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p><strong>Tags, attributes, configs</strong></p></td>
+</tr>
+<tr class="row-even"><td><p>section</p></td>
+<td><p>heading of a section in a config file, heading in
+text markup</p></td>
+</tr>
+<tr class="row-odd"><td><p>tag</p></td>
+<td><p>XML/HTML tag</p></td>
+</tr>
+<tr class="row-even"><td><p>name</p></td>
+<td><p>name of an XML tag, the first word in an
+s-expression</p></td>
+</tr>
+<tr class="row-odd"><td><p>attr</p></td>
+<td><p>name of an attribute with no language defined
+semantics (keys in JSON, setting names in .ini),
+also sub-attribute within another highlighted
+object, like XML tag</p></td>
+</tr>
+<tr class="row-even"><td><p>attribute</p></td>
+<td><p>name of an attribute followed by a structured
+value part, like CSS properties</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p><strong>Text Markup</strong></p></td>
+</tr>
+<tr class="row-even"><td><p>bullet</p></td>
+<td><p>list item bullet</p></td>
+</tr>
+<tr class="row-odd"><td><p>code</p></td>
+<td><p>code block</p></td>
+</tr>
+<tr class="row-even"><td><p>emphasis</p></td>
+<td><p>emphasis</p></td>
+</tr>
+<tr class="row-odd"><td><p>strong</p></td>
+<td><p>strong emphasis</p></td>
+</tr>
+<tr class="row-even"><td><p>formula</p></td>
+<td><p>mathematical formula</p></td>
+</tr>
+<tr class="row-odd"><td><p>link</p></td>
+<td><p>hyperlink</p></td>
+</tr>
+<tr class="row-even"><td><p>quote</p></td>
+<td><p>quotation or blockquote</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p><strong>CSS</strong></p></td>
+</tr>
+<tr class="row-even"><td><p>selector-tag</p></td>
+<td><p>tag selector</p></td>
+</tr>
+<tr class="row-odd"><td><p>selector-id</p></td>
+<td><p>#id selector</p></td>
+</tr>
+<tr class="row-even"><td><p>selector-class</p></td>
+<td><p>.class selector</p></td>
+</tr>
+<tr class="row-odd"><td><p>selector-attr</p></td>
+<td><p>[attr] selector</p></td>
+</tr>
+<tr class="row-even"><td><p>selector-pseudo</p></td>
+<td><p>:pseudo selector</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p><strong>Templates</strong></p></td>
+</tr>
+<tr class="row-even"><td><p>template-tag</p></td>
+<td><p>tag of a template language</p></td>
+</tr>
+<tr class="row-odd"><td><p>template-variable</p></td>
+<td><p>variable in a template language</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p><strong>diff</strong></p></td>
+</tr>
+<tr class="row-odd"><td><p>addition</p></td>
+<td><p>added or changed line</p></td>
+</tr>
+<tr class="row-even"><td><p>deletion</p></td>
+<td><p>deleted line</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<section id="a-note-on-scopes-with-sub-scopes">
+<h3>A note on scopes with sub-scopes<a class="headerlink" href="#a-note-on-scopes-with-sub-scopes" title="連結到這個標頭">¶</a></h3>
+<p>Some scope names above have a <code class="docutils literal notranslate"><span class="pre">.</span></code> in them.  We use this notation to specify
+sub-scopes.  In the generated HTML this will output multiple computed class
+names. The depth of nesting determines the number of underscores appended to
+sub-scope names. For example, Lets say the scope is <code class="docutils literal notranslate"><span class="pre">title.class.other</span></code>.</p>
+<p>The CSS class names generated would be:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">hljs-title</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">class_</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">other__</span></code></p></li>
+</ul>
+<p>The top-level scope is always the one that has the configured prefix applied.</p>
+<p>The generated HTML would be:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span data-line="1"><span class="o">&lt;</span><span class="n">span</span> <span class="n">class</span><span class="o">=</span><span class="s2">"hljs-title class_ other__"</span><span class="o">&gt;</span><span class="n">Render</span><span class="o">&lt;/</span><span class="n">span</span><span class="o">&gt;</span>
+</span></pre></div>
+</div>
+<p>A theme could then simply target that using the following CSS:</p>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span data-line="1"><span class="p">.</span><span class="nc">hljs-title</span><span class="p">.</span><span class="nc">class_</span><span class="p">.</span><span class="nc">other__</span><span class="w"> </span><span class="p">{</span>
+</span><span data-line="2"><span class="w">   </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">blue</span><span class="p">;</span>
+</span><span data-line="3"><span class="p">}</span>
+</span></pre></div>
+</div>
+</section>
+<section id="a-note-on-newer-scopes">
+<h3>A note on newer scopes<a class="headerlink" href="#a-note-on-newer-scopes" title="連結到這個標頭">¶</a></h3>
+<p>Some scopes have been added more recently and do not enjoy universal theme
+support.  For themes without support, these items will simply not be
+highlighted.  This doesn't mean not to use them, only that they will be
+highlighted better as support improves over time.</p>
+<p>A list of these scopes:</p>
+<ul class="simple">
+<li><p>operator</p></li>
+<li><p>punctuation</p></li>
+<li><p>property</p></li>
+</ul>
+</section>
+<section id="reserved-scopes">
+<h3>Reserved scopes<a class="headerlink" href="#reserved-scopes" title="連結到這個標頭">¶</a></h3>
+<p>The below scopes (ReasonML) are left here for documentation purposes but may
+not be used in other grammars because they are very poorly supported by all
+themes.</p>
+<p>If you'd like to help out with the larger issue here:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/highlightjs/highlight.js/issues/2521">https://github.com/highlightjs/highlight.js/issues/2521</a></p></li>
+<li><p><a class="reference external" href="https://github.com/highlightjs/highlight.js/issues/2500">https://github.com/highlightjs/highlight.js/issues/2500</a></p></li>
+</ul>
+<div class="table-wrapper docutils container">
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td colspan="2"><p><strong>ReasonML</strong></p></td>
+</tr>
+<tr class="row-even"><td><p>pattern-match</p></td>
+<td><p>pattern matching matchers</p></td>
+</tr>
+<tr class="row-odd"><td><p>typing</p></td>
+<td><p>type signatures on function parameters</p></td>
+</tr>
+<tr class="row-even"><td><p>constructor</p></td>
+<td><p>type constructors</p></td>
+</tr>
+<tr class="row-odd"><td><p>module-access</p></td>
+<td><p>scope access into a module</p></td>
+</tr>
+<tr class="row-even"><td><p>module</p></td>
+<td><p>module reference within scope access</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</section>
+<section id="language-names-and-aliases">
+<h2>Language names and aliases<a class="headerlink" href="#language-names-and-aliases" title="連結到這個標頭">¶</a></h2>
+<p>The language names and aliases table has moved to <a class="reference external" href="https://github.com/highlightjs/highlight.js/blob/main/SUPPORTED_LANGUAGES.md">SUPPORTED_LANGUAGES.md</a>.</p>
+</section>
+</section>
+
+        </article><button class="back-to-top" type="button">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+    <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+  </svg>
+  <span>回到頂部</span>
+</button><div class="navigation flex print:hidden"><div class="navigation-prev">
+    <a href="mode-reference.html">
+      <i class="i-lucide chevron-left"></i>
+      <div class="page-info">
+        <span>上一頁</span><div class="title">模式參考</div></div>
+    </a>
+  </div><div class="navigation-next">
+    <a href="plugin-recipes.html">
+      <div class="page-info">
+        <span>下一頁</span>
+        <div class="title">Plugin Recipes</div>
+      </div>
+      <i class="i-lucide chevron-right"></i>
+    </a>
+  </div></div></div>
+    </div>
+  </main>
+</div>
+<footer class="sy-foot">
+  <div class="sy-foot-inner sy-container mx-auto">
+    <div class="sy-foot-reserved md:flex justify-between items-center">
+      <div class="sy-foot-copyright"><p>2012–2024, Ivan Sagalaev</p>
+  
+  <p>
+    Made with
+    
+    <a href="https://www.sphinx-doc.org/">Sphinx</a> and
+    
+    <a href="https://shibuya.lepture.com">Shibuya theme</a>.
+  </p>
+</div>
+      <div class="sy-foot-socials">
+<a href="https://github.com/highlightjs/highlight.js" aria-label="GitHub">
+  <iconify-icon icon="simple-icons:github"></iconify-icon>
+</a>
+<a href="https://discord.gg/M24EbU7ja9" aria-label="Discord">
+  <iconify-icon icon="simple-icons:discord"></iconify-icon>
+</a></div>
+    </div>
+  </div>
+</footer>
+      <script src="_static/documentation_options.js?v=aeab7042"></script>
+      <script src="_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="_static/translations.js?v=cbf116e0"></script>
+      <script src="_static/design-tabs.js?v=f930bc37"></script>
+      <script src="_static/shibuya.js?v=50760d75"></script></body>
+</html>
