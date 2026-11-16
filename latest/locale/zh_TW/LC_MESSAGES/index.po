@@ -83,7 +83,7 @@ msgstr "連結"
 
 #: ../../../index.rst:11
 msgid "Highlight.js"
-msgstr ""
+msgstr "Highlight.js"
 
 #: ../../../index.rst:15
 msgid ""
@@ -96,28 +96,3 @@ msgid ""
 "`Website <https://highlightjs.org/>`_ :doc:`Docs <readme>` `GitHub <https://"
 "github.com/highlightjs/highlight.js>`_"
 msgstr ""
-
-#~ msgid "Highlight.js Documentation"
-#~ msgstr "Highlight.js 文件"
-
-#~ msgid "`Source <https://github.com/highlightjs/highlight.js>`_"
-#~ msgstr "`來源碼 <https://github.com/highlightjs/highlight.js>`_"
-
-#~ msgid "`Issues <https://github.com/highlightjs/highlight.js/issues>`_"
-#~ msgstr "`議題 <https://github.com/highlightjs/highlight.js/issues>`_"
-
-#~ msgid "`Discord <https://discord.gg/M24EbU7ja9>`_"
-#~ msgstr "`Discord <https://discord.gg/M24EbU7ja9>`_"
-
-#~ msgid "`Website <https://highlightjs.org>`_"
-#~ msgstr "`網站 <https://highlightjs.org>`_"
-
-#~ msgid "`highlight.js npm <https://www.npmjs.com/package/highlight.js>`_"
-#~ msgstr "`highlight.js npm <https://www.npmjs.com/package/highlight.js>`_"
-
-#~ msgid ""
-#~ "`@highlightjs/cdn-assets npm <https://www.npmjs.com/package/@highlightjs/"
-#~ "cdn-assets>`_"
-#~ msgstr ""
-#~ "`@highlightjs/cdn-assets npm <https://www.npmjs.com/package/@highlightjs/"
-#~ "cdn-assets>`_"
