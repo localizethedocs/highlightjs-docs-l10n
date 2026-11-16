@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en-US" data-accent-color="red" data-content_root="./">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Building and Testing - highlight.js 11.12.0 documentation</title><link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="Upgrading to Highlight.js v11.0" href="upgrade-11.html" /><link rel="prev" title="Highlight.js" href="readme.html" />
+      <link rel="canonical" href="https://projects.localizethedocs.org/highlightjs-docs-l10n/building-testing.html" /><script>
+    function setColorMode(t){let e=document.documentElement;e.setAttribute("data-color-mode",t);let a=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches,s=t;"auto"===t&&(s=a?"dark":"light"),"light"===s?(e.classList.remove("dark"),e.classList.add("light")):(e.classList.remove("light"),e.classList.add("dark"))}
+    setColorMode(localStorage._theme||"auto");
+  </script><link rel="stylesheet" type="text/css" href="_static/pygments.css?v=ad592e98" />
+    <link rel="stylesheet" type="text/css" href="_static/shibuya.css?v=9454f7d5" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+    <link media="print" rel="stylesheet" type="text/css" href="_static/print.css?v=20ff2c19" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css?v=e91073b2" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --sy-f-text: "Inter", var(--sy-f-sys), var(--sy-f-cjk), sans-serif;
+  --sy-f-heading: "Inter", var(--sy-f-sys), var(--sy-f-cjk), sans-serif;
+}
+</style>
+    
+
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="https://projects.localizethedocs.org/highlightjs-docs-l10n/building-testing.html"/>
+  <meta property="og:title" content="Building and Testing"/>
+    <meta name="twitter:card" content="summary"/>
+  
+<script type="text/javascript" src="ltd-provenance.js"></script>
+<script type="text/javascript" src="ltd-current.js"></script>
+<script type="text/javascript" src="../../ltd-config.js"></script>
+<script type="text/javascript" src="../../ltd-flyout.js"></script>
+</head>
+<body><div class="sy-head">
+  <div class="sy-head-blur"></div>
+  <div class="sy-head-inner sy-container mx-auto">
+    <a class="sy-head-brand" href="index.html">
+      
+      
+      <strong>highlight.js</strong>
+    </a>
+    <div class="sy-head-nav" id="head-nav">
+      <nav class="sy-head-links"></nav>
+      <div class="sy-head-extra flex items-center print:hidden"><form class="searchbox flex items-center" action="search.html" method="get">
+  <input type="text" name="q" placeholder="Search" />
+  <kbd>/</kbd>
+</form><div class="sy-head-socials">
+  <a href="https://github.com/highlightjs/highlight.js" aria-label="GitHub">
+    <iconify-icon icon="simple-icons:github"></iconify-icon>
+  </a>
+  <a href="https://discord.gg/M24EbU7ja9" aria-label="Discord">
+    <iconify-icon icon="simple-icons:discord"></iconify-icon>
+  </a></div></div>
+    </div>
+    <div class="sy-head-actions flex items-center shrink-0 print:hidden"><button class="js-theme theme-switch flex items-center"
+data-aria-auto="Switch to light color mode"
+data-aria-light="Switch to dark color mode"
+data-aria-dark="Switch to auto color mode">
+<i class="i-lucide theme-icon"></i>
+</button><button class="md:hidden flex items-center js-menu" aria-label="Menu" type="button" aria-controls="head-nav" aria-expanded="false">
+        <div class="hamburger">
+          <span class="hamburger_1"></span>
+          <span class="hamburger_2"></span>
+          <span class="hamburger_3"></span>
+        </div>
+      </button>
+    </div>
+  </div>
+</div>
+<div class="sy-page sy-container flex mx-auto">
+  <aside id="lside" class="sy-lside md:w-72 md:shrink-0 print:hidden">
+    <div class="sy-lside-inner md:sticky">
+      <div class="sy-scrollbar p-6">
+        <div class="globaltoc" data-expand-depth="0"><p class="caption" role="heading" aria-level="3"><span class="caption-text">Getting Started</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="readme.html">README / How to Use</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Building and Testing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="upgrade-11.html">Upgrading to Version 11</a></li>
+</ul>
+<p class="caption" role="heading" aria-level="3"><span class="caption-text">Reference</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="api.html">Core API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="plugin-api.html">Plugin API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="language-guide.html">Language Definition Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="theme-guide.html">Theme Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mode-reference.html">Mode Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="css-classes-reference.html">Scope Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="plugin-recipes.html">Plugin Recipes</a></li>
+</ul>
+<p class="caption" role="heading" aria-level="3"><span class="caption-text">FAQ</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="supported-languages.html">Which languages are supported?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="line-numbers.html">Why no line numbers?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="language-requests.html">How to request a new language?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="language-contribution.html">How to contribute a new language?</a></li>
+</ul>
+<p class="caption" role="heading" aria-level="3"><span class="caption-text">Links</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/highlightjs/highlight.js">Source</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/highlightjs/highlight.js/issues">Issues</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://discord.gg/M24EbU7ja9">Discord</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://highlightjs.org">Website</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.npmjs.com/package/highlight.js">highlight.js npm</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.npmjs.com/package/&#64;highlightjs/cdn-assets">&#64;highlightjs/cdn-assets npm</a></li>
+</ul>
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="lside-overlay js-menu" role="button" aria-label="Close left sidebar" aria-controls="lside" aria-expanded="false"></div>
+  <aside id="rside" class="sy-rside pb-3 w-64 shrink-0 order-last">
+    <button class="rside-close js-menu xl:hidden" aria-label="Close Table of Contents" type="button" aria-controls="rside" aria-expanded="false">
+      <i class="i-lucide close"></i>
+    </button>
+    <div class="sy-scrollbar sy-rside-inner px-6 xl:top-16 xl:sticky xl:pl-0 pt-6 pb-4"><div class="localtoc"><h3>On this page</h3><ul>
+<li><a class="reference internal" href="#tldr">TLDR</a></li>
+<li><a class="reference internal" href="#building">Building</a></li>
+<li><a class="reference internal" href="#basic-testing">Basic testing</a></li>
+<li><a class="reference internal" href="#testing-markup">Testing markup</a><ul>
+<li><a class="reference internal" href="#skipped-markup-tests-unsupported-edge-cases">Skipped markup tests (unsupported edge cases)</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#building-and-testing-with-docker">Building and Testing with Docker</a></li>
+</ul>
+</div><a class="js-repo-stats repo-stats flex items-center" href="https://github.com/highlightjs/highlight.js"
+  data-type="github" data-user="highlightjs" data-repo="highlight.js">
+  <span class="w-8 flex items-center justify-around shrink-0 text-3xl">
+    <iconify-icon icon="simple-icons:github"></iconify-icon>
+  </span>
+  <span class="flex-grow px-2 break-all">
+    
+    
+      <span>highlight.js</span>
+    
+    <span class="flex text-sm repo-stats-count">
+      <span class="flex items-center pr-3">
+        <iconify-icon icon="lucide:star"></iconify-icon>
+        <strong class="js-repo-stars ml-1">0</strong>
+      </span>
+      <span class="flex items-center">
+        <iconify-icon icon="lucide:git-fork"></iconify-icon>
+        <strong class="js-repo-forks ml-1">0</strong>
+      </span>
+    </span>
+  </span>
+</a><div class="edit-this-page">
+  <a href="https://github.com/highlightjs/highlight.js/blob/main/docs/building-testing.rst">Edit this page</a>
+</div><div id="ethical-ad-placement" data-ea-publisher="readthedocs"></div></div>
+  </aside>
+  <div class="rside-overlay js-menu" role="button" aria-label="Close Table of Contents" aria-controls="rside" aria-expanded="false"></div>
+  <main class="sy-main w-full max-sm:max-w-full print:pt-6">
+<div class="sy-breadcrumbs" role="navigation">
+  <div class="sy-breadcrumbs-inner flex items-center">
+    <div class="md:hidden mr-3">
+      <button class="js-menu" aria-label="Menu" type="button" aria-controls="lside" aria-expanded="false">
+        <i class="i-lucide menu"></i>
+      </button>
+    </div>
+    <ol class="flex-1" itemscope itemtype="https://schema.org/BreadcrumbList"><li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <a itemprop="item" href="index.html"><span itemprop="name">highlight.js</span></a>
+        <span>/</span>
+        <meta itemprop="position" content="1" />
+      </li><li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <strong itemprop="name">Building and Testing</strong>
+        <meta itemprop="position" content="2" />
+      </li></ol>
+    <div class="xl:hidden ml-1">
+      <button class="js-menu" aria-label="Show table of contents" type="button" aria-controls="rside"
+        aria-expanded="false">
+        <i class="i-lucide outdent"></i>
+      </button>
+    </div>
+  </div>
+</div><div class="flex flex-col break-words justify-between">
+      <div class="relative min-w-0 max-w-6xl px-6 pb-6 pt-8 xl:px-12">
+  <article class="yue" role="main">
+          <section id="building-and-testing">
+<h1>Building and Testing<a class="headerlink" href="#building-and-testing" title="Link to this heading">¶</a></h1>
+<p>To use Highlight.js it is first necessary to build it for the environment
+where you plan to execute it: the browser, the Node.js server, etc.</p>
+<section id="tldr">
+<h2>TLDR<a class="headerlink" href="#tldr" title="Link to this heading">¶</a></h2>
+<p>Often when contributing a pull-request it’s sufficient to build and test only
+the Node.js build. Our CI process will guarantee the browser build tests are all
+still green if you don’t run them during development.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span data-line="1"><span class="n">npm</span> <span class="n">run</span> <span class="n">build</span>
+</span><span data-line="2"><span class="n">npm</span> <span class="n">run</span> <span class="n">test</span>
+</span></pre></div>
+</div>
+<p>The browser library must be built and tested separately:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span data-line="1"><span class="n">npm</span> <span class="n">run</span> <span class="n">build</span><span class="o">-</span><span class="n">browser</span>
+</span><span data-line="2"><span class="n">npm</span> <span class="n">run</span> <span class="n">test</span><span class="o">-</span><span class="n">browser</span>
+</span></pre></div>
+</div>
+</section>
+<section id="building">
+<h2>Building<a class="headerlink" href="#building" title="Link to this heading">¶</a></h2>
+<p>The build tool is written in JavaScript using node.js. Before running the
+script, make sure to have node installed and run <code class="docutils literal notranslate"><span class="pre">npm</span> <span class="pre">install</span></code> to get the
+dependencies.</p>
+<p>The tool is located in <code class="docutils literal notranslate"><span class="pre">tools/build.js</span></code>. A few useful examples:</p>
+<ul>
+<li><p>Build for a browser using only common languages:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span data-line="1"><span class="n">node</span> <span class="n">tools</span><span class="o">/</span><span class="n">build</span><span class="o">.</span><span class="n">js</span> <span class="p">:</span><span class="n">common</span>
+</span></pre></div>
+</div>
+</li>
+<li><p>Build for node.js including all available languages:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span data-line="1"><span class="n">node</span> <span class="n">tools</span><span class="o">/</span><span class="n">build</span><span class="o">.</span><span class="n">js</span> <span class="o">-</span><span class="n">t</span> <span class="n">node</span>
+</span></pre></div>
+</div>
+</li>
+<li><p>Build two specific languages for debugging, skipping compression in this case:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span data-line="1"><span class="n">node</span> <span class="n">tools</span><span class="o">/</span><span class="n">build</span><span class="o">.</span><span class="n">js</span> <span class="o">-</span><span class="n">n</span> <span class="n">python</span> <span class="n">ruby</span>
+</span></pre></div>
+</div>
+</li>
+</ul>
+<p>On some systems the node binary is named <code class="docutils literal notranslate"><span class="pre">nodejs</span></code>; simply replace <code class="docutils literal notranslate"><span class="pre">node</span></code>
+with <code class="docutils literal notranslate"><span class="pre">nodejs</span></code> in the examples above if that is the case.</p>
+<p>The full option reference is available with the usual <code class="docutils literal notranslate"><span class="pre">--help</span></code> option.</p>
+<p>The build result will be in the <code class="docutils literal notranslate"><span class="pre">build/</span></code> directory.</p>
+</section>
+<section id="basic-testing">
+<span id="id1"></span><h2>Basic testing<a class="headerlink" href="#basic-testing" title="Link to this heading">¶</a></h2>
+<p>The usual approach to debugging and testing a language is first doing it
+visually. You need to build highlight.js with only the language you’re working
+on (without compression, to have readable code in browser error messages) and
+then use the Developer tool in <code class="docutils literal notranslate"><span class="pre">tools/developer.html</span></code> to see how it highlights
+a test snippet in that language.</p>
+<p>A test snippet should be short and give the idea of the overall look of the
+language. It shouldn’t include every possible syntactic element and shouldn’t
+even make practical sense.</p>
+<p>After you satisfied with the result you need to make sure that language
+detection still works with your language definition included in the whole suite.</p>
+<p>Testing is done using <a class="reference external" href="http://mochajs.org/">Mocha</a> and the
+files are found in the <code class="docutils literal notranslate"><span class="pre">test/</span></code> directory. You can use the node build to
+run the tests from the command line with <code class="docutils literal notranslate"><span class="pre">npm</span> <span class="pre">test</span></code> after <a class="reference internal" href="#building">building</a>. (Using
+<code class="docutils literal notranslate"><span class="pre">npm</span> <span class="pre">run</span> <span class="pre">build_and_test</span></code> you can build and then test with one command.)</p>
+<p><strong>Note</strong>: for Debian-based machine, like Ubuntu, you might need to create an
+alias or symbolic link for nodejs to node. The reason for this is the
+dependencies that are requires to test highlight.js has a reference to
+“node”.</p>
+<p>Place the snippet you used inside the browser in
+<code class="docutils literal notranslate"><span class="pre">test/detect/&lt;language&gt;/default.txt</span></code>, build the package with all the languages
+for node and run the test suite. If your language breaks auto-detection, it
+should be fixed by <a class="reference internal" href="language-guide.html#relevance"><span class="std std-ref">improving relevance</span></a>, which is a black art
+in and of itself. When in doubt, please refer to the discussion group!</p>
+</section>
+<section id="testing-markup">
+<h2>Testing markup<a class="headerlink" href="#testing-markup" title="Link to this heading">¶</a></h2>
+<p>You can also provide additional markup tests for the language to test isolated
+cases of various syntactic construct. If your language has 19 different string
+literals or complicated heuristics for telling division (<code class="docutils literal notranslate"><span class="pre">/</span></code>) apart from
+regexes (<code class="docutils literal notranslate"><span class="pre">/</span> <span class="pre">..</span> <span class="pre">/</span></code>) – this is the place.</p>
+<p>A test case consists of two files:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">test/markup/&lt;language&gt;/&lt;test_name&gt;.txt</span></code>: test code</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">test/markup/&lt;language&gt;/&lt;test_name&gt;.expect.txt</span></code>: reference rendering</p></li>
+</ul>
+<p>To generate reference rendering use the Developer tool located at
+<code class="docutils literal notranslate"><span class="pre">tools/developer.html</span></code>. Make sure to explicitly select your language in the
+drop-down menu, as automatic detection is unlikely to work in this case.</p>
+<section id="skipped-markup-tests-unsupported-edge-cases">
+<h3>Skipped markup tests (unsupported edge cases)<a class="headerlink" href="#skipped-markup-tests-unsupported-edge-cases" title="Link to this heading">¶</a></h3>
+<p>The suite must not ship failing markup tests. For edge cases that are not
+supported yet (or are tracked as future work), commit the pair with a
+<code class="docutils literal notranslate"><span class="pre">.skip</span></code> suffix on the base name:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">test/markup/&lt;language&gt;/&lt;test_name&gt;.skip.txt</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">test/markup/&lt;language&gt;/&lt;test_name&gt;.skip.expect.txt</span></code></p></li>
+</ul>
+<p>These are registered with Mocha as skipped tests: they appear in the report
+but do not fail CI. Prefer this over omitting the case entirely so the gap
+stays visible. Link a tracking issue in the PR or a nearby comment when you
+add a skip.</p>
+</section>
+</section>
+<section id="building-and-testing-with-docker">
+<h2>Building and Testing with Docker<a class="headerlink" href="#building-and-testing-with-docker" title="Link to this heading">¶</a></h2>
+<p>If you don’t want to install dependencies on your system, you can use the
+included Dockerfile to build a container that will add the source code
+and then deploy a web server for you to preview it. Specifically, after you
+finish with your changes you can build the container from the root of the repository:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span data-line="1"><span class="n">docker</span> <span class="n">build</span> <span class="o">-</span><span class="n">t</span> <span class="n">highlight</span><span class="o">-</span><span class="n">js</span> <span class="o">.</span>
+</span></pre></div>
+</div>
+<p>And then run the container. You will need to expose port 80 on the host for the
+web interface, and note that we are running it in detached (-d) mode.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span data-line="1"><span class="n">docker</span> <span class="n">run</span> <span class="o">-</span><span class="n">d</span> <span class="o">--</span><span class="n">name</span> <span class="n">highlight</span><span class="o">-</span><span class="n">js</span> <span class="o">--</span><span class="n">rm</span> <span class="o">-</span><span class="n">p</span> <span class="mi">80</span><span class="p">:</span><span class="mi">80</span> <span class="n">highlight</span><span class="o">-</span><span class="n">js</span>
+</span></pre></div>
+</div>
+<p>If your preference is for another port, you can do that too:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span data-line="1"><span class="n">docker</span> <span class="n">run</span> <span class="o">-</span><span class="n">d</span> <span class="o">--</span><span class="n">name</span> <span class="n">highlight</span><span class="o">-</span><span class="n">js</span> <span class="o">--</span><span class="n">rm</span> <span class="o">-</span><span class="n">p</span> <span class="mi">80</span><span class="p">:</span><span class="mi">8080</span> <span class="n">highlight</span><span class="o">-</span><span class="n">js</span>
+</span></pre></div>
+</div>
+<p>Or you can skip binding a port if your intention is to interactively shell
+into the container to use it as a development environment.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span data-line="1"><span class="n">docker</span> <span class="n">run</span> <span class="o">-</span><span class="n">d</span> <span class="o">--</span><span class="n">name</span> <span class="n">highlight</span><span class="o">-</span><span class="n">js</span> <span class="o">--</span><span class="n">rm</span> <span class="n">highlight</span><span class="o">-</span><span class="n">js</span>
+</span></pre></div>
+</div>
+<p>Whatever you choose, you can use docker ps to ensure that it’s running.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span data-line="1">$ docker ps
+</span><span data-line="2">CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                NAMES
+</span><span data-line="3">0e15a7c99adf        highlight-js        "docker-entrypoint.s…"   8 seconds ago       Up 7 seconds        0.0.0.0:80-&gt;80/tcp   highlight-js
+</span></pre></div>
+</div>
+<p>Then, open up to <a class="reference external" href="http://127.0.0.1/tools/developer.html">http://127.0.0.1/tools/developer.html</a> to see the developer page
+for preview. When you are done, clean up your container.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span data-line="1"><span class="n">docker</span> <span class="n">stop</span> <span class="n">highlight</span><span class="o">-</span><span class="n">js</span>
+</span></pre></div>
+</div>
+<p>If you want a more advanced testing setup, you can bind the source folder when you
+run the container.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span data-line="1">docker run -d --name highlight-js --volume $PWD/src:/var/www/html/src --rm -p 80:80 highlight-js
+</span></pre></div>
+</div>
+<p>Then if you want to make changes, you can do so locally (the folder is bound as a volume),
+and execute a command to the container to trigger a rebuild:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span data-line="1"><span class="n">docker</span> <span class="n">exec</span> <span class="n">highlight</span><span class="o">-</span><span class="n">js</span> <span class="n">node</span> <span class="n">tools</span><span class="o">/</span><span class="n">build</span><span class="o">.</span><span class="n">js</span> <span class="p">:</span><span class="n">common</span>
+</span></pre></div>
+</div>
+<p>And then reload the page to see changes. When you finish, don’t forget to remove the container.</p>
+</section>
+</section>
+
+        </article><button class="back-to-top" type="button">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+    <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+  </svg>
+  <span>Back to top</span>
+</button><div class="navigation flex print:hidden"><div class="navigation-prev">
+    <a href="readme.html">
+      <i class="i-lucide chevron-left"></i>
+      <div class="page-info">
+        <span>Previous</span><div class="title">Highlight.js</div></div>
+    </a>
+  </div><div class="navigation-next">
+    <a href="upgrade-11.html">
+      <div class="page-info">
+        <span>Next</span>
+        <div class="title">Upgrading to Highlight.js v11.0</div>
+      </div>
+      <i class="i-lucide chevron-right"></i>
+    </a>
+  </div></div></div>
+    </div>
+  </main>
+</div>
+<footer class="sy-foot">
+  <div class="sy-foot-inner sy-container mx-auto">
+    <div class="sy-foot-reserved md:flex justify-between items-center">
+      <div class="sy-foot-copyright"><p>2012–2024, Ivan Sagalaev</p>
+  
+  <p>
+    Made with
+    
+    <a href="https://www.sphinx-doc.org/">Sphinx</a> and
+    
+    <a href="https://shibuya.lepture.com">Shibuya theme</a>.
+  </p>
+</div>
+      <div class="sy-foot-socials">
+<a href="https://github.com/highlightjs/highlight.js" aria-label="GitHub">
+  <iconify-icon icon="simple-icons:github"></iconify-icon>
+</a>
+<a href="https://discord.gg/M24EbU7ja9" aria-label="Discord">
+  <iconify-icon icon="simple-icons:discord"></iconify-icon>
+</a></div>
+    </div>
+  </div>
+</footer>
+      <script src="_static/documentation_options.js?v=6fe312b6"></script>
+      <script src="_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="_static/design-tabs.js?v=f930bc37"></script>
+      <script src="_static/shibuya.js?v=50760d75"></script></body>
+</html>
