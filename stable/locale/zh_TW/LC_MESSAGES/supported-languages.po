@@ -98,7 +98,7 @@ msgstr ""
 
 #: ../../../supported-languages.md:0
 msgid "[highlightjs-abc](https://github.com/nocpiun/highlightjs-abc)"
-msgstr ""
+msgstr "[highlightjs-abc](https://github.com/nocpiun/highlightjs-abc)"
 
 #: ../../../supported-languages.md:0
 msgid "ABNF"

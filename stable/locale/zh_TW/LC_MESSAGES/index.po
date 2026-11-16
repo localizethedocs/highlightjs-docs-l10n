@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: highlight.js stable\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-04-02 03:28+0000\n"
+"POT-Creation-Date: 2026-11-13 13:46+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -55,7 +55,7 @@ msgstr ""
 
 #: ../../../index.rst:7
 msgid "Highlight.js Documentation"
-msgstr "Highlight.js 文件"
+msgstr ""
 
 #: ../../../index.rst:44
 msgid "Links"
@@ -63,28 +63,26 @@ msgstr "連結"
 
 #: ../../../index.rst:48
 msgid "`Source <https://github.com/highlightjs/highlight.js>`_"
-msgstr "`來源碼 <https://github.com/highlightjs/highlight.js>`_"
+msgstr ""
 
 #: ../../../index.rst:49
 msgid "`Issues <https://github.com/highlightjs/highlight.js/issues>`_"
-msgstr "`議題 <https://github.com/highlightjs/highlight.js/issues>`_"
+msgstr ""
 
 #: ../../../index.rst:50
 msgid "`Discord <https://discord.gg/M24EbU7ja9>`_"
-msgstr "`Discord <https://discord.gg/M24EbU7ja9>`_"
+msgstr ""
 
 #: ../../../index.rst:51
 msgid "`Website <https://highlightjs.org>`_"
-msgstr "`網站 <https://highlightjs.org>`_"
+msgstr ""
 
 #: ../../../index.rst:52
 msgid "`highlight.js npm <https://www.npmjs.com/package/highlight.js>`_"
-msgstr "`highlight.js npm <https://www.npmjs.com/package/highlight.js>`_"
+msgstr ""
 
 #: ../../../index.rst:53
 msgid ""
 "`@highlightjs/cdn-assets npm <https://www.npmjs.com/package/@highlightjs/cdn-"
 "assets>`_"
 msgstr ""
-"`@highlightjs/cdn-assets npm <https://www.npmjs.com/package/@highlightjs/cdn-"
-"assets>`_"
