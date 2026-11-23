@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en-US" data-accent-color="red" data-content_root="./">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Line numbers - highlight.js 11.12.0 documentation</title><link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="On requesting new languages" href="language-requests.html" /><link rel="prev" title="Supported Languages" href="supported-languages.html" />
+      <link rel="canonical" href="https://projects.localizethedocs.org/highlightjs-docs-l10n/line-numbers.html" /><script>
+    function setColorMode(t){let e=document.documentElement;e.setAttribute("data-color-mode",t);let a=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches,s=t;"auto"===t&&(s=a?"dark":"light"),"light"===s?(e.classList.remove("dark"),e.classList.add("light")):(e.classList.remove("light"),e.classList.add("dark"))}
+    setColorMode(localStorage._theme||"auto");
+  </script><link rel="stylesheet" type="text/css" href="_static/pygments.css?v=ad592e98" />
+    <link rel="stylesheet" type="text/css" href="_static/shibuya.css?v=9454f7d5" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+    <link media="print" rel="stylesheet" type="text/css" href="_static/print.css?v=20ff2c19" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css?v=e91073b2" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --sy-f-text: "Inter", var(--sy-f-sys), var(--sy-f-cjk), sans-serif;
+  --sy-f-heading: "Inter", var(--sy-f-sys), var(--sy-f-cjk), sans-serif;
+}
+</style>
+    
+
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="https://projects.localizethedocs.org/highlightjs-docs-l10n/line-numbers.html"/>
+  <meta property="og:title" content="Line numbers"/>
+    <meta name="twitter:card" content="summary"/>
+  
+<script type="text/javascript" src="ltd-provenance.js"></script>
+<script type="text/javascript" src="ltd-current.js"></script>
+<script type="text/javascript" src="../../ltd-config.js"></script>
+<script type="text/javascript" src="../../ltd-flyout.js"></script>
+</head>
+<body><div class="sy-head">
+  <div class="sy-head-blur"></div>
+  <div class="sy-head-inner sy-container mx-auto">
+    <a class="sy-head-brand" href="index.html">
+      
+      
+      <strong>highlight.js</strong>
+    </a>
+    <div class="sy-head-nav" id="head-nav">
+      <nav class="sy-head-links"></nav>
+      <div class="sy-head-extra flex items-center print:hidden"><form class="searchbox flex items-center" action="search.html" method="get">
+  <input type="text" name="q" placeholder="Search" />
+  <kbd>/</kbd>
+</form><div class="sy-head-socials">
+  <a href="https://github.com/highlightjs/highlight.js" aria-label="GitHub">
+    <iconify-icon icon="simple-icons:github"></iconify-icon>
+  </a>
+  <a href="https://discord.gg/M24EbU7ja9" aria-label="Discord">
+    <iconify-icon icon="simple-icons:discord"></iconify-icon>
+  </a></div></div>
+    </div>
+    <div class="sy-head-actions flex items-center shrink-0 print:hidden"><button class="js-theme theme-switch flex items-center"
+data-aria-auto="Switch to light color mode"
+data-aria-light="Switch to dark color mode"
+data-aria-dark="Switch to auto color mode">
+<i class="i-lucide theme-icon"></i>
+</button><button class="md:hidden flex items-center js-menu" aria-label="Menu" type="button" aria-controls="head-nav" aria-expanded="false">
+        <div class="hamburger">
+          <span class="hamburger_1"></span>
+          <span class="hamburger_2"></span>
+          <span class="hamburger_3"></span>
+        </div>
+      </button>
+    </div>
+  </div>
+</div>
+<div class="sy-page sy-container flex mx-auto">
+  <aside id="lside" class="sy-lside md:w-72 md:shrink-0 print:hidden">
+    <div class="sy-lside-inner md:sticky">
+      <div class="sy-scrollbar p-6">
+        <div class="globaltoc" data-expand-depth="0"><p class="caption" role="heading" aria-level="3"><span class="caption-text">Getting Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="readme.html">README / How to Use</a></li>
+<li class="toctree-l1"><a class="reference internal" href="building-testing.html">Building and Testing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="upgrade-11.html">Upgrading to Version 11</a></li>
+</ul>
+<p class="caption" role="heading" aria-level="3"><span class="caption-text">Reference</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="api.html">Core API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="plugin-api.html">Plugin API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="language-guide.html">Language Definition Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="theme-guide.html">Theme Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mode-reference.html">Mode Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="css-classes-reference.html">Scope Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="plugin-recipes.html">Plugin Recipes</a></li>
+</ul>
+<p class="caption" role="heading" aria-level="3"><span class="caption-text">FAQ</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="supported-languages.html">Which languages are supported?</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Why no line numbers?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="language-requests.html">How to request a new language?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="language-contribution.html">How to contribute a new language?</a></li>
+</ul>
+<p class="caption" role="heading" aria-level="3"><span class="caption-text">Links</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/highlightjs/highlight.js">Source</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/highlightjs/highlight.js/issues">Issues</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://discord.gg/M24EbU7ja9">Discord</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://highlightjs.org">Website</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.npmjs.com/package/highlight.js">highlight.js npm</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.npmjs.com/package/&#64;highlightjs/cdn-assets">&#64;highlightjs/cdn-assets npm</a></li>
+</ul>
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="lside-overlay js-menu" role="button" aria-label="Close left sidebar" aria-controls="lside" aria-expanded="false"></div>
+  <aside id="rside" class="sy-rside pb-3 w-64 shrink-0 order-last">
+    <button class="rside-close js-menu xl:hidden" aria-label="Close Table of Contents" type="button" aria-controls="rside" aria-expanded="false">
+      <i class="i-lucide close"></i>
+    </button>
+    <div class="sy-scrollbar sy-rside-inner px-6 xl:top-16 xl:sticky xl:pl-0 pt-6 pb-4"><a class="js-repo-stats repo-stats flex items-center" href="https://github.com/highlightjs/highlight.js"
+  data-type="github" data-user="highlightjs" data-repo="highlight.js">
+  <span class="w-8 flex items-center justify-around shrink-0 text-3xl">
+    <iconify-icon icon="simple-icons:github"></iconify-icon>
+  </span>
+  <span class="flex-grow px-2 break-all">
+    
+    
+      <span>highlight.js</span>
+    
+    <span class="flex text-sm repo-stats-count">
+      <span class="flex items-center pr-3">
+        <iconify-icon icon="lucide:star"></iconify-icon>
+        <strong class="js-repo-stars ml-1">0</strong>
+      </span>
+      <span class="flex items-center">
+        <iconify-icon icon="lucide:git-fork"></iconify-icon>
+        <strong class="js-repo-forks ml-1">0</strong>
+      </span>
+    </span>
+  </span>
+</a><div class="edit-this-page">
+  <a href="https://github.com/highlightjs/highlight.js/blob/main/docs/line-numbers.rst">Edit this page</a>
+</div><div id="ethical-ad-placement" data-ea-publisher="readthedocs"></div></div>
+  </aside>
+  <div class="rside-overlay js-menu" role="button" aria-label="Close Table of Contents" aria-controls="rside" aria-expanded="false"></div>
+  <main class="sy-main w-full max-sm:max-w-full print:pt-6">
+<div class="sy-breadcrumbs" role="navigation">
+  <div class="sy-breadcrumbs-inner flex items-center">
+    <div class="md:hidden mr-3">
+      <button class="js-menu" aria-label="Menu" type="button" aria-controls="lside" aria-expanded="false">
+        <i class="i-lucide menu"></i>
+      </button>
+    </div>
+    <ol class="flex-1" itemscope itemtype="https://schema.org/BreadcrumbList"><li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <a itemprop="item" href="index.html"><span itemprop="name">highlight.js</span></a>
+        <span>/</span>
+        <meta itemprop="position" content="1" />
+      </li><li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <strong itemprop="name">Line numbers</strong>
+        <meta itemprop="position" content="2" />
+      </li></ol>
+    <div class="xl:hidden ml-1">
+      <button class="js-menu" aria-label="Show table of contents" type="button" aria-controls="rside"
+        aria-expanded="false">
+        <i class="i-lucide outdent"></i>
+      </button>
+    </div>
+  </div>
+</div><div class="flex flex-col break-words justify-between">
+      <div class="relative min-w-0 max-w-6xl px-6 pb-6 pt-8 xl:px-12">
+  <article class="yue" role="main">
+          <section id="line-numbers">
+<h1>Line numbers<a class="headerlink" href="#line-numbers" title="Link to this heading">¶</a></h1>
+<p>Highlight.js’ notable lack of line numbers support is not an oversight but a
+feature. Following is an explanation from the original author:</p>
+<blockquote>
+<div><p>One of the defining design principles for Highlight.js from the start was
+simplicity. Not the simplicity of code (in fact, it’s quite complex) but
+the simplicity of usage and of the actual look of highlighted snippets on
+HTML pages. Many highlighters, in my opinion, are overdoing it with such
+things as separate colors for every single type of lexemes, striped
+backgrounds, fancy buttons around code blocks and — yes — line numbers.
+The more fancy stuff resides around the code the more it distracts a
+reader from understanding it.</p>
+<p>This is why it’s not a straightforward decision: this new feature will not
+just make Highlight.js better, it might actually make it worse simply by
+making it look more bloated in blog posts around the Internet. This is why
+I’m asking people to show that it’s worth it.</p>
+<p>The only real use-case that ever was brought up in support of line numbers
+is referencing code from the descriptive text around it. On my own blog I
+was always solving this either with comments within the code itself or by
+breaking the larger snippets into smaller ones and describing each small
+part separately. I’m not saying that my solution is better. But I don’t
+see how line numbers are better either. And the only way to show that they
+are better is to set up some usability research on the subject. I doubt
+anyone would bother to do it.</p>
+<p>Then there’s maintenance. So far the core code of Highlight.js is
+maintained by only one person — yours truly. Inclusion of any new code in
+Highlight.js means that from that moment I will have to fix bugs in it,
+improve it further, make it work together with the rest of the code,
+defend its design. And I don’t want to do all this for the feature that I
+consider “evil” and probably will never use myself.</p>
+</div></blockquote>
+<p>This doesn’t stop anyone from forking the library or maintaining a line-numbers plugin.</p>
+</section>
+
+        </article><button class="back-to-top" type="button">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+    <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+  </svg>
+  <span>Back to top</span>
+</button><div class="navigation flex print:hidden"><div class="navigation-prev">
+    <a href="supported-languages.html">
+      <i class="i-lucide chevron-left"></i>
+      <div class="page-info">
+        <span>Previous</span><div class="title">Supported Languages</div></div>
+    </a>
+  </div><div class="navigation-next">
+    <a href="language-requests.html">
+      <div class="page-info">
+        <span>Next</span>
+        <div class="title">On requesting new languages</div>
+      </div>
+      <i class="i-lucide chevron-right"></i>
+    </a>
+  </div></div></div>
+    </div>
+  </main>
+</div>
+<footer class="sy-foot">
+  <div class="sy-foot-inner sy-container mx-auto">
+    <div class="sy-foot-reserved md:flex justify-between items-center">
+      <div class="sy-foot-copyright"><p>2012–2024, Ivan Sagalaev</p>
+  
+  <p>
+    Made with
+    
+    <a href="https://www.sphinx-doc.org/">Sphinx</a> and
+    
+    <a href="https://shibuya.lepture.com">Shibuya theme</a>.
+  </p>
+</div>
+      <div class="sy-foot-socials">
+<a href="https://github.com/highlightjs/highlight.js" aria-label="GitHub">
+  <iconify-icon icon="simple-icons:github"></iconify-icon>
+</a>
+<a href="https://discord.gg/M24EbU7ja9" aria-label="Discord">
+  <iconify-icon icon="simple-icons:discord"></iconify-icon>
+</a></div>
+    </div>
+  </div>
+</footer>
+      <script src="_static/documentation_options.js?v=6fe312b6"></script>
+      <script src="_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="_static/design-tabs.js?v=f930bc37"></script>
+      <script src="_static/shibuya.js?v=50760d75"></script></body>
+</html>

@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-accent-color="red" data-content_root="./">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Plugin API - highlight.js 11.12.0 文档</title><link rel="index" title="索引" href="genindex.html" /><link rel="search" title="搜索" href="search.html" /><link rel="next" title="Language Definition Guide" href="language-guide.html" /><link rel="prev" title="Core API" href="api.html" />
+      <link rel="canonical" href="https://projects.localizethedocs.org/highlightjs-docs-l10n/plugin-api.html" /><script>
+    function setColorMode(t){let e=document.documentElement;e.setAttribute("data-color-mode",t);let a=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches,s=t;"auto"===t&&(s=a?"dark":"light"),"light"===s?(e.classList.remove("dark"),e.classList.add("light")):(e.classList.remove("light"),e.classList.add("dark"))}
+    setColorMode(localStorage._theme||"auto");
+  </script><link rel="stylesheet" type="text/css" href="_static/pygments.css?v=ad592e98" />
+    <link rel="stylesheet" type="text/css" href="_static/shibuya.css?v=9454f7d5" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+    <link media="print" rel="stylesheet" type="text/css" href="_static/print.css?v=20ff2c19" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css?v=e91073b2" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --sy-f-text: "Inter", var(--sy-f-sys), var(--sy-f-cjk), sans-serif;
+  --sy-f-heading: "Inter", var(--sy-f-sys), var(--sy-f-cjk), sans-serif;
+}
+</style>
+    
+
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="https://projects.localizethedocs.org/highlightjs-docs-l10n/plugin-api.html"/>
+  <meta property="og:title" content="Plugin API"/>
+    <meta name="twitter:card" content="summary"/>
+  
+<script type="text/javascript" src="ltd-provenance.js"></script>
+<script type="text/javascript" src="ltd-current.js"></script>
+<script type="text/javascript" src="../../ltd-config.js"></script>
+<script type="text/javascript" src="../../ltd-flyout.js"></script>
+</head>
+<body><div class="sy-head">
+  <div class="sy-head-blur"></div>
+  <div class="sy-head-inner sy-container mx-auto">
+    <a class="sy-head-brand" href="index.html">
+      
+      
+      <strong>highlight.js</strong>
+    </a>
+    <div class="sy-head-nav" id="head-nav">
+      <nav class="sy-head-links"></nav>
+      <div class="sy-head-extra flex items-center print:hidden"><form class="searchbox flex items-center" action="search.html" method="get">
+  <input type="text" name="q" placeholder="搜索" />
+  <kbd>/</kbd>
+</form><div class="sy-head-socials">
+  <a href="https://github.com/highlightjs/highlight.js" aria-label="GitHub">
+    <iconify-icon icon="simple-icons:github"></iconify-icon>
+  </a>
+  <a href="https://discord.gg/M24EbU7ja9" aria-label="Discord">
+    <iconify-icon icon="simple-icons:discord"></iconify-icon>
+  </a></div></div>
+    </div>
+    <div class="sy-head-actions flex items-center shrink-0 print:hidden"><button class="js-theme theme-switch flex items-center"
+data-aria-auto="切换到亮色模式"
+data-aria-light="切换到暗色模式"
+data-aria-dark="切换到自动模式">
+<i class="i-lucide theme-icon"></i>
+</button><button class="md:hidden flex items-center js-menu" aria-label="Menu" type="button" aria-controls="head-nav" aria-expanded="false">
+        <div class="hamburger">
+          <span class="hamburger_1"></span>
+          <span class="hamburger_2"></span>
+          <span class="hamburger_3"></span>
+        </div>
+      </button>
+    </div>
+  </div>
+</div>
+<div class="sy-page sy-container flex mx-auto">
+  <aside id="lside" class="sy-lside md:w-72 md:shrink-0 print:hidden">
+    <div class="sy-lside-inner md:sticky">
+      <div class="sy-scrollbar p-6">
+        <div class="globaltoc" data-expand-depth="0"><p class="caption" role="heading" aria-level="3"><span class="caption-text">Getting Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="readme.html">README / How to Use</a></li>
+<li class="toctree-l1"><a class="reference internal" href="building-testing.html">Building and Testing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="upgrade-11.html">Upgrading to Version 11</a></li>
+</ul>
+<p class="caption" role="heading" aria-level="3"><span class="caption-text">Reference</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="api.html">Core API</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Plugin API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="language-guide.html">Language Definition Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="theme-guide.html">Theme Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mode-reference.html">Mode Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="css-classes-reference.html">Scope Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="plugin-recipes.html">Plugin Recipes</a></li>
+</ul>
+<p class="caption" role="heading" aria-level="3"><span class="caption-text">FAQ</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="supported-languages.html">Which languages are supported?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="line-numbers.html">Why no line numbers?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="language-requests.html">How to request a new language?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="language-contribution.html">How to contribute a new language?</a></li>
+</ul>
+<p class="caption" role="heading" aria-level="3"><span class="caption-text">Links</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/highlightjs/highlight.js">Source</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/highlightjs/highlight.js/issues">Issues</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://discord.gg/M24EbU7ja9">Discord</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://highlightjs.org">Website</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.npmjs.com/package/highlight.js">highlight.js npm</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.npmjs.com/package/&#64;highlightjs/cdn-assets">&#64;highlightjs/cdn-assets npm</a></li>
+</ul>
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="lside-overlay js-menu" role="button" aria-label="Close left sidebar" aria-controls="lside" aria-expanded="false"></div>
+  <aside id="rside" class="sy-rside pb-3 w-64 shrink-0 order-last">
+    <button class="rside-close js-menu xl:hidden" aria-label="Close Table of Contents" type="button" aria-controls="rside" aria-expanded="false">
+      <i class="i-lucide close"></i>
+    </button>
+    <div class="sy-scrollbar sy-rside-inner px-6 xl:top-16 xl:sticky xl:pl-0 pt-6 pb-4"><div class="localtoc"><h3>该页内容</h3><ul>
+<li><a class="reference internal" href="#types-of-plugins">Types of plugins</a><ul>
+<li><a class="reference internal" href="#class-based-plugins">Class based plugins</a></li>
+<li><a class="reference internal" href="#function-based-plugins">Function Based Plugins</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#before-highlight">before:highlight</a></li>
+<li><a class="reference internal" href="#after-highlight">after:highlight</a></li>
+<li><a class="reference internal" href="#after-highlightelement">after:highlightElement</a></li>
+<li><a class="reference internal" href="#before-highlightelement">before:highlightElement</a></li>
+<li><a class="reference internal" href="#deprecated">Deprecated</a><ul>
+<li><a class="reference internal" href="#after-highlightblock">after:highlightBlock</a></li>
+<li><a class="reference internal" href="#before-highlightblock">before:highlightBlock</a></li>
+</ul>
+</li>
+</ul>
+</div><a class="js-repo-stats repo-stats flex items-center" href="https://github.com/highlightjs/highlight.js"
+  data-type="github" data-user="highlightjs" data-repo="highlight.js">
+  <span class="w-8 flex items-center justify-around shrink-0 text-3xl">
+    <iconify-icon icon="simple-icons:github"></iconify-icon>
+  </span>
+  <span class="flex-grow px-2 break-all">
+    
+    
+      <span>highlight.js</span>
+    
+    <span class="flex text-sm repo-stats-count">
+      <span class="flex items-center pr-3">
+        <iconify-icon icon="lucide:star"></iconify-icon>
+        <strong class="js-repo-stars ml-1">0</strong>
+      </span>
+      <span class="flex items-center">
+        <iconify-icon icon="lucide:git-fork"></iconify-icon>
+        <strong class="js-repo-forks ml-1">0</strong>
+      </span>
+    </span>
+  </span>
+</a><div class="edit-this-page">
+  <a href="https://github.com/highlightjs/highlight.js/blob/main/docs/plugin-api.rst">编辑此页面</a>
+</div><div id="ethical-ad-placement" data-ea-publisher="readthedocs"></div></div>
+  </aside>
+  <div class="rside-overlay js-menu" role="button" aria-label="Close Table of Contents" aria-controls="rside" aria-expanded="false"></div>
+  <main class="sy-main w-full max-sm:max-w-full print:pt-6">
+<div class="sy-breadcrumbs" role="navigation">
+  <div class="sy-breadcrumbs-inner flex items-center">
+    <div class="md:hidden mr-3">
+      <button class="js-menu" aria-label="Menu" type="button" aria-controls="lside" aria-expanded="false">
+        <i class="i-lucide menu"></i>
+      </button>
+    </div>
+    <ol class="flex-1" itemscope itemtype="https://schema.org/BreadcrumbList"><li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <a itemprop="item" href="index.html"><span itemprop="name">highlight.js</span></a>
+        <span>/</span>
+        <meta itemprop="position" content="1" />
+      </li><li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <strong itemprop="name">Plugin API</strong>
+        <meta itemprop="position" content="2" />
+      </li></ol>
+    <div class="xl:hidden ml-1">
+      <button class="js-menu" aria-label="Show table of contents" type="button" aria-controls="rside"
+        aria-expanded="false">
+        <i class="i-lucide outdent"></i>
+      </button>
+    </div>
+  </div>
+</div><div class="flex flex-col break-words justify-between">
+      <div class="relative min-w-0 max-w-6xl px-6 pb-6 pt-8 xl:px-12">
+  <article class="yue" role="main">
+          <section id="plugin-api">
+<h1>Plugin API<a class="headerlink" href="#plugin-api" title="链接到此标题。">¶</a></h1>
+<p>Highlight.js supports plugins.  You add plugins via the <code class="docutils literal notranslate"><span class="pre">addPlugin</span></code> API.</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span data-line="1"><span class="c1">// a plugin can be a class</span>
+</span><span data-line="2"><span class="nx">addPlugin</span><span class="p">(</span><span class="ow">new</span><span class="w"> </span><span class="nx">SimplePlugin</span><span class="p">());</span>
+</span><span data-line="3"><span class="nx">addPlugin</span><span class="p">(</span><span class="ow">new</span><span class="w"> </span><span class="nx">MoreComplexPlugin</span><span class="p">(</span><span class="nx">options</span><span class="p">));</span>
+</span><span data-line="4">
+</span><span data-line="5"><span class="c1">// or simply a keyed object of functions</span>
+</span><span data-line="6"><span class="nx">addPlugin</span><span class="p">({</span>
+</span><span data-line="7"><span class="w">  </span><span class="s1">'after:highlightElement'</span><span class="o">:</span><span class="w"> </span><span class="p">({</span><span class="w"> </span><span class="nx">el</span><span class="p">,</span><span class="w"> </span><span class="nx">result</span><span class="p">,</span><span class="w"> </span><span class="nx">text</span><span class="w"> </span><span class="p">})</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+</span><span data-line="8"><span class="w">    </span><span class="c1">// ...</span>
+</span><span data-line="9"><span class="w">  </span><span class="p">}</span>
+</span><span data-line="10"><span class="p">});</span>
+</span></pre></div>
+</div>
+<section id="types-of-plugins">
+<h2>Types of plugins<a class="headerlink" href="#types-of-plugins" title="链接到此标题。">¶</a></h2>
+<section id="class-based-plugins">
+<h3>Class based plugins<a class="headerlink" href="#class-based-plugins" title="链接到此标题。">¶</a></h3>
+<p>This approach is useful for more complex plugins that need to deal with
+configuration options or managing state.  Highlight.js will instantiate
+a single instance of
+your class and execute it's callbacks as necessary.</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span data-line="1"><span class="kd">class</span><span class="w"> </span><span class="nx">DataLanguagePlugin</span><span class="w"> </span><span class="p">{</span>
+</span><span data-line="2"><span class="w">  </span><span class="kr">constructor</span><span class="p">(</span><span class="nx">options</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span data-line="3"><span class="w">    </span><span class="nx">self</span><span class="p">.</span><span class="nx">prefix</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">options</span><span class="p">.</span><span class="nx">dataPrefix</span><span class="p">;</span>
+</span><span data-line="4"><span class="w">  </span><span class="p">}</span>
+</span><span data-line="5">
+</span><span data-line="6"><span class="w">  </span><span class="s1">'after:highlightElement'</span><span class="p">({</span><span class="w"> </span><span class="nx">el</span><span class="p">,</span><span class="w"> </span><span class="nx">result</span><span class="p">,</span><span class="w"> </span><span class="nx">text</span><span class="w"> </span><span class="p">})</span><span class="w"> </span><span class="p">{</span>
+</span><span data-line="7"><span class="w">    </span><span class="c1">// ...</span>
+</span><span data-line="8"><span class="w">  </span><span class="p">}</span>
+</span><span data-line="9"><span class="p">}</span>
+</span><span data-line="10">
+</span><span data-line="11"><span class="nx">hljs</span><span class="p">.</span><span class="nx">addPlugin</span><span class="p">(</span><span class="ow">new</span><span class="w"> </span><span class="nx">DataLanguagePlugin</span><span class="p">({</span><span class="w"> </span><span class="nx">dataPrefix</span><span class="o">:</span><span class="w"> </span><span class="s1">'hljs'</span><span class="w"> </span><span class="p">}));</span>
+</span></pre></div>
+</div>
+</section>
+<section id="function-based-plugins">
+<h3>Function Based Plugins<a class="headerlink" href="#function-based-plugins" title="链接到此标题。">¶</a></h3>
+<p>This approach is best for simpler plugins.</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span data-line="1"><span class="nx">hljs</span><span class="p">.</span><span class="nx">addPlugin</span><span class="p">({</span>
+</span><span data-line="2"><span class="w">  </span><span class="s1">'after:highlightElement'</span><span class="o">:</span><span class="w"> </span><span class="p">({</span><span class="w"> </span><span class="nx">el</span><span class="p">,</span><span class="w"> </span><span class="nx">result</span><span class="w"> </span><span class="p">})</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+</span><span data-line="3"><span class="w">    </span><span class="c1">// move the language from the result into the dataset</span>
+</span><span data-line="4"><span class="w">    </span><span class="nx">el</span><span class="p">.</span><span class="nx">dataset</span><span class="p">.</span><span class="nx">language</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">result</span><span class="p">.</span><span class="nx">language</span><span class="p">;</span>
+</span><span data-line="5"><span class="w">  </span><span class="p">}</span>
+</span><span data-line="6"><span class="p">});</span>
+</span></pre></div>
+</div>
+</section>
+</section>
+<section id="before-highlight">
+<h2>before:highlight<a class="headerlink" href="#before-highlight" title="链接到此标题。">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">before:highlight({code,</span> <span class="pre">language})</span></code></p>
+<p>This callback function is passed a context object with two keys:</p>
+<dl class="simple">
+<dt>code</dt><dd><p>The code to be highlighted.</p>
+</dd>
+<dt>language</dt><dd><p>The language grammar that should be used for highlighting.</p>
+</dd>
+</dl>
+<p>Your plugin may modify either value and those new values will be used as input
+to the highlighting engine.  If you add a <code class="docutils literal notranslate"><span class="pre">result</span></code> key to the object that
+result will be returned as the overall result and the internal highlighting code
+will never even be called.</p>
+<p>If you're plugin plans to make its own recursive calls to <code class="docutils literal notranslate"><span class="pre">highlight</span></code> you'll
+need to manually handle this. Each time <code class="docutils literal notranslate"><span class="pre">highlight</span></code> is called your plugin
+callbacks will also be called - making it easy to get into an infinite loop.
+You'll likely need to use a class based plugin and add a guard so that your
+plugin code is only triggered on the initial call to <code class="docutils literal notranslate"><span class="pre">highlight</span></code> and not on
+any internal calls your plugin itself is making.</p>
+<p>Note: This callback does not fire from highlighting resulting from auto-language detection.</p>
+<p>It returns nothing.</p>
+</section>
+<section id="after-highlight">
+<h2>after:highlight<a class="headerlink" href="#after-highlight" title="链接到此标题。">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">after:highlight(result)</span></code></p>
+<p>This callback function is passed the <code class="docutils literal notranslate"><span class="pre">result</span></code> object after highlighting is
+complete. Your plugin may make any changes it desires to the result object
+and that will be the final return value of the initial call to <code class="docutils literal notranslate"><span class="pre">highlight</span></code>.</p>
+<p>Note: This callback does not fire from highlighting resulting from auto-language detection.</p>
+<p>It returns nothing.</p>
+</section>
+<section id="after-highlightelement">
+<h2>after:highlightElement<a class="headerlink" href="#after-highlightelement" title="链接到此标题。">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">after:highlightElement({el,</span> <span class="pre">result,</span> <span class="pre">text})</span></code></p>
+<p>This callback function is passed an object with two keys:</p>
+<dl class="simple">
+<dt>el</dt><dd><p>The HTML element that's been highlighted.</p>
+</dd>
+<dt>result</dt><dd><p>The result object returned by <cite>highlight</cite> or <cite>highlightAuto</cite>.</p>
+</dd>
+<dt>text</dt><dd><p>The raw text that was to be highlighted.</p>
+</dd>
+</dl>
+<p>It returns nothing.</p>
+</section>
+<section id="before-highlightelement">
+<h2>before:highlightElement<a class="headerlink" href="#before-highlightelement" title="链接到此标题。">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">before:highlightElement({el,</span> <span class="pre">language})</span></code></p>
+<p>This callback function is passed an object with two keys:</p>
+<dl class="simple">
+<dt>el</dt><dd><p>The HTML element that will be highlighted.</p>
+</dd>
+<dt>language</dt><dd><p>The language determined from the class attribute (or undefined).</p>
+</dd>
+</dl>
+<p>It returns nothing.</p>
+</section>
+<section id="deprecated">
+<h2>Deprecated<a class="headerlink" href="#deprecated" title="链接到此标题。">¶</a></h2>
+<section id="after-highlightblock">
+<h3>after:highlightBlock<a class="headerlink" href="#after-highlightblock" title="链接到此标题。">¶</a></h3>
+<div class="deprecated">
+<p><span class="versionmodified deprecated">自 10.7 版本弃用: </span>Please use <code class="docutils literal notranslate"><span class="pre">after:highlightElement</span></code>.</p>
+</div>
+</section>
+<section id="before-highlightblock">
+<h3>before:highlightBlock<a class="headerlink" href="#before-highlightblock" title="链接到此标题。">¶</a></h3>
+<div class="deprecated">
+<p><span class="versionmodified deprecated">自 10.7 版本弃用: </span>Please use <code class="docutils literal notranslate"><span class="pre">before:highlightElement</span></code>.</p>
+</div>
+</section>
+</section>
+</section>
+
+        </article><button class="back-to-top" type="button">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+    <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+  </svg>
+  <span>回到顶部</span>
+</button><div class="navigation flex print:hidden"><div class="navigation-prev">
+    <a href="api.html">
+      <i class="i-lucide chevron-left"></i>
+      <div class="page-info">
+        <span>上一章</span><div class="title">Core API</div></div>
+    </a>
+  </div><div class="navigation-next">
+    <a href="language-guide.html">
+      <div class="page-info">
+        <span>下一章</span>
+        <div class="title">Language Definition Guide</div>
+      </div>
+      <i class="i-lucide chevron-right"></i>
+    </a>
+  </div></div></div>
+    </div>
+  </main>
+</div>
+<footer class="sy-foot">
+  <div class="sy-foot-inner sy-container mx-auto">
+    <div class="sy-foot-reserved md:flex justify-between items-center">
+      <div class="sy-foot-copyright"><p>2012–2024, Ivan Sagalaev</p>
+  
+  <p>
+    Made with
+    
+    <a href="https://www.sphinx-doc.org/">Sphinx</a> and
+    
+    <a href="https://shibuya.lepture.com">Shibuya theme</a>.
+  </p>
+</div>
+      <div class="sy-foot-socials">
+<a href="https://github.com/highlightjs/highlight.js" aria-label="GitHub">
+  <iconify-icon icon="simple-icons:github"></iconify-icon>
+</a>
+<a href="https://discord.gg/M24EbU7ja9" aria-label="Discord">
+  <iconify-icon icon="simple-icons:discord"></iconify-icon>
+</a></div>
+    </div>
+  </div>
+</footer>
+      <script src="_static/documentation_options.js?v=deb450b5"></script>
+      <script src="_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="_static/translations.js?v=540d3cec"></script>
+      <script src="_static/design-tabs.js?v=f930bc37"></script>
+      <script src="_static/shibuya.js?v=50760d75"></script></body>
+</html>
